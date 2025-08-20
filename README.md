@@ -13,17 +13,16 @@ Suisse !
 À l'issue de cette unité d'enseignement, la personne qui étudie sera capable de
 :
 
-- Comprendre les bases de PHP et son rôle dans le monde web.
-- Écrire un code PHP propre et organisé.
-- Gérer les formulaires HTML et les données qu'ils contiennent.
-- Persister des données dans une base de données SQLite.
-- Implémenter les mécanismes de base de la sécurité web.
-- Implémenter des concepts de base de la programmation orientée objet.
+- Comprendre et appliquer certains concepts avancés de PHP.
+- Déployer et accéder à une application PHP sur Internet.
+- Gérer plusieurs utilisateurs avec l'authentification et gestion des accès.
+- Réaliser une application PHP de taille intermédiaire.
 
 Grâce à ces compétences, la personne qui étudie sera en mesure de développer des
-applications web multi-domaines avec une gestion des accès aux pages publiques
-et privées (par exemple, un gestionnaire de tâches multi-utilisateurs, une
-plateforme de réservations de concerts, etc.).
+applications web combinant plusieurs ressources (gestion des utilisateurs et
+gestion d'une collection de données) avec une gestion des accès aux pages
+publiques et privées (par exemple, un gestionnaire de tâches multi-utilisateurs,
+une plateforme de réservations de concerts, etc.).
 
 ## ➡️ Par où commencer ?
 
@@ -40,7 +39,7 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 Les dates sont tirées du
 [calendrier académique HEIG-VD](https://heig-vd.ch/formation/bachelor/calendrier-academique/).
 
-|               Cours | Dates             | 1ère partie (2 x 45 minutes)                                   | 2ème partie (2 x 45 minutes)                | État[^etat] |
+|               Cours | Dates             | 1ère partie                                                    | 2ème partie                                 | État[^etat] |
 | ------------------: | :---------------- | :------------------------------------------------------------- | :------------------------------------------ | :---------- |
 |                   - | 15.09. - 21.09.25 | -                                                              | -                                           | -           |
 |    [01](#-cours-01) | 22.09. - 28.09.25 | Modalités de l'unité d'enseignement et notions avancées de PHP | Projet (1/8)                                | 🔴 À faire  |
