@@ -3,7 +3,7 @@
 [![Licence](https://img.shields.io/github/license/heig-vd-progserv-course/heig-vd-progserv2-course)](./LICENSE.md)
 
 Bienvenue sur le dépôt principal de l'unité d'enseignement
-[_Programmation server 2 (ProgServ2)_](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=7280)
+[_Programmation serveur 2 (ProgServ2)_](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=7280)
 enseigné à la
 [Haute Ecole d'Ingénierie et de Gestion du Canton de Vaud (HEIG-VD)](https://heig-vd.ch),
 Suisse !
@@ -15,7 +15,7 @@ Suisse !
 
 - Comprendre et appliquer certains concepts avancés de PHP.
 - Déployer et accéder à une application PHP sur Internet.
-- Gérer plusieurs utilisateurs avec l'authentification et gestion des accès.
+- Gérer plusieurs utilisateurs avec authentification et gestion des accès.
 - Réaliser une application PHP de taille intermédiaire.
 
 Grâce à ces compétences, la personne qui étudie sera en mesure de développer des
@@ -39,7 +39,7 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 Les dates sont tirées du
 [calendrier académique HEIG-VD](https://heig-vd.ch/formation/bachelor/calendrier-academique/).
 
-|               Cours | Dates             | 1ère partie                                                    | 2ème partie                                 | État[^etat] |
+|               Cours | Dates             | 1ère partie[^partie]                                           | 2ème partie[^partie]                        | État[^etat] |
 | ------------------: | :---------------- | :------------------------------------------------------------- | :------------------------------------------ | :---------- |
 |                   - | 15.09. - 21.09.25 | -                                                              | -                                           | -           |
 |    [01](#-cours-01) | 22.09. - 28.09.25 | Modalités de l'unité d'enseignement et notions avancées de PHP | Projet (1/8)                                | 🔴 À faire  |
@@ -152,3 +152,8 @@ Ce travail est sous licence
     🟢 Prêt : le cours est prêt à être utilisé. 🟡 En cours : le cours est en
     cours de rédaction/de relecture. 🔴 À faire : le cours doit être rédigé/mis
     à jour.
+
+[^partie]:
+    Chaque partie dure généralement deux périodes (2 x 45 minutes). Cependant,
+    la partie peut être plus longue ou plus courte selon la complexité des
+    sujets abordés et le rythme des personnes qui étudient.
