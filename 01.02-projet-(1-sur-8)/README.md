@@ -9,7 +9,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 - Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
   d'évaluation : [Lien vers le contenu](.)
-- Supports de cours : [Lien vers le contenu](./01-support-de-cours/README.md) ·
+- Supports de cours : [Lien vers le contenu](./01-supports-de-cours/README.md) ·
   [Presentation (web)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.02-projet-(1-sur-8)/01-supports-de-cours/index.html>)
   ·
   [Presentation (PDF)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.02-projet-(1-sur-8)/01-supports-de-cours/01.02-projet-(1-sur-8)-presentation.pdf>)
