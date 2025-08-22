@@ -3,7 +3,7 @@
 [![Licence](https://img.shields.io/github/license/heig-vd-progserv-course/heig-vd-progserv2-course)](./LICENSE.md)
 
 Bienvenue sur le dépôt principal de l'unité d'enseignement
-[_Programmation serveur 2 (ProgServ2)_](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=7280)
+[Programmation serveur 2 (ProgServ2)](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=7280)
 enseigné à la
 [Haute Ecole d'Ingénierie et de Gestion du Canton de Vaud (HEIG-VD)](https://heig-vd.ch),
 Suisse !

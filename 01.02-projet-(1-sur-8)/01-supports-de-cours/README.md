@@ -86,25 +86,25 @@ La note de votre travail sera calculée à l'aide de la formule suivante :
 
 $\text{Note du projet} =\frac{\text{Nombre de points obtenus}}{\text{Nombre de points totaux}} * 5 + 1$
 
-|     # | Critère                                                                                                                                                                          | Points |
-| ----: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-|     1 | L'application est déployée et accessible sur Internet.                                                                                                                           |      2 |
-|     2 | La plateforme propose au moins deux pages publiques (accessibles sans connexion) et au moins quatre pages privées (accessibles après connexion).                                 |      2 |
-|     3 | La plateforme est traduite dans au moins deux langues.                                                                                                                           |      2 |
-|     4 | La page d'accueil permet de comprendre rapidement l'objectif de la plateforme et propose un accès aux principales fonctionnalités.                                               |      2 |
-|     5 | La plateforme propose un formulaire qui permet de se créer un nouveau compte sur la plateforme.                                                                                  |      2 |
-|     6 | La plateforme envoie un email de confirmation lors de la création d'un compte.                                                                                                   |      2 |
-|     7 | La plateforme propose un formulaire qui permet de se connecter à la plateforme.                                                                                                  |      2 |
-|     8 | Une fois la personne connectée, la plateforme maintient la session de la personne.                                                                                               |      2 |
-|     9 | Une fois la personne connectée, la plateforme permet à la personne de se déconnecter.                                                                                            |      2 |
-|    10 | La plateforme supporte au moins deux rôles d'utilisateur (par exemple : _utilisateur_ et _administrateur_).                                                                      |      2 |
-|    12 | Seules les personnes autorisées peuvent accéder aux données ou les manipuler selon leur rôle.                                                                                    |      2 |
-|    11 | La plateforme permet de gérer au moins deux domaines/types de ressources avec des relations/liens entre elles (par exemple : _articles_ et _utilisateurs_)[^multiples-domaines]. |      2 |
-|    13 | La plateforme stocke les mots de passe de façon sécurisée dans la base de données.                                                                                               |      2 |
-|    14 | Les différentes classes utilisées sont chargées automatiquement.                                                                                                                 |      2 |
-|    15 | Les informations de connexion à la base de données proviennent d'un fichier de configuration.                                                                                    |      2 |
-|    16 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalons](#jalons)).                         | 6 \* 2 |
-| Total |                                                                                                                                                                                  |     42 |
+|         # | Critère                                                                                                                                                                          | Points |
+| --------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+|         1 | L'application est déployée sur Internet et est fonctionnelle.                                                                                                                    |      2 |
+|         2 | La plateforme propose au moins deux pages publiques (accessibles sans connexion) et au moins quatre pages privées (accessibles après connexion).                                 |      2 |
+|         3 | La plateforme est traduite dans au moins deux langues.                                                                                                                           |      2 |
+|         4 | La page d'accueil permet de comprendre rapidement l'objectif de la plateforme et propose un accès aux principales fonctionnalités.                                               |      2 |
+|         5 | La plateforme propose un formulaire qui permet de se créer un nouveau compte sur la plateforme.                                                                                  |      2 |
+|         6 | La plateforme envoie un email de confirmation lors de la création d'un compte.                                                                                                   |      2 |
+|         7 | La plateforme propose un formulaire qui permet de se connecter à la plateforme.                                                                                                  |      2 |
+|         8 | Une fois la personne connectée, la plateforme maintient la session de la personne.                                                                                               |      2 |
+|         9 | Une fois la personne connectée, la plateforme permet à la personne de se déconnecter.                                                                                            |      2 |
+|        10 | La plateforme supporte au moins deux rôles d'utilisateur (par exemple : _utilisateur_ et _administrateur_).                                                                      |      2 |
+|        12 | Seules les personnes autorisées peuvent accéder aux données ou les manipuler selon leur rôle.                                                                                    |      2 |
+|        11 | La plateforme permet de gérer au moins deux domaines/types de ressources avec des relations/liens entre elles (par exemple : _articles_ et _utilisateurs_)[^multiples-domaines]. |      2 |
+|        13 | La plateforme stocke les mots de passe de façon sécurisée dans la base de données.                                                                                               |      2 |
+|        14 | Les différentes classes utilisées sont chargées automatiquement.                                                                                                                 |      2 |
+|        15 | Les informations de connexion à la base de données proviennent d'un fichier de configuration.                                                                                    |      2 |
+|        16 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalons](#jalons)).                         | 6 \* 2 |
+| **Total** |                                                                                                                                                                                  | **42** |
 
 ## Contraintes
 
@@ -119,7 +119,7 @@ Le projet doit respecter les règles suivantes :
 - Le projet est réalisé en PHP, avec une base de données MySQL/MariaDB.
 - Le projet doit respecter les bonnes pratiques étudiées et acquises jusqu'ici
   dans le cursus de formation. Cela implique les éléments étudiés en
-  [_Programmation serveur 1_](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main),
+  [Programmation serveur 1 (ProgServ1)](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main),
   tels que la validation côté serveur et client, le nettoyage des saisies
   utilisateur, la protection contre les attaques courantes (par exemple :
   injection SQL, XSS), les principes de la programmation orientée objet, rédiger
@@ -146,7 +146,7 @@ Votre travail doit être remis comme suit :
 Un e-mail doit être envoyé à
 [`ludovic.delafontaine@heig-vd.ch`](mailto:ludovic.delafontaine@heig-vd.ch)
 contenant une archive ZIP de votre projet ou le lien vers un dépôt Git contenant
-votre projet. Tous les membres du groupe sont mis en copie du mail.
+votre projet. Tou.tes les membres du groupe sont mis en copie du mail.
 
 > [!CAUTION]
 >
@@ -170,12 +170,12 @@ corps enseignant !
 <summary>Modèle d'e-mail pour le corps enseignant</summary>
 
 ```text
-[DAI 202X-202Y] Retours sur le travail pratique Z
+[ProgServ2 202X-202Y] Retours sur le projet
 
 Bonjour,
 
 Vous trouverez en pièce jointe les retours que nous vous avons faits pour le
-travail pratique.
+projet.
 
 La note a été saisie dans GAPS également.
 
@@ -186,6 +186,31 @@ Cordialement,
 ```
 
 </details>
+
+## Conseils
+
+### Restez simple
+
+Évitez de créer des fonctionnalités ou des éléments qui ne sont pas demandés
+dans le cahier des charges ou qui vont au-delà de celui-ci. Concentrez-vous sur
+les besoins initiaux, partez avec une solution simple et fonctionnelle, puis
+améliorez/rajoutez de nouvelles choses ensuite.
+
+### Mettez en place un environnement de travail collaboratif
+
+Utilisez des outils de gestion de projet (comme GitHub, Trello, etc.) pour
+faciliter la collaboration au sein de votre équipe. Assurez-vous que chaque
+membre du groupe a accès aux ressources nécessaires et comprenne bien son rôle
+dans le projet.
+
+Si vous n'êtes pas familier.e avec Git/GitHub, n'hésitez pas à consulter les
+ressources suivantes ou à demander de l'aide au corps enseignant :
+
+- <https://github.com/MediaComem/comem-archidep/tree/main>, dépôt Git du cours
+  ArchiDep, enseigné à la HEIG-VD dans le département COMEM+.
+- <https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.03-git-github-and-markdown>,
+  cours sur Git, GitHub et Markdown du cours DAI, enseigné à la HEIG-VD dans le
+  département TIC (en anglais).
 
 ## Jalons
 
@@ -303,6 +328,6 @@ A faire pour le rendu final :
     Lorsque nous parlons de plusieurs domaines, nous entendons par-là que
     l'application doit aller plus loin que "juste" gérer une collection de
     données (tel que vu dans l'unité d'enseignement
-    [Programmation serveur 1](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main))
+    [Programmation serveur 1 (ProgServ1)](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main))
     et doit également prendre en compte les interactions entre ces différents
     domaines (la gestion des utilisateurs, la gestion des produits, etc.).
