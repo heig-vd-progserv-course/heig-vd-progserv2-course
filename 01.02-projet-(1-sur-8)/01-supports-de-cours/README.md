@@ -84,7 +84,7 @@ l'échelle suivante :
 
 La note de votre travail sera calculée à l'aide de la formule suivante :
 
-$\text{Note du projet} =\frac{\text{Nombre de points obtenus}}{\text{Nombre de points totaux}} * 5 + 1$.
+$\text{Note du projet} =\frac{\text{Nombre de points obtenus}}{\text{Nombre de points totaux}} * 5 + 1$
 
 |     # | Critère                                                                                                                                                                          | Points |
 | ----: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
@@ -278,6 +278,11 @@ A faire pour le prochain cours :
 - Réponses aux éventuels questions/besoins.
 - S'assurer que tout le monde a bien tout ce qu'il lui faut pour finaliser le
   projet.
+
+A faire pour le prochain cours :
+
+- [x] Arriver gentiment au bout de l'application.
+- [x] Réviser pour l'évaluation.
 
 ### Jalon 8
 
