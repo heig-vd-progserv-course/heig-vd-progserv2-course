@@ -19,7 +19,10 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Objectifs
 
-- TODO
+- Réaliser une application web complète avec PHP, incluant une interface
+  utilisateur, une logique métier et une persistance des données.
+- Gérer correctement l'authentification et les accès aux différentes pages.
+- Déployer et accéder à l'application web depuis Internet.
 
 ## Méthodes d'enseignement et d'apprentissage
 
