@@ -68,7 +68,24 @@ temps dont vous disposez pour le réaliser.
 Si vous n'avez pas d'idée, consulter le corps enseignant et il vous aidera à en
 trouver une.
 
-Un cahier des charges sera demandé afin de valider l'idée.
+Un cahier des charges sera demandé afin de valider l'idée, comportant les points
+suivants :
+
+- Les membres de l'équipe.
+- Fonctionnalités principales de l'application.
+- Fonctionnalités optionnelles de l'application (si le temps le permet).
+
+En fin de projet, ce même document devra être mis à jour pour refléter les
+fonctionnalités réellement implémentées et une conclusion sur le projet.
+
+Ce document doit se limiter à quelques pages seulement.
+
+> [!CAUTION]
+>
+> Ce document doit être envoyé dans les deux premières semaines du projet à
+> l'adresse
+> [`ludovic.delafontaine@heig-vd.ch`](mailto:ludovic.delafontaine@heig-vd.ch) au
+> format PDF, comme indiqué dans la section [Contraintes](#contraintes).
 
 ## Critères d'évaluation
 
@@ -101,7 +118,7 @@ $\text{Note du projet} =\frac{\text{Nombre de points obtenus}}{\text{Nombre de p
 |        12 | Seules les personnes autorisées peuvent accéder aux données ou les manipuler selon leur rôle.                                                                                    |      2 |
 |        11 | La plateforme permet de gérer au moins deux domaines/types de ressources avec des relations/liens entre elles (par exemple : _articles_ et _utilisateurs_)[^multiples-domaines]. |      2 |
 |        13 | La plateforme stocke les mots de passe de façon sécurisée dans la base de données.                                                                                               |      2 |
-|        14 | Les différentes classes utilisées sont chargées automatiquement.                                                                                                                 |      2 |
+|        14 | L'application utilise entièrement les principes de la programmation orientée objet et les classes sont chargées automatiquement.                                                 |      2 |
 |        15 | Les informations de connexion à la base de données proviennent d'un fichier de configuration.                                                                                    |      2 |
 |        16 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalons](#jalons)).                         | 6 \* 2 |
 | **Total** |                                                                                                                                                                                  | **42** |
@@ -122,8 +139,8 @@ Le projet doit respecter les règles suivantes :
   [Programmation serveur 1 (ProgServ1)](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main),
   tels que la validation côté serveur et client, le nettoyage des saisies
   utilisateur, la protection contre les attaques courantes (par exemple :
-  injection SQL, XSS), les principes de la programmation orientée objet, rédiger
-  du code lisible, agréable à lire et explicite, etc.
+  injection SQL, XSS), rédiger du code lisible, agréable à lire et explicite,
+  etc.
 - Vous devez indiquer vos sources si vous avez utilisé des éléments dont vous
   n'êtes pas l'auteur.trice (code provenant d'Internet, code généré par des
   outils d'IA, etc.). Vous devez également indiquer dans votre rapport final à
@@ -145,8 +162,13 @@ Votre travail doit être remis comme suit :
 
 Un e-mail doit être envoyé à
 [`ludovic.delafontaine@heig-vd.ch`](mailto:ludovic.delafontaine@heig-vd.ch)
-contenant une archive ZIP de votre projet ou le lien vers un dépôt Git contenant
-votre projet. Tou.tes les membres du groupe sont mis en copie du mail.
+contenant une archive ZIP ou le lien vers un dépôt Git contenant :
+
+- Le code source de votre projet.
+- Le rapport contenant le cahier des charges et une conclusion comme décrit dans
+  [Validation de l'idée](#validation-de-lidée) au format PDF.
+
+Tou.tes les membres du groupe sont mis en copie du mail.
 
 > [!CAUTION]
 >
