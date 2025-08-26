@@ -40,30 +40,30 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 Les dates sont tirées du
 [calendrier académique HEIG-VD](https://heig-vd.ch/formation/bachelor/calendrier-academique/).
 
-|               Cours | Dates                        | 1ère partie[^1ere-partie]                                                        | 2ème partie[^2eme-partie]                   | État[^etat] |
-| ------------------: | :--------------------------- | :------------------------------------------------------------------------------- | :------------------------------------------ | :---------- |
-|    [00](#-cours-00) | _Avant le début du semestre_ | **Mettre en place son environnement de développement**                           | -                                           | -           |
-|                   - | 15.09. - 21.09.25            | -                                                                                | -                                           | -           |
-|    [01](#-cours-01) | 22.09. - 28.09.25            | **Modalités de l'unité d'enseignement et programmation orientée objet (avancé)** | **Projet (1/8)**                            | 🔴 À faire  |
-|    [02](#-cours-02) | 29.09. - 05.10.25            | **Bases de données et PDO (avancé)**                                             | **Projet (2/8)**                            | 🔴 À faire  |
-|    [03](#-cours-03) | 06.10. - 12.10.25            | **Déploiement**                                                                  | **Projet (3/8)**                            | 🔴 À faire  |
-|                   - | 13.10. - 19.10.25            | _Pas de cours_                                                                   | _Pas de cours_                              | -           |
-|                   - | 20.10. - 26.10.25            | _Pas de cours : semaine interdisciplinaire_                                      | _Pas de cours : semaine interdisciplinaire_ | -           |
-|    [04](#-cours-04) | 27.10. - 02.11.25            | **Cookies, préférences et gestion multilingues (i18n)**                          | **Projet (4/8)**                            | 🔴 À faire  |
-|    [05](#-cours-05) | 03.11. - 09.11.25            | **Sessions et authentification**                                                 | **Projet (5/8)**                            | 🔴 À faire  |
-|                   - | 10.11. - 16.11.25            | _Pas de cours_                                                                   | _Pas de cours_                              | -           |
-|    [06](#-cours-06) | 17.11. - 23.11.25            | **Gestion et envoi des e-mails**                                                 | **Projet (6/8)**                            | 🔴 À faire  |
-|    [07](#-cours-07) | 24.11. - 30.11.25            | **Récapitulatif de l'unité d'enseignement**                                      | **Projet (7/8)**                            | 🔴 À faire  |
-|                   - | 01.12. - 07.12.25            | _Pas de cours_                                                                   | _Pas de cours_                              | -           |
-|                   - | 08.12. - 14.12.25            | _Pas de cours_                                                                   | _Pas de cours_                              | -           |
-| 🚨 [08](#-cours-08) | 15.12. - 21.12.25            | **Évaluation**                                                                   | **Projet (8/8)**                            | 🔴 À faire  |
-|                   - | 22.12. - 28.12.25            | _Pas de cours : vacances_                                                        | _Pas de cours : vacances_                   | -           |
-|                   - | 29.12. - 04.01.26            | _Pas de cours : vacances_                                                        | _Pas de cours : vacances_                   | -           |
-|                   - | 05.01. - 11.01.26            | _Pas de cours_                                                                   | _Pas de cours_                              | -           |
-|                   - | 12.01. - 18.01.26            | _Pas de cours_                                                                   | _Pas de cours_                              | -           |
-|                   - | 19.01. - 25.01.26            | _Pas de cours_                                                                   | _Pas de cours_                              | -           |
-|                   - | 26.01. - 01.02.26            | _Pas de cours_                                                                   | _Pas de cours_                              | -           |
-|                   - | 02.02. - 08.02.26            | _Pas de cours_                                                                   | _Pas de cours_                              | -           |
+|               Cours | Dates                        | 1ère partie[^1ere-partie]                                                    | 2ème partie[^2eme-partie]                   | État[^etat] |
+| ------------------: | :--------------------------- | :--------------------------------------------------------------------------- | :------------------------------------------ | :---------- |
+|    [00](#-cours-00) | _Avant le début du semestre_ | Mettre en place son environnement de développement                           | -                                           | -           |
+|                   - | 15.09. - 21.09.25            | -                                                                            | -                                           | -           |
+|    [01](#-cours-01) | 22.09. - 28.09.25            | Modalités de l'unité d'enseignement et programmation orientée objet (avancé) | Projet (1/8)                                | 🔴 À faire  |
+|    [02](#-cours-02) | 29.09. - 05.10.25            | Bases de données et PDO (avancé)                                             | Projet (2/8)                                | 🔴 À faire  |
+|    [03](#-cours-03) | 06.10. - 12.10.25            | Déploiement                                                                  | Projet (3/8)                                | 🔴 À faire  |
+|                   - | 13.10. - 19.10.25            | _Pas de cours_                                                               | _Pas de cours_                              | -           |
+|                   - | 20.10. - 26.10.25            | _Pas de cours : semaine interdisciplinaire_                                  | _Pas de cours : semaine interdisciplinaire_ | -           |
+|    [04](#-cours-04) | 27.10. - 02.11.25            | Cookies, préférences et gestion multilingues (i18n)                          | Projet (4/8)                                | 🔴 À faire  |
+|    [05](#-cours-05) | 03.11. - 09.11.25            | Sessions et authentification                                                 | Projet (5/8)                                | 🔴 À faire  |
+|                   - | 10.11. - 16.11.25            | _Pas de cours_                                                               | _Pas de cours_                              | -           |
+|    [06](#-cours-06) | 17.11. - 23.11.25            | Gestion et envoi des e-mails                                                 | Projet (6/8)                                | 🔴 À faire  |
+|    [07](#-cours-07) | 24.11. - 30.11.25            | Récapitulatif de l'unité d'enseignement                                      | Projet (7/8)                                | 🔴 À faire  |
+|                   - | 01.12. - 07.12.25            | _Pas de cours_                                                               | _Pas de cours_                              | -           |
+|                   - | 08.12. - 14.12.25            | _Pas de cours_                                                               | _Pas de cours_                              | -           |
+| 🚨 [08](#-cours-08) | 15.12. - 21.12.25            | Évaluation                                                                   | Projet (8/8)                                | 🔴 À faire  |
+|                   - | 22.12. - 28.12.25            | _Pas de cours : vacances_                                                    | _Pas de cours : vacances_                   | -           |
+|                   - | 29.12. - 04.01.26            | _Pas de cours : vacances_                                                    | _Pas de cours : vacances_                   | -           |
+|                   - | 05.01. - 11.01.26            | _Pas de cours_                                                               | _Pas de cours_                              | -           |
+|                   - | 12.01. - 18.01.26            | _Pas de cours_                                                               | _Pas de cours_                              | -           |
+|                   - | 19.01. - 25.01.26            | _Pas de cours_                                                               | _Pas de cours_                              | -           |
+|                   - | 26.01. - 01.02.26            | _Pas de cours_                                                               | _Pas de cours_                              | -           |
+|                   - | 02.02. - 08.02.26            | _Pas de cours_                                                               | _Pas de cours_                              | -           |
 
 ## 🕛 Cours 00
 
@@ -75,7 +75,7 @@ Les dates sont tirées du
 
 ## 🕐 Cours 01
 
-### Modalités de l'unité d'enseignement et notions avancées de PHP
+### Modalités de l'unité d'enseignement et programmation orientée objet (avancé)
 
 - Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
   d'évaluation : [Lien vers le contenu]()
@@ -99,7 +99,12 @@ Les dates sont tirées du
 
 ### Bases de données et PDO (avancé)
 
-TODO
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation : [Lien vers le contenu]()
+- Supports de cours : [Lien vers le contenu]() · [Presentation (web)]() ·
+  [Presentation (PDF)]()
+- Exemples de code : [Lien vers le contenu]()
+- Exercices : [Lien vers les exercices]()
 
 ### Projet (2/8)
 
@@ -116,7 +121,12 @@ TODO
 
 ### Déploiement
 
-TODO
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation : [Lien vers le contenu]()
+- Supports de cours : [Lien vers le contenu]() · [Presentation (web)]() ·
+  [Presentation (PDF)]()
+- Exemples de code : [Lien vers le contenu]()
+- Exercices : [Lien vers les exercices]()
 
 ### Projet (3/8)
 
@@ -133,7 +143,12 @@ TODO
 
 ### Cookies, préférences et gestion multilingues (i18n)
 
-TODO
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation : [Lien vers le contenu]()
+- Supports de cours : [Lien vers le contenu]() · [Presentation (web)]() ·
+  [Presentation (PDF)]()
+- Exemples de code : [Lien vers le contenu]()
+- Exercices : [Lien vers les exercices]()
 
 ### Projet (4/8)
 
@@ -150,7 +165,12 @@ TODO
 
 ### Sessions et authentification
 
-TODO
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation : [Lien vers le contenu]()
+- Supports de cours : [Lien vers le contenu]() · [Presentation (web)]() ·
+  [Presentation (PDF)]()
+- Exemples de code : [Lien vers le contenu]()
+- Exercices : [Lien vers les exercices]()
 
 ### Projet (5/8)
 
@@ -167,7 +187,12 @@ TODO
 
 ### Gestion et envoi des e-mails
 
-TODO
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation : [Lien vers le contenu]()
+- Supports de cours : [Lien vers le contenu]() · [Presentation (web)]() ·
+  [Presentation (PDF)]()
+- Exemples de code : [Lien vers le contenu]()
+- Exercices : [Lien vers les exercices]()
 
 ### Projet (6/8)
 
@@ -184,7 +209,12 @@ TODO
 
 ### Récapitulatif de l'unité d'enseignement
 
-TODO
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation : [Lien vers le contenu]()
+- Supports de cours : [Lien vers le contenu]() · [Presentation (web)]() ·
+  [Presentation (PDF)]()
+- Exemples de code : [Lien vers le contenu]()
+- Exercices : [Lien vers les exercices]()
 
 ### Projet (7/8)
 
@@ -201,7 +231,10 @@ TODO
 
 ### Évaluation
 
-TODO
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation : [Lien vers le contenu]()
+- Supports de cours : [Lien vers le contenu]() · [Presentation (web)]() ·
+  [Presentation (PDF)]()
 
 ### Projet (8/8)
 
@@ -225,11 +258,11 @@ Ce travail est sous licence
     à jour.
 
 [^1ere-partie]:
-    Chaque partie dure généralement deux périodes (2 x 45 minutes). Cependant,
-    la partie peut être plus longue ou plus courte selon la complexité des
-    sujets abordés et le rythme des personnes qui étudient.
+    La partie dure généralement deux périodes (2 x 45 minutes). Cependant, elle
+    peut être plus longue ou plus courte selon la complexité des sujets abordés
+    et le rythme des personnes qui étudient.
 
 [^2eme-partie]:
-    Chaque partie dure généralement deux périodes (2 x 45 minutes). Cependant,
-    la partie peut être plus longue ou plus courte selon la complexité des
-    sujets abordés et le rythme des personnes qui étudient.
+    La partie dure généralement deux périodes (2 x 45 minutes). Cependant, elle
+    peut être plus longue ou plus courte selon la complexité des sujets abordés
+    et le rythme des personnes qui étudient.
