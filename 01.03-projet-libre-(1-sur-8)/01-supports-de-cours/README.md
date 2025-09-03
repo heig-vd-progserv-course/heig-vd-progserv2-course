@@ -1,4 +1,4 @@
-# Projet
+# Projet libre
 
 L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).
@@ -11,9 +11,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.02-projet-(1-sur-8)/01-supports-de-cours/index.html>)
+  [Presentation (web)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-(1-sur-8)/01-supports-de-cours/index.html>)
   ·
-  [Presentation (PDF)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.02-projet-(1-sur-8)/01-supports-de-cours/01.02-projet-(1-sur-8)-presentation.pdf>)
+  [Presentation (PDF)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-(1-sur-8)/01-supports-de-cours/01.03-projet-(1-sur-8)-presentation.pdf>)
 
 ## Introduction
 
@@ -120,7 +120,12 @@ $\text{Note du projet} =\frac{\text{Nombre de points obtenus}}{\text{Nombre de p
 |        13 | La plateforme stocke les mots de passe de façon sécurisée dans la base de données.                                                                                               |      2 |
 |        14 | L'application utilise entièrement les principes de la programmation orientée objet et les classes sont chargées automatiquement.                                                 |      2 |
 |        15 | Les informations de connexion à la base de données proviennent d'un fichier de configuration.                                                                                    |      2 |
-|        16 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalons](#jalons)).                         | 6 \* 2 |
+|        16 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 2](#jalon-2)).                       |      2 |
+|        17 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 3](#jalon-3)).                       |      2 |
+|        18 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 4](#jalon-4)).                       |      2 |
+|        19 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 5](#jalon-5)).                       |      2 |
+|        20 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 6](#jalon-6)).                       |      2 |
+|        21 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 7](#jalon-7)).                       |      2 |
 | **Total** |                                                                                                                                                                                  | **42** |
 
 ## Contraintes
@@ -165,8 +170,8 @@ Un e-mail doit être envoyé à
 contenant une archive ZIP ou le lien vers un dépôt Git contenant :
 
 - Le code source de votre projet.
-- Le rapport contenant le cahier des charges et une conclusion comme décrit dans
-  [Validation de l'idée](#validation-de-lidée) au format PDF.
+- Le rapport contenant le cahier des charges et une conclusion au format PDF,
+  comme indiqué dans la section [Validation de l'idée](#validation-de-lidée).
 
 Tou.tes les membres du groupe sont mis en copie du mail.
 
@@ -339,7 +344,8 @@ A faire pour le prochain cours :
 
 A faire pour le rendu final :
 
-- [x] Respecter la forme du rendu final.
+- [x] Avoir terminé l'application.
+- [x] Rendre le projet en respectant la forme du rendu final.
 
 **Ce jalon ne compte pas dans l'évaluation finale.**
 
