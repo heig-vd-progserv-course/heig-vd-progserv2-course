@@ -32,6 +32,21 @@ _paginate: false
 
 ![bg opacity:0.1][illustration-principale]
 
+## _Retrouvez plus de détails dans le support de cours_
+
+<!-- _class: lead -->
+
+_Cette présentation est un résumé du support de cours. Pour plus de détails,
+consultez le [support de cours][cours]._
+
+## Objectifs
+
+- Rappeler les concepts de base de la programmation orientée objet.
+- Appliquer les notions d'interface, d'héritage et d'abstraction avec la
+  programmation orientée objet.
+
+![bg right:40%][illustration-objectifs]
+
 ## Programmation orientée objet, un rappel
 
 TODO

@@ -84,11 +84,9 @@ consultez le [support de cours][cours]._
 
 ## Objectifs
 
-- Lister les objectifs de l'unité d'enseignement
-- Lister les modalités d'organisation de l'unité d'enseignement
-- Lister les modalités d'évaluation
-- Rappeler les concepts de base de la programmation orientée objet.
-- Appliquer les notions d'interface et d'héritage avec la POO.
+- Lister les objectifs de l'unité d'enseignement.
+- Lister les modalités d'organisation de l'unité d'enseignement.
+- Lister les modalités d'évaluation.
 
 ![bg right:40%][illustration-objectifs]
 
@@ -244,7 +242,32 @@ Quelques règles concernant l'utilisation de ces outils :
 
 Est-ce que vous avez des questions ?
 
-## Sources (1/3)
+---
+
+Est-ce que les personnes suivantes pourraient venir me voir à la fin du cours ?
+Je veux juste parler de ProgServ1 (pas en danger). :)
+
+<div class="two-columns">
+<div>
+
+- Carla H. et Djibril D.
+- Ivan K. et Mathias N.
+- Jennifer F., Kristina T. et Maureen G.
+- Liliana K. et Thierry K.
+- Tanguy V. et Thomas D.
+
+</div>
+<div>
+
+- Donit R.
+- Léana G.
+- Valentin F.
+- Lilou M.
+
+</div>
+</div>
+
+## Sources
 
 - [Illustration principale][illustration-principale] par
   [Richard Jacobs](https://unsplash.com/@rj2747) sur

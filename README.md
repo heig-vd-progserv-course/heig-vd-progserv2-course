@@ -99,6 +99,10 @@ Les dates sont tirées du
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.02-programmation-orientee-objet-avance/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.02-programmation-orientee-objet-avance/01-supports-de-cours/01.02-programmation-orientee-objet-avance-presentation.pdf)
+- Exemples de code :
+  [Lien vers le contenu](./01.02-programmation-orientee-objet-avance/02-exemples-de-code/)
+- Exercices :
+  [Lien vers le contenu](./01.02-programmation-orientee-objet-avance/03-exercices/README.md)
 
 ### Projet libre (1/8)
 
@@ -302,11 +306,13 @@ Ce travail est sous licence
     à jour.
 
 [^1ere-partie]:
-    Le contenu **principal** du cours. La partie dure généralement deux périodes
-    (2 x 45 minutes). Cependant, elle peut être plus longue ou plus courte selon
-    la complexité des sujets abordés et le rythme des personnes qui étudient.
+    Le contenu **principal** de la partie. D'autres contenus annexes peuvent
+    avoir lieu dans la partie. La partie dure généralement deux périodes (2 x 45
+    minutes). Cependant, elle peut être plus longue ou plus courte selon la
+    complexité des sujets abordés et le rythme des personnes qui étudient.
 
 [^2eme-partie]:
-    Le contenu **principal** du cours. La partie dure généralement deux périodes
-    (2 x 45 minutes). Cependant, elle peut être plus longue ou plus courte selon
-    la complexité des sujets abordés et le rythme des personnes qui étudient.
+    Le contenu **principal** de la partie. D'autres contenus annexes peuvent
+    avoir lieu dans la partie. La partie dure généralement deux périodes (2 x 45
+    minutes). Cependant, elle peut être plus longue ou plus courte selon la
+    complexité des sujets abordés et le rythme des personnes qui étudient.

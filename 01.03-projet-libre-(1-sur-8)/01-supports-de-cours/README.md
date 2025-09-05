@@ -44,8 +44,8 @@ pénalisé.es si vous le faites.
 
 ## Objectifs
 
-- Réaliser une application web complète avec PHP, incluant une interface
-  utilisateur, une logique métier et une persistance des données.
+- Réaliser une application web complète, incluant une interface utilisateur, une
+  logique métier et une persistance des données.
 - Gérer correctement l'authentification et les accès aux différentes pages.
 - Déployer et accéder à l'application web depuis Internet.
 
@@ -118,15 +118,16 @@ $\text{Note du projet} =\frac{\text{Nombre de points obtenus}}{\text{Nombre de p
 |        12 | Seules les personnes autorisées peuvent accéder aux données ou les manipuler selon leur rôle.                                                                                    |      2 |
 |        11 | La plateforme permet de gérer au moins deux domaines/types de ressources avec des relations/liens entre elles (par exemple : _articles_ et _utilisateurs_)[^multiples-domaines]. |      2 |
 |        13 | La plateforme stocke les mots de passe de façon sécurisée dans la base de données.                                                                                               |      2 |
-|        14 | L'application utilise entièrement les principes de la programmation orientée objet et les classes sont chargées automatiquement.                                                 |      2 |
-|        15 | Les informations de connexion à la base de données proviennent d'un fichier de configuration.                                                                                    |      2 |
-|        16 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 2](#jalon-2)).                       |      2 |
-|        17 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 3](#jalon-3)).                       |      2 |
-|        18 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 4](#jalon-4)).                       |      2 |
-|        19 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 5](#jalon-5)).                       |      2 |
-|        20 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 6](#jalon-6)).                       |      2 |
-|        21 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 7](#jalon-7)).                       |      2 |
-| **Total** |                                                                                                                                                                                  | **42** |
+|        14 | L'application est entièrement typée.                                                                                                                                             |      2 |
+|        15 | L'application utilise entièrement les principes de la programmation orientée objet et les classes sont chargées automatiquement.                                                 |      2 |
+|        16 | Les informations de connexion à la base de données proviennent d'un fichier de configuration.                                                                                    |      2 |
+|        17 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 2](#jalon-2)).                       |      2 |
+|        18 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 3](#jalon-3)).                       |      2 |
+|        19 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 4](#jalon-4)).                       |      2 |
+|        20 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 5](#jalon-5)).                       |      2 |
+|        21 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 6](#jalon-6)).                       |      2 |
+|        22 | Les différentes attentes de chaque jalon sont respectées et le travail est réparti équitablement entre les membres de l'équipe (voir [Jalon 7](#jalon-7)).                       |      2 |
+| **Total** |                                                                                                                                                                                  | **44** |
 
 ## Contraintes
 
@@ -154,16 +155,19 @@ Le projet doit respecter les règles suivantes :
 
 > [!CAUTION]
 >
-> Le non-respect de ces contraintes peut entraîner des sanctions sévères,
-> pouvant aller jusqu'à une pénalité de -1 point sur la note finale _**pour
-> chaque critère non respecté**_.
+> Le non-respect de ces contraintes peut entraîner des sanctions sévères, d'une
+> pénalité de -1 point sur la note finale _**pour chaque critère non
+> respecté**_.
 
 ## Soumission
 
 Votre travail doit être remis comme suit :
 
-- ProgServ2-A (mardi matin) : **À déterminer**
-- ProgServ2-B (mardi après-midi) : **À déterminer**
+- ProgServ2-A (mardi matin) : **21.12.2025 12h00** ou **04.01.2026 12h00**.
+- ProgServ2-B (mardi après-midi) : **21.12.2025 16h15** ou **04.01.2026 16h15**.
+
+La date de rendu est à décider ensemble pour les deux classes (soit avant ou
+après les vacances de Noël) à l'aide du sondage suivant : <TODO>.
 
 Un e-mail doit être envoyé à
 [`ludovic.delafontaine@heig-vd.ch`](mailto:ludovic.delafontaine@heig-vd.ch)
@@ -177,8 +181,9 @@ Tou.tes les membres du groupe sont mis en copie du mail.
 
 > [!CAUTION]
 >
-> Chaque jour de retard entraînera une pénalité de -1 point sur la note finale,
-> comme indiqué dans la section [Contraintes](#contraintes).
+> Chaque 24h de retard (dès une (1) minute après l'heure de rendu) entraînera
+> une pénalité de -1 point sur la note finale, comme indiqué dans la section
+> [Contraintes](#contraintes).
 
 ## Notes et retours
 
@@ -197,12 +202,12 @@ corps enseignant !
 <summary>Modèle d'e-mail pour le corps enseignant</summary>
 
 ```text
-[ProgServ2 202X-202Y] Retours sur le projet
+[ProgServ2 202X-202Y] Retours sur le projet libre
 
 Bonjour,
 
 Vous trouverez en pièce jointe les retours que nous vous avons faits pour le
-projet.
+projet libre.
 
 La note a été saisie dans GAPS également.
 
@@ -223,6 +228,12 @@ dans le cahier des charges ou qui vont au-delà de celui-ci. Concentrez-vous sur
 les besoins initiaux, partez avec une solution simple et fonctionnelle, puis
 améliorez/rajoutez de nouvelles choses ensuite.
 
+- N'essayez pas d'en faire trop.
+- Concentrez-vous sur l'essentiel.
+- Faites-le bien.
+
+Ne soyez pas Numérobis du film _Astérix et Obélix : Mission Cléopâtre_ !
+
 ### Mettez en place un environnement de travail collaboratif
 
 Utilisez des outils de gestion de projet (comme GitHub, Trello, etc.) pour
@@ -233,11 +244,13 @@ dans le projet.
 Si vous n'êtes pas familier.e avec Git/GitHub, n'hésitez pas à consulter les
 ressources suivantes ou à demander de l'aide au corps enseignant :
 
-- <https://github.com/MediaComem/comem-archidep/tree/main>, dépôt Git du cours
-  ArchiDep, enseigné à la HEIG-VD dans le département COMEM+.
+- <https://github.com/MediaComem/comem-archidep/tree/main>, dépôt Git de l'unité
+  d'enseignement Architecture et déploiement d'application (ArchiDep), enseigné
+  à la HEIG-VD dans le département COMEM+.
 - <https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.03-git-github-and-markdown>,
-  cours sur Git, GitHub et Markdown du cours DAI, enseigné à la HEIG-VD dans le
-  département TIC (en anglais).
+  cours sur Git, GitHub et Markdown de l'unité d'enseignement Développement
+  d'applications internet (DAI), enseigné à la HEIG-VD dans le département TIC
+  (en anglais).
 
 ## Jalons
 

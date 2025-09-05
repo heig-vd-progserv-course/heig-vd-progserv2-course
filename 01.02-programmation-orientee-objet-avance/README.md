@@ -13,12 +13,14 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/01.01-modalites-de-lunite-denseignement-presentation.pdf)
-- Exemples de code : [Lien vers le contenu](./02-exemples-de-code/README.md)
+- Exemples de code : [Lien vers le contenu](./02-exemples-de-code/)
 - Exercices : [Lien vers le contenu](./03-exercices/README.md)
 
 ## Objectifs
 
-TODO
+- Rappeler les concepts de base de la programmation orientée objet.
+- Appliquer les notions d'interface, d'héritage et d'abstraction avec la
+  programmation orientée objet.
 
 ## Méthodes d'enseignement et d'apprentissage
 
