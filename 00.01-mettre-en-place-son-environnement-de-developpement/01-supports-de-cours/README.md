@@ -8,8 +8,8 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Ressources
 
 - Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu](.)
-- Support de cours : [Lien vers le contenu](./01-supports-de-cours/README.md)
+  d'évaluation : [Lien vers le contenu](..)
+- Support de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
 
 ## Table des matières
 
