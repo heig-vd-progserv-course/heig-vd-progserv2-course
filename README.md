@@ -72,7 +72,7 @@ Les dates sont tirées du
   d'évaluation :
   [Lien vers le contenu](00.01-mettre-en-place-son-environnement-de-developpement/)
 - Support de cours :
-  [Lien vers le contenu](./00.01-mettre-en-place-son-environnement-de-developpement/supports-de-cours/README.md)
+  [Lien vers le contenu](./00.01-mettre-en-place-son-environnement-de-developpement/01-supports-de-cours/README.md)
 
 ## 🕐 Cours 01
 
