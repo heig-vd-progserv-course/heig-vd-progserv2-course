@@ -43,8 +43,8 @@ Les dates sont tirées du
 | ------------------: | :--------------------------- | :-------------------------------------------------- | :------------------------------------------ | :---------- |
 |    [00](#-cours-00) | _Avant le début du semestre_ | Mettre en place son environnement de développement  | -                                           | 🟢 Prêt     |
 |                   - | 15.09. - 21.09.25            | -                                                   | -                                           | -           |
-|    [01](#-cours-01) | 22.09. - 28.09.25            | Programmation orientée objet (avancé)               | Projet libre (1/8)                          | 🟢 Prêt     |
-|    [02](#-cours-02) | 29.09. - 05.10.25            | Bases de données et PDO (avancé)                    | Projet libre (2/8)                          | 🟡 En cours |
+|    [01](#-cours-01) | 22.09. - 28.09.25            | Programmation orientée objet (avancé)               | Projet libre (1/8)                          | 🟡 En cours |
+|    [02](#-cours-02) | 29.09. - 05.10.25            | Bases de données et PDO (avancé)                    | Projet libre (2/8)                          | 🔴 À faire  |
 |    [03](#-cours-03) | 06.10. - 12.10.25            | Déploiement                                         | Projet libre (3/8)                          | 🔴 À faire  |
 |                   - | 13.10. - 19.10.25            | _Pas de cours_                                      | _Pas de cours_                              | -           |
 |                   - | 20.10. - 26.10.25            | _Pas de cours : semaine interdisciplinaire_         | _Pas de cours : semaine interdisciplinaire_ | -           |
