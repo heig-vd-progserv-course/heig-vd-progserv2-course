@@ -244,8 +244,8 @@ Est-ce que vous avez des questions ?
 
 ---
 
-Est-ce que les personnes suivantes pourraient venir me voir à la fin du cours ?
-Je veux juste parler de ProgServ1 (pas en danger). :)
+Est-ce que les personnes suivantes pourraient venir me voir à la fin du cours
+(par groupe) ? Je veux juste parler de ProgServ1. :)
 
 <div class="two-columns">
 <div>
@@ -262,7 +262,7 @@ Je veux juste parler de ProgServ1 (pas en danger). :)
 - Donit R.
 - Léana G.
 - Valentin F.
-- Lilou M.
+- Steve B., Albertina B., Rania M., Lilou M., Loriane M., Nabil M. et Luka S.
 
 </div>
 </div>
