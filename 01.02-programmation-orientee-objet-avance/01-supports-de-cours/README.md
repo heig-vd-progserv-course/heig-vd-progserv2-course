@@ -114,6 +114,22 @@ Voici quelques opérateurs courants en PHP :
 La liste complète des opérateurs est disponible dans la documentation officielle
 de PHP : <https://www.php.net/manual/fr/language.operators.php>.
 
+Un exemple d'utilisation des opérateurs :
+
+```php
+if ($a > $b && $c === $d) {
+    echo "Condition met!";
+} else {
+    echo "Condition not met!";
+}
+```
+
+L'opérateur `===` vérifie à la fois la valeur et le type, tandis que `==` ne
+vérifie que la valeur.
+
+Préférez toujours `===` et `!==` pour éviter des comportements inattendus dus à
+la conversion de type automatique.
+
 ### Structures conditionnelles
 
 PHP propose plusieurs structures de contrôle pour gérer les flux de données et
@@ -1173,8 +1189,8 @@ chaque groupe de classes.
 
 ```php
 <?php
-// animal.php
-namespace MyApp\Animals;
+// src/Animals/Animal.php
+namespace Animals;
 
 abstract class Animal {
     protected string $name;
@@ -1199,12 +1215,12 @@ abstract class Animal {
 
 ```php
 <?php
-// pet.php
-namespace MyApp\Animals\Pets;
+// src/Animals/Pets/Pet.php
+namespace Animals\Pets;
 
 require_once 'animal.php';
 
-use MyApp\Animals\Animal;
+use Animals\Animal;
 
 abstract class Pet extends Animal {
     protected string $nickname;
@@ -1226,12 +1242,12 @@ abstract class Pet extends Animal {
 
 ```php
 <?php
-// dog.php
-namespace MyApp\Animals\Pets;
+// src/Animals/Pets/Dog.php
+namespace Animals\Pets;
 
 require_once 'pet.php';
 
-use MyApp\Animals\Pets\Pet;
+use Animals\Pets\Pet;
 
 class Dog extends Pet {
     public function __construct(string $name, float $size, string $nickname) {
@@ -1246,12 +1262,12 @@ class Dog extends Pet {
 
 ```php
 <?php
-// cat.php
-namespace MyApp\Animals\Pets;
+// src/Animals/Pets/Cat.php
+namespace Animals\Pets;
 
 require_once 'pet.php';
 
-use MyApp\Animals\Pets\Pet;
+use Animals\Pets\Pet;
 
 class Cat extends Pet {
     public function __construct(string $name, float $size, string $nickname) {
@@ -1269,11 +1285,11 @@ namespace ou utiliser son nom complet.
 
 ```php
 <?php
-require_once 'dog.php';
-require_once 'cat.php';
+require_once 'src/Animals/Pets/Dog.php';
+require_once 'src/Animals/Pets/Cat.php';
 
-use MyApp\Animals\Pets\Dog;
-use MyApp\Animals\Pets\Cat;
+use Animals\Pets\Dog;
+use Animals\Pets\Cat;
 
 $dog = new Dog("Nalia", 30.5, "Naliouille");
 $cat = new Cat("Tofu", 10.0, "Sushi");
@@ -1314,11 +1330,20 @@ automatique :
 ```php
 <?php
 // autoloader.php
-// Indique à PHP de considérer tous les fichiers avec l'extension `.php` pour l'autoloading
-spl_autoload_extensions(".php");
-
 // Charge les classes automatiquement
-spl_autoload_register();
+spl_autoload_register(function ($class) {
+    // Convertit les séparateurs de namespace en séparateurs de répertoires
+    $relativePath = str_replace('\\', '/', $class);
+
+    // Construit le chemin complet du fichier
+    $file = __DIR__ . '/../classes/' . $relativePath . '.php';
+
+    // Vérifie si le fichier existe avant de l'inclure
+    if (file_exists($file)) {
+        // Inclut le fichier de classe
+        require_once $file;
+    }
+});
 ```
 
 Ensuite, dans le fichier `index.php`, nous incluons simplement l'autoloader au
@@ -1329,8 +1354,8 @@ lieu d'inclure chaque fichier de classe individuellement :
 // index.php
 require 'autoloader.php'; // Plus besoin d'inclure chaque fichier de classe manuellement
 
-use MyApp\Animals\Pets\Dog;
-use MyApp\Animals\Pets\Cat;
+use Animals\Pets\Dog;
+use Animals\Pets\Cat;
 
 $dog = new Dog("Nalia", 30.5, "Naliouille");
 $cat = new Cat("Tofu", 10.0, "Sushi");

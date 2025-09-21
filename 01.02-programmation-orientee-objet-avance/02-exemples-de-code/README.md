@@ -5,7 +5,7 @@ L. Delafontaine, avec l'aide de
 
 Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-## Ressources
+## Ressources annexes
 
 - Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
   d'évaluation : [Lien vers le contenu](..)
