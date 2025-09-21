@@ -80,36 +80,29 @@ Sur la base de critères bien définis et d'une échelle à trois points :
 
 $\text{Note du projet} =\frac{\text{Nombre de points obtenus}}{\text{Nombre de points totaux}} * 5 + 1$
 
-## Contraintes (1/3)
+## Contraintes (1/2)
 
-- Toute l'équipe doit contribuer au projet et tou.tes les membres doivent être
-  en mesure de l'expliquer en détail si on leur demande. Dans des cas
-  exceptionnels, l'appréciation peut être individuelle.
+- Toute l'équipe doit contribuer au projet. Dans des cas exceptionnels,
+  l'appréciation peut être individuelle.
 - Le projet respecte le cahier des charges initial.
-- Le projet doit être terminé et remis à la date indiquée dans la section
-  [Soumission](#soumission-12).
-- Le projet est réalisé en PHP, avec une base de données MySQL/MariaDB.
+- Le projet doit être terminé et remis selon les instructions indiquées dans la
+  section [Soumission](#soumission-12).
+- Le projet est réalisé en PHP, avec une base de données MySQL/MariaDB, sans
+  utiliser de frameworks externes.
+- Le projet doit respecter les bonnes pratiques étudiées et acquises jusqu'ici.
+  Voir
+  [Programmation serveur 1 (ProgServ1)](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main).
 
-## Contraintes (2/3)
-
-- Le projet doit respecter les bonnes pratiques étudiées et acquises jusqu'ici
-  dans le cursus de formation. Cela implique les éléments étudiés en
-  [Programmation serveur 1 (ProgServ1)](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main),
-  tels que la validation côté serveur et client, le nettoyage des saisies
-  utilisateur, la protection contre les attaques courantes (par exemple :
-  injection SQL, XSS), rédiger du code lisible, agréable à lire et explicite,
-  etc.
-
-## Contraintes (3/3)
+## Contraintes (2/2)
 
 - Vous devez indiquer vos sources si vous avez utilisé des éléments dont vous
-  n'êtes pas l'auteur.trice (code provenant d'Internet, code généré par des
-  outils d'IA, etc.). Vous devez également indiquer dans votre rapport final à
-  quelles fins vous avez utilisé la ou les sources/outils. Si vous plagiez le
-  code d'un autre groupe, tous les groupes impliqués recevront une note de 1.
+  n'êtes pas l'auteur.trice. Vous devez également indiquer dans votre rapport
+  final à quelles fins vous avez utilisé la ou les sources/outils.
+- Le plagiat entraîne la note de 1. Si plusieurs groupes sont impliqués, tous
+  les groupes impliqués recevront une note de 1.
 
-**Le non-respect de ces contraintes peut entraîner des sanctions sévères, d'une
-pénalité de -1 point sur la note finale _pour chaque critère non respecté_.**
+Le non-respect de ces contraintes peut entraîner des sanctions sévères, et ce,
+**pour chaque critère non respecté**.
 
 ## Soumission (1/2)
 
