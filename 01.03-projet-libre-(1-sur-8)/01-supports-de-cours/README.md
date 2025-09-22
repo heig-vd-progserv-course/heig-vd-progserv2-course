@@ -1,16 +1,15 @@
-# Projet libre
+# Projet libre - Support de cours
 
 L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).
 
 Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-## Ressources
+## Ressources annexes
 
 - Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
   d'évaluation : [Lien vers le contenu](..)
-- Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
-  ·
+- Autres formes du support de cours :
   [Presentation (web)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-(1-sur-8)/01-supports-de-cours/index.html>)
   ·
   [Presentation (PDF)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-(1-sur-8)/01-supports-de-cours/01.03-projet-(1-sur-8)-presentation.pdf>)
@@ -55,7 +54,8 @@ Vous travaillerez en groupes de deux (2) à trois (3) personnes. Vous pouvez
 choisir votre ou vos partenaires. Si vous n'avez pas de partenaire, le corps
 enseignant vous en attribuera un.e.
 
-Pour annoncer votre groupe, remplissez le document suivant : <TODO>.
+Pour annoncer votre groupe, remplissez le document suivant :
+[[ProgServ2 2025-2026] Composition des groupes](https://docs.google.com/spreadsheets/d/1IC6aVPTo2YNmhBHygb93YnOE-ZnuPYBeLIiokFlCz8E/edit?usp=sharing).
 
 ## Validation de l'idée
 
@@ -115,8 +115,8 @@ $\text{Note du projet} =\frac{\text{Nombre de points obtenus}}{\text{Nombre de p
 |         8 | Une fois la personne connectée, la plateforme maintient la session de la personne.                                                                                               |      2 |
 |         9 | Une fois la personne connectée, la plateforme permet à la personne de se déconnecter.                                                                                            |      2 |
 |        10 | La plateforme supporte au moins deux rôles d'utilisateur (par exemple : _utilisateur_ et _administrateur_).                                                                      |      2 |
-|        12 | Seules les personnes autorisées peuvent accéder aux données ou les manipuler selon leur rôle.                                                                                    |      2 |
-|        11 | La plateforme permet de gérer au moins deux domaines/types de ressources avec des relations/liens entre elles (par exemple : _articles_ et _utilisateurs_)[^multiples-domaines]. |      2 |
+|        11 | Seules les personnes autorisées peuvent accéder aux données ou les manipuler selon leur rôle.                                                                                    |      2 |
+|        12 | La plateforme permet de gérer au moins deux domaines/types de ressources avec des relations/liens entre elles (par exemple : _articles_ et _utilisateurs_)[^multiples-domaines]. |      2 |
 |        13 | La plateforme stocke les mots de passe de façon sécurisée dans la base de données.                                                                                               |      2 |
 |        14 | L'application est entièrement typée.                                                                                                                                             |      2 |
 |        15 | L'application utilise entièrement les principes de la programmation orientée objet et les classes sont chargées automatiquement.                                                 |      2 |
@@ -137,9 +137,10 @@ Le projet doit respecter les règles suivantes :
   en mesure de l'expliquer en détail si on leur demande. Dans des cas
   exceptionnels, l'appréciation peut être individuelle.
 - Le projet respecte le cahier des charges initial.
-- Le projet doit être terminé et remis à la date indiquée dans la section
-  [Soumission](#soumission).
-- Le projet est réalisé en PHP, avec une base de données MySQL/MariaDB.
+- Le projet doit être terminé et remis selon les instructions indiquées dans la
+  section [Soumission](#soumission).
+- Le projet est réalisé en PHP, avec une base de données MySQL/MariaDB, sans
+  utiliser de frameworks externes (par exemple : Laravel, Symfony, etc.).
 - Le projet doit respecter les bonnes pratiques étudiées et acquises jusqu'ici
   dans le cursus de formation. Cela implique les éléments étudiés en
   [Programmation serveur 1 (ProgServ1)](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main),
@@ -150,14 +151,14 @@ Le projet doit respecter les règles suivantes :
 - Vous devez indiquer vos sources si vous avez utilisé des éléments dont vous
   n'êtes pas l'auteur.trice (code provenant d'Internet, code généré par des
   outils d'IA, etc.). Vous devez également indiquer dans votre rapport final à
-  quelles fins vous avez utilisé la ou les sources/outils. Si vous plagiez le
-  code d'un autre groupe, tous les groupes impliqués recevront une note de 1.
+  quelles fins vous avez utilisé la ou les sources/outils.
+- Le plagiat entraîne la note de 1. Si plusieurs groupes sont impliqués, tous
+  les groupes impliqués recevront une note de 1.
 
 > [!CAUTION]
 >
-> Le non-respect de ces contraintes peut entraîner des sanctions sévères, d'une
-> pénalité de -1 point sur la note finale _**pour chaque critère non
-> respecté**_.
+> Le non-respect de ces contraintes peut entraîner des sanctions sévères, et ce,
+> **pour chaque critère non respecté**.
 
 ## Soumission
 
@@ -167,7 +168,8 @@ Votre travail doit être remis comme suit :
 - ProgServ2-B (mardi après-midi) : **21.12.2025 16h15** ou **04.01.2026 16h15**.
 
 La date de rendu est à décider ensemble pour les deux classes (soit avant ou
-après les vacances de Noël) à l'aide du sondage suivant : <TODO>.
+après les vacances de Noël) à l'aide du sondage suivant :
+[ProgServ2 2025-2026 - Date de rendu du projet ](https://framaforms.org/progserv2-2025-2026-date-de-rendu-du-projet-1758026007).
 
 Un e-mail doit être envoyé à
 [`ludovic.delafontaine@heig-vd.ch`](mailto:ludovic.delafontaine@heig-vd.ch)

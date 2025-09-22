@@ -43,8 +43,8 @@ Les dates sont tirées du
 | ------------------: | :----------------------- | :-------------------------------------------------- | :------------------------------------------ | :---------- |
 |    [00](#-cours-00) | _Avant le premier cours_ | Mettre en place son environnement de développement  | -                                           | 🟢 Prêt     |
 |                   - | 15.09. - 21.09.25        | -                                                   | -                                           | -           |
-|    [01](#-cours-01) | 22.09. - 28.09.25        | Programmation orientée objet (avancé)               | Projet libre (1/8)                          | 🟡 En cours |
-|    [02](#-cours-02) | 29.09. - 05.10.25        | Bases de données et PDO (avancé)                    | Projet libre (2/8)                          | 🔴 À faire  |
+|    [01](#-cours-01) | 22.09. - 28.09.25        | Programmation orientée objet (avancé)               | Projet libre (1/8)                          | 🟢 Prêt     |
+|    [02](#-cours-02) | 29.09. - 05.10.25        | Bases de données et PDO (avancé)                    | Projet libre (2/8)                          | 🟡 En cours |
 |    [03](#-cours-03) | 06.10. - 12.10.25        | Déploiement                                         | Projet libre (3/8)                          | 🔴 À faire  |
 |                   - | 13.10. - 19.10.25        | _Pas de cours_                                      | _Pas de cours_                              | -           |
 |                   - | 20.10. - 26.10.25        | _Pas de cours : semaine interdisciplinaire_         | _Pas de cours : semaine interdisciplinaire_ | -           |
@@ -66,21 +66,15 @@ Les dates sont tirées du
 
 ## 🕛 Cours 00
 
-### Mettre en place son environnement de développement
+### [Mettre en place son environnement de développement](00.01-mettre-en-place-son-environnement-de-developpement/)
 
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation :
-  [Lien vers le contenu](00.01-mettre-en-place-son-environnement-de-developpement/)
 - Support de cours :
   [Lien vers le contenu](./00.01-mettre-en-place-son-environnement-de-developpement/01-supports-de-cours/README.md)
 
 ## 🕐 Cours 01
 
-### Modalités de l'unité d'enseignement
+### [Modalités de l'unité d'enseignement](./01.01-modalites-de-lunite-denseignement/)
 
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation :
-  [Lien vers le contenu](./01.01-modalites-de-lunite-denseignement/)
 - Supports de cours :
   [Lien vers le contenu](./01.01-modalites-de-lunite-denseignement/01-supports-de-cours/README.md)
   ·
@@ -88,11 +82,8 @@ Les dates sont tirées du
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/01.01-modalites-de-lunite-denseignement-presentation.pdf)
 
-### Programmation orientée objet (avancé)
+### [Programmation orientée objet (avancé)](./01.02-programmation-orientee-objet-avance/)
 
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation :
-  [Lien vers le contenu](./01.02-programmation-orientee-objet-avance/)
 - Supports de cours :
   [Lien vers le contenu](./01.02-programmation-orientee-objet-avance/01-supports-de-cours/README.md)
   ·
@@ -104,10 +95,8 @@ Les dates sont tirées du
 - Exercices :
   [Lien vers le contenu](./01.02-programmation-orientee-objet-avance/03-exercices/README.md)
 
-### Projet libre (1/8)
+### [Projet libre (1/8)](<./01.03-projet-libre-(1-sur-8)/>)
 
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu](<./01.03-projet-libre-(1-sur-8)/>)
 - Supports de cours :
   [Lien vers le contenu](<./01.03-projet-libre-(1-sur-8)/01-supports-de-cours/README.md>)
   ·
@@ -130,10 +119,8 @@ _À venir._
 - Exercices : [Lien vers les exercices]()
 -->
 
-### Projet libre (2/8)
+### [Projet libre (2/8)](<./01.03-projet-libre-(1-sur-8)/>)
 
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu](<./01.03-projet-libre-(1-sur-8)/>)
 - Supports de cours :
   [Lien vers le contenu](<./01.03-projet-libre-(1-sur-8)/01-supports-de-cours/README.md>)
   ·
@@ -156,10 +143,8 @@ _À venir._
 - Exercices : [Lien vers les exercices]()
 -->
 
-### Projet libre (3/8)
+### [Projet libre (3/8)](<./01.03-projet-libre-(1-sur-8)/>)
 
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu](<./01.03-projet-libre-(1-sur-8)/>)
 - Supports de cours :
   [Lien vers le contenu](<./01.03-projet-libre-(1-sur-8)/01-supports-de-cours/README.md>)
   ·
@@ -182,10 +167,8 @@ _À venir._
 - Exercices : [Lien vers les exercices]()
 -->
 
-### Projet libre (4/8)
+### [Projet libre (4/8)](<./01.03-projet-libre-(1-sur-8)/>)
 
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu](<./01.03-projet-libre-(1-sur-8)/>)
 - Supports de cours :
   [Lien vers le contenu](<./01.03-projet-libre-(1-sur-8)/01-supports-de-cours/README.md>)
   ·
@@ -208,10 +191,8 @@ _À venir._
 - Exercices : [Lien vers les exercices]()
 -->
 
-### Projet libre (5/8)
+### [Projet libre (5/8)](<./01.03-projet-libre-(1-sur-8)/>)
 
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu](<./01.03-projet-libre-(1-sur-8)/>)
 - Supports de cours :
   [Lien vers le contenu](<./01.03-projet-libre-(1-sur-8)/01-supports-de-cours/README.md>)
   ·
@@ -234,10 +215,8 @@ _À venir._
 - Exercices : [Lien vers les exercices]()
 -->
 
-### Projet libre (6/8)
+### [Projet libre (6/8)](<./01.03-projet-libre-(1-sur-8)/>)
 
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu](<./01.03-projet-libre-(1-sur-8)/>)
 - Supports de cours :
   [Lien vers le contenu](<./01.03-projet-libre-(1-sur-8)/01-supports-de-cours/README.md>)
   ·
@@ -260,10 +239,8 @@ _À venir._
 - Exercices : [Lien vers les exercices]()
 -->
 
-### Projet libre (7/8)
+### [Projet libre (7/8)](<./01.03-projet-libre-(1-sur-8)/>)
 
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu](<./01.03-projet-libre-(1-sur-8)/>)
 - Supports de cours :
   [Lien vers le contenu](<./01.03-projet-libre-(1-sur-8)/01-supports-de-cours/README.md>)
   ·
@@ -284,10 +261,8 @@ _À venir._
   [Presentation (PDF)]()
 -->
 
-### Projet libre (8/8)
+### [Projet libre (8/8)](<./01.03-projet-libre-(1-sur-8)/>)
 
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu](<./01.03-projet-libre-(1-sur-8)/>)
 - Supports de cours :
   [Lien vers le contenu](<./01.03-projet-libre-(1-sur-8)/01-supports-de-cours/README.md>)
   ·
