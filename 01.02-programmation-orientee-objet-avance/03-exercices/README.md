@@ -15,7 +15,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/01.01-modalites-de-lunite-denseignement-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
-- Exercices : [Lien vers le contenu](../03-exercices/README.md)
 
 ## Exercices
 
@@ -123,9 +122,27 @@ n'a été effectuée).
 Cela implique que la classe `Calculator` doit maintenir un état interne pour
 stocker le résultat de l'opération précédente.
 
-Voici un exemple d'implémentation de la classe `Calculator` :
+Voici un exemple d'utilisation de la classe `Calculator` :
 
 ```php
+<?php
+require_once __DIR__ . '/../src/Calculator.php';
+
+$calculator = new Calculator();
+
+// Premier calcul
+echo $calculator->getCurrentValue() . "<br>";   // 0
+
+$calculator->add(7, 3);                         // 10 (7 + 3)
+
+echo $calculator->getCurrentValue() . "<br>";   // 10
+
+$calculator->clear();
+
+// Deuxième calcul
+$calculator->add(5);                            // 5 (0 + 5)
+$calculator->add(10);                           // 15 (5 + 10)
+$calculator->subtract(3);                       // 12 (15 - 3)
 <?php
 require_once __DIR__ . '/../src/Calculator.php';
 
@@ -145,6 +162,8 @@ $calculator->subtract(20, 5);                   // 15 (20 - 5)
 
 echo $calculator->getCurrentValue() . "<br>";   // 15
 
+$calculator->clear();
+
 // Troisième calcul
 $calculator->add(5);                            // 5 (0 + 5)
 $calculator->add(10);                           // 15 (5 + 10)
@@ -155,6 +174,17 @@ echo $calculator->getCurrentValue() . "<br>";   // 12
 $calculator->clear();
 
 // Quatrième calcul
+$calculator->subtract(10, 15);                  // -5 (10 - 15)
+$calculator->add(20);                           // 15 (-5 + 20)
+
+echo $calculator->getCurrentValue() . "<br>";   // 15
+
+$calculator->clear();
+echo $calculator->getCurrentValue() . "<br>";   // 12
+
+$calculator->clear();
+
+// Troisième calcul
 $calculator->subtract(10, 15);                  // -5 (10 - 15)
 $calculator->add(20);                           // 15 (-5 + 20)
 

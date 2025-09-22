@@ -22,6 +22,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [PHP, un rappel](#php-un-rappel)
+  - [Architecture client-serveur](#architecture-client-serveur)
   - [Variables](#variables)
   - [Constantes](#constantes)
   - [Opérateurs](#opérateurs)
@@ -58,6 +59,15 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > <https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main>.
 >
 > N'hésitez pas à poser des questions si besoin !
+
+### Architecture client-serveur
+
+PHP repose sur une architecture client-serveur. Le client (navigateur web)
+envoie des requêtes au serveur, qui traite ces requêtes et renvoie des réponses.
+Cette architecture permet de séparer la logique de présentation (côté client) de
+la logique de traitement (côté serveur).
+
+![Architecture client-serveur](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/raw/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/images/architecture-client-serveur-avec-php.png)
 
 ### Variables
 
@@ -96,7 +106,13 @@ echo EULER; // Affiche 2.71828
 ```
 
 Les variables nécessitent le signe `$` pour être utilisées, tandis que les
-constantes n'en ont pas besoin.
+constantes n'utilise pas ce signe lors de leur utilisation.
+
+Si nous essayons de modifier une constante, une erreur sera générée :
+
+```php
+EULER = 3.14; // Erreur : syntax error, unexpected token "=" (Expression is not writable)
+```
 
 ### Opérateurs
 
@@ -117,6 +133,14 @@ de PHP : <https://www.php.net/manual/fr/language.operators.php>.
 Un exemple d'utilisation des opérateurs :
 
 ```php
+<?php
+
+$a = 10;
+$b = 5;
+$c = 15;
+$d = 15;
+
+// L'opérateur `===` permet de vérifier la valeur et le type (à préférer).
 if ($a > $b && $c === $d) {
     echo "Condition met!";
 } else {
@@ -124,8 +148,9 @@ if ($a > $b && $c === $d) {
 }
 ```
 
-L'opérateur `===` vérifie à la fois la valeur et le type, tandis que `==` ne
-vérifie que la valeur.
+L'opérateur `=` est utilisé pour l'affectation, tandis que `==` et `===` sont
+utilisés pour la comparaison. Notez que `===` vérifie à la fois la valeur et le
+type, tandis que `==` ne vérifie que la valeur.
 
 Préférez toujours `===` et `!==` pour éviter des comportements inattendus dus à
 la conversion de type automatique.
@@ -218,7 +243,7 @@ fonction et de ses (potentiels) paramètres.
 
 ```php
 <?php
-function greet(): string {
+function greet() {
     return "Hello, World!";
 }
 ```
@@ -251,9 +276,9 @@ Les paramètres sont passés lors de l'appel de la fonction, dans le même ordre
 que lors de la déclaration.
 
 ```php
-$greetings = greet("Alice");    // "Hello, Alice!"
-echo $greetings;                // "Hello, Alice!"
-echo greet("Bob");              // "Hello, Bob!"
+$greetings = greet("Alice");
+echo $greetings . "<br>";       // "Hello, Alice!"
+echo greet("Bob") . "<br>";     // "Hello, Bob!"
 ```
 
 #### Fonctions avec des paramètres par défaut
@@ -270,8 +295,8 @@ function greet($name = "World") {
 ```
 
 ```php
-echo greet();           // "Hello, World!" (utilise la valeur par défaut)
-echo greet("Alice");    // "Hello, Alice!" (utilise l'argument fourni)
+echo greet() . "<br>";          // "Hello, World!" (utilise la valeur par défaut)
+echo greet("Alice") . "<br>";   // "Hello, Alice!" (utilise l'argument fourni)
 ```
 
 #### Fonctions avec typage des paramètres et du retour
@@ -296,16 +321,18 @@ function add(int $a, int $b): int {
 Grâce au typage, les appels suivants sont valides :
 
 ```php
-echo greet();           // "Hello, World!"
-echo greet("Alice");    // "Hello, Alice!"
-echo add(2, 3);         // 5
+echo greet() . "<br>";          // "Hello, World!"
+echo greet("Alice") . "<br>";   // "Hello, Alice!"
+echo greet(42) . "<br>";        // "Hello, 42!" (conversion implicite)
+echo add(2, 3) . "<br>";        // 5
 ```
 
-Mais les appels suivants généreront une erreur de type :
+Mais l'appel suivant générera une erreur de type :
 
 ```php
-echo greet(42);         // Erreur : Argument 1 passed to greet() must be of type string, int given
-echo add(2.5, 3.5);     // Erreur : Argument 1 passed to add() must be of type int, float given
+// Erreur 1 : Implicit conversion from float 2.5 to int loses precision
+// Erreur 2 : Argument #2 ($b) must be of type int, string given
+echo add(2.5, "Hello") . "<br>";
 ```
 
 Les types par défaut sont `mixed`, ce qui signifie que n'importe quel type est
@@ -342,7 +369,7 @@ function greet(string $name = "World"): string {
 // Fichier `index.php`
 require "functions.php"; // On inclut le fichier
 
-// La fonction `greet` est définie dans le fichier importé
+// La fonction `greet()` est définie dans le fichier importé
 // et peut être utilisée ici
 $greetings = greet("Alice");
 echo $greetings; // "Hello, Alice!"
@@ -380,13 +407,14 @@ indexés numériquement ou associativement (avec des clés personnalisées).
 ```php
 <?php
 // Tableau indexé numériquement
-$fruits = ['apple', 'banana', 'orange'];
+$fruits = [
+    'apple',
+    'banana',
+    'orange'
+];
 
-echo $fruits[0]; // "apple"
-```
+echo $fruits[0] . "<br>"; // "apple"
 
-```php
-<?php
 // Tableau associatif
 $person = [
     'name' => 'Alice',
@@ -394,7 +422,7 @@ $person = [
     'city' => 'New York'
 ];
 
-echo $person['name']; // "Alice"
+echo $person['name'] . "<br>"; // "Alice"
 ```
 
 #### Boucles
@@ -425,20 +453,6 @@ while ($i < 10) {
 
 ```php
 <?php
-$weather = "cloudy";
-
-while ($weather == "cloudy") {
-    echo "It's still cloudy...<br>";
-
-    // Ici, on imagine un scénario où notre code va interagir avec un site web externe qui retourne la météo pour mettre à jour la variable `$weather`
-    $weather = getWeather("Yverdon-les-Bains");
-}
-
-echo "The weather in Yverdon-les-Bains is *finally* different than cloudy! Yay!";
-```
-
-```php
-<?php
 $randomNumber = null;
 
 do {
@@ -446,16 +460,6 @@ do {
     $randomNumber = rand(1, 10);
     echo "The random number is $randomNumber<br>";
 } while ($randomNumber < 8);
-```
-
-```php
-<?php
-$fruits = ['apple', 'banana', 'orange', 'kiwi'];
-
-// L'ordre des champs ici est inversé par rapport à Java !
-foreach ($fruits as $fruit) {
-    echo "$fruit<br>";
-}
 ```
 
 ```php
@@ -489,133 +493,11 @@ utilisateurs. En PHP, les données des formulaires sont accessibles via les
 superglobales `$_POST` et `$_GET`, selon la méthode utilisée pour soumettre le
 formulaire.
 
-Il est tout à fait possible de mélanger du code HTML et PHP dans un même
-fichier.
+Il est crucial de valider et de traiter correctement les données reçues des
+formulaires pour éviter des vulnérabilités telles que les injections SQL ou les
+attaques XSS (Cross-Site Scripting).
 
-Le code PHP est délimité par les balises `<?php ... ?>`, tandis que le code HTML
-est écrit en dehors de ces balises.
-
-```php
-<?php
-// Fichier `create.php`
-// Constante pour le fichier de base de données SQLite
-const DATABASE_FILE = "./users.db";
-
-// Connexion à la base de données
-$pdo = new PDO("sqlite:" . DATABASE_FILE);
-
-// Création d'une table `users`
-$sql = "CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    email TEXT NOT NULL UNIQUE,
-    password TEXT NOT NULL
-)";
-
-// On exécute la requête SQL pour créer la table
-$pdo->exec($sql);
-
-// Gère la soumission du formulaire
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // On récupère les données du formulaire
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-
-    // On prépare la requête SQL pour ajouter un utilisateur
-    $sql = "INSERT INTO users (email, password) VALUES (:email, :password)";
-
-    // On prépare la requête
-    $stmt = $pdo->prepare($sql);
-
-    // On lie les paramètres
-    $stmt->bindValue(':email', $email);
-    $stmt->bindValue(':password', $password);
-
-    // On exécute la requête SQL pour ajouter l'utilisateur
-    $stmt->execute();
-}
-?>
-
-<!-- Gère l'affichage du formulaire -->
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Création d'un compte</title>
-</head>
-
-<body>
-    <h1>Création d'un compte</h1>
-    <a href="view.php"><button>Voir les comptes</button></a>
-
-    <form action="create.php" method="POST">
-        <label for="email">E-mail :</label><br>
-        <input
-            type="text"
-            id="email"
-            name="email" />
-
-        <br>
-
-        <label for="password">Mot de passe :</label><br>
-        <input
-            type="password"
-            id="password"
-            name="password" />
-
-        <br>
-
-        <button type="submit">Envoyer</button>
-    </form>
-
-    <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
-        <p>Le formulaire a été soumis avec succès.</p>
-    <?php } ?>
-</body>
-
-</html>
-```
-
-```php
-<?php
-// Fichier `view.php`
-// Constante pour le fichier de base de données SQLite
-const DATABASE_FILE = "./users.db";
-
-// Connexion à la base de données
-$pdo = new PDO("sqlite:" . DATABASE_FILE);
-
-// On prépare la requête SQL pour récupérer tous les utilisateurs
-$sql = "SELECT * FROM users";
-
-// On exécute la requête SQL pour récupérer les utilisateurs
-$users = $pdo->query($sql);
-
-// On transforme le résultat en tableau
-$users = $users->fetchAll();
-?>
-
-<!-- Gère l'affichage du formulaire -->
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Comptes utilisateurs</title>
-</head>
-
-<body>
-    <h1>Comptes utilisateurs</h1>
-
-    <a href="create.php"><button>Créer un compte</button></a>
-
-    <ul>
-        <?php foreach ($users as $user) { ?>
-            <li><?= htmlspecialchars($user["email"]) ?></li>
-        <?php } ?>
-    </ul>
-</body>
-
-</html>
-```
+Nous y reviendrons plus en détail dans un futur cours.
 
 ## Programmation orientée objet (base)
 
@@ -626,19 +508,16 @@ La programmation orientée objet permet de structurer le code de manière plus
 modulaire et réutilisable.
 
 ```php
+<?php
 class User {
     // Propriétés (attributs)
     private string $firstName;
     private string $lastName;
-    private string $email;
-    private int $age;
 
     // Constructeur
-    public function __construct(string $firstName, string $lastName, string $email, int $age) {
+    public function __construct(string $firstName, string $lastName) {
         $this->firstName = $firstName;
         $this->lastName = $lastName;
-        $this->email = $email;
-        $this->age = $age;
     }
 
     // Méthodes
@@ -660,22 +539,6 @@ class User {
 
     public function getFullName(): string {
         return "{$this->firstName} {$this->lastName}";
-    }
-
-    public function getEmail(): string {
-        return $this->email;
-    }
-
-    public function setEmail(string $email): void {
-        $this->email = $email;
-    }
-
-    public function getAge(): int {
-     return $this->age;
-    }
-
-    public function setAge(int $age): void {
-        $this->age = $age;
     }
 }
 ```
@@ -705,14 +568,14 @@ nouvel objet de cette classe :
 
 ```php
 // Création d'objets (instanciation)
-$user1 = new User("Alice", "Smith", "alice@example.com", 25);
-$user2 = new User("Bob", "Johnson", "bob@example.com", 17);
+$user1 = new User("Alice", "Smith");
+$user2 = new User("Bob", "Johnson");
 
 // Utilisation des méthodes
-echo $user1->getFirstName();    // "Alice"
-echo $user2->getFullName();     // "Bob Johnson"
-$user2->setAge(18);             // Modifie l'âge de Bob
-echo $user2->getAge();          // 18
+echo $user1->getFirstName() . "<br>";   // "Alice"
+echo $user2->getFullName() . "<br>";    // "Bob Johnson"
+$user2->setLastName("Doe");             // Modifie le nom de famille de Bob
+echo $user2->getFullName() . "<br>";    // "Bob Doe"
 ```
 
 ## Programmation orientée objet (avancé)
@@ -1012,7 +875,7 @@ Le fichier `Animal.php` pourrait contenir la classe abstraite `Animal` :
 
 ```php
 <?php
-// animal.php
+// Animal.php
 abstract class Animal {
     protected string $name;
     protected float $size;
@@ -1042,13 +905,13 @@ abstract class Animal {
 }
 ```
 
-Le fichier `pet.php` pourrait contenir la classe abstraite `Pet` qui hérite de
+Le fichier `Pet.php` pourrait contenir la classe abstraite `Pet` qui hérite de
 `Animal` :
 
 ```php
 <?php
-// pet.php
-require 'animal.php';
+// Pet.php
+require 'Animal.php';
 
 abstract class Pet extends Animal {
     protected string $nickname;
@@ -1068,13 +931,13 @@ abstract class Pet extends Animal {
 }
 ```
 
-Le fichier `dog.php` pourrait contenir la classe concrète `Dog` qui hérite de la
+Le fichier `Dog.php` pourrait contenir la classe concrète `Dog` qui hérite de la
 classe abstraite `Pet` :
 
 ```php
 <?php
-// dog.php
-require 'pet.php';
+// Dog.php
+require 'Pet.php';
 
 class Dog extends Pet {
     public function __construct(string $name, float $size, string $nickname) {
@@ -1087,13 +950,13 @@ class Dog extends Pet {
 }
 ```
 
-Le fichier `cat.php` pourrait contenir la classe concrète `Cat` qui hérite de la
+Le fichier `Cat.php` pourrait contenir la classe concrète `Cat` qui hérite de la
 classe abstraite `Pet` :
 
 ```php
 <?php
-// cat.php
-require 'pet.php';
+// Cat.php
+require 'Pet.php';
 
 class Cat extends Pet {
     public function __construct(string $name, float $size, string $nickname) {
@@ -1112,71 +975,71 @@ application, où nous incluons les fichiers nécessaires et créons des objets :
 ```php
 <?php
 // index.php
-require 'dog.php';
-require 'cat.php';
+require 'Dog.php';
+require 'Cat.php';
 
 $dog = new Dog("Nalia", 30.5, "Naliouille");
 $cat = new Cat("Tofu", 10.0, "Sushi");
 
-echo $dog->getName() . " says: " . $dog->makeSound() . "\n";
-echo $cat->getName() . " says: " . $cat->makeSound() . "\n";
+echo $dog->getName() . " says: " . $dog->makeSound() . "<br>";
+echo $cat->getName() . " says: " . $cat->makeSound() . "<br>";
 ```
 
 Avec le code actuel, nous sommes confronté à un problème d'import.
 
 En effet, PHP va exécuter le fichier `index.php` et va rencontrer la ligne
-`require 'dog.php';`. PHP va alors inclure le fichier `dog.php`.
+`require 'Dog.php';`. PHP va alors inclure le fichier `Dog.php`.
 
-Le fichier `dog.php` importe lui-même le fichier `pet.php` avec la ligne
-`require 'pet.php';`.
+Le fichier `Dog.php` importe lui-même le fichier `Pet.php` avec la ligne
+`require 'Pet.php';`.
 
-Le fichier `pet.php` importe lui-même le fichier `animal.php` avec la ligne
-`require 'animal.php';`.
+Le fichier `Pet.php` importe lui-même le fichier `Animal.php` avec la ligne
+`require 'Animal.php';`.
 
 Jusqu'ici, tout va bien.
 
-Le même processus se produit pour la ligne `require 'cat.php';` dans le fichier
-`index.php`, qui inclut `cat.php`, mais ce fichier contient lui-même une ligne
-`require 'pet.php';`.
+Le même processus se produit pour la ligne `require 'Cat.php';` dans le fichier
+`index.php`, qui inclut `Cat.php`, mais ce fichier contient lui-même une ligne
+`require 'Pet.php';`.
 
-Hors, le fichier `pet.php` a déjà été inclus une première fois, donc PHP va
+Hors, le fichier `Pet.php` a déjà été inclus une première fois, donc PHP va
 générer une erreur fatale :
 
 ```text
-Fatal error: Cannot declare class Pet, because the name is already in use in /path/to/pet.php on line 4
+Fatal error: Cannot declare class Pet, because the name is already in use in /path/to/Pet.php on line 4
 ```
 
 Pour éviter ce problème, nous pouvons utiliser `require_once` au lieu de
 `require`. Cela garantit que chaque fichier n'est inclus qu'une seule fois, même
 s'il est référencé plusieurs fois.
 
-Ainsi, tous les fichiers `dog.php`, `cat.php` et `pet.php` doivent utiliser
+Ainsi, tous les fichiers `Dog.php`, `Cat.php` et `Pet.php` doivent utiliser
 `require_once` au lieu de `require` :
 
 ```php
 <?php
-// dog.php
-require_once 'pet.php';
+// Dog.php
+require_once 'Pet.php';
 ...
 ```
 
 ```php
 <?php
-// cat.php
-require_once 'pet.php';
+// Cat.php
+require_once 'Pet.php';
 ...
 ```
 
 ```php
 <?php
-// pet.php
-require_once 'animal.php';
+// Pet.php
+require_once 'Animal.php';
 ...
 ```
 
-De cette manière, lorsque PHP inclut `dog.php`, il inclut `pet.php` une seule
-fois (qui lui-même inclut `animal.php` une seule fois) et lorsque `cat.php` est
-inclus, `pet.php` n'est pas inclus à nouveau. Le problème d'import est résolu !
+De cette manière, lorsque PHP inclut `Dog.php`, il inclut `Pet.php` une seule
+fois (qui lui-même inclut `Animal.php` une seule fois) et lorsque `Cat.php` est
+inclus, `Pet.php` n'est pas inclus à nouveau. Le problème d'import est résolu !
 
 ### Espaces de noms (namespaces)
 
@@ -1218,7 +1081,7 @@ abstract class Animal {
 // src/Animals/Pets/Pet.php
 namespace Animals\Pets;
 
-require_once 'animal.php';
+require_once 'Animal.php';
 
 use Animals\Animal;
 
@@ -1245,7 +1108,7 @@ abstract class Pet extends Animal {
 // src/Animals/Pets/Dog.php
 namespace Animals\Pets;
 
-require_once 'pet.php';
+require_once 'Pet.php';
 
 use Animals\Pets\Pet;
 
@@ -1265,7 +1128,7 @@ class Dog extends Pet {
 // src/Animals/Pets/Cat.php
 namespace Animals\Pets;
 
-require_once 'pet.php';
+require_once 'Pet.php';
 
 use Animals\Pets\Pet;
 
@@ -1294,20 +1157,20 @@ use Animals\Pets\Cat;
 $dog = new Dog("Nalia", 30.5, "Naliouille");
 $cat = new Cat("Tofu", 10.0, "Sushi");
 
-echo $dog->getName() . " says: " . $dog->makeSound() . "\n";
-echo $cat->getName() . " says: " . $cat->makeSound() . "\n";
+echo $dog->getName() . " says: " . $dog->makeSound() . "<br>";
+echo $cat->getName() . " says: " . $cat->makeSound() . "<br>";
 ```
 
 ```php
 <?php
-require_once 'dog.php';
-require_once 'cat.php';
+require_once 'Dog.php';
+require_once 'Cat.php';
 
 $dog = new \MyApp\Animals\Pets\Dog("Nalia", 30.5, "Naliouille");
 $cat = new \MyApp\Animals\Pets\Cat("Tofu", 10.0, "Sushi");
 
-echo $dog->getName() . " says: " . $dog->makeSound() . "\n";
-echo $cat->getName() . " says: " . $cat->makeSound() . "\n";
+echo $dog->getName() . " says: " . $dog->makeSound() . "<br>";
+echo $cat->getName() . " says: " . $cat->makeSound() . "<br>";
 ```
 
 Les namespaces ne sont pas obligatoires, mais ils peuvent aider à organiser le
@@ -1360,8 +1223,8 @@ use Animals\Pets\Cat;
 $dog = new Dog("Nalia", 30.5, "Naliouille");
 $cat = new Cat("Tofu", 10.0, "Sushi");
 
-echo $dog->getName() . " says: " . $dog->makeSound() . "\n";
-echo $cat->getName() . " says: " . $cat->makeSound() . "\n";
+echo $dog->getName() . " says: " . $dog->makeSound() . "<br>";
+echo $cat->getName() . " says: " . $cat->makeSound() . "<br>";
 ```
 
 L'autoloader va automatiquement chercher et inclure les fichiers nécessaires

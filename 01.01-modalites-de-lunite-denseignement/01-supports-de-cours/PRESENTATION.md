@@ -112,17 +112,17 @@ En résumé, vous devriez être capable de :
   dans le contexte d'un projet libre.
 - Utiliser des concepts avancés de la programmation orientée objet.
 - Déployer et accéder à votre propre application en ligne et persister les
-  données dans une base de données.
+  données dans une base de données dédiée.
 - Gérer les préférences et l'authentification des utilisateur.trices.
 
 ---
 
 <!-- _class: lead -->
 
-Grâce à ces compétences, la personne qui étudie sera en mesure de développer des
-applications web combinant plusieurs ressources avec une gestion des accès aux
-pages publiques et privées (par exemple, un gestionnaire de tâches
-multi-utilisateurs, une plateforme de réservations de concerts, etc.).
+> Grâce à ces compétences, la personne qui étudie sera en mesure de développer
+> des applications web combinant plusieurs ressources avec une gestion des accès
+> aux pages publiques et privées (par exemple, un gestionnaire de tâches
+> multi-utilisateurs, une plateforme de réservations de concerts, etc.).
 
 ## Modalités d'organisation de l'unité d'enseignement
 
@@ -250,19 +250,18 @@ Est-ce que les personnes suivantes pourraient venir me voir à la fin du cours
 <div class="two-columns">
 <div>
 
+- Steve B., Albertina B., Rania M., Lilou M., Loriane M., Nabil M. et Luka S.
 - Carla H. et Djibril D.
 - Ivan K. et Mathias N.
 - Jennifer F., Kristina T. et Maureen G.
 - Liliana K. et Thierry K.
-- Tanguy V. et Thomas D.
 
 </div>
 <div>
 
-- Donit R.
+- Tanguy V. et Thomas D.
 - Léana G.
 - Valentin F.
-- Steve B., Albertina B., Rania M., Lilou M., Loriane M., Nabil M. et Luka S.
 
 </div>
 </div>
