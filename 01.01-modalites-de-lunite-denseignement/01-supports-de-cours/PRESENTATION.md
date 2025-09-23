@@ -251,7 +251,6 @@ Est-ce que les personnes suivantes pourraient venir me voir à la fin du cours
 <div>
 
 - Steve B., Albertina B., Rania M., Lilou M., Loriane M., Nabil M. et Luka S.
-- Carla H. et Djibril D.
 - Ivan K. et Mathias N.
 - Jennifer F., Kristina T. et Maureen G.
 - Liliana K. et Thierry K.
@@ -259,8 +258,8 @@ Est-ce que les personnes suivantes pourraient venir me voir à la fin du cours
 </div>
 <div>
 
+- Carla H.
 - Tanguy V. et Thomas D.
-- Léana G.
 - Valentin F.
 
 </div>
