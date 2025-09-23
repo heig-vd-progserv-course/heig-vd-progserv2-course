@@ -10,9 +10,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
   d'évaluation : [Lien vers le contenu](..)
 - Autres formes du support de cours :
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.02-programmation-orientee-objet-avance/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/01.01-modalites-de-lunite-denseignement-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.02-programmation-orientee-objet-avance/01-supports-de-cours/01.02-programmation-orientee-objet-avance-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
 - Exercices : [Lien vers le contenu](../03-exercices/README.md)
 
