@@ -1105,7 +1105,7 @@ Est-ce que vous avez des questions ?
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
-## Sources (1/5)
+## Sources (1/2)
 
 - [Illustration principale][illustration-principale] par
   [Richard Jacobs](https://unsplash.com/@rj2747) sur
@@ -1132,7 +1132,7 @@ Est-ce que vous avez des questions ?
   [Jack Church](https://unsplash.com/@jackchurch) sur
   [Unsplash](https://unsplash.com/photos/a-sign-on-the-side-of-a-building-advertising-giving-back-LZ8NzZrByts)
 
-## Sources (2/5)
+## Sources (2/2)
 
 - [Illustration][illustration-tableaux] par
   [Faris Mohammed](https://unsplash.com/@pkmfaris) sur
@@ -1153,7 +1153,7 @@ Est-ce que vous avez des questions ?
 <!-- URLs -->
 
 [cours]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01.01-modalites-de-lunite-denseignement
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01.02-programmation-orientee-objet-avance
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
 
