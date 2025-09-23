@@ -293,7 +293,7 @@ A faire pour le rendu final :
 <!-- URLs -->
 
 [cours]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/3-finalisation-du-cours-01/01.03-projet-libre-(1-sur-8)
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01.03-projet-libre-(1-sur-8)
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-ProgServ2-course/blob/main/LICENSE.md
 
