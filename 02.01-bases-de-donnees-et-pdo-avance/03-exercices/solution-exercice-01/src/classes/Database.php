@@ -22,7 +22,7 @@ class Database implements DatabaseInterface {
         // Documentation :
         //   - https://www.php.net/manual/fr/pdo.connections.php
         //   - https://www.php.net/manual/fr/ref.pdo-mysql.connection.php
-        $this->pdo = new PDO("mysql:host=$host;port=$port;charset=utf8", $username, $password);
+        $this->pdo = new PDO("mysql:host=$host;port=$port;charset=utf8mb4", $username, $password);
 
         // Création de la base de données si elle n'existe pas
         $sql = "CREATE DATABASE IF NOT EXISTS `$database` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;";
@@ -33,7 +33,7 @@ class Database implements DatabaseInterface {
         $sql = "USE `$database`;";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute();
-        
+
         // Création de la table `tools` si elle n'existe pas
         $sql = "CREATE TABLE IF NOT EXISTS tools (
             id INT AUTO_INCREMENT PRIMARY KEY,

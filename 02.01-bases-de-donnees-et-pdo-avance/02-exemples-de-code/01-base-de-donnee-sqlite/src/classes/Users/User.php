@@ -57,22 +57,17 @@ class User {
     public function validate(): array {
         $errors = [];
 
-        if (empty($this->firstName)) {
-            $errors[] = "Le prénom est requis.";
-
-            if (strlen($this->firstName) < 2) {
-                $errors[] = "Le prénom doit contenir au moins 2 caractères.";
-            }
+        if (empty($this->firstName) || strlen($this->firstName) < 2) {
+            $errors[] = "Le prénom doit contenir au moins 2 caractères.";
         }
 
-        if (empty($this->lastName)) {
-            $errors[] = "Le nom est requis.";
-
-            if (strlen($this->lastName) < 2) {
-                $errors[] = "Le nom doit contenir au moins 2 caractères.";
-            }
+        if (empty($this->lastName) || strlen($this->lastName) < 2) {
+            $errors[] = "Le nom doit contenir au moins 2 caractères.";
         }
 
+        // Documentation pour filter_var et FILTER_VALIDATE_EMAIL :
+        //   - https://www.php.net/manual/fr/function.filter-var.php
+        //   - https://www.php.net/manual/fr/filter.constants.php#constant.filter-validate-bool
         if (empty($this->email) || !filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
             $errors[] = "Un email valide est requis.";
         }

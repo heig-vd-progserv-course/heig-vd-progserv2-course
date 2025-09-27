@@ -88,16 +88,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <form action="create.php" method="POST">
             <label for="first-name">Prénom</label>
-            <input type="text" id="first-name" name="first-name" value="<?php if (isset($firstName)) echo htmlspecialchars($firstName); ?>" required minlength="2">
+            <input type="text" id="first-name" name="first-name" value="<?= htmlspecialchars($firstName ?? ''); ?>" required minlength="2">
 
             <label for="last-name">Nom</label>
-            <input type="text" id="last-name" name="last-name" value="<?php if (isset($lastName)) echo htmlspecialchars($lastName); ?>" required minlength="2">
+            <input type="text" id="last-name" name="last-name" value="<?= htmlspecialchars($lastName ?? ''); ?>" required minlength="2">
 
             <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" value="<?php if (isset($email)) echo htmlspecialchars($email); ?>" required>
+            <input type="email" id="email" name="email" value="<?= htmlspecialchars($email ?? ''); ?>" required>
 
             <label for="age">Âge</label>
-            <input type="number" id="age" name="age" value="<?php if (isset($age)) echo htmlspecialchars($age); ?>" required min="0">
+            <input type="number" id="age" name="age" value="<?= htmlspecialchars($age ?? ''); ?>" required min="0">
 
             <button type="submit">Créer</button>
         </form>

@@ -21,35 +21,33 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Ressources annexes](#ressources-annexes)
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
-- [PHP, un rappel](#php-un-rappel)
-  - [Architecture client-serveur](#architecture-client-serveur)
-  - [Variables](#variables)
-  - [Constantes](#constantes)
-  - [Opérateurs](#opérateurs)
-  - [Structures conditionnelles](#structures-conditionnelles)
-  - [Fonctions](#fonctions)
-  - [Importation de fichiers](#importation-de-fichiers)
-  - [Tableaux et boucles](#tableaux-et-boucles)
-  - [Formulaires HTML, validation et sécurité](#formulaires-html-validation-et-sécurité)
-- [Programmation orientée objet (base)](#programmation-orientée-objet-base)
-- [Bases de données et PDO (avancé)](#programmation-orientée-objet-avancé)
-  - [Interfaces](#interfaces)
-  - [Héritage](#héritage)
-  - [Abstraction](#abstraction)
-  - [Inclusion des fichiers et classes](#inclusion-des-fichiers-et-classes)
-  - [Espaces de noms (namespaces)](#espaces-de-noms-namespaces)
-  - [Limites de l'héritage et de l'abstraction](#limites-de-lhéritage-et-de-labstraction)
+- [Formulaires HTML et PDO, un rappel](#formulaires-html-et-pdo-un-rappel)
+  - [Structure d'un formulaire HTML](#structure-dun-formulaire-html)
+  - [Récupération des données côté serveur](#récupération-des-données-côté-serveur)
+  - [Validation côté serveur](#validation-côté-serveur)
+  - [Nettoyage des données et requêtes préparées](#nettoyage-des-données-et-requêtes-préparées)
+  - [Conservation des données en cas d'erreur](#conservation-des-données-en-cas-derreur)
+  - [Affichage sécurisé des données](#affichage-sécurisé-des-données)
+  - [Validation côté client](#validation-côté-client)
+- [Bases de données et PDO (base)](#bases-de-données-et-pdo-base)
+  - [SQLite](#sqlite)
+- [Bases de données et PDO (avancé)](#bases-de-données-et-pdo-avancé)
+  - [MySQL/MariaDB](#mysqlmariadb)
+  - [Gestion des erreurs avec les exceptions](#gestion-des-erreurs-avec-les-exceptions)
+  - [Fichiers de configuration](#fichiers-de-configuration)
 - [Conclusion](#conclusion)
 - [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
 
 ## Objectifs
 
-- Rappeler les concepts de base de la programmation orientée objet.
-- Appliquer les notions d'interface, d'héritage et d'abstraction avec la
-  programmation orientée objet.
+- Rappeler les concepts de base des formulaires HTML, validation et sécurité.
+- Utiliser PDO pour interagir avec une base de données MySQL/MariaDB.
+- Utiliser les exceptions pour la gestion des erreurs en PHP.
+- Utiliser les fichiers de configuration pour stocker les paramètres de
+  connexion à la base de données.
 
-## PHP, un rappel
+## Formulaires HTML et PDO, un rappel
 
 > [!TIP]
 >
@@ -60,1216 +58,621 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 >
 > N'hésitez pas à poser des questions si besoin !
 
-### Architecture client-serveur
+Les formulaires HTML sont un élément clé pour interagir avec les utilisateurs
+sur le web. Ils permettent de collecter des données que les utilisateurs peuvent
+soumettre à un serveur pour traitement.
 
-PHP repose sur une architecture client-serveur. Le client (navigateur web)
-envoie des requêtes au serveur, qui traite ces requêtes et renvoie des réponses.
-Cette architecture permet de séparer la logique de présentation (côté client) de
-la logique de traitement (côté serveur).
+### Structure d'un formulaire HTML
 
-![Architecture client-serveur](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/raw/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/images/architecture-client-serveur-avec-php.png)
-
-### Variables
-
-PHP est un langage à typage dynamique, ce qui signifie que les types de
-variables sont déterminés automatiquement au moment de l'exécution. Voici les
-types de base en PHP :
+Un formulaire HTML est défini à l'aide de la balise `<form>`. Voici un exemple
+simple :
 
 ```php
-<?php
-$variable = "Hello";                        // string
-$variable = 42;                             // int
-$variable = 3.14;                           // float
-$variable = true;                           // bool
-$variable = [true, 2, "3", 4 => [5, 6, 7]]; // array contenant des types mixtes
-$variable = null;                           // null
+<form action="create.php" method="POST">
+    <label for="first-name">Prénom</label>
+    <input type="text" id="first-name" name="first-name">
+
+    <label for="last-name">Nom</label>
+    <input type="text" id="last-name" name="last-name">
+
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email">
+
+    <label for="age">Âge</label>
+    <input type="number" id="age" name="age">
+
+    <button type="submit">Créer</button>
+</form>
 ```
 
-### Constantes
+Dans cet exemple :
 
-Les constantes sont des valeurs qui ne peuvent pas être modifiées une fois
-définies. Elles sont définies à l'aide de la fonction `define()` ou du mot-clé
-`const`.
+- La balise `<form>` définit le début du formulaire. L'attribut `action`
+  spécifie l'URL où les données du formulaire seront envoyées pour traitement
+  (ici, `create.php`). L'attribut `method` indique la méthode HTTP utilisée pour
+  envoyer les données (ici, `POST`).
+- Les balises `<label>` sont utilisées pour définir des étiquettes pour les
+  champs du formulaire. L'attribut `for` doit correspondre à l'attribut `id` du
+  champ associé.
+- Les balises `<input>` définissent les champs de saisie. L'attribut `type`
+  spécifie le type de champ (texte, e-mail, nombre, etc.). L'attribut `name` est
+  crucial car il détermine la clé sous laquelle la valeur saisie sera envoyée au
+  serveur.
+- Le bouton `<button type="submit">` permet à l'utilisateur de soumettre le
+  formulaire.
+
+> [!CAUTION]
+>
+> Il est recommandé d'utiliser la méthode `POST` pour les formulaires pour des
+> raisons de sécurité et de confidentialité car les données sont envoyées dans
+> le corps de la requête HTTP et ne sont pas visibles dans l'URL.
+>
+> La méthode `GET` peut être utilisée pour des formulaires de recherche ou
+> lorsque les données ne sont pas sensibles, mais elle expose les données dans
+> l'URL car les données sont ajoutées à l'URL sous forme de paramètres de
+> requête (par exemple, `?query=ma recherche`).
+
+### Récupération des données côté serveur
+
+Une fois le formulaire soumis, les données peuvent être récupérées côté serveur
+en PHP à l'aide des superglobales `$_POST` ou `$_GET`, selon la méthode
+utilisée.
+
+Voici comment récupérer les données envoyées par le formulaire précédent dans le
+fichier `create.php` :
 
 ```php
-<?php
-define("PI", 3.14159); // Définition d'une constante
-const EULER = 2.71828; // Définition d'une constante
+// Gère la soumission du formulaire
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Récupération des données du formulaire
+    $firstName = $_POST["first-name"];
+    $lastName = $_POST["last-name"];
+    $email = $_POST["email"];
+    $age = $_POST["age"];
+
+    // ...
 ```
 
-Les constantes sont généralement écrites en majuscules par convention et peuvent
-être utilisées partout dans le code :
+Grâce à la condition `if ($_SERVER["REQUEST_METHOD"] == "POST")`, on s'assure
+que le code ne s'exécute que lorsque le formulaire est soumis via la méthode
+`POST`.
+
+Les données sont ensuite accessibles via la superglobale `$_POST` en utilisant
+les noms des champs définis dans le formulaire HTML (par exemple,
+`$_POST["first-name"]` pour récupérer la valeur du champ "Prénom").
+
+### Validation côté serveur
+
+Il est crucial de valider les données reçues côté serveur pour garantir leur
+intégrité et sécurité. Voici un exemple simple de validation :
 
 ```php
-echo PI;    // Affiche 3.14159
-echo EULER; // Affiche 2.71828
-```
+$errors = [];
 
-Les variables nécessitent le signe `$` pour être utilisées, tandis que les
-constantes n'utilise pas ce signe lors de leur utilisation.
+if (empty($firstName) || strlen($firstName) < 2) {
+    $errors[] = "Le prénom doit contenir au moins 2 caractères.";
+}
 
-Si nous essayons de modifier une constante, une erreur sera générée :
+if (empty($lastName) || strlen($lastName) < 2) {
+    $errors[] = "Le nom doit contenir au moins 2 caractères.";
+}
 
-```php
-EULER = 3.14; // Erreur : syntax error, unexpected token "=" (Expression is not writable)
-```
+if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors[] = "Un email valide est requis.";
+}
 
-### Opérateurs
-
-Les opérateurs permettent de réaliser des opérations sur des variables et des
-valeurs ou encore comparer des valeurs.
-
-Voici quelques opérateurs courants en PHP :
-
-- Opérateurs arithmétiques : `+`, `-`, `*`, `/`, `%`
-- Opérateurs de comparaison : `==`, `===`, `!=`, `!==`, `<`, `>`, `<=`, `>=`
-- Opérateurs logiques : `&&`, `||`, `!`
-- Opérateurs d'affectation : `=`, `+=`, `-=`, `*=`, `/=`, `.=`
-- Opérateurs de concaténation : `.`
-
-La liste complète des opérateurs est disponible dans la documentation officielle
-de PHP : <https://www.php.net/manual/fr/language.operators.php>.
-
-Un exemple d'utilisation des opérateurs :
-
-```php
-<?php
-
-$a = 10;
-$b = 5;
-$c = 15;
-$d = 15;
-
-// L'opérateur `===` permet de vérifier la valeur et le type (à préférer).
-if ($a > $b && $c === $d) {
-    echo "Condition met!";
-} else {
-    echo "Condition not met!";
+if ($age < 0) {
+    $errors[] = "L'âge doit être un nombre positif.";
 }
 ```
 
-L'opérateur `=` est utilisé pour l'affectation, tandis que `==` et `===` sont
-utilisés pour la comparaison. Notez que `===` vérifie à la fois la valeur et le
-type, tandis que `==` ne vérifie que la valeur.
+Le tableau `$errors` est utilisé pour collecter les messages d'erreur. Chaque
+condition vérifie une règle de validation spécifique, et si la règle n'est pas
+respectée, un message d'erreur est ajouté au tableau.
 
-Préférez toujours `===` et `!==` pour éviter des comportements inattendus dus à
-la conversion de type automatique.
-
-### Structures conditionnelles
-
-PHP propose plusieurs structures de contrôle pour gérer les flux de données et
-les conditions à l'aide de `if`, `elseif`, `else` et `switch` et des opérateurs
-logiques (`&&`, `||`, `!`).
+Ce tableau peut ensuite être utilisé pour afficher les erreurs à l'utilisateur
+ou pour empêcher la poursuite du traitement si des erreurs sont présentes :
 
 ```php
-<?php
-$age = 20;
-
-if ($age < 18) {
-    echo "You are a minor.";
-} elseif ($age >= 18 && $age < 65) {
-    echo "You are an adult.";
-} else {
-    echo "You are a senior.";
-}
+<?php if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
+    <?php if (empty($errors)) { ?>
+        <p style="color: green;">Le formulaire a été soumis avec succès !</p>
+    <?php } else { ?>
+        <p style="color: red;">Le formulaire contient des erreurs :</p>
+        <ul>
+            <?php foreach ($errors as $error) { ?>
+                <li><?php echo $error; ?></li>
+            <?php } ?>
+        </ul>
+    <?php } ?>
+<?php } ?>
 ```
+
+### Nettoyage des données et requêtes préparées
+
+Une fois les données validées, il est possible de les insérer dans une base de
+données.
+
+Pour cela, PHP met à disposition l'extension PDO (PHP Data Objects) qui fournit
+une interface sécurisée pour interagir avec différentes bases de données, dont
+SQLite, MySQL/MariaDB, etc.
+
+Mais avant d'insérer les données dans la base de données, il est important de
+les nettoyer pour éviter les attaques de type injection SQL ou XSS.
+L'utilisation de requêtes préparées avec PDO est une bonne pratique pour
+sécuriser les interactions avec la base de données.
+
+Voici un exemple d'insertion sécurisée dans une base de données avec PDO :
 
 ```php
-<?php
-$day = "Monday";
+// Définition de la requête SQL pour ajouter un utilisateur
+$sql = "INSERT INTO users (first_name, last_name, email, age) VALUES (:first_name, :last_name, :email, :age)";
 
-switch ($day) {
-    case "Monday":
-        echo "It's Monday!";
-        break;
-    case "Tuesday":
-        echo "It's Tuesday!";
-        break;
-    case "Wednesday":
-        echo "It's Wednesday!";
-        break;
-    case "Thursday":
-        echo "It's Thursday!";
-        break;
-    case "Friday":
-        echo "It's Friday!";
-        break;
-    case "Saturday":
-        echo "It's Saturday!";
-        break;
-    case "Sunday":
-        echo "It's Sunday!";
-        break;
-}
+// Définition de la requête SQL pour ajouter un utilisateur
+$sql = "INSERT INTO users (
+    first_name,
+    last_name,
+    email,
+    age
+) VALUES (
+    :first_name,
+    :last_name,
+    :email,
+    :age
+)";
+
+// Préparation de la requête SQL
+$stmt = $pdo->prepare($sql);
+
+// Lien avec les paramètres
+$stmt->bindValue(':first_name', $firstName);
+$stmt->bindValue(':last_name', $lastName);
+$stmt->bindValue(':email', $email);
+$stmt->bindValue(':age', $age);
+
+// Exécution de la requête SQL pour ajouter un utilisateur
+$stmt->execute();
+
+// Récupération de l'identifiant de l'utilisateur ajouté
+$userId = $pdo->lastInsertId();
 ```
 
-Il est aussi possible de réunir plusieurs conditions dans une seule instruction
-ou encore d'utiliser `default` pour gérer les cas non prévus.
+Grâce aux requêtes préparées, les valeurs des variables sont liées aux
+paramètres de la requête SQL. Les valeurs sont automatiquement échappées par
+PDO, ce qui empêche les injections SQL.
+
+En effet, une personne malveillante pourrait tenter d'injecter du code SQL dans
+les champs du formulaire pour manipuler la base de données. Par exemple, si un
+utilisateur saisit `'; DROP TABLE users; --` dans le champ "Prénom", et si les
+données ne sont pas correctement échappées, cela pourrait entraîner la
+suppression de la table `users`.
+
+En échappant automatiquement les valeurs, PDO empêche ce type d'attaque, car le
+code malveillant est traité comme une simple chaîne de caractères et non comme
+une commande SQL.
+
+### Conservation des données en cas d'erreur
+
+Lorsqu'un formulaire est soumis avec des erreurs, il est utile de conserver les
+données saisies par l'utilisateur pour éviter qu'il ait à tout re-saisir. Voici
+comment faire cela en PHP :
 
 ```php
-<?php
-$day = "Monday";
-
-switch ($day) {
-    case "Monday":
-    case "Tuesday":
-    case "Wednesday":
-    case "Thursday":
-    case "Friday":
-        echo "It's a weekday!";
-        break;
-    case "Saturday":
-    case "Sunday":
-        echo "It's the weekend!";
-        break;
-    default:
-        echo "Invalid day!";
-        break;
-}
+<input type="text" id="first-name" name="first-name" value="<?= $firstName ?? '' ?>">
 ```
 
-### Fonctions
+Dans cet exemple, l'attribut `value` de l'élément `<input>` est défini pour
+conserver la valeur saisie par l'utilisateur. L'opérateur de coalescence nulle
+`??` est utilisé pour vérifier si `$firstName` est défini. Si c'est le cas, sa
+valeur est utilisée ; sinon, une chaîne vide est assignée, ce qui évite les
+messages d'erreur si la variable n'est pas définie.
 
-Les fonctions permettent de structurer le code en blocs réutilisables. Elles
-facilitent la réutilisation du code.
+### Affichage sécurisé des données
 
-Une fonction peut être définie par l'utilisateur ou être une fonction intégrée à
-PHP.
+Lorsque vous affichez des données saisies par les utilisateurs, il est crucial
+de les échapper pour prévenir les attaques XSS (Cross-Site Scripting). En PHP,
+vous pouvez utiliser la fonction `htmlspecialchars()` pour échapper les
+caractères spéciaux.
 
-Une fonction est définie à l'aide du mot-clé `function`, suivi du nom de la
-fonction et de ses (potentiels) paramètres.
-
-#### Fonctions sans paramètres
+Voici comment afficher les données de manière sécurisée :
 
 ```php
-<?php
-function greet() {
-    return "Hello, World!";
-}
+<input type="text" id="first-name" name="first-name" value="<?= htmlspecialchars($firstName ?? ''); ?>">
 ```
 
-Ici, la fonction `greet` ne prend pas de paramètres et retourne une chaîne de
-caractères que nous pouvons utiliser comme suit :
+Ici, `htmlspecialchars()` convertit les caractères spéciaux en entités HTML,
+empêchant ainsi l'exécution de code malveillant si l'utilisateur a saisi du HTML
+ou du JavaScript.
+
+### Validation côté client
+
+Pour améliorer l'expérience utilisateur, il est également possible de valider
+les données côté client à l'aide d'attributs HTML5 tels que `required`,
+`minlength`, `type="email"`, etc. Cependant, cette validation côté client ne
+remplace pas la validation côté serveur, qui est essentielle pour la sécurité.
+
+> [!CAUTION]
+>
+> La validation côté client peut être contournée par des utilisateurs
+> malveillants qui désactivent JavaScript ou modifient le code HTML. Par
+> conséquent, il est impératif de **toujours** valider et nettoyer les données
+> côté serveur avant de les utiliser.
+
+En reprenant l'exemple de formulaire HTML, voici comment ajouter des attributs
+de validation côté client :
 
 ```php
-$greetings = greet();   // Affecte (= donne la valeur) "Hello, World!" à `$greetings`
-echo $greetings;        // Affiche "Hello, World!"
+<form action="create.php" method="POST">
+    <label for="first-name">Prénom</label>
+    <input type="text" id="first-name" name="first-name" value="<?= htmlspecialchars($firstName ?? '') ?>" required minlength="2">
+
+    <label for="last-name">Nom</label>
+    <input type="text" id="last-name" name="last-name" value="<?= htmlspecialchars($lastName ?? '') ?>" required minlength="2">
+
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" value="<?= htmlspecialchars($email ?? '') ?>" required>
+
+    <label for="age">Âge</label>
+    <input type="number" id="age" name="age" value="<?= htmlspecialchars($age ?? '') ?>" required min="0">
+
+    <button type="submit">Créer</button>
+</form>
 ```
 
-#### Fonctions avec paramètres
+## Bases de données et PDO (base)
 
-Des paramètres peuvent être passés à une fonction pour lui fournir des
-informations supplémentaires.
+PHP Data Objects (PDO) est une extension de PHP qui fournit une interface
+abstraite pour accéder à différentes bases de données. PDO permet d'écrire du
+code indépendant du type de base de données, ce qui facilite la portabilité des
+applications.
 
-Les paramètres sont définis entre les parenthèses lors de la déclaration de la
-fonction et ne sont disponibles que dans le corps de la fonction (entre les
-accolades (`{}`)).
+PDO prend en charge plusieurs bases de données, dont MySQL, PostgreSQL, SQLite,
+et bien d'autres.
+
+### SQLite
+
+SQLite est une base de données relationnelle légère qui stocke les données dans
+un fichier unique sur le disque. Elle est idéale pour les applications de petite
+à moyenne taille, les applications embarquées, ou les environnements de
+développement.
+
+Dans l'unité d'enseignement ProgServ1, nous avons déjà vu comment utiliser
+SQLite avec PDO pour sa simplicité.
+
+Voici comment utiliser PDO pour se connecter à une base de données SQLite :
 
 ```php
-<?php
-function greet($name) {
-    return "Hello, " . $name . "!";
-}
+const DATABASE_FILE = __DIR__ . '/mydatabase.db';
+
+$pdo = new PDO("sqlite:" . self::DATABASE_FILE);
+
+$sql = "CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
+    age INTEGER NOT NULL
+);";
+
+$stmt = $pdo->prepare($sql);
+
+$stmt->execute();
 ```
 
-Les paramètres sont passés lors de l'appel de la fonction, dans le même ordre
-que lors de la déclaration.
-
-```php
-$greetings = greet("Alice");
-echo $greetings . "<br>";       // "Hello, Alice!"
-echo greet("Bob") . "<br>";     // "Hello, Bob!"
-```
-
-#### Fonctions avec des paramètres par défaut
-
-Les paramètres par défaut permettent de spécifier une valeur par défaut pour un
-paramètre d'une fonction. Si l'argument correspondant n'est pas fourni lors de
-l'appel de la fonction, la valeur par défaut est utilisée.
-
-```php
-<?php
-function greet($name = "World") {
-    return "Hello, " . $name . "!";
-}
-```
-
-```php
-echo greet() . "<br>";          // "Hello, World!" (utilise la valeur par défaut)
-echo greet("Alice") . "<br>";   // "Hello, Alice!" (utilise l'argument fourni)
-```
-
-#### Fonctions avec typage des paramètres et du retour
-
-Depuis sa version 7.1, PHP permet de spécifier les types des paramètres et du
-retour d'une fonction.
-
-Cela permet de garantir que les arguments passés à la fonction et la valeur
-retournée sont du type attendu, ce qui peut aider à prévenir les erreurs.
-
-```php
-<?php
-function greet(string $name = "World"): string {
-    return "Hello, " . $name . "!";
-}
-
-function add(int $a, int $b): int {
-    return $a + $b;
-}
-```
-
-Grâce au typage, les appels suivants sont valides :
-
-```php
-echo greet() . "<br>";          // "Hello, World!"
-echo greet("Alice") . "<br>";   // "Hello, Alice!"
-echo greet(42) . "<br>";        // "Hello, 42!" (conversion implicite)
-echo add(2, 3) . "<br>";        // 5
-```
-
-Mais l'appel suivant générera une erreur de type :
-
-```php
-// Erreur 1 : Implicit conversion from float 2.5 to int loses precision
-// Erreur 2 : Argument #2 ($b) must be of type int, string given
-echo add(2.5, "Hello") . "<br>";
-```
-
-Les types par défaut sont `mixed`, ce qui signifie que n'importe quel type est
-accepté.
-
-La liste des types de base est la suivante :
-
-- `int` : entier (ex. `42`, `-7`)
-- `float` : nombre à virgule flottante (ex. `3.14`, `-0.001`)
-- `string` : chaîne de caractères (ex. `"Hello"`, `'World'`)
-- `bool` : booléen (ex. `true`, `false`)
-- `array` : tableau (ex. `[1, 2, 3]`, `['a' => 'apple', 'b' => 'banana']`)
-- `object` : objet (ex. `new DateTime()`, `new User()`)
-
-Il existe d'autres types plus avancés, comme `callable`, `iterable`, `void`,
-`self`, tous disponibles dans la documentation officielle de PHP :
-<https://www.php.net/manual/fr/language.types.declarations.php>.
-
-### Importation de fichiers
-
-L'importation de fichiers permet de réutiliser du code défini dans d'autres
-fichiers. Cela favorise la modularité et la maintenabilité du code.
-
-```php
-<?php
-// Fichier `functions.php`
-function greet(string $name = "World"): string {
-    return "Hello, " . $name . "!";
-}
-```
-
-```php
-<?php
-// Fichier `index.php`
-require "functions.php"; // On inclut le fichier
-
-// La fonction `greet()` est définie dans le fichier importé
-// et peut être utilisée ici
-$greetings = greet("Alice");
-echo $greetings; // "Hello, Alice!"
-```
-
-Il existe plusieurs façons d'importer des fichiers en PHP :
-
-- `include '<file>.php';` : Inclut et évalue le fichier spécifié. Si le fichier
-  n'est pas trouvé, une alerte est émise, mais le reste du code est exécuté. Ce
-  n'est pas recommandé.
-- `require '<file>.php';` : Inclut et évalue le fichier spécifié. Si le fichier
-  n'est pas trouvé, une erreur fatale est émise et le reste du code n'est pas
-  exécuté. C'est la méthode recommandée.
-
-#### Fonctions prédéfinies
-
-PHP offre de nombreuses fonctions prédéfinies pour effectuer des tâches
-courantes. Voici quelques exemples :
-
-- `strlen($string)` : retourne la longueur d'une chaîne de caractères.
-- `array_merge($array1, $array2)` : fusionne deux tableaux.
-- `count($array)` : retourne le nombre d'éléments dans un tableau.
-
-La liste complète des fonctions prédéfinies est disponible dans la documentation
-officielle de PHP : <https://www.php.net/manual/fr/funcref.php>.
-
-### Tableaux et boucles
-
-#### Tableaux
-
-Les tableaux (arrays) sont des structures de données qui permettent de stocker
-plusieurs valeurs dans une seule variable. En PHP, les tableaux peuvent être
-indexés numériquement ou associativement (avec des clés personnalisées).
-
-```php
-<?php
-// Tableau indexé numériquement
-$fruits = [
-    'apple',
-    'banana',
-    'orange'
-];
-
-echo $fruits[0] . "<br>"; // "apple"
-
-// Tableau associatif
-$person = [
-    'name' => 'Alice',
-    'age' => 30,
-    'city' => 'New York'
-];
-
-echo $person['name'] . "<br>"; // "Alice"
-```
-
-#### Boucles
-
-Les boucles permettent de répéter un bloc de code tant qu'une condition est
-vraie.
-
-Les boucles les plus courantes sont `for`, `while`, `do-while` et `foreach`.
-
-```php
-<?php
-// Affiche les nombres de 0 à 9
-for ($i = 0; $i < 10; $i++) {
-    echo "$i<br>";
-}
-```
-
-```php
-<?php
-$i = 0;
-
-// Affiche les nombres de 0 à 9
-while ($i < 10) {
-    echo "$i<br>";
-    $i++;
-}
-```
-
-```php
-<?php
-$randomNumber = null;
-
-do {
-    // La fonction `rand()` génère un nombre aléatoire entre 1 et 10
-    $randomNumber = rand(1, 10);
-    echo "The random number is $randomNumber<br>";
-} while ($randomNumber < 8);
-```
-
-```php
-<?php
-$users = [
-    'john' => [
-        'name' => 'John Doe',
-        'age' => 30,
-        'city' => 'New York',
-    ],
-    'jane' => [
-        'name' => 'Jane Doe',
-        'age' => 25,
-        'city' => 'Los Angeles',
-    ],
-];
-
-// `$user` contient la valeur de l'élément du tableau
-foreach ($users as $user) {
-    echo "Name: {$user['name']}<br>";
-    echo "Age: {$user['age']}<br>";
-    echo "City: {$user['city']}<br>";
-    echo "<br>";
-}
-```
-
-### Formulaires HTML, validation et sécurité
-
-Les formulaires HTML permettent de collecter des données auprès des
-utilisateurs. En PHP, les données des formulaires sont accessibles via les
-superglobales `$_POST` et `$_GET`, selon la méthode utilisée pour soumettre le
-formulaire.
-
-Il est crucial de valider et de traiter correctement les données reçues des
-formulaires pour éviter des vulnérabilités telles que les injections SQL ou les
-attaques XSS (Cross-Site Scripting).
-
-Nous y reviendrons plus en détail dans un futur cours.
-
-## Programmation orientée objet (base)
-
-La programmation orientée objet (POO) est un paradigme de programmation qui
-utilise des "objets" pour représenter des données et des comportements.
-
-La programmation orientée objet permet de structurer le code de manière plus
-modulaire et réutilisable.
-
-```php
-<?php
-class User {
-    // Propriétés (attributs)
-    private string $firstName;
-    private string $lastName;
-
-    // Constructeur
-    public function __construct(string $firstName, string $lastName) {
-        $this->firstName = $firstName;
-        $this->lastName = $lastName;
-    }
-
-    // Méthodes
-    public function getFirstName(): string {
-        return $this->firstName;
-    }
-
-    public function setFirstName(string $firstName): void {
-        $this->firstName = $firstName;
-    }
-
-    public function getLastName(): string {
-        return $this->lastName;
-    }
-
-    public function setLastName(string $lastName): void {
-        $this->lastName = $lastName;
-    }
-
-    public function getFullName(): string {
-        return "{$this->firstName} {$this->lastName}";
-    }
-}
-```
-
-Les attributs (propriétés) sont des variables qui stockent l'état de l'objet,
-tandis que les méthodes sont des fonctions qui définissent le comportement de
-l'objet.
-
-Grâce aux dernières versions de PHP, il est possible de typer les attributs
-d'une classe de la même manière que pour les paramètres et le retour des
-fonctions.
-
-Les attributs et les méthodes peuvent avoir différents niveaux de visibilité :
-`public`, `protected` et `private`. Il est recommandé d'utiliser `protected` ou
-`private` pour les attributs afin de favoriser l'encapsulation.
-
-Grâce à l'encapsulation, les attributs d'une classe ne sont pas accessibles
-directement depuis l'extérieur de la classe. On utilise des méthodes publiques
-pour accéder et modifier les attributs (communément appelées _getters_ et
-_setters_).
-
-Le constructeur est une méthode spéciale qui est appelée lors de la création
-d'un objet.
-
-Une classe est instanciée (créée) à l'aide du mot-clé `new`, ce qui crée un
-nouvel objet de cette classe :
-
-```php
-// Création d'objets (instanciation)
-$user1 = new User("Alice", "Smith");
-$user2 = new User("Bob", "Johnson");
-
-// Utilisation des méthodes
-echo $user1->getFirstName() . "<br>";   // "Alice"
-echo $user2->getFullName() . "<br>";    // "Bob Johnson"
-$user2->setLastName("Doe");             // Modifie le nom de famille de Bob
-echo $user2->getFullName() . "<br>";    // "Bob Doe"
-```
+Dans cet exemple, nous créons une connexion à une base de données SQLite stockée
+dans le fichier `mydatabase.db`. Nous définissons ensuite une requête SQL pour
+créer une table `users` si elle n'existe pas déjà, puis nous préparons et
+exécutons cette requête.
 
 ## Bases de données et PDO (avancé)
 
-### Interfaces
+Dans un environnement de production, SQLite peut ne pas être suffisant en raison
+de ses limitations en termes de concurrence et de fonctionnalités avancées. Pour
+des applications plus complexes, il est courant d'utiliser des systèmes de
+gestion de bases de données (SGBD) plus robustes comme MySQL ou MariaDB.
 
-Les interfaces définissent un contrat que les classes doivent respecter. Elles
-spécifient quelles méthodes une classe doit implémenter sans définir leur
-implémentation.
+### MySQL/MariaDB
 
-Considérons une interface `AnimalInterface` qui définit les méthodes que toutes
-les classes d'animaux doivent implémenter.
+MySQL et MariaDB sont des SGBD relationnels populaires qui offrent des
+fonctionnalités avancées, une meilleure gestion de la concurrence, et une
+évolutivité supérieure par rapport à SQLite.
+
+MariaDB est un fork de MySQL, créé par les développeurs originaux de MySQL après
+son acquisition par Oracle. MariaDB est entièrement compatible avec MySQL, ce
+qui permet de migrer facilement entre les deux systèmes. C'est la raison pour
+laquelle nous citons ces deux SGBD ensemble car vous pourriez tomber sur l'un ou
+l'autre dans le monde professionnel.
+
+Voici comment se connecter à une base de données MySQL/MariaDB avec PDO :
 
 ```php
-<?php
-interface AnimalInterface {
-    public function makeSound(): string;
-    public function getHabitat(): string;
+const DB_HOST = 'localhost';
+const DB_PORT = 3306;
+const DB_NAME = 'mydatabase';
+const DB_USER = 'myuser';
+const DB_PASSWORD = 'mypassword';
+
+$dsn = "mysql:host=" . self::DB_HOST . ";port=" . self::DB_PORT . ";dbname=" . self::DB_NAME . ";charset=utf8mb4";
+
+$pdo = new PDO($dsn, DB_USER, DB_PASSWORD);
+```
+
+Dans cet exemple, nous définissons les paramètres de connexion à la base de
+données, y compris l'hôte, le port, le nom de la base de données, l'utilisateur
+et le mot de passe. Nous construisons ensuite la chaîne de connexion (DSN) et
+créons une instance de PDO pour établir la connexion.
+
+La chaîne de connexion pour MySQL/MariaDB inclut le type de SGBD (`mysql`),
+l'hôte, le port, le nom de la base de données, et le jeu de caractères
+(`charset=utf8mb4`). Il est possible de passer d'autres options dans la chaîne
+de connexion selon les besoins.
+
+Comme pour SQLite, nous pouvons utiliser des requêtes préparées pour interagir
+avec la base de données de manière sécurisée. Il est néanmoins nécessaire de
+modifier légèrement la syntaxe SQL pour s'adapter aux spécificités de
+MySQL/MariaDB :
+
+```php
+// Création de la base de données si elle n'existe pas
+$sql = "CREATE DATABASE IF NOT EXISTS `$database` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+
+// Sélection de la base de données
+$sql = "USE `$database`;";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+
+// Création de la table `users` si elle n'existe pas
+$sql = "CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    age INT NOT NULL
+);";
+
+$stmt = $pdo->prepare($sql);
+
+$stmt->execute();
+```
+
+En dehors de la syntaxe SQL, l'utilisation de PDO avec MySQL/MariaDB reste
+similaire à celle avec SQLite, notamment en ce qui concerne les requêtes
+préparées et la liaison des paramètres.
+
+Lors de l'installation de MAMP sur votre machine, MySQL/MariaDB est déjà inclus
+et prêt à l'emploi. Par défaut, l'utilisateur est `root` sans mot de passe. Il
+serait recommandé de créer un nouvel utilisateur avec des privilèges limités
+pour vos applications web. Mais comme il s'agit d'un environnement de
+développement local, vous pouvez utiliser l'utilisateur `root` sans mot de passe
+pour simplifier les choses.
+
+MySQL est donc directement à votre disposition pour vos applications web en
+développement.
+
+### Gestion des erreurs avec les exceptions
+
+Lorsque l'on interagit avec une base de données, il est possible que des erreurs
+se produisent, par exemple en cas de problème de connexion, de requête SQL
+invalide, ou de violation de contraintes (comme une clé unique).
+
+De ce fait, lorsqu'une erreur survient, PDO peut générer une exception.
+
+Une exception est un objet qui représente une erreur ou une condition
+exceptionnelle dans le programme. En PHP, les exceptions sont des instances de
+la classe `Exception` ou de ses sous-classes.
+
+Une exception peut être "jetée" (throw) lorsqu'une erreur se produit, et elle
+peut être "attrapée" (catch) dans un bloc `try-catch` pour gérer l'erreur de
+manière appropriée.
+
+Une analogie courante pour comprendre les exceptions est de les comparer à des
+"signaux d'alarme" dans un programme. Lorsqu'une erreur se produit, l'exception
+est jetée pour signaler qu'il y a un problème. Le programme peut alors attraper
+cette exception et décider comment y répondre, par exemple en affichant un
+message d'erreur à l'utilisateur ou en effectuant une action de récupération.
+
+Les signaux d'alarme peuvent émerger quelque part dans le code, et, si personne
+ne les entend/attrape, le programme s'arrête brusquement. En revanche, si
+quelqu'un est là pour les attraper, il peut gérer l'erreur de manière
+appropriée, effectuer des actions correctives, informer l'utilisateur, ou
+simplement relancer le signal pour qu'une autre partie du programme puisse le
+gérer.
+
+Pour gérer ces exceptions, le code doit être encapsulé dans un bloc `try-catch`.
+Voici un exemple :
+
+```php
+try {
+    // Code qui peut générer une exception
+    throw new Exception("Une erreur s'est produite.");
+} catch (Exception $e) {
+    // Gestion de l'exception
+    echo "Une exception a été capturée : " . $e->getMessage();
 }
 ```
 
-Cette interface déclare deux méthodes : `makeSound` et `getHabitat`. Toutes les
-classes qui implémentent cette interface doivent fournir une implémentation pour
-ces méthodes.
+Dans cet exemple, le code à risque est placé dans le bloc `try`. Si une
+exception est jetée, elle est capturée dans le bloc `catch`, où nous pouvons
+gérer la situation, par exemple en affichant un message d'erreur.
+
+Ici, de façon naïve, nous jetons une exception manuellement pour illustrer le
+fonctionnement des blocs `try-catch`. En pratique, les exceptions sont souvent
+jetées automatiquement par des fonctions ou des méthodes lorsqu'une erreur se
+produit.
+
+Si une exception n'est pas capturée, elle provoque l'arrêt du script et
+l'affichage d'un message d'erreur dans le navigateur.
+
+PDO est capable de lever des exceptions en cas d'erreurs de connexion ou de
+requêtes SQL. Il est donc possible de gérer ces erreurs en utilisant des blocs
+`try-catch`.
+
+Il est aussi possible d'attraper plusieurs types d'exceptions en utilisant
+plusieurs blocs `catch`. Par exemple, on peut attraper les exceptions
+spécifiques à PDO (`PDOException`) ainsi que les exceptions générales
+(`Exception`) :
 
 ```php
-class Lion implements AnimalInterface {
-    public function makeSound(): string {
-        return "Roar!";
-    }
-
-    public function getHabitat(): string {
-        return "Savannah";
-    }
-}
-
-class Penguin implements AnimalInterface {
-    public function makeSound(): string {
-        return "Honk!";
-    }
-
-    public function getHabitat(): string {
-        return "Antarctica";
-    }
-}
-```
-
-Grâce aux interfaces, nous pouvons garantir que toutes les classes d'animaux
-implémentent les mêmes méthodes, ce qui facilite le polymorphisme.
-
-```php
-$lion = new Lion();
-$penguin = new Penguin();
-
-echo $lion->makeSound();        // "Roar!"
-echo $lion->getHabitat();       // "Savannah"
-echo $penguin->makeSound();     // "Honk!"
-echo $penguin->getHabitat();    // "Antarctica"
-```
-
-Le polymorphisme permet de traiter différents types d'objets de manière uniforme
-lorsqu'ils implémentent la même interface. Ici, tous les animaux peuvent être
-traités de la même manière grâce à l'interface `AnimalInterface`.
-
-### Héritage
-
-L'héritage permet à une classe (classe fille) d'hériter des propriétés et
-méthodes d'une autre classe (classe parent), favorisant la réutilisation du
-code.
-
-A la différence des interfaces, une classe peut inclure les attributs et
-méthodes d'une autre classe.
-
-```php
-<?php
-class Plant {
-    protected string $englishName;
-    protected string $latinName;
-
-    public function __construct(string $englishName, string $latinName) {
-        $this->englishName = $englishName;
-        $this->latinName = $latinName;
-    }
-
-    public function getEnglishName(): string {
-        return $this->englishName;
-    }
-
-    public function getLatinName(): int {
-        return $this->latinName;
-    }
+try {
+    // Connexion à la base de données
+    $pdo = new PDO($dsn, DB_USER, DB_PASSWORD);
+} catch (PDOException $e) {
+    // Gestion des erreurs spécifiques à PDO
+    echo "Erreur de connexion à la base de données : " . $e->getMessage();
+} catch (Exception $e) {
+    // Gestion des autres exceptions
+    echo "Une erreur s'est produite : " . $e->getMessage();
 }
 ```
 
-Ici, la classe `Plant` est une classe de base qui représente une plante avec son
-nom anglais et son nom latin.
-
-Les attributs sont `protected`, ce qui signifie qu'ils sont accessibles dans la
-classe et ses sous-classes.
-
-Si des attributs sont privés (`private`), ils ne sont pas accessibles dans les
-sous-classes.
+En utilisant la même base de données MySQL/MariaDB que précédemment, illustrons
+un exemple de l'insertion de deux personnes dans la base de données avec gestion
+avec la même adresse e-mail :
 
 ```php
-class Basil extends Plant {
-    private string $variety;
+try {
+    // Connexion à la base de données
+    $pdo = new PDO($dsn, DB_USER, DB_PASSWORD);
 
-    public function __construct(string $englishName, string $latinName, string $variety) {
-        parent::__construct($englishName, $latinName);
-        $this->variety = $variety;
-    }
+    // Préparation de la requête SQL pour ajouter un utilisateur
+    $sql = "INSERT INTO users (first_name, last_name, email, age) VALUES (:first_name, :last_name, :email, :age)";
+    $stmt = $pdo->prepare($sql);
 
-    public function getVariety(): string {
-        return $this->variety;
-    }
-}
+    // Insertion du premier utilisateur
+    $stmt->execute([
+        ':first_name' => 'Alice',
+        ':last_name' => 'Dupont',
+        ':email' => 'alice.dupont@example.com',
+        ':age' => 30
+    ]);
 
-class Tomato extends Plant {
-    private string $color;
-
-    public function __construct(string $englishName, string $latinName, string $color) {
-        parent::__construct($englishName, $latinName);
-        $this->color = $color;
-    }
-
-    public function getColor(): string {
-        return $this->color;
-    }
+    // Insertion du deuxième utilisateur (avec la même adresse e-mail)
+    $stmt->execute([
+        ':first_name' => 'Bob',
+        ':last_name' => 'Martin',
+        ':email' => 'alice.dupont@example.com',
+        ':age' => 25
+    ]);
+} catch (PDOException $e) {
+    // Gestion de l'exception
+    echo "Une erreur s'est produite : " . $e->getMessage();
 }
 ```
 
-Ici, nous avons deux classes filles, `Basil` et `Tomato`, qui héritent de la
-classe `Plant`. Elles ajoutent chacune un attribut spécifique (`variety` pour le
-basilic et `color` pour la tomate) et redéfinissent le constructeur pour
-initialiser ces nouveaux attributs.
-
-Dans le constructeur des classes filles, nous appelons le constructeur de la
-classe parent avec `parent::__construct(...)` pour initialiser les attributs
-hérités.
-
-```php
-$plant = new Plant("Generic Plant", "Plantae");
-$basil = new Basil("Basil", "Ocimum basilicum", "Sweet Basil");
-$tomato = new Tomato("Tomato", "Solanum lycopersicum", "Red");
-
-echo $plant->getEnglishName(); // "Generic Plant"
-echo $plant->getLatinName();   // "Plantae"
-echo $basil->getVariety();     // "Sweet Basil"
-echo $tomato->getColor();      // "Red"
-```
-
-Ces classes peuvent être ensuite utilisées pour créer des objets représentant
-des plantes spécifiques.
-
-### Abstraction
-
-Les classes abstraites permettent de définir une base commune avec des méthodes
-partiellement implémentées. Elles ne peuvent pas être instanciées directement.
-
-Nous pouvons imaginer une classe abstraite comme un mélange entre une interface
-et une classe normale.
-
-```php
-<?php
-abstract class Shape {
-    protected string $color;
-
-    public function __construct(string $color) {
-        $this->color = $color;
-    }
-
-    // Méthode concrète (implémentée)
-    public function getColor(): string {
-        return $this->color;
-    }
-
-    // Méthodes abstraites (doivent être implémentées par les classes filles)
-    abstract public function calculateArea(): float;
-    abstract public function calculatePerimeter(): float;
-
-    // Méthode concrète utilisant les méthodes abstraites
-    public function getShapeInfo(): string {
-        return sprintf(
-            "Shape: %s, Color: %s, Area: %.2f, Perimeter: %.2f",
-            static::class,
-            $this->color,
-            $this->calculateArea(),
-            $this->calculatePerimeter()
-        );
-    }
-}
-```
-
-Ici, nous avons une classe abstraite `Shape` qui définit une propriété `color`
-et une méthode concrète `getColor()`. Elle déclare également deux méthodes
-abstraites `calculateArea()` et `calculatePerimeter()` que les classes filles
-doivent implémenter.
-
-Cette classe abstraite a pour but de fournir une structure commune pour toutes
-les formes géométriques, tout en laissant les détails spécifiques à chaque forme
-aux classes filles.
-
-```php
-class Rectangle extends Shape {
-    private float $width;
-    private float $height;
-
-    public function __construct(string $color, float $width, float $height) {
-        parent::__construct($color);
-        $this->width = $width;
-        $this->height = $height;
-    }
-
-    public function calculateArea(): float {
-        return $this->width * $this->height;
-    }
-
-    public function calculatePerimeter(): float {
-        return 2 * ($this->width + $this->height);
-    }
-}
-```
-
-Ici, nous avons une première classe fille `Rectangle` qui hérite de la classe
-abstraite `Shape`. Elle implémente les méthodes abstraites `calculateArea()` et
-`calculatePerimeter()` pour calculer l'aire et le périmètre d'un rectangle.
-
-Si une classe fille n'implémente pas toutes les méthodes abstraites, une erreur
-fatale est générée lors de l'exécution, car elle doit respecter le contrat
-défini par la classe abstraite.
-
-```php
-class Circle extends Shape {
-    private float $radius;
-
-    public function __construct(string $color, float $radius) {
-        parent::__construct($color);
-        $this->radius = $radius;
-    }
-
-    public function calculateArea(): float {
-        return pi() * pow($this->radius, 2);
-    }
-
-    public function calculatePerimeter(): float {
-        return 2 * pi() * $this->radius;
-    }
-}
-```
-
-Ici, nous avons une deuxième classe fille `Circle` qui hérite également de la
-classe abstraite `Shape`. Elle implémente les méthodes abstraites pour calculer
-l'aire et le périmètre d'un cercle.
-
-Il suffit maintenant d'instancier les classes filles pour créer des objets
-représentant des formes géométriques spécifiques.
-
-```php
-$rectangle = new Rectangle("blue", 10, 5);
-$circle = new Circle("red", 7);
-
-echo $rectangle->getShapeInfo();
-// Shape: Rectangle, Color: blue, Area: 50.00, Perimeter: 30.00
-
-echo $circle->getShapeInfo();
-// Shape: Circle, Color: red, Area: 153.94, Perimeter: 43.98
-```
-
-Il n'est pas possible d'instancier directement la classe abstraite `Shape` :
-
-```php
-$shape = new Shape("green"); // Erreur fatale : Cannot instantiate abstract class Shape
-```
-
-La classe abstraite `Shape` sert uniquement de modèle pour les classes filles.
-
-### Inclusion des fichiers et classes
-
-En PHP, il est courant d'organiser le code en plusieurs fichiers pour améliorer
-la lisibilité et la maintenabilité. Chaque classe peut être définie dans son
-propre fichier, et ces fichiers peuvent être inclus dans d'autres fichiers selon
-les besoins.
-
-#### Inclusion manuelle
-
-Pour inclure des fichiers en PHP, nous pouvons utiliser les fonctions `include`
-et `require`.
-
-Si nous prenons le diagramme de classes suivant :
-
-![Exemple de diagramme de classes](./images/animal-hierarchy-example.png)
-
-Nous avons plusieurs classes abstraites et concrètes représentant différents
-animaux. Chaque classe peut être définie dans son propre fichier.
-
-Le fichier `Animal.php` pourrait contenir la classe abstraite `Animal` :
-
-```php
-<?php
-// Animal.php
-abstract class Animal {
-    protected string $name;
-    protected float $size;
-
-    public function __construct(string $name, float $size) {
-        $this->name = $name;
-        $this->size = $size;
-    }
-
-    abstract public function makeSound(): string;
-
-    public function getName(): string {
-        return $this->name;
-    }
-
-    public function setName(string $name): void {
-        $this->name = $name;
-    }
-
-    public function getSize(): float {
-        return $this->size;
-    }
-
-    public function setSize(float $size): void {
-        $this->size = $size;
-    }
-}
-```
-
-Le fichier `Pet.php` pourrait contenir la classe abstraite `Pet` qui hérite de
-`Animal` :
-
-```php
-<?php
-// Pet.php
-require 'Animal.php';
-
-abstract class Pet extends Animal {
-    protected string $nickname;
-
-    public function __construct(string $name, float $size, string $nickname) {
-        parent::__construct($name, $size);
-        $this->nickname = $nickname;
-    }
-
-    public function getNickname(): string {
-        return $this->nickname;
-    }
-
-    public function setNickname(string $nickname): void {
-        $this->nickname = $nickname;
-    }
-}
-```
-
-Le fichier `Dog.php` pourrait contenir la classe concrète `Dog` qui hérite de la
-classe abstraite `Pet` :
-
-```php
-<?php
-// Dog.php
-require 'Pet.php';
-
-class Dog extends Pet {
-    public function __construct(string $name, float $size, string $nickname) {
-        parent::__construct($name, $size, $nickname);
-    }
-
-    public function makeSound(): string {
-        return "Woof!";
-    }
-}
-```
-
-Le fichier `Cat.php` pourrait contenir la classe concrète `Cat` qui hérite de la
-classe abstraite `Pet` :
-
-```php
-<?php
-// Cat.php
-require 'Pet.php';
-
-class Cat extends Pet {
-    public function __construct(string $name, float $size, string $nickname) {
-        parent::__construct($name, $size, $nickname);
-    }
-
-    public function makeSound(): string {
-        return "Meow!";
-    }
-}
-```
-
-Puis finalement, le fichier `index.php` pourrait être le point d'entrée de notre
-application, où nous incluons les fichiers nécessaires et créons des objets :
-
-```php
-<?php
-// index.php
-require 'Dog.php';
-require 'Cat.php';
-
-$dog = new Dog("Nalia", 30.5, "Naliouille");
-$cat = new Cat("Tofu", 10.0, "Sushi");
-
-echo $dog->getName() . " says: " . $dog->makeSound() . "<br>";
-echo $cat->getName() . " says: " . $cat->makeSound() . "<br>";
-```
-
-Avec le code actuel, nous sommes confronté à un problème d'import.
-
-En effet, PHP va exécuter le fichier `index.php` et va rencontrer la ligne
-`require 'Dog.php';`. PHP va alors inclure le fichier `Dog.php`.
-
-Le fichier `Dog.php` importe lui-même le fichier `Pet.php` avec la ligne
-`require 'Pet.php';`.
-
-Le fichier `Pet.php` importe lui-même le fichier `Animal.php` avec la ligne
-`require 'Animal.php';`.
-
-Jusqu'ici, tout va bien.
-
-Le même processus se produit pour la ligne `require 'Cat.php';` dans le fichier
-`index.php`, qui inclut `Cat.php`, mais ce fichier contient lui-même une ligne
-`require 'Pet.php';`.
-
-Hors, le fichier `Pet.php` a déjà été inclus une première fois, donc PHP va
-générer une erreur fatale :
+Lors de l'insertion du deuxième utilisateur, une exception `PDOException` sera
+jetée en raison de la violation de la contrainte d'unicité sur le champ `email`.
+L'exception sera capturée dans le bloc `catch`, et un message d'erreur approprié
+sera affiché :
 
 ```text
-Fatal error: Cannot declare class Pet, because the name is already in use in /path/to/Pet.php on line 4
+Une erreur s'est produite : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'alice.dupont@example.com' for key 'email'
 ```
 
-Pour éviter ce problème, nous pouvons utiliser `require_once` au lieu de
-`require`. Cela garantit que chaque fichier n'est inclus qu'une seule fois, même
-s'il est référencé plusieurs fois.
+Chaque erreur de PDO est associée à un code d'erreur SQLSTATE qui fournit des
+informations supplémentaires sur la nature de l'erreur. Dans cet exemple, le
+code `23000` indique une violation de contrainte d'intégrité, et le message
+détaillé précise qu'il s'agit d'une entrée en double pour la clé `email`.
 
-Ainsi, tous les fichiers `Dog.php`, `Cat.php` et `Pet.php` doivent utiliser
-`require_once` au lieu de `require` :
+Une liste des codes d'erreur SQLSTATE est disponible ici :
+<https://en.wikipedia.org/wiki/SQLSTATE>.
 
-```php
-<?php
-// Dog.php
-require_once 'Pet.php';
-...
-```
+Il est donc possible de gérer les erreurs de manière élégante et de fournir des
+messages d'erreur utiles aux utilisateurs ou aux développeurs, comme illustré
+dans l'exemple ci-dessus :
 
 ```php
-<?php
-// Cat.php
-require_once 'Pet.php';
-...
-```
+// S'il n'y a pas d'erreurs, ajout de l'utilisateur
+if (empty($errors)) {
+    try {
+        // Ajout de l'utilisateur à la base de données
+        $userId = $usersManager->addUser($user);
 
-```php
-<?php
-// Pet.php
-require_once 'Animal.php';
-...
-```
-
-De cette manière, lorsque PHP inclut `Dog.php`, il inclut `Pet.php` une seule
-fois (qui lui-même inclut `Animal.php` une seule fois) et lorsque `Cat.php` est
-inclus, `Pet.php` n'est pas inclus à nouveau. Le problème d'import est résolu !
-
-### Espaces de noms (namespaces)
-
-Les namespaces permettent d'organiser le code en regroupant les classes,
-fonctions et constantes sous un même espace de noms. Cela peut permettre
-d'éviter les conflits de noms et d'améliorer la lisibilité du code.
-
-En reprenant l'exemple précédent, nous pourrions définir un namespace pour
-chaque groupe de classes.
-
-```php
-<?php
-// src/Animals/Animal.php
-namespace Animals;
-
-abstract class Animal {
-    protected string $name;
-    protected float $size;
-
-    public function __construct(string $name, float $size) {
-        $this->name = $name;
-        $this->size = $size;
-    }
-
-    abstract public function makeSound(): string;
-
-    public function getName(): string {
-        return $this->name;
-    }
-
-    public function getSize(): float {
-        return $this->size;
+        // Redirection vers la page d'accueil avec tous les utilisateurs
+        header("Location: index.php");
+        exit();
+    } catch (PDOException $e) {
+        // Liste des codes d'erreurs : https://en.wikipedia.org/wiki/SQLSTATE
+        if ($e->getCode() == 23000) {
+            // Erreur de contrainte d'unicité (par exemple, email déjà utilisé)
+            $errors[] = "L'adresse e-mail est déjà utilisée.";
+        } else {
+            $errors[] = "Erreur lors de l'interaction avec la base de données : " . $e->getMessage();
+        }
+    } catch (Exception $e) {
+        $errors[] = "Erreur inattendue : " . $e->getMessage();
     }
 }
 ```
 
+### Fichiers de configuration
+
+Dans les exemples précédents, les paramètres de connexion à la base de données
+étaient définis directement dans le code. Cependant, dans une application
+réelle, il est préférable de stocker ces paramètres dans un fichier de
+configuration séparé.
+
+Cela permet de modifier les paramètres sans toucher au code source, et de garder
+les informations sensibles (comme les mots de passe) hors du code.
+
+Voici un exemple simple de fichier de configuration `config/database.ini` :
+
 ```php
-<?php
-// src/Animals/Pets/Pet.php
-namespace Animals\Pets;
+host = "127.0.0.1"
+port = 3306
+database = "myapp"
+username = "username"
+password = "password"
+```
 
-require_once 'Animal.php';
+Et voici comment lire ce fichier de configuration en PHP :
 
-use Animals\Animal;
+```php
+const DATABASE_CONFIGURATION_FILE = __DIR__ . '/../config/database.ini';
 
-abstract class Pet extends Animal {
-    protected string $nickname;
+// Documentation : https://www.php.net/manual/fr/function.parse-ini-file.php
+$config = parse_ini_file(self::DATABASE_CONFIGURATION_FILE, true);
 
-    public function __construct(string $name, float $size, string $nickname) {
-        parent::__construct($name, $size);
-        $this->nickname = $nickname;
-    }
-
-    public function getNickname(): string {
-        return $this->nickname;
-    }
-
-    public function setNickname(string $nickname): void {
-        $this->nickname = $nickname;
-    }
+if (!$config) {
+    throw new Exception("Erreur lors de la lecture du fichier de configuration : " . self::DATABASE_CONFIGURATION_FILE);
 }
+
+$host = $config['host'];
+$port = $config['port'];
+$database = $config['database'];
+$username = $config['username'];
+$password = $config['password'];
+
+// Documentation :
+//   - https://www.php.net/manual/fr/pdo.connections.php
+//   - https://www.php.net/manual/fr/ref.pdo-mysql.connection.php
+$pdo = new PDO("mysql:host=$host;port=$port;charset=utf8mb4", $username, $password);
 ```
 
-```php
-<?php
-// src/Animals/Pets/Dog.php
-namespace Animals\Pets;
+En utilisant un fichier de configuration, il est important de s'assurer que ce
+fichier n'est pas accessible publiquement via le serveur web pour des raisons de
+sécurité. Il est recommandé de placer le fichier de configuration en dehors du
+répertoire racine du serveur web, ou de configurer le serveur pour restreindre
+l'accès à ce fichier.
 
-require_once 'Pet.php';
-
-use Animals\Pets\Pet;
-
-class Dog extends Pet {
-    public function __construct(string $name, float $size, string $nickname) {
-        parent::__construct($name, $size, $nickname);
-    }
-
-    public function makeSound(): string {
-        return "Woof!";
-    }
-}
-```
-
-```php
-<?php
-// src/Animals/Pets/Cat.php
-namespace Animals\Pets;
-
-require_once 'Pet.php';
-
-use Animals\Pets\Pet;
-
-class Cat extends Pet {
-    public function __construct(string $name, float $size, string $nickname) {
-        parent::__construct($name, $size, $nickname);
-    }
-
-    public function makeSound(): string {
-        return "Meow!";
-    }
-}
-```
-
-Pour utiliser cette classe dans un autre fichier, nous devons importer le
-namespace ou utiliser son nom complet.
-
-```php
-<?php
-require_once 'src/Animals/Pets/Dog.php';
-require_once 'src/Animals/Pets/Cat.php';
-
-use Animals\Pets\Dog;
-use Animals\Pets\Cat;
-
-$dog = new Dog("Nalia", 30.5, "Naliouille");
-$cat = new Cat("Tofu", 10.0, "Sushi");
-
-echo $dog->getName() . " says: " . $dog->makeSound() . "<br>";
-echo $cat->getName() . " says: " . $cat->makeSound() . "<br>";
-```
-
-```php
-<?php
-require_once 'Dog.php';
-require_once 'Cat.php';
-
-$dog = new \MyApp\Animals\Pets\Dog("Nalia", 30.5, "Naliouille");
-$cat = new \MyApp\Animals\Pets\Cat("Tofu", 10.0, "Sushi");
-
-echo $dog->getName() . " says: " . $dog->makeSound() . "<br>";
-echo $cat->getName() . " says: " . $cat->makeSound() . "<br>";
-```
-
-Les namespaces ne sont pas obligatoires, mais ils peuvent aider à organiser le
-code pour les projets plus complexes et éviter les conflits de noms (plusieurs
-classes avec le même nom dans des contextes différents).
-
-#### Inclusion automatique (autoloader)
-
-Gérer les imports manuellement peut devenir fastidieux dans les projets plus
-complexes avec de nombreuses classes et dépendances. Pour simplifier ce
-processus, PHP offre une fonctionnalité d'inclusion automatique (autoloader).
-
-L'autoloader permet de charger automatiquement les classes lorsqu'elles sont
-utilisées, sans avoir à inclure manuellement chaque fichier.
-
-L'autoloader sera importé une seule fois par fichier, puis il s'occupera de
-charger toutes les autres classes utilisées dans ce fichier de manière
-automatique :
-
-```php
-<?php
-// autoloader.php
-// Charge les classes automatiquement
-spl_autoload_register(function ($class) {
-    // Convertit les séparateurs de namespace en séparateurs de répertoires
-    $relativePath = str_replace('\\', '/', $class);
-
-    // Construit le chemin complet du fichier
-    $file = __DIR__ . '/../classes/' . $relativePath . '.php';
-
-    // Vérifie si le fichier existe avant de l'inclure
-    if (file_exists($file)) {
-        // Inclut le fichier de classe
-        require_once $file;
-    }
-});
-```
-
-Ensuite, dans le fichier `index.php`, nous incluons simplement l'autoloader au
-lieu d'inclure chaque fichier de classe individuellement :
-
-```php
-<?php
-// index.php
-require 'autoloader.php'; // Plus besoin d'inclure chaque fichier de classe manuellement
-
-use Animals\Pets\Dog;
-use Animals\Pets\Cat;
-
-$dog = new Dog("Nalia", 30.5, "Naliouille");
-$cat = new Cat("Tofu", 10.0, "Sushi");
-
-echo $dog->getName() . " says: " . $dog->makeSound() . "<br>";
-echo $cat->getName() . " says: " . $cat->makeSound() . "<br>";
-```
-
-L'autoloader va automatiquement chercher et inclure les fichiers nécessaires
-lorsque les classes `Dog` et `Cat` sont instanciées. L'autoloader se chargera
-d'importer qu'un seul fichier par classe, même si plusieurs classes sont
-utilisées dans le même fichier.
-
-### Limites de l'héritage et de l'abstraction
-
-PHP ne supporte pas l'héritage multiple, c'est-à-dire qu'une classe ne peut
-hériter que d'une seule classe parent. Cependant, une classe peut implémenter
-plusieurs interfaces.
-
-Il est important de noter que l'héritage et l'abstraction doivent être utilisés
-avec parcimonie pour éviter une hiérarchie de classes trop complexe. Une
-hiérarchie trop profonde peut rendre le code difficile à comprendre et à
-maintenir.
-
-L'exemple suivant illustre une hiérarchie de classes qui peut déjà être
-considérée comme trop complexe :
-
-![Exemple de diagramme de classes inutilement compliqué](./images/animal-hierarchy-example-over-engineered.png)
-
-Restez simple et adaptez la structure de votre code aux besoins réels de votre
-application si les besoins évoluent.
+Lors de l'utilisation de Git pour le contrôle de version, il est également
+conseillé d'ajouter le fichier de configuration à `.gitignore` pour éviter de le
+committer dans le dépôt, surtout s'il contient des informations sensibles, et
+d'utiliser plutôt un fichier de configuration d'exemple (par exemple,
+`database.ini.example`) dans le dépôt.
 
 ## Conclusion
 
-Dans ce cours, nous avons exploré les concepts fondamentaux de la programmation
-en PHP ainsi que les principes de la programmation orientée objet (POO).
+Dans ce cours, nous avons exploré les concepts avancés liés aux bases de données
+et à l'utilisation de PDO en PHP. Nous avons vu comment interagir avec des bases
+de données MySQL/MariaDB, gérer les erreurs avec des exceptions, et utiliser des
+fichiers de configuration pour stocker les paramètres de connexion.
 
-Nous avons couvert les bases du langage PHP, y compris les variables, les types
-de données, les structures de contrôle, les fonctions, et l'importation de
-fichiers.
-
-Ensuite, nous avons approfondi la POO en examinant les classes, les objets,
-l'héritage, les interfaces, l'abstraction, et la gestion des espaces de noms.
-
-Nous avons également abordé des pratiques avancées telles que l'inclusion
-automatique des classes (autoloader) pour simplifier la gestion des dépendances
-dans les projets plus complexes.
-
-La POO est un paradigme puissant qui permet de structurer le code de manière
-modulaire et réutilisable, mais il est essentiel de l'utiliser judicieusement
-pour éviter une complexité excessive.
+Un rappel des concepts de base des formulaires HTML, de la validation et de la
+sécurité a également été fait pour s'assurer que les données saisies par les
+utilisateurs sont correctement gérées avant d'être insérées dans la base de
+données.
 
 ## Exemples de code
 

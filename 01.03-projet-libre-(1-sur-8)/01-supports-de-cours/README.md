@@ -301,6 +301,38 @@ A faire pour le prochain cours :
 - [x] Mettre en place son environnement de travail collaboratif.
 - [x] Se répartir le travail entre les différents membres du groupe.
 
+#### ProgServ2-A (mardi matin)
+
+|   # | Groupe               | Heure de passage |
+| --: | :------------------- | :--------------- |
+|   1 | Luca, Sacha, Ryad    | 10h30            |
+|   2 | Pierre, Raul, Romain | 10h40            |
+|   3 | Inês, Rania          | 10h50            |
+|   4 | Matteo, Ella, Aïdan  | 11h00            |
+|   5 | Luka, Nabil, Mathias | 11h10            |
+|   6 | Carla, Cindy         | 11h20            |
+|   7 | Marc, Ana, Charline  | 11h30            |
+|   8 | Lilou, Aissya        | 11h40            |
+|   9 | Léa, Grégory         | 11h50            |
+
+Steve..?
+
+#### ProgServ2-B (mardi après-midi)
+
+|   # | Groupe                                     | Heure de passage |
+| --: | :----------------------------------------- | :--------------- |
+|   1 | Sarah, Sasita, Enya                        | 14h30            |
+|   2 | Gabriel Cappai, Nuno Amaro, Tanguy Vaucher | 14h40            |
+|   3 | Thierry, Lilliana                          | 14h50            |
+|   4 | Dylan, Valentin                            | 15h00            |
+|   5 | Christophe, Loic                           | 15h10            |
+|   6 | Chloé, Benoît, Camilo                      | 15h20            |
+|   7 | Etienne, Teicir                            | 15h30            |
+|   8 | Inoé, Léa, Yannis                          | 15h40            |
+|   9 | Loann, Elia, Marike                        | 15h50            |
+
+Loriane..?
+
 ### Jalon 3
 
 - Tour de table - validation du travail effectué jusqu'à présent.

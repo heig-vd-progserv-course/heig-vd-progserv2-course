@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <form action="create.php" method="POST">
             <label for="name">Nom</label>
-            <input type="text" id="name" name="name" value="<?php if (isset($name)) echo htmlspecialchars($name); ?>" required minlength="2">
+            <input type="text" id="name" name="name" value="<?= htmlspecialchars($name ?? ''); ?>" required minlength="2">
 
             <label for="type">Type</label>
             <select id="type" name="type" required>
@@ -98,10 +98,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </select>
 
             <label for="purchase-date">Date d'achat</label>
-            <input type="date" id="purchase-date" name="purchase-date" value="<?php if (isset($purchaseDate)) echo htmlspecialchars($purchaseDate); ?>" required>
+            <input type="date" id="purchase-date" name="purchase-date" value="<?= htmlspecialchars($purchaseDate ?? ''); ?>" required>
 
             <label for="price">Prix</label>
-            <input type="number" id="price" name="price" value="<?php if (isset($price)) echo htmlspecialchars($price); ?>" required min="0">
+            <input type="number" id="price" name="price" value="<?= htmlspecialchars($price ?? ''); ?>" required min="0">
 
             <button type="submit">Créer</button>
         </form>

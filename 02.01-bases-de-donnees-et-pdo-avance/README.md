@@ -16,9 +16,11 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Objectifs
 
-- Rappeler les concepts de base de la programmation orientée objet.
-- Appliquer les notions d'interface, d'héritage et d'abstraction avec la
-  programmation orientée objet.
+- Rappeler les concepts de base des formulaires HTML, validation et sécurité.
+- Utiliser PDO pour interagir avec une base de données MySQL/MariaDB.
+- Utiliser les exceptions pour la gestion des erreurs en PHP.
+- Utiliser les fichiers de configuration pour stocker les paramètres de
+  connexion à la base de données.
 
 ## Méthodes d'enseignement et d'apprentissage
 
