@@ -1,5 +1,7 @@
 <?php
 
+namespace Users;
+
 class User {
     // Propriétés privées pour assurer l'encapsulation
     private string $firstName;
@@ -51,13 +53,34 @@ class User {
         }
     }
 
-    // Méthode métier qui combine plusieurs propriétés
-    public function getFullName(): string {
-        return $this->firstName . ' ' . $this->lastName;
-    }
+    // Méthode pour valider les données de l'utilisateur
+    public function validate(): array {
+        $errors = [];
 
-    // Méthode pour vérifier si l'utilisateur est majeur
-    public function isAdult(): bool {
-        return $this->age >= 18;
+        if (empty($this->firstName)) {
+            $errors[] = "Le prénom est requis.";
+
+            if (strlen($this->firstName) < 2) {
+                $errors[] = "Le prénom doit contenir au moins 2 caractères.";
+            }
+        }
+
+        if (empty($this->lastName)) {
+            $errors[] = "Le nom est requis.";
+
+            if (strlen($this->lastName) < 2) {
+                $errors[] = "Le nom doit contenir au moins 2 caractères.";
+            }
+        }
+
+        if (empty($this->email) || !filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+            $errors[] = "Un email valide est requis.";
+        }
+
+        if ($this->age < 0) {
+            $errors[] = "L'âge doit être un nombre positif.";
+        }
+
+        return $errors;
     }
 }

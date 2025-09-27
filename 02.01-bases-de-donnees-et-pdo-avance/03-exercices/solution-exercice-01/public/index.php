@@ -18,7 +18,7 @@
         <p>Bienvenue sur la page d'accueil de MyApp.</p>
 
 
-        <p><a href="users/index.php"><button>Aller à la gestion des utilisateur.trices</button></a></p>
+        <p><a href="tools/index.php"><button>Aller à la gestion des outils</button></a></p>
     </main>
 </body>
 

@@ -46,12 +46,12 @@ $users = $usersManager->getUsers();
             <tbody>
                 <?php foreach ($users as $user) { ?>
                     <tr>
-                        <td><?= htmlspecialchars($user['first_name']) ?></td>
-                        <td><?= htmlspecialchars($user['last_name']) ?></td>
-                        <td><?= htmlspecialchars($user['email']) ?></td>
-                        <td><?= htmlspecialchars($user['age']) ?></td>
+                        <td><?= htmlspecialchars($user->getFirstName()) ?></td>
+                        <td><?= htmlspecialchars($user->getLastName()) ?></td>
+                        <td><?= htmlspecialchars($user->getEmail()) ?></td>
+                        <td><?= htmlspecialchars($user->getAge()) ?></td>
                         <td>
-                            <a href="delete.php?id=<?= htmlspecialchars($user['id']) ?>"><button>Supprimer</button></a>
+                            <a href="delete.php?id=<?= htmlspecialchars($user->getId()) ?>"><button>Supprimer</button></a>
                         </td>
                     </tr>
                 <?php } ?>

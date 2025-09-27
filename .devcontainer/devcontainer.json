@@ -2,6 +2,7 @@
 	"name": "HEIG-VD ProgServ2 Course Development Container",
 	"dockerComposeFile": "compose.yaml",
 	"service": "devcontainer",
+	"runServices": ["plantuml"],
 	"workspaceFolder": "/workspace",
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
@@ -9,6 +10,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"bmewburn.vscode-intelephense-client",
 				"DavidAnson.vscode-markdownlint",
 				"esbenp.prettier-vscode",
 				"GitHub.copilot",
@@ -28,8 +30,11 @@
 		"type=bind,source=${localEnv:HOME}/.ssh,target=${localEnv:HOME}/.ssh,type=bind,consistency=cached"
 	],
 	// Ports to expose on the container's network host
-	"forwardPorts": [8080, 9090],
+	"forwardPorts": [3306, 8080, 9090],
 	"portsAttributes": {
+		"3306": {
+			"label": "MariaDB Database"
+		},
 		"8080": {
 			"label": "Apache HTTP Server"
 		},
