@@ -184,6 +184,7 @@ consultez le [support de cours][cours]._
 - Une exception peut être "jetée" (throw) lorsqu'une erreur se produit, et elle
   peut être "attrapée" (catch) dans un bloc `try-catch` pour gérer l'erreur de
   manière appropriée.
+- Une exception non gérée provoque l'arrêt de l'application.
 
 ### Gestion des erreurs avec les exceptions (2/3)
 
