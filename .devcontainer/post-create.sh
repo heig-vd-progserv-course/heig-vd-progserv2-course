@@ -19,13 +19,13 @@ sudo apt install --yes jpegoptim optipng
 sudo apt install --yes ghostscript
 
 # Install packages to interact with SQLite databases
-sudo apt install --yes sqlite3
+sudo apt install --yes sqlite3 php-sqlite3
 
 # Install Apache server and PHP
-sudo apt install --yes php-common libapache2-mod-php php-cli php-mysql
+sudo apt install --yes php-common libapache2-mod-php php-cli
 
 # Install MariaDB client and server
-sudo apt install --yes mariadb-client mariadb-server
+sudo apt install --yes mariadb-client mariadb-server php-mysql
 
 ## Configure Apache server
 # Remove the default document root

@@ -25,14 +25,14 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Structure d'un formulaire HTML](#structure-dun-formulaire-html)
   - [Récupération des données côté serveur](#récupération-des-données-côté-serveur)
   - [Validation côté serveur](#validation-côté-serveur)
-  - [Nettoyage des données et requêtes préparées](#nettoyage-des-données-et-requêtes-préparées)
-  - [Conservation des données en cas d'erreur](#conservation-des-données-en-cas-derreur)
+  - [Conservation des données en cas d'erreurs](#conservation-des-données-en-cas-derreurs)
+  - [Connexion à une base de données SQLite avec PDO](#connexion-à-une-base-de-données-sqlite-avec-pdo)
+  - [Nettoyage des données et persistance avec les requêtes préparées](#nettoyage-des-données-et-persistance-avec-les-requêtes-préparées)
   - [Affichage sécurisé des données](#affichage-sécurisé-des-données)
   - [Validation côté client](#validation-côté-client)
-- [Bases de données et PDO (base)](#bases-de-données-et-pdo-base)
-  - [SQLite](#sqlite)
 - [Bases de données et PDO (avancé)](#bases-de-données-et-pdo-avancé)
   - [MySQL/MariaDB](#mysqlmariadb)
+  - [Accéder à MySQL/MariaDB avec MAMP et Visual Studio Code](#accéder-à-mysqlmariadb-avec-mamp-et-visual-studio-code)
   - [Gestion des erreurs avec les exceptions](#gestion-des-erreurs-avec-les-exceptions)
   - [Fichiers de configuration](#fichiers-de-configuration)
 - [Conclusion](#conclusion)
@@ -85,6 +85,11 @@ simple :
 </form>
 ```
 
+> [!TIP]
+>
+> Pour voir l'exemple complet, se référer au fichier
+> [`01-simple-form.php`](./snippets/01-simple-form.php).
+
 Dans cet exemple :
 
 - La balise `<form>` définit le début du formulaire. L'attribut `action`
@@ -133,6 +138,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // ...
 ```
 
+> [!TIP]
+>
+> Pour voir l'exemple complet, se référer au fichier
+> [`02-get-data-server-side.php`](./snippets/02-get-data-server-side.php).
+
 Grâce à la condition `if ($_SERVER["REQUEST_METHOD"] == "POST")`, on s'assure
 que le code ne s'exécute que lorsque le formulaire est soumis via la méthode
 `POST`.
@@ -166,6 +176,11 @@ if ($age < 0) {
 }
 ```
 
+> [!TIP]
+>
+> Pour voir l'exemple complet, se référer au fichier
+> [`03-validate-data-server-side.php`](./snippets/03-validate-data-server-side.php).
+
 Le tableau `$errors` est utilisé pour collecter les messages d'erreur. Chaque
 condition vérifie une règle de validation spécifique, et si la règle n'est pas
 respectée, un message d'erreur est ajouté au tableau.
@@ -188,14 +203,85 @@ ou pour empêcher la poursuite du traitement si des erreurs sont présentes :
 <?php } ?>
 ```
 
-### Nettoyage des données et requêtes préparées
+### Conservation des données en cas d'erreurs
+
+Lorsqu'un formulaire est soumis, les valeurs saisies par l'utilisateur sont
+perdues lors du rechargement de la page. Pour améliorer l'expérience utilisateur
+en cas d'erreur, il est utile de conserver les données saisies par l'utilisateur
+pour éviter qu'il ait à tout re-saisir. Voici comment faire cela en PHP :
+
+```php
+<input type="text" id="first-name" name="first-name" value="<?= $firstName ?? '' ?>">
+```
+
+> [!TIP]
+>
+> Pour voir l'exemple complet, se référer au fichier
+> [`04-keep-data-on-errors.php`](./snippets/04-keep-data-on-errors.php).
+
+Dans cet exemple, l'attribut `value` de l'élément `<input>` est défini pour
+conserver la valeur saisie par l'utilisateur.
+
+L'opérateur de coalescence nulle `??` est utilisé pour vérifier si `$firstName`
+est défini. Si c'est le cas, sa valeur est utilisée ; sinon, une chaîne vide est
+assignée, ce qui évite les messages d'erreur si la variable n'est pas définie.
+
+### Connexion à une base de données SQLite avec PDO
+
+Afin de stocker les données de manière persistante, il est courant d'utiliser
+une base de données.
+
+PHP met à disposition l'extension PDO (PHP Data Objects) qui fournit une
+interface abstraite pour interagir avec différentes bases de données.
+
+PDO permet d'écrire du code indépendant du type de base de données, ce qui
+facilite la portabilité des applications.
+
+PDO prend en charge plusieurs bases de données, dont MySQL, PostgreSQL, SQLite,
+et bien d'autres.
+
+SQLite est une base de données relationnelle légère qui stocke les données dans
+un fichier unique sur le disque. Elle est idéale pour les applications de petite
+à moyenne taille, les applications embarquées, ou les environnements de
+développement.
+
+Dans l'unité d'enseignement ProgServ1, nous avons déjà vu comment utiliser
+SQLite avec PDO pour sa simplicité.
+
+Voici comment utiliser PDO pour se connecter à une base de données SQLite :
+
+```php
+const DATABASE_FILE = __DIR__ . '/mydatabase.db';
+
+$pdo = new PDO("sqlite:" . DATABASE_FILE);
+
+$sql = "CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
+    age INTEGER NOT NULL
+);";
+
+$stmt = $pdo->prepare($sql);
+
+$stmt->execute();
+```
+
+> [!TIP]
+>
+> Pour voir l'exemple complet, se référer au fichier
+> [`05-pdo-and-sqlite.php`](./snippets/05-pdo-and-sqlite.php).
+
+Dans cet exemple, nous créons une connexion à une base de données SQLite stockée
+dans le fichier `mydatabase.db`. Nous définissons ensuite une requête SQL pour
+créer une table `users` si elle n'existe pas déjà, puis nous préparons et
+exécutons cette requête.
+
+### Nettoyage des données et persistance avec les requêtes préparées
 
 Une fois les données validées, il est possible de les insérer dans une base de
 données.
-
-Pour cela, PHP met à disposition l'extension PDO (PHP Data Objects) qui fournit
-une interface sécurisée pour interagir avec différentes bases de données, dont
-SQLite, MySQL/MariaDB, etc.
 
 Mais avant d'insérer les données dans la base de données, il est important de
 les nettoyer pour éviter les attaques de type injection SQL ou XSS.
@@ -233,9 +319,16 @@ $stmt->bindValue(':age', $age);
 // Exécution de la requête SQL pour ajouter un utilisateur
 $stmt->execute();
 
-// Récupération de l'identifiant de l'utilisateur ajouté
-$userId = $pdo->lastInsertId();
+// Redirection vers la page d'accueil avec tous les utilisateurs
+header("Location: index.php");
+exit();
 ```
+
+> [!TIP]
+>
+> Pour voir l'exemple complet, se référer au fichiers
+> [`05-pdo-and-sqlite.php`](./snippets/05-pdo-and-sqlite.php) et
+> [`index-sqlite.php`](./snippets/index-sqlite.php).
 
 Grâce aux requêtes préparées, les valeurs des variables sont liées aux
 paramètres de la requête SQL. Les valeurs sont automatiquement échappées par
@@ -251,22 +344,6 @@ En échappant automatiquement les valeurs, PDO empêche ce type d'attaque, car l
 code malveillant est traité comme une simple chaîne de caractères et non comme
 une commande SQL.
 
-### Conservation des données en cas d'erreur
-
-Lorsqu'un formulaire est soumis avec des erreurs, il est utile de conserver les
-données saisies par l'utilisateur pour éviter qu'il ait à tout re-saisir. Voici
-comment faire cela en PHP :
-
-```php
-<input type="text" id="first-name" name="first-name" value="<?= $firstName ?? '' ?>">
-```
-
-Dans cet exemple, l'attribut `value` de l'élément `<input>` est défini pour
-conserver la valeur saisie par l'utilisateur. L'opérateur de coalescence nulle
-`??` est utilisé pour vérifier si `$firstName` est défini. Si c'est le cas, sa
-valeur est utilisée ; sinon, une chaîne vide est assignée, ce qui évite les
-messages d'erreur si la variable n'est pas définie.
-
 ### Affichage sécurisé des données
 
 Lorsque vous affichez des données saisies par les utilisateurs, il est crucial
@@ -280,9 +357,29 @@ Voici comment afficher les données de manière sécurisée :
 <input type="text" id="first-name" name="first-name" value="<?= htmlspecialchars($firstName ?? ''); ?>">
 ```
 
+> [!TIP]
+>
+> Pour voir l'exemple complet, se référer aux fichiers
+> [`06-escape-special-characters.php`](./snippets/06-escape-special-characters.php)
+> et [`index-sqlite.php`](./snippets/index-sqlite.php).
+
 Ici, `htmlspecialchars()` convertit les caractères spéciaux en entités HTML,
 empêchant ainsi l'exécution de code malveillant si l'utilisateur a saisi du HTML
 ou du JavaScript.
+
+Lors de l'affichage des données dans une liste ou un tableau, il est également
+important d'échapper les données :
+
+```php
+<?php foreach ($users as $user) { ?>
+    <tr>
+        <td><?= htmlspecialchars($user['first_name']) ?></td>
+        <td><?= htmlspecialchars($user['last_name']) ?></td>
+        <td><?= htmlspecialchars($user['email']) ?></td>
+        <td><?= htmlspecialchars($user['age']) ?></td>
+    </tr>
+<?php } ?>
+```
 
 ### Validation côté client
 
@@ -319,50 +416,15 @@ de validation côté client :
 </form>
 ```
 
-## Bases de données et PDO (base)
+> [!TIP]
+>
+> Pour voir l'exemple complet, se référer aux fichiers
+> [`07-validate-data-client-side.php`](./snippets/07-validate-data-client-side.php)
+> et [`index-sqlite.php`](./snippets/index-sqlite.php).
 
-PHP Data Objects (PDO) est une extension de PHP qui fournit une interface
-abstraite pour accéder à différentes bases de données. PDO permet d'écrire du
-code indépendant du type de base de données, ce qui facilite la portabilité des
-applications.
-
-PDO prend en charge plusieurs bases de données, dont MySQL, PostgreSQL, SQLite,
-et bien d'autres.
-
-### SQLite
-
-SQLite est une base de données relationnelle légère qui stocke les données dans
-un fichier unique sur le disque. Elle est idéale pour les applications de petite
-à moyenne taille, les applications embarquées, ou les environnements de
-développement.
-
-Dans l'unité d'enseignement ProgServ1, nous avons déjà vu comment utiliser
-SQLite avec PDO pour sa simplicité.
-
-Voici comment utiliser PDO pour se connecter à une base de données SQLite :
-
-```php
-const DATABASE_FILE = __DIR__ . '/mydatabase.db';
-
-$pdo = new PDO("sqlite:" . self::DATABASE_FILE);
-
-$sql = "CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    first_name TEXT NOT NULL,
-    last_name TEXT NOT NULL,
-    email TEXT NOT NULL UNIQUE,
-    age INTEGER NOT NULL
-);";
-
-$stmt = $pdo->prepare($sql);
-
-$stmt->execute();
-```
-
-Dans cet exemple, nous créons une connexion à une base de données SQLite stockée
-dans le fichier `mydatabase.db`. Nous définissons ensuite une requête SQL pour
-créer une table `users` si elle n'existe pas déjà, puis nous préparons et
-exécutons cette requête.
+Grâce aux attributs `required`, `minlength`, `type="email"`, et `min`, le
+navigateur effectue une validation de base avant de permettre la soumission du
+formulaire.
 
 ## Bases de données et PDO (avancé)
 
@@ -377,11 +439,11 @@ MySQL et MariaDB sont des SGBD relationnels populaires qui offrent des
 fonctionnalités avancées, une meilleure gestion de la concurrence, et une
 évolutivité supérieure par rapport à SQLite.
 
-MariaDB est un fork de MySQL, créé par les développeurs originaux de MySQL après
-son acquisition par Oracle. MariaDB est entièrement compatible avec MySQL, ce
-qui permet de migrer facilement entre les deux systèmes. C'est la raison pour
-laquelle nous citons ces deux SGBD ensemble car vous pourriez tomber sur l'un ou
-l'autre dans le monde professionnel.
+MariaDB est un fork (= une copie) de MySQL, créé par les développeurs originaux
+de MySQL après son acquisition par Oracle. MariaDB est entièrement compatible
+avec MySQL, ce qui permet de migrer facilement entre les deux systèmes. C'est la
+raison pour laquelle nous citons ces deux SGBD ensemble car vous pourriez tomber
+sur l'un ou l'autre dans le monde professionnel.
 
 Voici comment se connecter à une base de données MySQL/MariaDB avec PDO :
 
@@ -392,10 +454,16 @@ const DB_NAME = 'mydatabase';
 const DB_USER = 'myuser';
 const DB_PASSWORD = 'mypassword';
 
-$dsn = "mysql:host=" . self::DB_HOST . ";port=" . self::DB_PORT . ";dbname=" . self::DB_NAME . ";charset=utf8mb4";
+$dsn = "mysql:host=" . DB_HOST . ";port=" . DB_PORT . ";dbname=" . DB_NAME . ";charset=utf8mb4";
 
 $pdo = new PDO($dsn, DB_USER, DB_PASSWORD);
 ```
+
+> [!TIP]
+>
+> Pour voir l'exemple complet, se référer aux fichiers
+> [`08-mysql-with-constants.php`](./snippets/08-mysql-with-constants.php) et
+> [`index-mysql.php`](./snippets/index-mysql.php).
 
 Dans cet exemple, nous définissons les paramètres de connexion à la base de
 données, y compris l'hôte, le port, le nom de la base de données, l'utilisateur
@@ -437,9 +505,17 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute();
 ```
 
+> [!TIP]
+>
+> Pour voir l'exemple complet, se référer aux fichiers
+> [`08-mysql-with-constants.php`](./snippets/08-mysql-with-constants.php) et
+> [`index-mysql.php`](./snippets/index-mysql.php).
+
 En dehors de la syntaxe SQL, l'utilisation de PDO avec MySQL/MariaDB reste
 similaire à celle avec SQLite, notamment en ce qui concerne les requêtes
 préparées et la liaison des paramètres.
+
+### Accéder à MySQL/MariaDB avec MAMP et Visual Studio Code
 
 Lors de l'installation de MAMP sur votre machine, MySQL/MariaDB est déjà inclus
 et prêt à l'emploi. Par défaut, l'utilisateur est `root` sans mot de passe. Il
@@ -450,6 +526,15 @@ pour simplifier les choses.
 
 MySQL est donc directement à votre disposition pour vos applications web en
 développement.
+
+Pour interagir avec MySQL/MariaDB, vous pouvez utiliser un client graphique
+comme [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) ou des
+extensions pour Visual Studio Code comme
+[Database client](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-database-client2).
+
+Il vous suffira de configurer la connexion avec les paramètres nécessaires pour
+accéder à votre serveur MySQL/MariaDB local (hôte, port, utilisateur, mot de
+passe).
 
 ### Gestion des erreurs avec les exceptions
 
@@ -509,24 +594,6 @@ PDO est capable de lever des exceptions en cas d'erreurs de connexion ou de
 requêtes SQL. Il est donc possible de gérer ces erreurs en utilisant des blocs
 `try-catch`.
 
-Il est aussi possible d'attraper plusieurs types d'exceptions en utilisant
-plusieurs blocs `catch`. Par exemple, on peut attraper les exceptions
-spécifiques à PDO (`PDOException`) ainsi que les exceptions générales
-(`Exception`) :
-
-```php
-try {
-    // Connexion à la base de données
-    $pdo = new PDO($dsn, DB_USER, DB_PASSWORD);
-} catch (PDOException $e) {
-    // Gestion des erreurs spécifiques à PDO
-    echo "Erreur de connexion à la base de données : " . $e->getMessage();
-} catch (Exception $e) {
-    // Gestion des autres exceptions
-    echo "Une erreur s'est produite : " . $e->getMessage();
-}
-```
-
 En utilisant la même base de données MySQL/MariaDB que précédemment, illustrons
 un exemple de l'insertion de deux personnes dans la base de données avec gestion
 avec la même adresse e-mail :
@@ -583,14 +650,39 @@ messages d'erreur utiles aux utilisateurs ou aux développeurs, comme illustré
 dans l'exemple ci-dessus :
 
 ```php
-// S'il n'y a pas d'erreurs, ajout de l'utilisateur
+// Si pas d'erreurs, insertion dans la base de données
 if (empty($errors)) {
     try {
-        // Ajout de l'utilisateur à la base de données
-        $userId = $usersManager->addUser($user);
+        // Définition de la requête SQL pour ajouter un utilisateur
+        $sql = "INSERT INTO users (first_name, last_name, email, age) VALUES (:first_name, :last_name, :email, :age)";
+
+        // Définition de la requête SQL pour ajouter un utilisateur
+        $sql = "INSERT INTO users (
+        first_name,
+        last_name,
+        email,
+        age
+    ) VALUES (
+        :first_name,
+        :last_name,
+        :email,
+        :age
+    )";
+
+        // Préparation de la requête SQL
+        $stmt = $pdo->prepare($sql);
+
+        // Lien avec les paramètres
+        $stmt->bindValue(':first_name', $firstName);
+        $stmt->bindValue(':last_name', $lastName);
+        $stmt->bindValue(':email', $email);
+        $stmt->bindValue(':age', $age);
+
+        // Exécution de la requête SQL pour ajouter un utilisateur
+        $stmt->execute();
 
         // Redirection vers la page d'accueil avec tous les utilisateurs
-        header("Location: index.php");
+        header("Location: index-mysql.php");
         exit();
     } catch (PDOException $e) {
         // Liste des codes d'erreurs : https://en.wikipedia.org/wiki/SQLSTATE
@@ -605,6 +697,16 @@ if (empty($errors)) {
     }
 }
 ```
+
+> [!TIP]
+>
+> Pour voir l'exemple complet, se référer aux fichiers
+> [`09-handle-exceptions.php`](./snippets/09-handle-exceptions.php) et
+> [`index-mysql.php`](./snippets/index-mysql.php).
+
+Notez l'utilisation de plusieurs blocs `catch` pour gérer différents types
+d'exceptions. Le premier bloc capture les exceptions spécifiques à PDO, tandis
+que le second bloc capture les exceptions générales.
 
 ### Fichiers de configuration
 
@@ -632,10 +734,10 @@ Et voici comment lire ce fichier de configuration en PHP :
 const DATABASE_CONFIGURATION_FILE = __DIR__ . '/../config/database.ini';
 
 // Documentation : https://www.php.net/manual/fr/function.parse-ini-file.php
-$config = parse_ini_file(self::DATABASE_CONFIGURATION_FILE, true);
+$config = parse_ini_file(DATABASE_CONFIGURATION_FILE, true);
 
 if (!$config) {
-    throw new Exception("Erreur lors de la lecture du fichier de configuration : " . self::DATABASE_CONFIGURATION_FILE);
+    throw new Exception("Erreur lors de la lecture du fichier de configuration : " . DATABASE_CONFIGURATION_FILE);
 }
 
 $host = $config['host'];
@@ -649,6 +751,12 @@ $password = $config['password'];
 //   - https://www.php.net/manual/fr/ref.pdo-mysql.connection.php
 $pdo = new PDO("mysql:host=$host;port=$port;charset=utf8mb4", $username, $password);
 ```
+
+> [!TIP]
+>
+> Pour voir l'exemple complet, se référer aux fichiers
+> [`10-database-configuration-file.php`](./snippets/10-database-configuration-file.php)
+> et [`index-mysql.php`](./snippets/index-mysql.php).
 
 En utilisant un fichier de configuration, il est important de s'assurer que ce
 fichier n'est pas accessible publiquement via le serveur web pour des raisons de

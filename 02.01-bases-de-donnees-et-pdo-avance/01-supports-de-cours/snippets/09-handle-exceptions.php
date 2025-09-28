@@ -1,11 +1,37 @@
 <?php
-require __DIR__ . '/../../src/utils/autoloader.php';
+// Connexion à la base de données MySQL
+const DB_HOST = 'localhost';
+const DB_PORT = 3306;
+const DB_NAME = 'myapp';
+const DB_USER = 'root';
+const DB_PASSWORD = 'root';
 
-use Users\UsersManager;
-use Users\User;
+$dsn = "mysql:host=" . DB_HOST . ";port=" . DB_PORT . ";dbname=" . DB_NAME . ";charset=utf8mb4";
 
-// Création d'une instance de UsersManager
-$usersManager = new UsersManager();
+$pdo = new PDO($dsn, DB_USER, DB_PASSWORD);
+
+// Création de la base de données si elle n'existe pas
+$sql = "CREATE DATABASE IF NOT EXISTS `" . DB_NAME . "` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+
+// Sélection de la base de données
+$sql = "USE `" . DB_NAME . "`;";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+
+// Création de la table `users` si elle n'existe pas
+$sql = "CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    age INT NOT NULL
+);";
+
+$stmt = $pdo->prepare($sql);
+
+$stmt->execute();
 
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -15,25 +41,57 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $age = $_POST["age"];
 
-    // Création d'un nouvel objet `User`
-    $user = new User(
-        $firstName,
-        $lastName,
-        $email,
-        $age
-    );
+    $errors = [];
 
-    // Validation des données
-    $errors = $user->validate();
+    if (empty($firstName) || strlen($firstName) < 2) {
+        $errors[] = "Le prénom doit contenir au moins 2 caractères.";
+    }
 
-    // S'il n'y a pas d'erreurs, ajout de l'utilisateur
+    if (empty($lastName) || strlen($lastName) < 2) {
+        $errors[] = "Le nom doit contenir au moins 2 caractères.";
+    }
+
+    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Un email valide est requis.";
+    }
+
+    if ($age < 0) {
+        $errors[] = "L'âge doit être un nombre positif.";
+    }
+
+    // Si pas d'erreurs, insertion dans la base de données
     if (empty($errors)) {
         try {
-            // Ajout de l'utilisateur à la base de données
-            $usersManager->addUser($user);
+            // Définition de la requête SQL pour ajouter un utilisateur
+            $sql = "INSERT INTO users (first_name, last_name, email, age) VALUES (:first_name, :last_name, :email, :age)";
+
+            // Définition de la requête SQL pour ajouter un utilisateur
+            $sql = "INSERT INTO users (
+            first_name,
+            last_name,
+            email,
+            age
+        ) VALUES (
+            :first_name,
+            :last_name,
+            :email,
+            :age
+        )";
+
+            // Préparation de la requête SQL
+            $stmt = $pdo->prepare($sql);
+
+            // Lien avec les paramètres
+            $stmt->bindValue(':first_name', $firstName);
+            $stmt->bindValue(':last_name', $lastName);
+            $stmt->bindValue(':email', $email);
+            $stmt->bindValue(':age', $age);
+
+            // Exécution de la requête SQL pour ajouter un utilisateur
+            $stmt->execute();
 
             // Redirection vers la page d'accueil avec tous les utilisateurs
-            header("Location: index.php");
+            header("Location: index-mysql.php");
             exit();
         } catch (PDOException $e) {
             // Liste des codes d'erreurs : https://en.wikipedia.org/wiki/SQLSTATE
@@ -58,7 +116,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-    <link rel="stylesheet" href="../assets/css/custom.css">
 
     <title>Créer un.e nouvel.le utilisateur.trice | MyApp</title>
 </head>
@@ -66,8 +123,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <main class="container">
         <h1>Créer un.e nouvel.le utilisateur.trice</h1>
-
-        <p><a href="../index.php">Accueil</a> > <a href="index.php">Gestion des utilisateur.trices</a> > Création d'un.e utilisateur.trice</p>
 
         <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
             <?php if (empty($errors)) { ?>
@@ -82,9 +137,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php } ?>
         <?php } ?>
 
-        <form action="create.php" method="POST">
+        <form action="09-handle-exceptions.php" method="POST">
             <label for="first-name">Prénom</label>
-            <!-- Documentation sur l'opérateur de fusion null (??) : https://www.php.net/manual/fr/language.operators.comparison.php#language.operators.comparison.coalesce -->
             <input type="text" id="first-name" name="first-name" value="<?= htmlspecialchars($firstName ?? '') ?>" required minlength="2">
 
             <label for="last-name">Nom</label>

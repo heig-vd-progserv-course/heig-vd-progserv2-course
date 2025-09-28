@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($errors)) {
         try {
             // Ajout de l'utilisateur à la base de données
-            $userId = $usersManager->addUser($user);
+            $usersManager->addUser($user);
 
             // Redirection vers la page d'accueil avec tous les utilisateurs
             header("Location: index.php");
