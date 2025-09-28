@@ -146,7 +146,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php } ?>
         <?php } ?>
 
-        <form action="10-database-configuration-file.php" method="POST">
+        <form action="10-mysql-with-configuration-file.php" method="POST">
             <label for="first-name">Prénom</label>
             <input type="text" id="first-name" name="first-name" value="<?= htmlspecialchars($firstName ?? '') ?>" required minlength="2">
 

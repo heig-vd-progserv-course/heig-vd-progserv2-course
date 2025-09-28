@@ -207,8 +207,9 @@ ou pour empêcher la poursuite du traitement si des erreurs sont présentes :
 
 Lorsqu'un formulaire est soumis, les valeurs saisies par l'utilisateur sont
 perdues lors du rechargement de la page. Pour améliorer l'expérience utilisateur
-en cas d'erreur, il est utile de conserver les données saisies par l'utilisateur
-pour éviter qu'il ait à tout re-saisir. Voici comment faire cela en PHP :
+en cas d'erreur de validation, il est utile de conserver les données saisies par
+l'utilisateur pour éviter qu'il ait à tout re-saisir. Voici comment faire cela
+en PHP :
 
 ```php
 <input type="text" id="first-name" name="first-name" value="<?= $firstName ?? '' ?>">
@@ -439,7 +440,7 @@ MySQL et MariaDB sont des SGBD relationnels populaires qui offrent des
 fonctionnalités avancées, une meilleure gestion de la concurrence, et une
 évolutivité supérieure par rapport à SQLite.
 
-MariaDB est un fork (= une copie) de MySQL, créé par les développeurs originaux
+MariaDB est un fork (= un clone) de MySQL, créé par les développeurs originaux
 de MySQL après son acquisition par Oracle. MariaDB est entièrement compatible
 avec MySQL, ce qui permet de migrer facilement entre les deux systèmes. C'est la
 raison pour laquelle nous citons ces deux SGBD ensemble car vous pourriez tomber
