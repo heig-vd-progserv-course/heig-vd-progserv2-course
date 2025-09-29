@@ -124,7 +124,7 @@ contenant une archive ZIP ou le lien vers un dépôt Git contenant :
 - Le rapport contenant le cahier des charges et une conclusion au format PDF,
   comme indiqué dans la section [Validation de l'idée](#validation-de-lidée).
 
-Tou.tes les membres du groupe sont mis en copie du mail.
+Tou.tes les membres du groupe sont mis.es en copie du mail.
 
 **Chaque 24h de retard (dès une (1) minute après l'heure de rendu) entraînera
 une pénalité de -1 point sur la note finale.**
@@ -189,7 +189,7 @@ Est-ce que vous avez des questions ?
 A faire avant le prochain cours :
 
 - ✅ Constitution et annonces des groupes.
-- ✅ Choix du projet et de ces fonctionnalités.
+- ✅ Choix du projet et de ses fonctionnalités.
 - ✅ Élaboration initiale du cahier des charges (brouillon).
 
 **Ce jalon ne compte pas dans l'évaluation finale.**

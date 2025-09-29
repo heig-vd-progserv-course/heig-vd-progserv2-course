@@ -1,6 +1,6 @@
 <?php
 // Gère la soumission du formulaire
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Récupération des données du formulaire
     $firstName = $_POST["first-name"];
     $lastName = $_POST["last-name"];

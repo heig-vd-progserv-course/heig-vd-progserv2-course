@@ -41,7 +41,7 @@ $users = $stmt->fetchAll();
 
         <h2>Liste des utilisateur.trices</h2>
 
-        <p><a href="07-validate-data-client-side.php"><button>Créer un.e nouvel.le utilisateur.trice</button></a></p>
+        <p><a href="10-mysql-with-configuration-file.php"><button>Créer un.e nouvel.le utilisateur.trice</button></a></p>
 
         <table>
             <thead>

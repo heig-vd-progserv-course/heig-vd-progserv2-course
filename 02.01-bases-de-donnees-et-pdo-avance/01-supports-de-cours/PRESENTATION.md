@@ -72,7 +72,7 @@ consultez le [support de cours][cours]._
 - Analysons l'exemple
   [`01-simple-form.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/01-simple-form.php).
 
-![bg right:40%][illustration-formulaires-html-et-pdo-un-rappel]
+![bg vertical][illustration-methode] ![bg right:40%][illustration-url-daction]
 
 ### Récupération des données côté serveur
 
@@ -81,7 +81,7 @@ consultez le [support de cours][cours]._
 - Analysons l'exemple
   [`02-get-data-server-side.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/02-get-data-server-side.php).
 
-![bg right:40%][illustration-formulaires-html-et-pdo-un-rappel]
+![bg right:40%][illustration-methode]
 
 ### Validation côté serveur
 
@@ -90,7 +90,7 @@ consultez le [support de cours][cours]._
 - Analysons l'exemple
   [`03-validate-data-server-side.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/03-validate-data-server-side.php).
 
-![bg right:40%][illustration-formulaires-html-et-pdo-un-rappel]
+![bg right:40%][illustration-validation-cote-serveur]
 
 ### Conservation des données en cas d'erreurs
 
@@ -100,7 +100,7 @@ consultez le [support de cours][cours]._
 - Analysons l'exemple
   [`04-keep-data-on-errors.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/04-keep-data-on-errors.php).
 
-![bg right:40%][illustration-formulaires-html-et-pdo-un-rappel]
+![bg right:40%][illustration-sauvegarde-des-donnees-saisies]
 
 ### Connexion à une base de données SQLite avec PDO
 
@@ -109,7 +109,7 @@ consultez le [support de cours][cours]._
 - Analysons l'exemple
   [`05-pdo-and-sqlite.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/05-pdo-and-sqlite.php).
 
-![bg right:40%][illustration-formulaires-html-et-pdo-un-rappel]
+![bg right:40% w:80%](https://www.sqlite.org/images/sqlite370_banner.svg)
 
 ### Nettoyage des données et persistance avec les requêtes préparées
 
@@ -118,7 +118,7 @@ consultez le [support de cours][cours]._
 - Analysons l'exemple
   [`05-pdo-and-sqlite.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/05-pdo-and-sqlite.php).
 
-![bg right:40%][illustration-formulaires-html-et-pdo-un-rappel]
+![bg right:40%][illustration-nettoyage-des-donnees-et-persistence-avec-les-requetes-preparees]
 
 ### Affichage sécurisé des données
 
@@ -128,7 +128,7 @@ consultez le [support de cours][cours]._
 - Analysons l'exemple
   [`06-escape-special-characters.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/06-escape-special-characters.php).
 
-![bg right:40%][illustration-formulaires-html-et-pdo-un-rappel]
+![bg right:40%][illustration-affichage-securise-des-donnees]
 
 ### Validation côté client
 
@@ -138,7 +138,7 @@ consultez le [support de cours][cours]._
 - Analysons l'exemple
   [`07-validate-data-client-side.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/07-validate-data-client-side.php).
 
-![bg right:40%][illustration-formulaires-html-et-pdo-un-rappel]
+![bg right:40% vertical][illustration-cote-client]
 
 ## Bases de données et PDO (avancé)
 
@@ -147,7 +147,7 @@ consultez le [support de cours][cours]._
   robuste.
 - Nous allons voir comment utiliser MySQL/MariaDB avec PDO.
 
-![bg right:40%][illustration-formulaires-html-et-pdo-un-rappel]
+![bg right:40%][illustration-bases-de-donnees-et-pdo-avance]
 
 ### MySQL/MariaDB
 
@@ -158,14 +158,16 @@ consultez le [support de cours][cours]._
 - Analysons l'exemple
   [`08-mysql-with-constants.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/08-mysql-with-constants.php).
 
-![bg right:40%][illustration-formulaires-html-et-pdo-un-rappel]
+![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/fr/6/62/MySQL.svg)
+![bg vertical w:80%](https://mariadb.com/wp-content/uploads/2019/11/mariadb-horizontal-blue.svg)
 
 ### Accéder à MySQL/MariaDB avec MAMP et Visual Studio Code (1/2)
 
 - Une base de données MySQL est accessible via MAMP.
 - L'utilisateur par défaut est `root`, sans mot de passe.
 
-![bg right:40%][illustration-formulaires-html-et-pdo-un-rappel]
+![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/fr/6/62/MySQL.svg)
+![bg vertical w:80%](https://mariadb.com/wp-content/uploads/2019/11/mariadb-horizontal-blue.svg)
 
 ### Accéder à MySQL/MariaDB avec MAMP et Visual Studio Code (2/2)
 
@@ -173,7 +175,9 @@ consultez le [support de cours][cours]._
   - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
   - Visual Studio Code avec
     [Database client](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-database-client2).
-    ![bg right:40%][illustration-formulaires-html-et-pdo-un-rappel]
+
+![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/fr/6/62/MySQL.svg)
+![bg vertical w:80%](https://mariadb.com/wp-content/uploads/2019/11/mariadb-horizontal-blue.svg)
 
 ### Gestion des erreurs avec les exceptions (1/3)
 
@@ -206,13 +210,12 @@ try {
 - Analysons l'exemple
   [`09-handle-exceptions.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/09-handle-exceptions.php).
 
-![bg right:40%][illustration-formulaires-html-et-pdo-un-rappel]
+![bg right:40%][illustration-gestion-des-erreurs-avec-les-exceptions]
 
 ### Fichiers de configuration (1/2)
 
 - Stocker les paramètres de connexion dans le code source n'est pas recommandé.
-- Utiliser un fichier de configuration (par exemple, `.ini`) pour stocker les
-  paramètres de connexion.
+- Utiliser un fichier de configuration pour les paramètres de connexion.
 - Attention à la sécurité : le fichier de configuration ne doit pas être
   accessible publiquement.
 
@@ -254,7 +257,7 @@ Est-ce que vous avez des questions ?
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
-## Sources
+## Sources (1/2)
 
 - [Illustration principale][illustration-principale] par
   [Richard Jacobs](https://unsplash.com/@rj2747) sur
@@ -265,6 +268,36 @@ Est-ce que vous avez des questions ?
 - [Illustration][illustration-formulaires-html-et-pdo-un-rappel] par
   [Kelly Sikkema](https://unsplash.com/@kellysikkema) sur
   [Unsplash](https://unsplash.com/photos/stack-of-papers-flat-lay-photography-tQQ4BwN_UFs)
+- [Illustration][illustration-methode] par
+  [Anastasiia Nelen](https://unsplash.com/@mnelen) sur
+  [Unsplash](https://unsplash.com/photos/a-blue-and-white-box-SAHWzVB3bcc)
+- [Illustration][illustration-url-daction] par
+  [Shavr IK](https://unsplash.com/@shavr) sur
+  [Unsplash](https://unsplash.com/photos/a-close-up-of-a-control-panel-with-buttons-r6fBLCriUgg)
+- [Illustration][illustration-validation-cote-serveur] par
+  [Taylor Vick](https://unsplash.com/@tvick) sur
+  [Unsplash](https://unsplash.com/photos/cable-network-M5tzZtFCOfs)
+- [Illustration][illustration-sauvegarde-des-donnees-saisies] par
+  [Kelly Sikkema](https://unsplash.com/@kellysikkema) sur
+  [Unsplash](https://unsplash.com/photos/white-and-black-board-SkFdmKGxQ44)
+
+## Sources (2/2)
+
+- [Illustration][illustration-nettoyage-des-donnees-et-persistence-avec-les-requetes-preparees]
+  par [Jan Antonin Kolar](https://unsplash.com/@jankolar) sur
+  [Unsplash](https://unsplash.com/photos/brown-wooden-drawer-lRoX0shwjUQ)
+- [Illustration][illustration-affichage-securise-des-donnees] par
+  [Towfiqu barbhuiya](https://unsplash.com/@towfiqu999999) sur
+  [Unsplash](https://unsplash.com/photos/person-holding-white-ceramic-mug-ho-p7qLBewk)
+- [Illustration][illustration-cote-client] par
+  [Blake Wisz](https://unsplash.com/@blakewisz) sur
+  [Unsplash](https://unsplash.com/photos/turned-on-monitor-tE6th1h6Bfk)
+- [Illustration][illustration-bases-de-donnees-et-pdo-avance] par
+  [Sunder Muthukumaran](https://unsplash.com/@sunder_2k25) sur
+  [Unsplash](https://unsplash.com/photos/a-stack-of-stacked-blue-and-white-plates-n7eJHQwefeI)
+- [Illustration][illustration-gestion-des-erreurs-avec-les-exceptions] par
+  [Sigmund](https://unsplash.com/@sigmund) sur
+  [Unsplash](https://unsplash.com/photos/black-digital-device-at-0-00-By-tZImt0Ms)
 - [Illustration][illustration-a-vous-de-jouer] par
   [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
   [Unsplash](https://unsplash.com/photos/white-sony-ps4-dualshock-controller-over-persons-palm-FJFPuE1MAOM)
@@ -284,5 +317,23 @@ Est-ce que vous avez des questions ?
 	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
 [illustration-formulaires-html-et-pdo-un-rappel]:
 	https://images.unsplash.com/photo-1554224155-1696413565d3?fit=crop&h=720
+[illustration-methode]:
+	https://images.unsplash.com/photo-1659896975336-3f3f989d3396?fit=crop&h=720
+[illustration-url-daction]:
+	https://images.unsplash.com/photo-1720036237584-7fd0f37db499?fit=crop&h=720
+[illustration-validation-cote-serveur]:
+	https://images.unsplash.com/photo-1558494949-ef010cbdcc31?fit=crop&h=720
+[illustration-sauvegarde-des-donnees-saisies]:
+	https://images.unsplash.com/photo-1554252116-ed7971ea7623?fit=crop&h=720
+[illustration-nettoyage-des-donnees-et-persistence-avec-les-requetes-preparees]:
+	https://images.unsplash.com/photo-1544383835-bda2bc66a55d?fit=crop&h=720
+[illustration-affichage-securise-des-donnees]:
+	https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?fit=crop&h=720
+[illustration-cote-client]:
+	https://images.unsplash.com/photo-1556740738-b6a63e27c4df?fit=crop&h=720
+[illustration-bases-de-donnees-et-pdo-avance]:
+	https://images.unsplash.com/photo-1633412802994-5c058f151b66?fit=crop&h=720
+[illustration-gestion-des-erreurs-avec-les-exceptions]:
+	https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?fit=crop&h=720
 [illustration-a-vous-de-jouer]:
 	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720
