@@ -11,6 +11,8 @@ on:
       - main
     tags:
       - "*"
+    paths:
+      - "**/**/PRESENTATION.md"
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages and to release to GitHub Releases
 permissions:

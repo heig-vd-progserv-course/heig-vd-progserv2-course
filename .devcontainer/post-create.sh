@@ -3,6 +3,8 @@
 ## Configure Bash aliases
 tee -a ~/.bash_aliases > /dev/null <<"EOF"
 alias tree='tree --dirsfirst -A -F'
+alias jpegoptim='jpegoptim --strip-all --all-progressive'
+alias optipng='optipng -o5 -strip all -fix'
 EOF
 
 ## Install required packages

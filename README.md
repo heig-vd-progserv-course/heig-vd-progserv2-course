@@ -45,10 +45,10 @@ Les dates sont tirées du
 |                   - | 15.09. - 21.09.25        | -                                                   | -                                           | -           |
 |    [01](#-cours-01) | 22.09. - 28.09.25        | Programmation orientée objet (avancé)               | Projet libre (1/8)                          | 🟢 Prêt     |
 |    [02](#-cours-02) | 29.09. - 05.10.25        | Bases de données et PDO (avancé)                    | Projet libre (2/8)                          | 🟢 Prêt     |
-|    [03](#-cours-03) | 06.10. - 12.10.25        | Déploiement                                         | Projet libre (3/8)                          | 🟡 En cours |
+|    [03](#-cours-03) | 06.10. - 12.10.25        | Déploiement                                         | Projet libre (3/8)                          | 🟢 Prêt     |
 |                   - | 13.10. - 19.10.25        | _Pas de cours_                                      | _Pas de cours_                              | -           |
 |                   - | 20.10. - 26.10.25        | _Pas de cours : semaine interdisciplinaire_         | _Pas de cours : semaine interdisciplinaire_ | -           |
-|    [04](#-cours-04) | 27.10. - 02.11.25        | Cookies, préférences et gestion multilingues (i18n) | Projet libre (4/8)                          | 🔴 À faire  |
+|    [04](#-cours-04) | 27.10. - 02.11.25        | Cookies, préférences et gestion multilingues (i18n) | Projet libre (4/8)                          | 🟡 En cours |
 |    [05](#-cours-05) | 03.11. - 09.11.25        | Sessions et authentification                        | Projet libre (5/8)                          | 🔴 À faire  |
 |                   - | 10.11. - 16.11.25        | _Pas de cours_                                      | _Pas de cours_                              | -           |
 |    [06](#-cours-06) | 17.11. - 23.11.25        | Gestion et envoi des e-mails                        | Projet libre (6/8)                          | 🔴 À faire  |
@@ -130,18 +130,16 @@ Les dates sont tirées du
 
 ## 🕒 Cours 03
 
-### Déploiement
+### [Déploiement](./03.01-deploiement/)
 
-_À venir._
-
-<!--
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu]()
-- Supports de cours : [Lien vers le contenu]() · [Presentation (web)]() ·
-  [Presentation (PDF)]()
-- Exemples de code : [Lien vers le contenu]()
-- Exercices : [Lien vers les exercices]()
--->
+- Supports de cours :
+  [Lien vers le contenu](./03.01-deploiement/01-supports-de-cours/README.md) ·
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03.01-deploiement/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03.01-deploiement/01-supports-de-cours/03.01-deploiement-presentation.pdf)
+- Exemples de code :
+  [Lien vers le contenu](./03.01-deploiement/02-exemples-de-code/)
+- Exercices : [Lien vers le contenu](./03.01-deploiement/03-exercices/README.md)
 
 ### [Projet libre (3/8)](<./01.03-projet-libre-(1-sur-8)/>)
 
