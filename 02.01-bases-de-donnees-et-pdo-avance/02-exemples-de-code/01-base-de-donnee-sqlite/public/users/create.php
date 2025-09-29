@@ -8,7 +8,7 @@ use Users\User;
 $usersManager = new UsersManager();
 
 // Gère la soumission du formulaire
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Récupération des données du formulaire
     $firstName = $_POST["first-name"];
     $lastName = $_POST["last-name"];
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         } catch (PDOException $e) {
             // Liste des codes d'erreurs : https://en.wikipedia.org/wiki/SQLSTATE
-            if ($e->getCode() == 23000) {
+            if ($e->getCode() === 23000) {
                 // Erreur de contrainte d'unicité (par exemple, email déjà utilisé)
                 $errors[] = "L'adresse e-mail est déjà utilisée.";
             } else {
@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <p><a href="../index.php">Accueil</a> > <a href="index.php">Gestion des utilisateur.trices</a> > Création d'un.e utilisateur.trice</p>
 
-        <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
+        <?php if ($_SERVER["REQUEST_METHOD"] === "POST") { ?>
             <?php if (empty($errors)) { ?>
                 <p style="color: green;">Le formulaire a été soumis avec succès !</p>
             <?php } else { ?>

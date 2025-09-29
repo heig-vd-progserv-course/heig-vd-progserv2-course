@@ -176,10 +176,11 @@ Un e-mail doit être envoyé à
 contenant une archive ZIP ou le lien vers un dépôt Git contenant :
 
 - Le code source de votre projet.
+- Le lien vers l'URL où le projet est déployé sur Internet.
 - Le rapport contenant le cahier des charges et une conclusion au format PDF,
   comme indiqué dans la section [Validation de l'idée](#validation-de-lidée).
 
-Tou.tes les membres du groupe sont mis en copie du mail.
+Tou.tes les membres du groupe sont mis.es en copie du mail.
 
 > [!CAUTION]
 >
@@ -285,7 +286,7 @@ se déroulera de la manière suivante :
 A faire avant le prochain cours :
 
 - [x] Constitution et annonces des groupes.
-- [x] Choix du projet et de ces fonctionnalités.
+- [x] Choix du projet et de ses fonctionnalités.
 - [x] Élaboration initiale du cahier des charges (brouillon).
 
 **Ce jalon ne compte pas dans l'évaluation finale.**

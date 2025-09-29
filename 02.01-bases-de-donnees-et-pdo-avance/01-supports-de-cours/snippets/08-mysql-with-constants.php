@@ -34,7 +34,7 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute();
 
 // Gère la soumission du formulaire
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Récupération des données du formulaire
     $firstName = $_POST["first-name"];
     $lastName = $_POST["last-name"];
@@ -112,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <main class="container">
         <h1>Créer un.e nouvel.le utilisateur.trice</h1>
 
-        <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
+        <?php if ($_SERVER["REQUEST_METHOD"] === "POST") { ?>
             <?php if (empty($errors)) { ?>
                 <p style="color: green;">Le formulaire a été soumis avec succès !</p>
             <?php } else { ?>

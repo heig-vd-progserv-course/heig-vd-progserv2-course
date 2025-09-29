@@ -189,7 +189,7 @@ Est-ce que vous avez des questions ?
 A faire avant le prochain cours :
 
 - ✅ Constitution et annonces des groupes.
-- ✅ Choix du projet et de ces fonctionnalités.
+- ✅ Choix du projet et de ses fonctionnalités.
 - ✅ Élaboration initiale du cahier des charges (brouillon).
 
 **Ce jalon ne compte pas dans l'évaluation finale.**
