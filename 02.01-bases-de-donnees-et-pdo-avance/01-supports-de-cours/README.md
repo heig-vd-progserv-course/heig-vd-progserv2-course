@@ -293,9 +293,6 @@ Voici un exemple d'insertion sécurisée dans une base de données avec PDO :
 
 ```php
 // Définition de la requête SQL pour ajouter un utilisateur
-$sql = "INSERT INTO users (first_name, last_name, email, age) VALUES (:first_name, :last_name, :email, :age)";
-
-// Définition de la requête SQL pour ajouter un utilisateur
 $sql = "INSERT INTO users (
     first_name,
     last_name,
@@ -604,8 +601,20 @@ try {
     // Connexion à la base de données
     $pdo = new PDO($dsn, DB_USER, DB_PASSWORD);
 
-    // Préparation de la requête SQL pour ajouter un utilisateur
-    $sql = "INSERT INTO users (first_name, last_name, email, age) VALUES (:first_name, :last_name, :email, :age)";
+    // Définition de la requête SQL pour ajouter un utilisateur
+    $sql = "INSERT INTO users (
+        first_name,
+        last_name,
+        email,
+        age
+    ) VALUES (
+        :first_name,
+        :last_name,
+        :email,
+        :age
+    )";
+
+    // Préparation de la requête SQL
     $stmt = $pdo->prepare($sql);
 
     // Insertion du premier utilisateur
@@ -655,20 +664,17 @@ dans l'exemple ci-dessus :
 if (empty($errors)) {
     try {
         // Définition de la requête SQL pour ajouter un utilisateur
-        $sql = "INSERT INTO users (first_name, last_name, email, age) VALUES (:first_name, :last_name, :email, :age)";
-
-        // Définition de la requête SQL pour ajouter un utilisateur
         $sql = "INSERT INTO users (
-        first_name,
-        last_name,
-        email,
-        age
-    ) VALUES (
-        :first_name,
-        :last_name,
-        :email,
-        :age
-    )";
+            first_name,
+            last_name,
+            email,
+            age
+        ) VALUES (
+            :first_name,
+            :last_name,
+            :email,
+            :age
+        )";
 
         // Préparation de la requête SQL
         $stmt = $pdo->prepare($sql);

@@ -43,9 +43,6 @@ class UsersManager implements UsersManagerInterface {
 
     public function addUser(User $user): int {
         // Définition de la requête SQL pour ajouter un utilisateur
-        $sql = "INSERT INTO users (first_name, last_name, email, age) VALUES (:first_name, :last_name, :email, :age)";
-
-        // Définition de la requête SQL pour ajouter un utilisateur
         $sql = "INSERT INTO users (
             first_name,
             last_name,

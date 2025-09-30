@@ -72,20 +72,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($errors)) {
         try {
             // Définition de la requête SQL pour ajouter un utilisateur
-            $sql = "INSERT INTO users (first_name, last_name, email, age) VALUES (:first_name, :last_name, :email, :age)";
-
-            // Définition de la requête SQL pour ajouter un utilisateur
             $sql = "INSERT INTO users (
-            first_name,
-            last_name,
-            email,
-            age
-        ) VALUES (
-            :first_name,
-            :last_name,
-            :email,
-            :age
-        )";
+                first_name,
+                last_name,
+                email,
+                age
+            ) VALUES (
+                :first_name,
+                :last_name,
+                :email,
+                :age
+            )";
 
             // Préparation de la requête SQL
             $stmt = $pdo->prepare($sql);

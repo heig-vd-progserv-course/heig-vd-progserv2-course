@@ -45,9 +45,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Si pas d'erreurs, insertion dans la base de données
     if (empty($errors)) {
         // Définition de la requête SQL pour ajouter un utilisateur
-        $sql = "INSERT INTO users (first_name, last_name, email, age) VALUES (:first_name, :last_name, :email, :age)";
-
-        // Définition de la requête SQL pour ajouter un utilisateur
         $sql = "INSERT INTO users (
             first_name,
             last_name,
