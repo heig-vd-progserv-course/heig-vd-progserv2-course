@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             exit();
         } catch (PDOException $e) {
             // Liste des codes d'erreurs : https://en.wikipedia.org/wiki/SQLSTATE
-            if ($e->getCode() === 23000) {
+            if ($e->getCode() === "23000") {
                 // Erreur de contrainte d'unicité (par exemple, nom déjà utilisé)
                 $errors[] = "L'outil existe déjà.";
             } else {

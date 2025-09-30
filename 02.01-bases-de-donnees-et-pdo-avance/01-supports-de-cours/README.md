@@ -687,7 +687,7 @@ if (empty($errors)) {
         exit();
     } catch (PDOException $e) {
         // Liste des codes d'erreurs : https://en.wikipedia.org/wiki/SQLSTATE
-        if ($e->getCode() === 23000) {
+        if ($e->getCode() === "23000") {
             // Erreur de contrainte d'unicité (par exemple, email déjà utilisé)
             $errors[] = "L'adresse e-mail est déjà utilisée.";
         } else {
