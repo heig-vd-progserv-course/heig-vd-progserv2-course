@@ -224,7 +224,7 @@ try {
 ### Fichiers de configuration (2/2)
 
 - Analysons l'exemple
-  [`10-database-configuration-file.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/10-database-configuration-file.php).
+  [`10-database-configuration-file.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/10-mysql-with-configuration-file.php).
 
 ![bg right:40%][illustration-formulaires-html-et-pdo-un-rappel]
 
