@@ -20,13 +20,19 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ### Exercice 1 - Accéder au programme étudiant d'Infomaniak
 
-### Exercice 2 - Créer un hébergement web
+### Exercice 2 - Acquérir un nom de domaine
 
-### Exercice 3 - Accéder à l'hébergement web via FTP/SFTP
+### Exercice 3 - Créer un hébergement web
 
-### Exercice 4 - Déployer une application PHP simple
+### Exercice 4 - Accéder à l'hébergement web via FTP/SFTP
 
-### Exercice 5 - Sécuriser l'application PHP
+### Exercice 5 - Accéder à la base de données
+
+### Exercice 6 - Déployer une application PHP simple
+
+### Exercice 7 - Sécuriser l'application PHP
+
+### Exercice 8 - Effectuer la demande de remboursement auprès de la HEIG-VD
 
 [licence]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
