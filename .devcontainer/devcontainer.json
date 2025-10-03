@@ -11,12 +11,12 @@
 		"vscode": {
 			"extensions": [
 				"bmewburn.vscode-intelephense-client",
+				"cweijan.vscode-database-client2",
 				"DavidAnson.vscode-markdownlint",
 				"esbenp.prettier-vscode",
 				"GitHub.copilot",
 				"jebbs.plantuml",
 				"marp-team.marp-vscode",
-				"qwtel.sqlite-viewer",
 				"redhat.vscode-yaml",
 				"streetsidesoftware.code-spell-checker",
 				"streetsidesoftware.code-spell-checker-french",

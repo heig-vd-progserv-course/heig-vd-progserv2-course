@@ -1274,7 +1274,7 @@ pour éviter une complexité excessive.
 ## Exemples de code
 
 Nous vous invitons maintenant à consulter les exemples de code du cours afin de
-familiariser avec les concepts abordés.
+vous familiariser avec les concepts abordés.
 
 Vous trouverez les exemples de code ici :
 [Exemples de code](../02-exemples-de-code/).

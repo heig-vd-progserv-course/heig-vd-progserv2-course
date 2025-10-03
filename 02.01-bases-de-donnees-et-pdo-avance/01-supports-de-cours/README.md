@@ -528,7 +528,7 @@ développement.
 Pour interagir avec MySQL/MariaDB, vous pouvez utiliser un client graphique
 comme [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) ou des
 extensions pour Visual Studio Code comme
-[Database client](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-database-client2).
+[Database Client](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-database-client2).
 
 Il vous suffira de configurer la connexion avec les paramètres nécessaires pour
 accéder à votre serveur MySQL/MariaDB local (hôte, port, utilisateur, mot de
@@ -792,7 +792,7 @@ données.
 ## Exemples de code
 
 Nous vous invitons maintenant à consulter les exemples de code du cours afin de
-familiariser avec les concepts abordés.
+vous familiariser avec les concepts abordés.
 
 Vous trouverez les exemples de code ici :
 [Exemples de code](../02-exemples-de-code/).
