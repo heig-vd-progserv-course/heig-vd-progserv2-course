@@ -174,7 +174,7 @@ consultez le [support de cours][cours]._
 - Pour accéder à la base de données, utilisez:
   - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
   - Visual Studio Code avec
-    [Database client](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-database-client2).
+    [Database Client](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-database-client2).
 
 ![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/fr/6/62/MySQL.svg)
 ![bg vertical w:80%](https://mariadb.com/wp-content/uploads/2019/11/mariadb-horizontal-blue.svg)

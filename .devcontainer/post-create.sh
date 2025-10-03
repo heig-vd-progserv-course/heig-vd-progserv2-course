@@ -45,7 +45,7 @@ sudo sed -i 's/display_errors = Off/display_errors = On/' /etc/php/*/apache2/php
 
 ## Configure MariaDB server
 # Start MariaDB server
-sudo service mysql start
+sudo service mariadb start
 
 # Set a password for the root user and remove anonymous users and test database
 #sudo mariadb-secure-installation
