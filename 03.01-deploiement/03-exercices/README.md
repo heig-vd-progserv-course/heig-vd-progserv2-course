@@ -16,29 +16,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03.01-deploiement/01-supports-de-cours/03.01-deploiement-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
 
-## Table des matières
-
-- [Ressources annexes](#ressources-annexes)
-- [Table des matières](#table-des-matières)
-- [Exercices](#exercices)
-  - [Exercice 0 - Accéder au programme étudiant d'Infomaniak](#exercice-0---accéder-au-programme-étudiant-dinfomaniak)
-  - [Exercice 1 - Créer un hébergement web](#exercice-1---créer-un-hébergement-web)
-  - [Exercice 2 - Désactiver le renouvellement automatique](#exercice-2---désactiver-le-renouvellement-automatique)
-  - [Exercice 3 - Configurer l'hébergement web](#exercice-3---configurer-lhébergement-web)
-  - [Exercice 4 - Accéder à l'hébergement web via FTP/SFTP](#exercice-4---accéder-à-lhébergement-web-via-ftpsftp)
-  - [Exercice 5 - Déployer une application PHP simple avec SQLite](#exercice-5---déployer-une-application-php-simple-avec-sqlite)
-  - [Exercice 6 - Accéder à la base de données MySQL/MariaDB](#exercice-6---accéder-à-la-base-de-données-mysqlmariadb)
-  - [Exercice 7 - Déployer une application PHP simple avec MySQL/MariaDB](#exercice-7---déployer-une-application-php-simple-avec-mysqlmariadb)
-  - [Exercice 8 - Sécuriser l'application PHP](#exercice-8---sécuriser-lapplication-php)
-  - [Exercice 9 - Effectuer la demande de remboursement auprès de la HEIG-VD](#exercice-9---effectuer-la-demande-de-remboursement-auprès-de-la-heig-vd)
-  - [Exercice 10 - Renouveler/révoquer le programme étudiant d'Infomaniak](#exercice-10---renouvelerrévoquer-le-programme-étudiant-dinfomaniak)
-
 ## Exercices
-
-> [!CAUTION]
->
-> Ces exercices sont à réaliser par groupe de projets. Une seule demande de
-> remboursement doit être effectuée par groupe de projet.
 
 ### Exercice 0 - Accéder au programme étudiant d'Infomaniak
 
@@ -104,8 +82,8 @@ que votre statut est bien approuvé :
 
 > [!CAUTION]
 >
-> Suivez ces étapes uniquement une fois que les étapes précédentes ont été
-> complétées !
+> Cet exercice est à réaliser par groupe de projets. Une seule demande de
+> remboursement est acceptée par groupe de projet.
 
 Afin de commander un hébergement web, vous pouvez vous rendre la page page
 suivante : <https://shop.infomaniak.com/order2/domain?hosting_order=true>.
@@ -472,7 +450,7 @@ locaux) vers le panneau de droite (fichiers distants) dans votre client
 FTP/SFTP. Les fichiers doivent être placés directement dans le répertoire du
 site web (et non dans un sous-dossier) :
 
-![Infomaniak - Transférer les fichiers de l'application PHP simple avec MySQL/MariaDB](./images/infomaniak-simple-php-mariadb-01-upload-files.png)
+![Infomaniak - Transférer les fichiers de l'application PHP simple avec MySQL/MariaDB](./images/infomaniak-simple-php-mysql-01-upload-files.png)
 
 Accédez ensuite à l'adresse du nom de domaine que vous avez choisi lors de la
 commande de l'hébergement web. Vous devriez voir l'application PHP d'exemple
@@ -626,10 +604,9 @@ quelques minutes :
 
 > [!NOTE]
 >
-> Si vous avez récemment modifié les enregistrements DNS de votre nom de
-> domaine, il se peut que le processus de validation du certificat SSL échoue.
-> Assurez-vous que les enregistrements DNS sont correctement configurés et
-> attendez quelques heures avant de réessayer.
+> Si vous avez récemment créé votre hébergement web, il se peut que le processus
+> de validation du certificat SSL échoue. Attendez quelques heures avant de
+> réessayer.
 
 ![Infomaniak - Certificat SSL installé](./images/infomaniak-ssl-06-ssl-certificate-installed.png)
 
