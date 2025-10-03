@@ -39,15 +39,123 @@ _paginate: false
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
 consultez le [support de cours][cours]._
 
-## Objectifs (1/2)
+## Objectifs
 
-- TODO
+- Déployer une application web PHP sur un serveur web.
+- Configurer un environnement de production sécurisé.
+
+![bg right:40%][illustration-objectifs]
+
+## Architecture typique d'une application web PHP
+
+- Un serveur web pour gérer les requêtes HTTP.
+- Un interpréteur PHP pour exécuter le code PHP.
+- Une base de données pour stocker les données.
+- Un espace de stockage pour stocker les fichiers de l'application.
+
+---
+
+![bg h:85%](./images/architecture-typique-dune-application-web-php.png)
+
+### Serveur web
+
+- Gère les requêtes HTTP.
+- Distribue les ressources (fichiers HTML, CSS, JavaScript, images, etc.).
+- Exemples : Apache, Nginx.
+
+![bg right:40%][illustration-objectifs]
+
+### Interpréteur PHP
+
+- Exécute le code PHP.
+- Génère du contenu dynamique.
+- Communique avec la base de données.
+
+![bg right:40%][illustration-objectifs]
+
+### Base de données
+
+- Stocke les données de l'application.
+- Exemples : MySQL/MariaDB, PostgreSQL, SQLite.
+
+![bg right:40%][illustration-objectifs]
+
+### Espace de stockage
+
+- Stocke les fichiers de l'application.
+- Exemples : FTP, SFTP, stockage en ligne.
+
+![bg right:40%][illustration-objectifs]
+
+## Hébergement
+
+- Services pour héberger une application web PHP.
+- Fournit le serveur web, l'interpréteur PHP, la base de données et l'espace de
+  stockage.
+- Exemples : Infomaniak, OVH, AWS, DigitalOcean.
+
+![bg right:40%][illustration-objectifs]
+
+### Infomaniak comme hébergeur
+
+- Hébergeur suisse populaire.
+- Offre des services adaptés aux applications PHP.
+- Offre un programme étudiant pour des hébergements gratuits.
+
+![bg right:40%][illustration-objectifs]
+
+## Déployer une application PHP
+
+- Consiste à transférer les fichiers de l'application vers le serveur web.
+- Configurer l'environnement de production.
+
+![bg right:40%][illustration-objectifs]
+
+### Transfert via FTP/SFTP
+
+- FTP (File Transfer Protocol) et SFTP (SSH File Transfer Protocol) sont des
+  protocoles pour transférer des fichiers.
+- Nécessite un client FTP/SFTP (ex. FileZilla sur Windows/Linux ou Cyberduck sur
+  macOS).
+- Utiliser les informations de connexion fournies par l'hébergeur.
+
+![bg right:40%][illustration-objectifs]
+
+## Sécuriser une application PHP
+
+- Important pour protéger les données et les utilisateurs.
+- Mettre en place des mesures de sécurité.
+
+![bg right:40%][illustration-objectifs]
+
+### Restreindre les accès grâce aux fichiers `.htaccess`
+
+- Fichiers de configuration pour le serveur web Apache.
+- Permettent de restreindre l'accès à certains fichiers ou répertoires.
+- Utilisé pour protéger les fichiers sensibles (ex. fichiers de configuration,
+  répertoires privés).
+
+![bg right:40%][illustration-objectifs]
+
+### Utilisation de HTTPS
+
+- HTTPS (Hypertext Transfer Protocol Secure) est une version sécurisée de HTTP.
+- Utilise SSL/TLS pour chiffrer les communications entre le client et le
+  serveur.
+- Protège les données sensibles (ex. informations de connexion, données
+  personnelles).
+- Infomaniak propose des certificats SSL gratuits.
 
 ![bg right:40%][illustration-objectifs]
 
 ## Conclusion
 
-TODO
+- Le déploiement d'une application web PHP nécessite la compréhension de son
+  architecture, le choix d'un hébergeur, le transfert des fichiers et la mise en
+  place de mesures de sécurité.
+- Infomaniak est un bon choix pour héberger des applications PHP.
+
+![bg right:40%][illustration-objectifs]
 
 ## Questions
 

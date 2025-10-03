@@ -12,7 +12,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Autres formes du support de cours :
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03.01-deploiement/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03.01-deploiement/01-supports-de-cours/03.01-deploiement-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03.01-deploiement/01-supports-de-cours/03.01-deploiement-presentation.pdf)traefik.nortalle.ch
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
 - Exercices : [Lien vers le contenu](../03-exercices/README.md)
 
@@ -31,8 +31,8 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Déployer une application PHP](#déployer-une-application-php)
   - [Transfert via FTP/SFTP](#transfert-via-ftpsftp)
 - [Sécuriser une application PHP](#sécuriser-une-application-php)
-  - [Utilisation de HTTPS](#utilisation-de-https)
   - [Restreindre les accès grâce aux fichiers `.htaccess`](#restreindre-les-accès-grâce-aux-fichiers-htaccess)
+  - [Utilisation de HTTPS](#utilisation-de-https)
 - [Conclusion](#conclusion)
 - [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
@@ -50,7 +50,7 @@ suivants :
 - Un serveur web (comme Apache ou Nginx) pour gérer les requêtes HTTP.
 - Un interpréteur PHP pour exécuter le code PHP.
 - Une base de données (comme MySQL ou PostgreSQL) pour stocker les données.
-- Un système de fichiers pour stocker les fichiers de l'application.
+- Un espace de stockage pour stocker les fichiers de l'application.
 
 ![Architecture client-serveur avec PHP](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/raw/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/images/architecture-client-serveur-avec-php.png)
 
@@ -139,6 +139,16 @@ La sécurité est un aspect crucial du déploiement d'une application web PHP. I
 est important de mettre en place des mesures de sécurité pour protéger
 l'application et les données des utilisateurs.
 
+### Restreindre les accès grâce aux fichiers `.htaccess`
+
+Les fichiers `.htaccess` sont des fichiers de configuration utilisés par le
+serveur web Apache. Ils permettent de définir des règles de configuration
+spécifiques pour un répertoire donné.
+
+Les fichiers `.htaccess` peuvent être utilisés pour restreindre l'accès à
+certaines parties de l'application, rediriger les requêtes, configurer les pages
+d'erreur personnalisées, etc.
+
 ### Utilisation de HTTPS
 
 HTTPS (Hypertext Transfer Protocol Secure) est une version sécurisée du
@@ -152,16 +162,6 @@ chiffrées, ce qui empêche les attaquants d'intercepter et de lire ces données
 
 Infomaniak propose des certificats gratuits, ce qui facilite la mise en place de
 sites web sécurisés.
-
-### Restreindre les accès grâce aux fichiers `.htaccess`
-
-Les fichiers `.htaccess` sont des fichiers de configuration utilisés par le
-serveur web Apache. Ils permettent de définir des règles de configuration
-spécifiques pour un répertoire donné.
-
-Les fichiers `.htaccess` peuvent être utilisés pour restreindre l'accès à
-certaines parties de l'application, rediriger les requêtes, configurer les pages
-d'erreur personnalisées, etc.
 
 ## Conclusion
 
