@@ -16,11 +16,8 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Objectifs
 
-- Rappeler les concepts de base des formulaires HTML, validation et sécurité.
-- Utiliser PDO pour interagir avec une base de données MySQL/MariaDB.
-- Utiliser les exceptions pour la gestion des erreurs en PHP.
-- Utiliser les fichiers de configuration pour stocker les paramètres de
-  connexion à la base de données.
+- Déployer une application web PHP sur un serveur web.
+- Configurer un environnement de production sécurisé.
 
 ## Méthodes d'enseignement et d'apprentissage
 
