@@ -157,7 +157,7 @@ Validez votre commande :
 > programme étudiant d'Infomaniak. Il est néanmoins obligatoire d'acquérir un
 > nom de domaine pour votre projet que vous devrez payer vous-même (environ 15
 > CHF pour une année). Ce montant peut être remboursé par la HEIG-VD si vous
-> effectuez la demande de remboursement (voir exercice ci-dessous).
+> effectuez la demande de remboursement (voir ci-après).
 
 ![Infomaniak - Résumé de la commande](./images/infomaniak-05-order-summary.png)
 
@@ -170,7 +170,7 @@ Validez votre commande :
 
 Une fois la commande validée et payée, vous pouvez télécharger la facture au
 format PDF. Vous en aurez besoin pour effectuer la demande de remboursement
-auprès de la HEIG-VD (voir ci-dessous) :
+auprès de la HEIG-VD (voir ci-après) :
 
 ![Infomaniak - Télécharger la facture](./images/infomaniak-06-download-invoice.png)
 
@@ -650,7 +650,7 @@ sécuriser une application PHP sur un hébergement web tel que celui d'Infomania
 Afin d'obtenir le remboursement du nom de domaine que vous avez acheté pour
 votre hébergement web, vous devez effectuer une demande de remboursement auprès
 de la HEIG-VD. Pour cela, vous devez obtenir la facture au format PDF attestant
-de l'achat du nom de domaine (voir exercice ci-dessus).
+de l'achat du nom de domaine (voir ci-après).
 
 Pour cela, vous pouvez vous rendre dans **Comptabilité** > **Commande** dans le
 portail d'Infomaniak :
