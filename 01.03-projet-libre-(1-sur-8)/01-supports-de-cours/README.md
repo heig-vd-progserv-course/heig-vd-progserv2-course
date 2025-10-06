@@ -302,38 +302,6 @@ A faire pour le prochain cours :
 - [x] Mettre en place son environnement de travail collaboratif.
 - [x] Se répartir le travail entre les différents membres du groupe.
 
-#### ProgServ2-A (mardi matin)
-
-|   # | Groupe               | Heure de passage |
-| --: | :------------------- | :--------------- |
-|   1 | Luca, Sacha, Ryad    | 10h30            |
-|   2 | Pierre, Raul, Romain | 10h40            |
-|   3 | Inês, Rania          | 10h50            |
-|   4 | Matteo, Ella, Aïdan  | 11h00            |
-|   5 | Luka, Nabil, Mathias | 11h10            |
-|   6 | Carla, Cindy         | 11h20            |
-|   7 | Marc, Ana, Charline  | 11h30            |
-|   8 | Lilou, Aissya        | 11h40            |
-|   9 | Léa, Grégory         | 11h50            |
-
-Steve..?
-
-#### ProgServ2-B (mardi après-midi)
-
-|   # | Groupe                                     | Heure de passage |
-| --: | :----------------------------------------- | :--------------- |
-|   1 | Sarah, Sasita, Enya                        | 14h30            |
-|   2 | Gabriel Cappai, Nuno Amaro, Tanguy Vaucher | 14h40            |
-|   3 | Thierry, Lilliana                          | 14h50            |
-|   4 | Dylan, Valentin                            | 15h00            |
-|   5 | Christophe, Loic                           | 15h10            |
-|   6 | Chloé, Benoît, Camilo                      | 15h20            |
-|   7 | Etienne, Teicir                            | 15h30            |
-|   8 | Inoé, Léa, Yannis                          | 15h40            |
-|   9 | Loann, Elia, Marike                        | 15h50            |
-
-Loriane..?
-
 ### Jalon 3
 
 - Tour de table - validation du travail effectué jusqu'à présent.
@@ -344,6 +312,34 @@ A faire pour le prochain cours :
 - [x] Avoir mis en place une base de données pour l'application.
 - [x] Avoir une version déployée de l'application sur Internet.
 - [x] Avoir commencé à implémenter les pages principales de l'application.
+
+#### ProgServ2-A (mardi matin)
+
+|   # | Groupe               | Heure de passage |
+| --: | :------------------- | :--------------- |
+|   1 | Pierre, Raul, Romain | 10h30            |
+|   2 | Léa, Grégory         | 10h40            |
+|   3 | Lilou, Aissya        | 10h50            |
+|   4 | Carla, Cindy, Steve  | 11h00            |
+|   5 | Matteo, Ella, Aïdan  | 11h10            |
+|   6 | Inês, Rania          | 11h20            |
+|   7 | Luca, Sacha, Ryad    | 11h30            |
+|   8 | Marc, Ana, Charline  | 11h40            |
+|   9 | Luka, Nabil, Mathias | 11h50            |
+
+#### ProgServ2-B (mardi après-midi)
+
+|   # | Groupe                    | Heure de passage |
+| --: | :------------------------ | :--------------- |
+|   1 | Chloé, Benoît, Camilo     | 14h45            |
+|   2 | Gabriel, Nuno, Tanguy     | 14h55            |
+|   3 | Inoé, Léa, Yannis         | 15h05            |
+|   4 | Thierry, Lilliana         | 15h15            |
+|   5 | Loann, Elia, Marike       | 15h25            |
+|   6 | Christophe, Loic, Loriane | 15h35            |
+|   7 | Etienne, Teicir           | 15h45            |
+|   8 | Sarah, Sasita, Enya       | 15h55            |
+|   9 | Dylan, Valentin           | 16h05            |
 
 ### Jalon 4
 
