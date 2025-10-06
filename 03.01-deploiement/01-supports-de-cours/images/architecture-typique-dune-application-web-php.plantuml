@@ -1,6 +1,5 @@
 @startuml "architecture-typique-dune-application-web-php"
 skinparam boxPadding 100
-skinparam participantPadding 50
 skinparam maxMessageSize 300
 skinparam noteTextAlignment center
 skinparam sequenceMessageAlign direction
@@ -13,9 +12,11 @@ title "Architecture typique d'une application web PHP"
 
 actor "Client\n(navigateur web)" as browser
 
-box "Hébergement web\n(Informaniak - espace de stockage via FTP)" #LightBlue
+box "Hébergement web\n(Informaniak)" #LightBlue
+box "Espace de stockage\n(FTP ou SFTP)"
 participant "Serveur web\n(Apache/nginx)" as webserver
 participant "Interpréteur PHP\n(PHP 8.4)" as php
+end box
 database "Base de données\n(MySQL/MariaDB)" as db
 end box
 
