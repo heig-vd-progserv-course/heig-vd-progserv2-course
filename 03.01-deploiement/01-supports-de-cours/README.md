@@ -52,7 +52,7 @@ suivants :
 - Une base de données (comme MySQL ou PostgreSQL) pour stocker les données.
 - Un espace de stockage pour stocker les fichiers de l'application.
 
-![Architecture client-serveur avec PHP](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/raw/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/images/architecture-client-serveur-avec-php.png)
+![Architecture typique d'une application web PHP](./images/architecture-typique-dune-application-web-php.png)
 
 ### Serveur web
 
