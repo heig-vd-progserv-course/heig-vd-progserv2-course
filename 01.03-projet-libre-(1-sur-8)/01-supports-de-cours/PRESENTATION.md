@@ -108,11 +108,8 @@ Le non-respect de ces contraintes peut entraîner des sanctions sévères, et ce
 
 Les dates de rendu de votre projet sont les suivantes :
 
-- ProgServ2-A (mardi matin) : **21.12.2025 12h00** ou **04.01.2026 12h00**.
-- ProgServ2-B (mardi après-midi) : **21.12.2025 16h15** ou **04.01.2026 16h15**.
-
-À décider ensemble pour les deux classes (soit avant ou après les vacances de
-Noël).
+- ProgServ2-A (mardi matin) : **21.12.2025 12h00**.
+- ProgServ2-B (mardi après-midi) : **21.12.2025 16h15**.
 
 ## Soumission (2/2)
 
