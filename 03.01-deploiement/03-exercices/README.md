@@ -223,6 +223,18 @@ Tentez d'accéder au site web en utilisant votre navigateur web en vous rendant 
 l'adresse du nom de domaine que vous avez choisi lors de la commande de
 l'hébergement web. Vous devriez voir une page par défaut d'Infomaniak :
 
+> [!NOTE]
+>
+> Il se peut que l'accès FTP ne soit pas immédiatement disponible après la
+> configuration. Cela est dû à la propagation des DNS, qui peut prendre jusqu'à
+> 24 heures.
+>
+> De notre expérience, cela prend généralement moins de deux heures.
+>
+> Vous pouvez essayer depuis un autre réseau (par exemple, en utilisant le
+> partage de connexion de votre téléphone) si l'accès FTP ne fonctionne pas
+> depuis le réseau Wi-Fi habituel.
+
 ![Infomaniak - Page par défaut](./images/infomaniak-web-08-default-page.png)
 
 Votre site web est maintenant configuré et prêt à être utilisé !
@@ -271,8 +283,8 @@ FTP/SFTP. Récupérez l'adresse du serveur dans le menu **FTP / SSH** :
 Ouvrez ensuite votre client FTP/SFTP et créez une nouvelle connexion en
 utilisant les informations suivantes :
 
-- Hôte : l'adresse du serveur que vous avez récupérée dans le tableau de bord de
-  l'hébergement web.
+- Hôte / Serveur : l'adresse du serveur que vous avez récupérée dans le tableau
+  de bord de l'hébergement web.
 - Nom d'utilisateur : le nom d'utilisateur que vous avez défini ou l'utilisateur
   par défaut.
 - Mot de passe : le mot de passe que vous avez défini pour l'utilisateur
@@ -283,6 +295,18 @@ utilisant les informations suivantes :
 Tentez de vous connecter à l'hébergement web. Si la connexion est réussie, vous
 devez voir la structure de fichiers de l'hébergement web dans votre client
 FTP/SFTP :
+
+> [!NOTE]
+>
+> Il se peut que l'accès FTP ne soit pas immédiatement disponible après la
+> configuration. Cela est dû à la propagation des DNS, qui peut prendre jusqu'à
+> 24 heures.
+>
+> De notre expérience, cela prend généralement moins de deux heures.
+>
+> Vous pouvez essayer depuis un autre réseau (par exemple, en utilisant le
+> partage de connexion de votre téléphone) si l'accès FTP ne fonctionne pas
+> depuis le réseau Wi-Fi habituel.
 
 > [!NOTE]
 >
@@ -313,6 +337,17 @@ avez choisi lors de la commande de l'hébergement web :
 Ce dossier contient les fichiers du site web spécifique associé à l'hébergement
 web. C'est ici que vous devez transférer les fichiers de votre application PHP
 afin de mettre à jour votre site web.
+
+> [!WARNING]
+>
+> Il se peut que les fichiers cachés (fichiers et dossiers commençant par un
+> point, comme `.htaccess`) ne soient pas affichés par défaut dans votre client
+> FTP/SFTP. Vous devrez peut-être activer l'option pour afficher les fichiers
+> cachés dans les paramètres de votre client.
+>
+> Sur macOS, le raccourci clavier `Cmd + Shift + .` permet d'afficher ou de
+> masquer les fichiers cachés. Il est peut-être nécessaire de rafraîchir la vue
+> après avoir modifié cette option.
 
 Créez un dossier `backup` dans le répertoire du site web (à l'aide du clic-droit
 dans FileZilla ou Cyberduck, puis en sélectionnant l'option pour créer un

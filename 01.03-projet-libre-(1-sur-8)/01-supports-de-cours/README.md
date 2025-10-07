@@ -164,8 +164,8 @@ Le projet doit respecter les règles suivantes :
 
 Votre travail doit être remis comme suit :
 
-- ProgServ2-A (mardi matin) : **21.12.2025 12h00** ou **04.01.2026 12h00**.
-- ProgServ2-B (mardi après-midi) : **21.12.2025 16h15** ou **04.01.2026 16h15**.
+- ProgServ2-A (mardi matin) : **21.12.2025 12h00**.
+- ProgServ2-B (mardi après-midi) : **21.12.2025 16h15**.
 
 La date de rendu est à décider ensemble pour les deux classes (soit avant ou
 après les vacances de Noël) à l'aide du sondage suivant :
