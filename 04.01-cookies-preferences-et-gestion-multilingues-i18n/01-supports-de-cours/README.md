@@ -22,10 +22,13 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [Les cookies](#les-cookies)
-  - [Créer et lire des cookies en PHP](#créer-et-lire-des-cookies-en-php)
-  - [Invalider/supprimer un cookie en PHP](#invalidersupprimer-un-cookie-en-php)
+  - [Créer des cookies en PHP](#créer-des-cookies-en-php)
+  - [Lire des cookies en PHP](#lire-des-cookies-en-php)
+  - [Invalider/supprimer des cookies en PHP](#invalidersupprimer-des-cookies-en-php)
   - [Visualiser les cookies dans le navigateur](#visualiser-les-cookies-dans-le-navigateur)
 - [Gestion multilingue (i18n)](#gestion-multilingue-i18n)
+  - [Fichiers de traduction](#fichiers-de-traduction)
+  - [Utilisation des fichiers de traduction](#utilisation-des-fichiers-de-traduction)
 - [Conclusion](#conclusion)
 - [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
@@ -73,7 +76,13 @@ Il existe différentes options pour les cookies, telles que :
 De ce fait, les cookies sont largement utilisés pour améliorer l'expérience
 utilisateur sur les sites web.
 
-### Créer et lire des cookies en PHP
+Le diagramme ci-dessous illustre le processus de création et de lecture des
+cookies entre le navigateur et le serveur pour la gestion des préférences de
+langue :
+
+![Exemple d'un cookie pour la gestion des préférences de langue](./images/exemple-dun-cookie-pour-la-gestion-des-preferences-de-langue.png)
+
+### Créer des cookies en PHP
 
 Les cookies ne sont pas spécifiques à PHP, mais PHP fournit des fonctions
 pratiques pour les gérer.
@@ -83,7 +92,15 @@ pour créer un cookie nommé `language` avec la valeur `fr` qui expire dans 30
 jours :
 
 ```php
-setcookie('language', 'fr', time() + (30 * 24 * 60 * 60));
+<?php
+// Définit un cookie 'language'
+// avec la valeur 'fr'
+// qui expire dans 30 jours.
+setcookie(
+    'language',
+    'fr',
+    time() + (30 * 24 * 60 * 60)
+);
 ```
 
 La fonction `time()` retourne le timestamp Unix actuel (nombre de secondes
@@ -99,13 +116,18 @@ retourner au client le cookie `language` avec la valeur `fr` dans l'en-tête HTT
 Automatiquement, le navigateur stockera le cookie et l'enverra de nouveau au
 serveur avec chaque requête subséquente vers le même domaine.
 
+### Lire des cookies en PHP
+
 Pour lire un cookie en PHP, on accède à la superglobale `$_COOKIE`. Par exemple,
 pour lire la valeur du cookie `language` :
 
 ```php
+<?php
+// Vérifie si le cookie 'language' est défini.
 if (isset($_COOKIE['language'])) {
     $language = $_COOKIE['language'];
-    echo "La langue préférée est : " . htmlspecialchars($language);
+    echo "La langue préférée est : " .
+        htmlspecialchars($language);
 } else {
     echo "Aucune langue préférée définie.";
 }
@@ -113,12 +135,6 @@ if (isset($_COOKIE['language'])) {
 
 Il est donc possible de lire la valeur du cookie `language` envoyé par le
 navigateur via l'en-tête HTTP `Cookie`.
-
-Le diagramme ci-dessous illustre le processus de création et de lecture des
-cookies entre le serveur et le navigateur pour la gestion des préférences de
-langue :
-
-![Diagramme de création et lecture des cookies](./images/exemple-dun-cookie-pour-la-gestion-des-preferences-de-langue.png)
 
 La fonction `setcookie()` doit être appelée avant tout envoi de contenu au
 navigateur, sinon le cookie ne sera pas pris en compte (par exemple, avant tout
@@ -132,14 +148,16 @@ documentation officielle de PHP pour `setcookie()` est disponible ici :
 Grâce aux cookies, il est possible de personnaliser l'expérience utilisateur en
 fonction des préférences stockées dans les cookies.
 
-### Invalider/supprimer un cookie en PHP
+### Invalider/supprimer des cookies en PHP
 
 Pour supprimer un cookie, il suffit de le recréer avec une valeur vide ou une
 date d'expiration passée. Par exemple, pour supprimer le cookie `language` en
 définissant une date d'expiration dans le passé :
 
 ```php
-// Supprime le cookie en le recréant avec une date d'expiration dans le passé
+<?php
+// Supprime le cookie en le recréant
+// avec une date d'expiration dans le passé.
 setcookie('language', '', time() - 3600);
 ```
 
@@ -152,7 +170,9 @@ Une autre façon de supprimer un cookie est de le recréer avec une valeur vide,
 sans spécifier de date d'expiration. Par exemple :
 
 ```php
-// Supprime le cookie en lui donnant une valeur vide
+<?php
+// Supprime le cookie en lui
+// donnant une valeur vide.
 setcookie('language', '');
 ```
 
@@ -194,10 +214,12 @@ Les outils de développement permettent également de modifier ou de supprimer l
 cookies existants, ce qui peut être utile pour le débogage et le test des
 applications web.
 
+![Exemple de visualisation des cookies dans les outils de développement de Chrome](./images/visualiser-les-cookies-dans-le-navigateur.png)
+
 ## Gestion multilingue (i18n)
 
 La gestion multilingue, ou i18n (internationalization - le terme _"i18n"_ vient
-du fait qu'il y a 18 lettres entre le "i" et le "n" dans le mot anglais
+du fait qu'il y a 18 lettres entre le _"i"_ et le _"n"_ dans le mot anglais
 _"internationalization"_), consiste à adapter une application pour qu'elle
 puisse être utilisée dans plusieurs langues et cultures. Cela implique
 généralement :
@@ -214,8 +236,11 @@ implémentée de plusieurs façons, notamment :
 
 - Utilisation de fichiers de traduction.
 - Utilisation de bases de données pour stocker les traductions.
+- Utilisation de services externes pour la traduction.
 - Utilisation de bibliothèques ou de frameworks qui facilitent la gestion des
   traductions.
+
+### Fichiers de traduction
 
 Dans le contexte de cette unité d'enseignement, nous allons utiliser des cookies
 pour stocker les préférences de langue des utilisateurs et adapter le contenu de
@@ -232,6 +257,7 @@ traductions pour différentes langues :
 
 ```php
 <?php
+// translations.php
 $translations = [
     'en' => [
         'welcome' => 'Welcome',
@@ -241,13 +267,11 @@ $translations = [
         'welcome' => 'Bienvenue',
         'hello' => 'Bonjour',
     ],
-    'it' => [
-        'welcome' => 'Benvenuto',
-        'hello' => 'Ciao',
-    ],
 ];
 ?>
 ```
+
+### Utilisation des fichiers de traduction
 
 Ensuite, dans le script principal, on peut lire la préférence de langue depuis
 le cookie et utiliser le tableau de traductions pour afficher les chaînes dans
@@ -269,18 +293,16 @@ if (isset($_COOKIE['language']) && array_key_exists($_COOKIE['language'], $trans
     $language = $_COOKIE['language'];
 }
 
-// Fonction pour obtenir la traduction d'une clé
-function t($key) {
-    global $translations, $language;
-    return $translations[$language][$key] ?? $translations[DEFAULT_LANGUAGE][$key] ?? $key;
-}
-
 // Exemple d'utilisation
-echo t('welcome'); // Affiche la traduction de "welcome" dans la langue préférée
+echo $translations[$language]['welcome'];
 ```
 
 Cette approche permet de gérer facilement les traductions en fonction des
 préférences de langue stockées dans les cookies.
+
+Un exemple plus complet est disponible dans les exemples de code de cette unité
+d'enseignement pour éviter d'avoir un seul fichier avec toutes les traductions
+de toutes les langues.
 
 ## Conclusion
 
