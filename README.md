@@ -152,9 +152,7 @@ Les dates sont tirées du
 
 ## 🕓 Cours 04
 
-### Cookies, préférences, et gestion multilingues (i18n)
-
-_À venir._
+### [Cookies, préférences, et gestion multilingues (i18n)](./04.01-cookies-preferences-et-gestion-multilingues-i18n/)
 
 - Supports de cours :
   [Lien vers le contenu](./04.01-cookies-preferences-et-gestion-multilingues-i18n/01-supports-de-cours/README.md)
