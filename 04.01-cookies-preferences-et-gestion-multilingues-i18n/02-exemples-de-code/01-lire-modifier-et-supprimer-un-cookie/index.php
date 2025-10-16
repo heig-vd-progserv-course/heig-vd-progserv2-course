@@ -16,8 +16,8 @@ $cookie_value = $_COOKIE[COOKIE_NAME] ?? null;
 
 <body>
     <h1>Lire un cookie</h1>
-    <p>Le cookie créé aura une durée de vie de 1 minute.</p>
-    <p>Après 1 minute, le cookie expirera et ne sera plus accessible.</p>
+    <p>Le cookie créé aura une durée de vie de 30 secondes.</p>
+    <p>Après 30 secondes, le cookie expirera et ne sera plus accessible.</p>
     <?php if ($cookie_value): ?>
         <p>Valeur du cookie : <strong><?= htmlspecialchars($cookie_value) ?></strong></p>
     <?php else: ?>
