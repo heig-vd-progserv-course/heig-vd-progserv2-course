@@ -1,0 +1,61 @@
+@startuml "exemple-dun-cookie-pour-la-gestion-des-preferences-de-langue"
+skinparam boxPadding 100
+skinparam maxMessageSize 300
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
+
+!$TITLE = "Exemple d'un cookie pour la gestion des préférences de langue"
+!$MULTIPAGE = 0
+
+!if ($MULTIPAGE)
+    right footer $TITLE (%page%/%lastpage%)
+!else
+    ignore newpage
+!endif
+
+title $TITLE
+
+actor "Client\n(navigateur web)" as browser
+participant "Hébergement web\n(Apache/PHP/MySQL)" as webserver
+
+== Requête sans préférence de la langue ==
+
+browser -> webserver: Une requête ""GET"" est effectuée. Elle demande la page d'accueil (""/"") au serveur web.
+webserver -> webserver: Vérification si le cookie ""language"" est défini.\n(superglobale ""$_COOKIE"")
+webserver -> webserver: Comme ce n'est pas le cas, le cookie est défini avec la valeur ""fr"" (valeur définie par défaut par la personne qui a créé l'application).\n(méthode ""setcookie("language", "fr")"")
+webserver -> browser: La réponse est retournée. Elle contient la page en français ainsi que l'entête HTTP ""Set-Cookie"" qui défini le cookie ""language=fr"".
+browser -> browser: Stockage du cookie ""language"" dans les cookies du navigateur.
+
+note over browser, webserver
+    Pour toutes les futures requêtes, le cookie sera automatiquement transféré au serveur web, qui pourra l'utiliser pour générer le contenu dynamique de la page.
+end note
+
+newpage $TITLE
+
+... <&clock> Du temps s'écoule... ...
+
+== Requête avec préférence de la langue ==
+
+browser -> webserver: Une requête ""GET"" est effectuée. Elle contient l'entête HTTP ""Cookie"" avec le cookie ""language=fr"".
+webserver -> webserver: Vérification si le cookie ""language"" est défini.\n(superglobale ""$_COOKIE"")
+webserver -> webserver: Comme c'est le cas, l'interprêteur PHP peut utiliser la valeur.
+webserver -> browser: La réponse est retournée. Elle contient la page en français, définie grâce au cookie envoyé par le client.
+browser -> browser: Stockage du cookie ""language"" dans les cookies du navigateur.
+
+newpage $TITLE
+
+... <&clock> Du temps s'écoule... ...
+
+== Requête pour changer la langue ==
+
+browser -> webserver: Une requête ""POST"" est effectuée au travers d'un formulaire pour changer la langue.
+webserver -> webserver: Extraction des saisies du formulaire, dont la préférence de langue.\n(superglobale ""$_POST"")
+webserver -> webserver: Le cookie ""language=en"" est défini.\n(méthode ""setcookie("language", "en")"")
+webserver -> browser: Une redirection est effectuée vers la page d'accueil (""/""). Elle contient l'entête HTTP ""Set-Cookie"" qui défini le cookie ""language=en"".
+browser -> browser: Le navigateur est redirigé vers la vers la page d'accueil (""/"").
+browser -> webserver: Une requête ""GET"" est effectuée. Elle demande la page d'accueil (""/"") et contient l'entête HTTP ""Cookie"" avec le cookie ""language=en"".
+webserver -> browser: La réponse est retournée. Elle contient la page en anglais.
+
+@enduml

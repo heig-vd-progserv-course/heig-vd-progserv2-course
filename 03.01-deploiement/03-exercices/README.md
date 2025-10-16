@@ -675,19 +675,18 @@ Puis cliquer sur le bouton **Facture** pour télécharger la facture au format P
 ![Infomaniak - Télécharger la facture](./images/infomaniak-accounting-04-download-invoice.png)
 
 Une fois la facture téléchargée, vous pouvez effectuer la demande de
-remboursement auprès de la HEIG-VD en passant au secrétariat COMEM+ de la
-HEIG-VD ou en leur envoyant un e-mail. Vous devez fournir les informations
-suivantes dans votre demande de remboursement :
+remboursement auprès de la HEIG-VD en suivant ces étapes :
 
-- Votre nom et prénom.
-- La facture au format PDF attestant de l'achat du nom de domaine.
-- Indiquez que l'achat a été effectué dans le cadre du programme étudiant
-  d'Infomaniak pour le cours de Programmation Serveur 2 (ProgServ2).
-- Vos coordonnées bancaires (IBAN) ou votre numéro de téléphone pour le
-  remboursement via TWINT.
+1. Envoyez un e-mail au secrétariat COMEM+ avec la facture au format PDF en
+   pièce-jointe. Indiquez que l'achat a été effectué dans le cadre du programme
+   étudiant d'Infomaniak pour le cours de Programmation Serveur 2 (ProgServ2).
+2. Attendez la validation de la demande de remboursement par le secrétariat
+   COMEM+.
+3. Passez au secrétariat COMEM+ pour récupérer le remboursement en espèces ou
+   via TWINT et signer le formulaire de remboursement.
 
 Le secrétariat COMEM+ traitera votre demande de remboursement et vous
-remboursera le montant du nom de domaine sur votre compte bancaire ou via TWINT.
+remboursera le montant du nom de domaine en espèce ou via TWINT.
 
 ### Exercice 10 - Renouveler/révoquer le programme étudiant d'Infomaniak
 
