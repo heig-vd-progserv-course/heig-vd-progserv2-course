@@ -45,7 +45,7 @@ consultez le [support de cours][cours]._
 - Implémenter la gestion multilingue (i18n) dans une application web PHP.
 - (Vous donner envie de manger des cookies).
 
-![bg right:40%](./images/image-objectifs.png)
+![bg right:40%](./images/illustration-objectifs.png)
 
 ## Les cookies (1/2)
 
@@ -234,7 +234,7 @@ Est-ce que vous avez des questions ?
 
 **N'hésitez pas à vous entraidez si vous avez des difficultés !**
 
-![bg right:40%][illustration-a-vous-de-jouer]
+![bg right:40%](./images/illustration-a-vous-de-jouer.png)
 
 ## Sources (1/2)
 
@@ -268,7 +268,7 @@ Est-ce que vous avez des questions ?
   chocolate chips."_
 - Illustration de _"À vous de jouer !"_ générée avec ChatGPT à partir de la
   saisie suivante :  
-  _"Make a game controller made out of cookies."_
+  _"Make a game controller made out of cookies in portrait mode."_
 
 <!-- URLs -->
 
@@ -291,5 +291,3 @@ Est-ce que vous avez des questions ?
 	https://images.unsplash.com/photo-1499636136210-6f4ee915583e?fit=crop&h=720
 [illustration-invalider-supprimer-des-cookies-en-php]:
 	https://images.unsplash.com/photo-1618923850107-d1a234d7a73a?fit=crop&h=720
-[illustration-a-vous-de-jouer]:
-	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720
