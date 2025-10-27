@@ -43,8 +43,9 @@ consultez le [support de cours][cours]._
 
 - Utiliser les cookies pour stocker les préférences des utilisateurs.
 - Implémenter la gestion multilingue (i18n) dans une application web PHP.
+- (Vous donner envie de manger des cookies).
 
-![bg right:40%][illustration-objectifs]
+![bg right:40%](./images/image-objectifs.png)
 
 ## Les cookies (1/2)
 
@@ -53,7 +54,7 @@ consultez le [support de cours][cours]._
 - Renvoyés par le client au serveur avec chaque requête HTTP.
 - Permettent de stocker les préférences utilisateur (ex. : langue, thème, etc.).
 
-![bg right:40%][illustration-les-cookies]
+![bg right:40%][illustration-les-cookies-1]
 
 ## Les cookies (2/2)
 
@@ -64,7 +65,7 @@ consultez le [support de cours][cours]._
   - Et quelques autres options (domaine, chemin, sécurité, etc.).
 - Valides pour une durée ou jusqu'à la fermeture du navigateur.
 
-![bg right:40%][illustration-les-cookies]
+![bg right:40%][illustration-les-cookies-2]
 
 ---
 
@@ -144,14 +145,14 @@ setcookie('language', '');
 - Plusieurs manières de l'implémenter (fichiers de traduction, bases de données,
   services externes, etc.).
 
-![bg right:40%][illustration-gestion-multilingue-i18n]
+![bg right:40%](./images/illustration-i18n.png)
 
 ## Gestion multilingue (i18n) (2/2)
 
 - Permet aux utilisateurs de choisir leur langue préférée.
 - Utilisation de cookies pour mémoriser la langue préférée.
 
-![bg right:40%][illustration-gestion-multilingue-i18n]
+![bg right:40%](./images/illustration-i18n.png)
 
 ### Fichiers de traduction
 
@@ -161,7 +162,7 @@ setcookie('language', '');
   spécifique.
 - Un exemple plus complet est disponible dans les codes d'exemples.
 
-![bg right:40%][illustration-gestion-multilingue-i18n]
+![bg right:40%](./images/illustration-i18n.png)
 
 ### Utilisation des fichiers de traduction (1/2)
 
@@ -210,7 +211,8 @@ echo $translations[$language]['welcome'];
 - Nous pouvons utiliser des cookies pour mémoriser les préférences de langue.
 - La gestion multilingue (i18n) améliore l'expérience utilisateur.
 
-![bg right:40%][illustration-les-cookies]
+![bg right:40%][illustration-les-cookies-1]
+![bg right:40%][illustration-les-cookies-2]
 ![bg right:40%][illustration-creer-des-cookies-en-php]
 ![bg right:40%][illustration-lire-des-cookies-en-php]
 ![bg right:40% vertical][illustration-invalider-supprimer-des-cookies-en-php]
@@ -234,32 +236,39 @@ Est-ce que vous avez des questions ?
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
-## Sources
+## Sources (1/2)
 
 - [Illustration principale][illustration-principale] par
   [Richard Jacobs](https://unsplash.com/@rj2747) sur
   [Unsplash](https://unsplash.com/photos/grayscale-photo-of-elephants-drinking-water-8oenpCXktqQ)
-- [Illustration][illustration-objectifs] par
-  [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
-  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
-- [Illustration][illustration-les-cookies] par
-  [Erol Ahmed](https://unsplash.com/@erol) sur
+- Illustration des objectifs générée avec ChatGPT à partir de la saisie suivante
+  :  
+  _"Make a realistic scene of a cookie thrown in a basketball loop."_
+- [Illustration][illustration-les-cookies-1] par
+  [Vicky Ng](https://unsplash.com/@vickyng) sur
   [Unsplash](https://unsplash.com/photos/baked-cookies-on-white-concrete-surface-AmzKuEnr1VY)
+- [Illustration][illustration-les-cookies-2] par
+  [Erol Ahmed](https://unsplash.com/@erol) sur
+  [Unsplash](https://unsplash.com/photos/brown-and-black-chocolate-chip-cookies-EnPlEZI4WfM)
 - [Illustration][illustration-creer-des-cookies-en-php] par
   [Chris Liverani](https://unsplash.com/@shaktirajpurohit) sur
   [Unsplash](https://unsplash.com/photos/brown-cookies-on-white-ceramic-plate-qczubsyHofQ)
 - [Illustration][illustration-lire-des-cookies-en-php] par
   [Food Photographer | Jennifer Pallian](https://unsplash.com/@foodess) sur
   [Unsplash](https://unsplash.com/photos/close-up-photo-of-baked-cookies-OfdDiqx8Cz8)
+
+## Sources (2/2)
+
 - [Illustration][illustration-invalider-supprimer-des-cookies-en-php] par
   [Tamas Pap](https://unsplash.com/@tamasp) sur
   [Unsplash](https://unsplash.com/photos/chocolate-ice-cream-on-brown-cone-98Kk8vwPbgs)
-- [Illustration][illustration-gestion-multilingue-i18n] par
-  [NASA](https://unsplash.com/@nasa) sur
-  [Unsplash](https://unsplash.com/photos/astronaut-in-spacesuit-floating-in-space-Yj1M5riCKk4)
-- [Illustration][illustration-a-vous-de-jouer] par
-  [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
-  [Unsplash](https://unsplash.com/photos/white-sony-ps4-dualshock-controller-over-persons-palm-FJFPuE1MAOM)
+- Illustration de la gestion multilingue (i18n) générée avec ChatGPT à partir de
+  la saisie suivante :  
+  _"Make a realistic scene of a cookie as the Earth with all continents as the
+  chocolate chips."_
+- Illustration de _"À vous de jouer !"_ générée avec ChatGPT à partir de la
+  saisie suivante :  
+  _"Make a game controller made out of cookies."_
 
 <!-- URLs -->
 
@@ -272,17 +281,15 @@ Est-ce que vous avez des questions ?
 
 [illustration-principale]:
 	https://images.unsplash.com/photo-1517486430290-35657bdcef51?fit=crop&h=720
-[illustration-objectifs]:
-	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
-[illustration-les-cookies]:
+[illustration-les-cookies-1]:
 	https://images.unsplash.com/photo-1485745655111-3272a37e76a5?fit=crop&h=720
+[illustration-les-cookies-2]:
+	https://images.unsplash.com/photo-1609501886186-d4de01248beb?fit=crop&h=720
 [illustration-creer-des-cookies-en-php]:
 	https://images.unsplash.com/photo-1625876981820-be17a6807189?fit=crop&h=720
 [illustration-lire-des-cookies-en-php]:
 	https://images.unsplash.com/photo-1499636136210-6f4ee915583e?fit=crop&h=720
 [illustration-invalider-supprimer-des-cookies-en-php]:
 	https://images.unsplash.com/photo-1618923850107-d1a234d7a73a?fit=crop&h=720
-[illustration-gestion-multilingue-i18n]:
-	https://images.unsplash.com/photo-1454789548928-9efd52dc4031?fit=crop&h=720
 [illustration-a-vous-de-jouer]:
 	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720
