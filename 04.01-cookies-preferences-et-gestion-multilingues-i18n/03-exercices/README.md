@@ -11,9 +11,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03.01-deploiement/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/04.01-cookies-preferences-et-gestion-multilingues-i18n/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03.01-deploiement/01-supports-de-cours/03.01-deploiement-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/04.01-cookies-preferences-et-gestion-multilingues-i18n/01-supports-de-cours/04.01-cookies-preferences-et-gestion-multilingues-i18n-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
 
 ## Exercices
