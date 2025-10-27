@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Cookies, préférences, et gestion multilingues (i18n)
 description: Cookies, préférences, et gestion multilingues (i18n) pour l'unité d'enseignement ProgServ2 enseigné à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03.01-deploiement/01-supports-de-cours/index.html
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/04.01-cookies-preferences-et-gestion-multilingues-i18n/01-supports-de-cours/index.html
 header: "**Cookies, préférences, et gestion multilingues (i18n)**"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
 headingDivider: 6
@@ -273,7 +273,7 @@ Est-ce que vous avez des questions ?
 <!-- URLs -->
 
 [cours]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/03.01-deploiement
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/04.01-cookies-preferences-et-gestion-multilingues-i18n
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
 
