@@ -248,7 +248,8 @@ Cyberduck (macOS).
 Commencez par télécharger et installer un client FTP/SFTP si vous n'en avez pas
 encore un :
 
-- [FileZilla (client)](https://filezilla-project.org/) (Windows/Linux)
+- [FileZilla (client)](https://filezilla-project.org/download.php?show_all=1)
+  (Windows/Linux)
 - [Cyberduck](https://cyberduck.io/) (macOS)
 
 Une fois le client FTP/SFTP installé, vous devez récupérer les informations de
@@ -582,6 +583,9 @@ Ce fichier `.htaccess` contient les règles suivantes :
 # Active le moteur de réécriture d'URL.
 # Permet de rediriger les requêtes vers d'autres emplacements.
 RewriteEngine On
+
+# Blocage d'accès aux répertoires sensibles.
+RewriteRule ^src/ - [R=404,L]
 
 # Si le fichier ou le répertoire demandé existe dans /public, ne pas réécrire le chemin d'accès (tout ce qui est dans /public reste accessible).
 RewriteCond %{DOCUMENT_ROOT}/public/$1 -f [OR]
