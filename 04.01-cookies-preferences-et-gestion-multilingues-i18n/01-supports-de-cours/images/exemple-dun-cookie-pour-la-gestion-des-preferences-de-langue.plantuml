@@ -42,7 +42,7 @@ browser -> webserver: Une requête ""GET"" est effectuée. Elle contient l'entê
 webserver -> webserver: Vérification si le cookie ""language"" est défini.\n(superglobale ""$_COOKIE"")
 webserver -> webserver: Comme c'est le cas, l'interprêteur PHP peut utiliser la valeur.
 webserver -> browser: La réponse est retournée. Elle contient la page en français, définie grâce au cookie envoyé par le client.
-browser -> browser: Stockage du cookie ""language"" dans les cookies du navigateur.
+browser -> browser: La page est affichée sur le navigateur, respectant les préférences de langue.
 
 newpage $TITLE
 
@@ -54,8 +54,10 @@ browser -> webserver: Une requête ""POST"" est effectuée au travers d'un formu
 webserver -> webserver: Extraction des saisies du formulaire, dont la préférence de langue.\n(superglobale ""$_POST"")
 webserver -> webserver: Le cookie ""language=en"" est défini.\n(méthode ""setcookie("language", "en")"")
 webserver -> browser: Une redirection est effectuée vers la page d'accueil (""/""). Elle contient l'entête HTTP ""Set-Cookie"" qui défini le cookie ""language=en"".
+browser -> browser: Stockage du cookie ""language"" dans les cookies du navigateur.
 browser -> browser: Le navigateur est redirigé vers la vers la page d'accueil (""/"").
 browser -> webserver: Une requête ""GET"" est effectuée. Elle demande la page d'accueil (""/"") et contient l'entête HTTP ""Cookie"" avec le cookie ""language=en"".
 webserver -> browser: La réponse est retournée. Elle contient la page en anglais.
+browser -> browser: La page est affichée sur le navigateur, respectant les préférences de langue.
 
 @enduml
