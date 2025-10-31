@@ -8,7 +8,7 @@ $userId = $_SESSION['user_id'] ?? null;
 // L'utilisateur est authentifié
 if ($userId) {
     // Récupère les autres informations de l'utilisateur
-    $username = $_SESSION['username'];
+    $email = $_SESSION['email'];
     $role = $_SESSION['role'];
 }
 ?>
@@ -20,7 +20,7 @@ if ($userId) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-    <title>Page publique | Gestion des sessions</title>
+    <title>Page publique | Gestion de livres</title>
 </head>
 
 <body>
@@ -29,15 +29,21 @@ if ($userId) {
 
         <p>Cette page est accessible à toutes les personnes, qu'elles soient connectées ou non.</p>
 
+        <p>Bienvenue sur notre plateforme de gestion de livres ! Ici, vous pouvez découvrir des livres, lire des critiques et, si vous êtes auteur.trice, publier vos propres œuvres.</p>
+
         <?php if ($userId) { ?>
-            <p><strong>Vous êtes actuellement connecté.e</strong> :</p>
-            <ul>
-                <li><strong>ID utilisateur :</strong> <?= htmlspecialchars($userId) ?></li>
-                <li><strong>Nom d'utilisateur :</strong> <?= htmlspecialchars($username) ?></li>
-                <li><strong>Rôle :</strong> <?= htmlspecialchars($role) ?></li>
-            </ul>
+            <article style="background-color: var(--pico-ins-color);">
+                <p><strong>Vous êtes actuellement connecté.e</strong> :</p>
+                <ul>
+                    <li><strong>Email :</strong> <?= htmlspecialchars($email) ?></li>
+                    <li><strong>Rôle :</strong> <?= htmlspecialchars($role === 'author' ? 'Auteur.trice' : 'Lecteur.trice') ?></li>
+                </ul>
+            </article>
         <?php } else { ?>
-            <p><strong>Vous n'êtes actuellement pas connecté.e.</strong></p>
+            <article>
+                <p><strong>Vous n'êtes actuellement pas connecté.e.</strong></p>
+                <p>Créez un compte ou connectez-vous pour accéder à plus de fonctionnalités !</p>
+            </article>
         <?php } ?>
 
         <p>

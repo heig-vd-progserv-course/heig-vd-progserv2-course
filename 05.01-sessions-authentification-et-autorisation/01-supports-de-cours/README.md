@@ -82,10 +82,10 @@ on peut utiliser le code suivant :
 
 ```php
 <?php
-// Démarrer la session
+// Démarre la session
 session_start();
 
-// Stocker des informations dans la session
+// Stocke des informations dans la session
 $_SESSION['user_id'] = 123;
 $_SESSION['username'] = 'johndoe';
 ?>
@@ -128,10 +128,10 @@ stockés dans la session, on peut utiliser le code suivant :
 
 ```php
 <?php
-// Démarrer la session
+// Démarre la session
 session_start();
 
-// Récupérer des informations de la session
+// Récupère des informations de la session
 $user_id = $_SESSION['user_id'] ?? null;
 $username = $_SESSION['username'] ?? 'Invité';
 ?>
@@ -140,25 +140,18 @@ $username = $_SESSION['username'] ?? 'Invité';
 ### Durée de vie des sessions
 
 Par défaut, les sessions en PHP expirent après une période d'inactivité définie
-par le serveur (180 minutes par défaut). Il est possible de configurer la durée
-de vie des sessions lors de l'appel à `session_start()` en utilisant des
-paramètres de configuration.
+par le serveur (24 minutes par défaut). Bien que cette durée puisse être
+modifiée dans la configuration de PHP (`php.ini`), il n'est pas recommandé de le
+faire pour des raisons de sécurité.
 
-Par exemple, pour définir une durée de vie de session de 1 heure (60 minutes),
-on peut utiliser le code suivant :
+La durée de vie des sessions se devraient d'être suffisamment courte pour
+minimiser les risques de détournement de session, tout en étant assez longue
+pour offrir une expérience utilisateur fluide.
 
-```php
-<?php
-// Définir la durée de vie de la session à 1 heure
-session_cache_expire(60);
-
-// Démarrer la session
-session_start();
-
-// Le reste du code
-// ...
-?>
-```
+Des mécanismes supplémentaires, tels que la régénération périodique de
+l'identifiant de session et l'utilisation de cookies sécurisés, peuvent être mis
+en place pour renforcer la sécurité des sessions. Cela sera abordé dans des
+unités d'enseignement ultérieures.
 
 ### Détruire une session en PHP
 
@@ -171,10 +164,10 @@ Voici un exemple de code pour détruire une session en PHP :
 
 ```php
 <?php
-// Démarrer la session
+// Démarre la session
 session_start();
 
-// Détruire la session
+// Détruit la session
 session_destroy();
 ?>
 ```
@@ -193,7 +186,9 @@ informations utilisateur, mais ils présentent des différences importantes :
   - Les cookies sont vulnérables aux attaques telles que le vol de cookies ou la
     falsification de cookies, car ils sont stockés sur le poste client.
   - Les sessions sont généralement plus sécurisées, car les données sensibles
-    sont stockées sur le serveur.
+    sont stockées sur le serveur. Cependant, l'identifiant de session stocké
+    dans le cookie peut être vulnérable aux attaques si des mesures de sécurité
+    appropriées ne sont pas mises en place.
 - **Taille des données** :
   - Les cookies ont une taille limitée (généralement quelques kilo-octets).
   - Les sessions peuvent stocker des quantités plus importantes de données, car
@@ -202,7 +197,10 @@ informations utilisateur, mais ils présentent des différences importantes :
   - Les cookies peuvent avoir une durée de vie définie par le serveur ou être
     valides jusqu'à la fermeture du navigateur.
   - Les sessions expirent généralement après une période d'inactivité définie
-    par le serveur.
+    par le serveur. La durée de vie se veut très courte (24 minutes maximum par
+    défaut avec PHP). D'autres mécanismes peuvent être mis en place pour
+    prolonger la durée de vie des sessions (non abordés dans cette unité
+    d'enseignement).
 
 Les cookies sont souvent utilisés pour stocker des préférences utilisateur ou
 des informations non sensibles. Ces cookies peuvent être modifiés par le client
@@ -210,16 +208,21 @@ et définissent le comportement de l'application (par exemple, la langue
 préférée) que le serveur doit respecter.
 
 A l'inverse, les sessions sont utilisées pour stocker des informations sensibles
-et temporaires, telles que l'état de connexion de l'utilisateur ou des données
-de panier d'achat. Ces informations ne doivent pas être directement modifiables
-par le client. La seule chose que le client doit faire est de renvoyer
-l'identifiant de session au serveur via le cookie associé. Si le client modifie
-ce cookie, il ne pourra plus être identifié correctement par le serveur et devra
-se reconnecter.
+et temporaires, telles que l'état de connexion de l'utilisateur. Ces
+informations ne doivent pas être directement modifiables par le client. La seule
+chose que le client doit faire est de renvoyer l'identifiant de session au
+serveur via le cookie associé. Si le client modifie ce cookie, il ne pourra plus
+être identifié correctement par le serveur et devra se reconnecter.
 
 Bien que les sessions utilisent des cookies pour stocker l'identifiant de
-session sur le poste client, elles offrent une couche de sécurité supplémentaire
-en stockant les données sensibles sur le serveur.
+session sur le poste client, elles offrent des fonctionnalités et une couche de
+sécurité supplémentaire en stockant les données sensibles sur le serveur
+(attention, les sessions à elles seules ne permettent pas de protéger
+complètement ces données).
+
+Les sessions devraient être utilisées pour stocker des informations que pour une
+durée limitée et non pour des données persistantes. La base de données est plus
+adaptée pour stocker des informations qui doivent être conservées à long terme.
 
 ## Authentification et autorisation
 
@@ -263,7 +266,7 @@ L'authentification est le processus de vérification de l'identité d'un
 utilisateur. Lorsqu'un utilisateur se connecte à une application, ses
 informations de connexion (par exemple, son nom d'utilisateur et son mot de
 passe) sont vérifiées par le serveur. Si les informations sont correctes,
-l'utilisateur est considéré comme authentifié.
+l'utilisateur est considéré comme authentifié. Sinon, l'accès est refusé.
 
 Une fois l'utilisateur authentifié, des informations spécifiques à cet
 utilisateur sont stockées dans la session. Par exemple, l'identifiant
@@ -296,24 +299,25 @@ les sessions de la manière suivante :
 
 ```php
 <?php
-// Démarrer la session
+// Démarre la session
 session_start();
 
-// Vérifier si l'utilisateur est authentifié
+// Vérifie si l'utilisateur est authentifié
 if (!isset($_SESSION['user_id'])) {
-    // Rediriger vers la page de connexion
+    // Redirige vers la page de connexion
     header('Location: login.php');
     exit();
 }
 
-// Vérifier les droits d'accès de l'utilisateur
+// Vérifie les droits d'accès de l'utilisateur
 if ($_SESSION['role'] !== 'admin') {
-    // Refuser l'accès
-    header('HTTP/1.1 403 Forbidden');
+    // Refuse l'accès avec une erreur 403 Forbidden
+    http_response_code(403);
     exit();
 }
 
 // L'utilisateur est authentifié et autorisé à accéder à la ressource
+// ...
 ```
 
 Un exemple plus complet d'implémentation de l'authentification et de
@@ -355,14 +359,14 @@ haché :
 // Connexion à la base de données
 $pdo = new PDO('mysql:host=localhost;dbname=mydatabase', 'username', 'password');
 
-// Récupérer les données du formulaire
+// Récupère les données du formulaire
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-// Hacher le mot de passe
+// Hache le mot de passe
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-// Insérer l'utilisateur dans la base de données
+// Insère l'utilisateur dans la base de données
 $stmt = $pdo->prepare('INSERT INTO users (username, password) VALUES (:username, :password)');
 $stmt->execute(['username' => $username, 'password' => $hashedPassword]);
 ?>
@@ -380,23 +384,25 @@ connexion :
 // Connexion à la base de données
 $pdo = new PDO('mysql:host=localhost;dbname=mydatabase', 'username', 'password');
 
-// Récupérer les données du formulaire
+// Récupère les données du formulaire
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-// Récupérer l'utilisateur de la base de données
+// Récupère l'utilisateur de la base de données
 $stmt = $pdo->prepare('SELECT * FROM users WHERE username = :username');
 $stmt->execute(['username' => $username]);
 $user = $stmt->fetch();
 
-// Vérifier le mot de passe
+// Vérifie le mot de passe
 if ($user && password_verify($password, $user['password'])) {
-    // Authentification réussie - démarrer la session
+    // Authentification réussie - démarre la session
     session_start();
+
+    // Stocke les informations utilisateur dans la session
     $_SESSION['user_id'] = $user['id'];
     $_SESSION['username'] = $user['username'];
 
-    // Rediriger vers la page d'accueil
+    // Redirige vers la page d'accueil
     header('Location: index.php');
     exit();
 } else {
@@ -416,9 +422,9 @@ Dans ce cours, nous avons exploré les concepts fondamentaux des sessions, de
 l'authentification et de l'autorisation dans les applications web.
 
 Ces mécanismes sont essentiels pour garantir la sécurité et la personnalisation
-des applications web, en permettant de stocker des informations utilisateur de
-manière sécurisée et de contrôler l'accès aux ressources en fonction des droits
-d'utilisateur.
+des applications web, en permettant de stocker des informations temporaires sur
+l'utilisateur du côté du serveur et de contrôler l'accès aux ressources en
+fonction des droits d'utilisateur.
 
 Une analogie (fictive et simplifiée) pour comprendre les sessions est de les
 comparer à une interaction à un guichet de la Poste :
@@ -435,9 +441,9 @@ comparer à une interaction à un guichet de la Poste :
 4. Après la transaction, la personne peut partir, mais si elle revient plus tard
    avec le même ticket, la personne qui tient le guichet pourra à nouveau
    retrouver ses informations.
-5. Mais si la personne perd son ticket ou si elle revient le lendemain (durée
-   maximale de la session), la personne qui tient le guichet ne pourra pas
-   l'identifier et devra lui demander de s'inscrire à nouveau.
+5. Mais si la personne perd son ticket ou si elle revient quelques minutes plus
+   tard (durée maximale de la session), la personne qui tient le guichet ne
+   pourra pas l'identifier et devra lui demander de s'inscrire à nouveau.
 
 Dans de futures unités d'enseignement, vous explorerez des mécanismes plus
 avancés d'authentification et d'autorisation, implémentés à l'aide de

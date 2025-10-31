@@ -20,42 +20,25 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ### Exercice 1
 
-Réalisez une application web PHP qui permet à une personne de choisir sa couleur
-préférée (par exemple, rouge, vert, bleu) et de stocker cette préférence dans un
-cookie.
+Réalisez une application web PHP simple de gestion de livres (uniquement la
+partie authentification et autorisation) avec les fonctionnalités suivantes :
 
-Si la personne n'a pas encore choisi de couleur, affichez un formulaire lui
-permettant de sélectionner sa couleur préférée.
+- Accéder à une page publique accessible à toutes les personnes (page
+  d'accueil).
+- Accéder à une page pour se créer un compte avec une adresse mail et un mot de
+  passe et un rôle (auteur.trice ou lecteur.trice).
+- Accéder à une page pour se connecter avec son adresse mail et son mot de
+  passe.
+- Accéder à une page privée accessible uniquement aux personnes connectées. La
+  page devra afficher un message de bienvenue avec l'adresse mail de la personne
+  et son rôle.
+- Accéder à une page privée accessible uniquement aux personnes avec le rôle
+  "auteur.trice".
+- Se déconnecter.
 
-Une fois la couleur choisie et le formulaire soumis, stockez la couleur dans un
-cookie avec une validité de 30 jours et redirigez la personne vers la même page.
-
-La page, détectant la couleur préférée, affichera un message du type _"Votre
-couleur préférée est : [couleur choisie]"_. Le style de la page utilisera cette
-couleur comme couleur de fond.
-
-Le formulaire n'est donc plus affiché mais un bouton _"Supprimer la préférence"_
-devrait être proposé. Si la personne clique sur ce bouton, le cookie devrait
-être supprimé et la page devrait revenir à son état initial (avec le formulaire
-pour choisir une couleur).
-
-#### Astuces
-
-- Utilisez les outils de développement de votre navigateur pour inspecter les
-  cookies et vérifier qu'ils sont bien créés, modifiés et supprimés comme
-  attendu.
-- Utilisez le champ `color` de HTML5 pour permettre à l'utilisateur de choisir
-  une couleur facilement. Documentation :
-  <https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/input/color>.
-- Pour définir la couleur de fond de la page, vous pouvez utiliser la propriété
-  CSS `background-color`. Documentation :
-  <https://developer.mozilla.org/fr/docs/Web/CSS/background-color>.
-- Pour supprimer la préférence, définissez un formulaire avec un bouton qui
-  soumet une requête POST. Dans le code PHP, vérifiez si ce formulaire a été
-  soumis et que le cookie existe, si c'est le cas, supprimez le cookie en le
-  définissant avec une date d'expiration passée. Redirigez ensuite l'utilisateur
-  vers la même page pour actualiser l'affichage et ainsi revenir à l'état
-  initial.
+Utilisez les sessions PHP pour gérer l'état de connexion des personnes.
+Assurez-vous de stocker les mots de passe de manière sécurisée (en hachant le
+mot de passe).
 
 #### Solution
 

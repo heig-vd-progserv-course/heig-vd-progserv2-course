@@ -1,4 +1,7 @@
 <?php
+// Constantes
+const DATABASE_FILE = __DIR__ . '/../../users.db';
+
 // Démarre la session
 session_start();
 
@@ -22,15 +25,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         try {
             // Connexion à la base de données
-            $pdo = new PDO('sqlite:users.db');
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $pdo = new PDO('sqlite:' . DATABASE_FILE);
 
             // Vérifier si l'utilisateur existe déjà
-            $stmt = $pdo->prepare('SELECT COUNT(*) FROM users WHERE username = :username');
+            $stmt = $pdo->prepare('SELECT * FROM users WHERE username = :username');
             $stmt->execute(['username' => $username]);
-            $userExists = $stmt->fetchColumn() > 0;
+            $user = $stmt->fetch();
 
-            if ($userExists) {
+            if ($user) {
                 $error = 'Ce nom d\'utilisateur est déjà pris.';
             } else {
                 // Hacher le mot de passe
@@ -66,39 +68,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <main class="container">
         <h1>Créer un compte</h1>
 
-        <?php if ($error): ?>
-            <article style="background-color: var(--pico-del-color);">
-                <p><strong>Erreur :</strong> <?= htmlspecialchars($error) ?></p>
-            </article>
-        <?php endif; ?>
+        <?php if ($error) { ?>
+            <p><strong>Erreur :</strong> <?= htmlspecialchars($error) ?></p>
+        <?php } ?>
 
-        <?php if ($success): ?>
-            <article style="background-color: var(--pico-ins-color);">
-                <p><?= htmlspecialchars($success) ?></p>
-                <p><a href="login.php">Se connecter maintenant</a></p>
-            </article>
-        <?php else: ?>
-            <form method="post">
-                <label for="username">
-                    Nom d'utilisateur
-                    <input type="text" id="username" name="username" required autofocus>
-                </label>
+        <?php if ($success) { ?>
+            <p><strong>Succès :</strong> <?= htmlspecialchars($success) ?></p>
+            <p><a href="login.php">Se connecter maintenant</a></p>
+        <?php } ?>
 
-                <label for="password">
-                    Mot de passe (min. 8 caractères)
-                    <input type="password" id="password" name="password" required>
-                </label>
+        <form method="post">
+            <label for="username">
+                Nom d'utilisateur
+                <input type="text" id="username" name="username" required autofocus>
+            </label>
 
-                <label for="confirm_password">
-                    Confirmer le mot de passe
-                    <input type="password" id="confirm_password" name="confirm_password" required>
-                </label>
+            <label for="password">
+                Mot de passe (min. 8 caractères)
+                <input type="password" id="password" name="password" required minlength="8">
+            </label>
 
-                <button type="submit">Créer mon compte</button>
-            </form>
+            <label for="confirm_password">
+                Confirmer le mot de passe
+                <input type="password" id="confirm_password" name="confirm_password" required minlength="8">
+            </label>
 
-            <p>Vous avez déjà un compte ? <a href="login.php">Se connecter</a></p>
-        <?php endif; ?>
+            <button type="submit">Créer mon compte</button>
+        </form>
+
+        <p>Vous avez déjà un compte ? <a href="login.php">Se connecter</a></p>
 
         <p><a href="index.php">Retour à l'accueil</a></p>
     </main>
