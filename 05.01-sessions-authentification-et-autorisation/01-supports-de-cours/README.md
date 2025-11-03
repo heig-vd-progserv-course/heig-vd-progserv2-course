@@ -40,8 +40,8 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 - Utiliser les sessions pour stocker des informations utilisateur.
 - Différencier les sessions et les cookies.
-- Implémenter l'authentification des utilisateurs à l'aide de sessions.
-- Gérer l'autorisation des utilisateurs en fonction de leurs rôles.
+- Implémenter l'authentification des utilisateur.trices à l'aide de sessions.
+- Gérer l'autorisation des utilisateur.trices en fonction de leurs rôles.
 
 ## Les sessions
 
@@ -88,7 +88,6 @@ session_start();
 // Stocke des informations dans la session
 $_SESSION['user_id'] = 123;
 $_SESSION['username'] = 'johndoe';
-?>
 ```
 
 Dans cet exemple, nous démarrons une session avec `session_start()`, puis nous
@@ -134,7 +133,6 @@ session_start();
 // Récupère des informations de la session
 $user_id = $_SESSION['user_id'] ?? null;
 $username = $_SESSION['username'] ?? 'Invité';
-?>
 ```
 
 ### Durée de vie des sessions
@@ -169,7 +167,6 @@ session_start();
 
 // Détruit la session
 session_destroy();
-?>
 ```
 
 ### Différences entre sessions et cookies
@@ -294,6 +291,15 @@ de l'utilisateur en fonction des informations stockées dans la session. Si
 l'utilisateur n'a pas les droits nécessaires pour accéder à la ressource, il
 peut être redirigé vers une page d'erreur ou recevoir un message d'accès refusé.
 
+Ce processus peut être résumé par les étapes suivantes :
+
+1. Démarrer une session lors de la connexion de l'utilisateur.
+2. Stocker l'ID de l'utilisateur et son rôle dans la session.
+3. Vérifier les informations d'identification de l'utilisateur lors de la
+   connexion.
+4. Utiliser les informations de session pour autoriser ou interdire l'accès à
+   certaines ressources.
+
 Avec PHP, l'authentification et l'autorisation peuvent être gérées en utilisant
 les sessions de la manière suivante :
 
@@ -316,7 +322,8 @@ if ($_SESSION['role'] !== 'admin') {
     exit();
 }
 
-// L'utilisateur est authentifié et autorisé à accéder à la ressource
+// L'utilisateur est authentifié
+// et autorisé à accéder à la ressource
 // ...
 ```
 
@@ -356,6 +363,7 @@ haché :
 
 ```php
 <?php
+// register.php
 // Connexion à la base de données
 $pdo = new PDO('mysql:host=localhost;dbname=mydatabase', 'username', 'password');
 
@@ -369,7 +377,6 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 // Insère l'utilisateur dans la base de données
 $stmt = $pdo->prepare('INSERT INTO users (username, password) VALUES (:username, :password)');
 $stmt->execute(['username' => $username, 'password' => $hashedPassword]);
-?>
 ```
 
 Lors de la connexion, il est important de vérifier le mot de passe saisi par
@@ -381,6 +388,7 @@ connexion :
 
 ```php
 <?php
+// login.php
 // Connexion à la base de données
 $pdo = new PDO('mysql:host=localhost;dbname=mydatabase', 'username', 'password');
 
@@ -409,7 +417,6 @@ if ($user && password_verify($password, $user['password'])) {
     // Authentification échouée
     echo 'Nom d\'utilisateur ou mot de passe incorrect.';
 }
-?>
 ```
 
 Un exemple plus complet d'implémentation de l'authentification et de

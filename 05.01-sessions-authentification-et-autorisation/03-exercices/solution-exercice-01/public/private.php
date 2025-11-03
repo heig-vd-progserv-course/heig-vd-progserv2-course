@@ -31,36 +31,14 @@ $role = $_SESSION['role'];
     <main class="container">
         <h1>Page privée</h1>
 
-        <article style="background-color: var(--pico-ins-color);">
-            <p><strong>✓ Bienvenue sur votre espace personnel !</strong></p>
-            <p>Cette page est accessible uniquement aux personnes authentifiées.</p>
-        </article>
+        <p>Cette page est accessible uniquement aux personnes authentifiées.</p>
 
-        <h2>Vos informations</h2>
-
+        <p><strong>Vous êtes actuellement connecté.e</strong> :</p>
         <ul>
+            <li><strong>ID utilisateur :</strong> <?= htmlspecialchars($userId) ?></li>
             <li><strong>Email :</strong> <?= htmlspecialchars($email) ?></li>
-            <li><strong>Rôle :</strong> <?= htmlspecialchars($role === 'author' ? 'Auteur.trice' : 'Lecteur.trice') ?></li>
+            <li><strong>Rôle :</strong> <?= htmlspecialchars($role) ?></li>
         </ul>
-
-        <h2>Fonctionnalités disponibles</h2>
-
-        <?php if ($role === 'author') { ?>
-            <p>En tant qu'auteur.trice, vous avez accès à des fonctionnalités supplémentaires :</p>
-            <ul>
-                <li>Publier de nouveaux livres</li>
-                <li>Modifier vos livres existants</li>
-                <li>Consulter les statistiques de vos livres</li>
-            </ul>
-            <p><a href="author.php">Accéder à l'espace auteur</a></p>
-        <?php } else { ?>
-            <p>En tant que lecteur.trice, vous pouvez :</p>
-            <ul>
-                <li>Consulter votre bibliothèque personnelle</li>
-                <li>Écrire des critiques de livres</li>
-                <li>Créer des listes de lecture</li>
-            </ul>
-        <?php } ?>
 
         <p><a href="index.php">Retour à l'accueil</a> | <a href="auth/logout.php">Se déconnecter</a></p>
     </main>

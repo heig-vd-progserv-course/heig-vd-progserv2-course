@@ -28,7 +28,7 @@ session_destroy();
     <main class="container">
         <h1>Déconnexion réussie</h1>
 
-        <p>Vous avez été déconnecté avec succès.</p>
+        <p>Vous avez été déconnecté.e avec succès.</p>
 
         <p><a href="../index.php">Retour à l'accueil</a> | <a href="login.php">Se connecter à nouveau</a></p>
     </main>

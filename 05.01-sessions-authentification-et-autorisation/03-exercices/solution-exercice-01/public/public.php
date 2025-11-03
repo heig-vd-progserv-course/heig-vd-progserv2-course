@@ -29,21 +29,15 @@ if ($userId) {
 
         <p>Cette page est accessible à toutes les personnes, qu'elles soient connectées ou non.</p>
 
-        <p>Bienvenue sur notre plateforme de gestion de livres ! Ici, vous pouvez découvrir des livres, lire des critiques et, si vous êtes auteur.trice, publier vos propres œuvres.</p>
-
         <?php if ($userId) { ?>
-            <article style="background-color: var(--pico-ins-color);">
-                <p><strong>Vous êtes actuellement connecté.e</strong> :</p>
-                <ul>
-                    <li><strong>Email :</strong> <?= htmlspecialchars($email) ?></li>
-                    <li><strong>Rôle :</strong> <?= htmlspecialchars($role === 'author' ? 'Auteur.trice' : 'Lecteur.trice') ?></li>
-                </ul>
-            </article>
+            <p><strong>Vous êtes actuellement connecté.e</strong> :</p>
+            <ul>
+                <li><strong>ID utilisateur :</strong> <?= htmlspecialchars($userId) ?></li>
+                <li><strong>Email :</strong> <?= htmlspecialchars($email) ?></li>
+                <li><strong>Rôle :</strong> <?= htmlspecialchars($role) ?></li>
+            </ul>
         <?php } else { ?>
-            <article>
-                <p><strong>Vous n'êtes actuellement pas connecté.e.</strong></p>
-                <p>Créez un compte ou connectez-vous pour accéder à plus de fonctionnalités !</p>
-            </article>
+            <p><strong>Vous n'êtes actuellement pas connecté.e.</strong></p>
         <?php } ?>
 
         <p>

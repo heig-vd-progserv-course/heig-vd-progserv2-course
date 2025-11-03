@@ -1,13 +1,3 @@
-<?php
-// Démarre la session
-session_start();
-
-// Vérifie si l'utilisateur est connecté
-$userId = $_SESSION['user_id'] ?? null;
-$username = $_SESSION['username'] ?? null;
-$role = $_SESSION['role'] ?? null;
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 

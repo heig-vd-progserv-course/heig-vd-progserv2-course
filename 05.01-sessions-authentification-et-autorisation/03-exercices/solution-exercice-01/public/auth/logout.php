@@ -28,9 +28,7 @@ session_destroy();
     <main class="container">
         <h1>Déconnexion réussie</h1>
 
-        <article style="background-color: var(--pico-ins-color);">
-            <p>Vous avez été déconnecté.e avec succès.</p>
-        </article>
+        <p>Vous avez été déconnecté.e avec succès.</p>
 
         <p><a href="../index.php">Retour à l'accueil</a> | <a href="login.php">Se connecter à nouveau</a></p>
     </main>
