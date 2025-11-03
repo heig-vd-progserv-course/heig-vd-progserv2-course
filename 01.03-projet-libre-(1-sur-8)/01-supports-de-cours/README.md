@@ -322,34 +322,6 @@ A faire pour le prochain cours :
 
 - [x] Mettre en place la gestion multilingue à l'aide d'un cookie.
 
-#### ProgServ2-A (mardi matin)
-
-|   # | Groupe               | Heure de passage |
-| --: | :------------------- | :--------------- |
-|   1 | Marc, Ana, Charline  | 10h30            |
-|   2 | Luka, Nabil, Mathias | 10h40            |
-|   3 | Léa, Grégory         | 10h50            |
-|   4 | Carla, Cindy, Steve  | 11h00            |
-|   5 | Pierre, Raul, Romain | 11h10            |
-|   6 | Matteo, Ella, Aïdan  | 11h20            |
-|   7 | Inês, Rania          | 11h30            |
-|   8 | Lilou, Aissya        | 11h40            |
-|   9 | Luca, Sacha, Ryad    | 11h50            |
-
-#### ProgServ2-B (mardi après-midi)
-
-|   # | Groupe                    | Heure de passage |
-| --: | :------------------------ | :--------------- |
-|   1 | Thierry, Lilliana         | 14h45            |
-|   2 | Dylan, Valentin           | 14h55            |
-|   3 | Gabriel, Nuno, Tanguy     | 15h05            |
-|   4 | Christophe, Loic, Loriane | 15h15            |
-|   5 | Loann, Elia, Marike       | 15h25            |
-|   6 | Etienne, Teicir           | 15h35            |
-|   7 | Inoé, Léa, Yannis         | 15h45            |
-|   8 | Chloé, Benoît, Camilo     | 15h55            |
-|   9 | Sarah, Sasita, Enya       | 16h05            |
-
 ### Jalon 5
 
 - Tour de table - validation du travail effectué jusqu'à présent.
@@ -358,6 +330,34 @@ A faire pour le prochain cours :
 A faire pour le prochain cours :
 
 - [x] Avoir commencé à mettre en place le système d'authentification.
+
+#### ProgServ2-A (mardi matin)
+
+|   # | Groupe                   | Heure de passage |
+| --: | :----------------------- | :--------------- |
+|   1 | Matteo, Ella, Aïdan (4)  | 10h30            |
+|   2 | Lilou, Aissya (8)        | 10h40            |
+|   3 | Luka, Nabil, Mathias (5) | 10h50            |
+|   4 | Léa, Grégory (9)         | 11h00            |
+|   5 | Marc, Ana, Charline (7)  | 11h10            |
+|   6 | Inês, Rania (3)          | 11h20            |
+|   7 | Luca, Sacha, Ryad (1)    | 11h30            |
+|   8 | Pierre, Raul, Romain (2) | 11h40            |
+|   9 | Carla, Cindy, Steve (6)  | 11h50            |
+
+#### ProgServ2-B (mardi après-midi)
+
+|   # | Groupe                        | Heure de passage |
+| --: | :---------------------------- | :--------------- |
+|   1 | Christophe, Loic, Loriane (5) | 14h45            |
+|   2 | Sarah, Sasita, Enya (1)       | 14h55            |
+|   3 | Inoé, Léa, Yannis (8)         | 15h05            |
+|   4 | Gabriel, Nuno, Tanguy (2)     | 15h15            |
+|   5 | Chloé, Benoît, Camilo (6)     | 15h25            |
+|   6 | Thierry, Lilliana (3)         | 15h35            |
+|   7 | Etienne, Teicir (7)           | 15h45            |
+|   8 | Dylan, Valentin (4)           | 15h55            |
+|   9 | Loann, Elia, Marike (9)       | 16h05            |
 
 ### Jalon 6
 
