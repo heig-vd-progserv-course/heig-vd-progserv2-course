@@ -5,6 +5,12 @@ services:
     volumes:
       - ..:/workspace:cached
 
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - 1025:1025
+      - 8025:8025
+
   plantuml:
     image: plantuml/plantuml-server:latest
     ports:

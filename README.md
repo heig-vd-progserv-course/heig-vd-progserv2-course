@@ -200,18 +200,18 @@ Les dates sont tirées du
 
 ## 🕕 Cours 06
 
-### Gestion et envoi des e-mails
+### [Gestion et envoi des e-mails](./06.01-gestion-et-envoi-des-e-mails/)
 
-_À venir._
-
-<!--
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu]()
-- Supports de cours : [Lien vers le contenu]() · [Presentation (web)]() ·
-  [Presentation (PDF)]()
-- Exemples de code : [Lien vers le contenu]()
-- Exercices : [Lien vers les exercices]()
--->
+- Supports de cours :
+  [Lien vers le contenu](./06.01-gestion-et-envoi-des-e-mails/01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/06.01-gestion-et-envoi-des-e-mails/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/06.01-gestion-et-envoi-des-e-mails/01-supports-de-cours/06.01-gestion-et-envoi-des-e-mails-presentation.pdf)
+- Exemples de code :
+  [Lien vers le contenu](./06.01-gestion-et-envoi-des-e-mails/02-exemples-de-code/)
+- Exercices :
+  [Lien vers le contenu](./06.01-gestion-et-envoi-des-e-mails/03-exercices/README.md)
 
 ### [Projet libre (6/8)](<./01.03-projet-libre-(1-sur-8)/>)
 

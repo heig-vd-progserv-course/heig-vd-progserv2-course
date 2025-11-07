@@ -29,6 +29,24 @@ sudo apt install --yes php-common libapache2-mod-php php-cli
 # Install MariaDB client and server
 sudo apt install --yes mariadb-client mariadb-server php-mysql
 
+# Install packages to send emails via SMTP
+sudo DEBIAN_FRONTEND=noninteractive apt install --yes msmtp msmtp-mta mailutils
+
+## Configure msmtp
+# Create a basic configuration file for msmtp
+tee ~/.msmtprc > /dev/null <<"EOF"
+defaults
+auth           off
+logfile        ~/.msmtp.log
+
+account mailpit
+host           localhost
+port           1025
+from           user@example.com
+
+account default : mailpit
+EOF
+
 ## Configure Apache server
 # Remove the default document root
 sudo rm -rf /var/www/html
