@@ -27,9 +27,7 @@ http_response_code(403);
     <main class="container">
         <h1>Accès refusé</h1>
 
-        <article style="background-color: var(--pico-del-color);">
-            <p><strong>✗ Vous n'avez pas les autorisations nécessaires pour accéder à cette page.</strong></p>
-        </article>
+        <p><strong>✗ Vous n'avez pas les autorisations nécessaires pour accéder à cette page.</strong></p>
 
         <p>Cette page est réservée aux auteur.trice.s uniquement.</p>
 

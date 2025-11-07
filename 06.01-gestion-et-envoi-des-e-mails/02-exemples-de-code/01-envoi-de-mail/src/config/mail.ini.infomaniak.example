@@ -1,0 +1,7 @@
+host = "mail.infomaniak.com"
+port = 465
+authentication = true
+username = "contact@heig-vd-progserv-course.ch"
+password = "CHANGE_ME"
+from_email = "no-reply@heig-vd-progserv-course.ch"
+from_name = "HEIG-VD ProgServ Course"

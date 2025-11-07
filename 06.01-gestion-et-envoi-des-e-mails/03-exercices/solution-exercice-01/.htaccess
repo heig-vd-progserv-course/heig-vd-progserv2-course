@@ -1,0 +1,13 @@
+# Active le moteur de réécriture d'URL.
+# Permet de rediriger les requêtes vers d'autres emplacements.
+RewriteEngine On
+
+# Blocage d'accès aux répertoires sensibles.
+RewriteRule ^src/ - [R=404,L]
+
+# Si le fichier ou le répertoire demandé existe dans /public, ne pas réécrire le chemin d'accès (tout ce qui est dans /public reste accessible).
+RewriteCond %{DOCUMENT_ROOT}/public/$1 -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/public/$1 -d
+
+# Tout le reste des requêtes est redirigé vers /public en masquant /public dans l'URL.
+RewriteRule ^(.*)$ public/$1 [L]
