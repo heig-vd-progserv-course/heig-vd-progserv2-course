@@ -33,11 +33,11 @@ try {
     $mail->CharSet = "UTF-8";
     $mail->Encoding = "base64";
 
-    // Recipients
+    // Expéditeur et destinataire
     $mail->setFrom($from_email, $from_name);
-    $mail->addAddress('ludovic.delafontaine@gmail.com', 'Ludovic Delafontaine');
+    $mail->addAddress('CHANGE_ME', 'CHANGE WITH YOUR NAME');
 
-    // Content
+    // Contenu du mail
     $mail->isHTML(true);
     $mail->Subject = 'Here is the subject';
     $mail->Body    = 'This is the HTML message body <b>in bold!</b>';

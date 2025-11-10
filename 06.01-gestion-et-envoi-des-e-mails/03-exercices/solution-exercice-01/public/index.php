@@ -48,12 +48,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail->CharSet = "UTF-8";
             $mail->Encoding = "base64";
 
-            // Recipients
+            // Expéditeur et destinataire
             $mail->setFrom($email, $name);
             $mail->addAddress($to_email, $to_name);
-
-            // Création du sujet du mail
-            $subject = "Nouveau message de contact : {$subject}";
 
             // Création du corps du mail
             $body = "Vous avez reçu un nouveau message de {$name} <{$email}>.
@@ -62,10 +59,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             Message :
             {$message}";
 
-            // Content
+            // Contenu du mail
             $mail->isHTML(true);
-            $mail->Subject = $subject;
-            // La fonction `nl2br` permet de conserver les sauts de ligne dans le corps de l'e-mail
+            $mail->Subject = "Nouveau message de contact : {$subject}";
+            // La fonction `nl2br` permet de transformer les sauts de ligne en balises HTML `<br>` dans le corps de l'e-mail
             // Documentation : https://www.php.net/manual/fr/function.nl2br.php
             $mail->Body    = nl2br(htmlspecialchars($body));
             $mail->AltBody = htmlspecialchars($body);

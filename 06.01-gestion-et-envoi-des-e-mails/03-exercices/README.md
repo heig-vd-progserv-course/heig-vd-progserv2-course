@@ -41,7 +41,7 @@ Le titre du mail envoyé à l'adresse prédéfinie doit être selon la forme sui
 :
 
 ```text
-[Nouveau message de contact] [Sujet]
+Nouveau message de contact : [Sujet]
 ```
 
 où `[Sujet]` est le sujet saisi dans le formulaire.
