@@ -23,7 +23,7 @@ _class: lead
 _paginate: false
 -->
 
-[Lien vers le cours][cours]
+[Lien vers le support de cours][support-de-cours]
 
 <small>L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -37,7 +37,7 @@ _paginate: false
 <!-- _class: lead -->
 
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
-consultez le [support de cours][cours]._
+consultez le [support de cours][support-de-cours]._
 
 ## Objectifs
 
@@ -53,7 +53,7 @@ consultez le [support de cours][cours]._
 - Deux (2) ou trois (3) personnes par groupe.
 - Si vous n'avez pas de partenaire, le corps enseignant vous en attribuera un.e.
 - Groupes à annoncer dans un document Google Sheets, comme décrit dans le
-  [support de cours][cours].
+  [support de cours][support-de-cours].
 
 ![bg right:40%][illustration-composition-des-groupes]
 
@@ -63,7 +63,7 @@ consultez le [support de cours][cours]._
   trop complexe.
 - Nous vous aiderons à trouver une bonne idée si nécessaire.
 - Un cahier des charges est attendu dans les deux premières semaines du projet
-  Les détails sont dans le [support de cours][cours].
+  Les détails sont dans le [support de cours][support-de-cours].
 
 ![bg right:40%][illustration-validation-de-lidee]
 
@@ -131,7 +131,7 @@ une pénalité de -1 point sur la note finale.**
 Les notes seront saisies dans GAPS, puis envoyées par e-mail avec les retours.
 
 L'évaluation utilisera exactement la même grille de notation que celle indiquée
-dans le [support de cours][cours].
+dans le [support de cours][support-de-cours].
 
 Chaque critère sera accompagné d'un commentaire expliquant les points obtenus,
 d'un commentaire général sur votre travail et de la note finale.
@@ -162,7 +162,7 @@ Ne soyez pas Numérobis du film _Astérix et Obélix : Mission Cléopâtre_ !
 - Utilisez des outils de gestion de projet (GitHub, Trello, etc. pour organiser
   votre travail).
 - Assurez-vous que chaque membre du groupe a ses tâches et responsabilités.
-- Des ressources sont disponibles dans le [support de cours][cours].
+- Des ressources sont disponibles dans le [support de cours][support-de-cours].
 
 ## Questions
 
@@ -327,7 +327,7 @@ A faire pour le rendu final :
 
 <!-- URLs -->
 
-[cours]:
+[support-de-cours]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01.03-projet-libre-(1-sur-8)
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-ProgServ2-course/blob/main/LICENSE.md

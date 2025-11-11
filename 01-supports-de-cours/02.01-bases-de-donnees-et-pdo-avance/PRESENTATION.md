@@ -23,7 +23,7 @@ _class: lead
 _paginate: false
 -->
 
-[Lien vers le cours][cours]
+[Lien vers le support de cours][support-de-cours]
 
 <small>L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -37,7 +37,7 @@ _paginate: false
 <!-- _class: lead -->
 
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
-consultez le [support de cours][cours]._
+consultez le [support de cours][support-de-cours]._
 
 ## Objectifs (1/2)
 
@@ -251,7 +251,7 @@ Est-ce que vous avez des questions ?
 - Faire les exercices.
 - Poser des questions si nécessaire.
 
-➡️ [Lien vers le cours][cours]
+➡️ [Lien vers le support de cours][support-de-cours]
 
 **N'hésitez pas à vous entraidez si vous avez des difficultés !**
 
@@ -304,7 +304,7 @@ Est-ce que vous avez des questions ?
 
 <!-- URLs -->
 
-[cours]:
+[support-de-cours]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/02.01-bases-de-donnees-et-pdo-avance
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md

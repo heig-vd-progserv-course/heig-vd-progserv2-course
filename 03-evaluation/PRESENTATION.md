@@ -23,7 +23,7 @@ _class: lead
 _paginate: false
 -->
 
-[Lien vers le cours][cours]
+[Lien vers le support de cours][support-de-cours]
 
 <small>L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -150,7 +150,7 @@ Est-ce que vous avez des questions ?
 
 <!-- URLs -->
 
-[cours]:
+[support-de-cours]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/08.01-evaluation
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md

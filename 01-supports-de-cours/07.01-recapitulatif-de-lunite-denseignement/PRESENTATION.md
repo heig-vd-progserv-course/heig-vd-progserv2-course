@@ -23,7 +23,7 @@ _class: lead
 _paginate: false
 -->
 
-[Lien vers le cours][cours]
+[Lien vers le support de cours][support-de-cours]
 
 <small>L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -199,7 +199,8 @@ Discussions et retours sur l'unité d'enseignement.
 
 <small>
 
-Vous pourrez les retrouver sur le [dépôt Git de l'unité d'enseignement][cours].
+Vous pourrez les retrouver sur le [dépôt Git de l'unité
+d'enseignement][support-de-cours].
 
 </small>
 
@@ -273,7 +274,7 @@ Apéro time! 🎉
 
 <!-- URLs -->
 
-[cours]:
+[support-de-cours]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/07.01-recapitulatif-de-lunite-denseignement
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md

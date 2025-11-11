@@ -23,7 +23,7 @@ _class: lead
 _paginate: false
 -->
 
-[Lien vers le cours][cours]
+[Lien vers le support de cours][support-de-cours]
 
 <small>L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -37,7 +37,7 @@ _paginate: false
 <!-- _class: lead -->
 
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
-consultez le [support de cours][cours]._
+consultez le [support de cours][support-de-cours]._
 
 ## Objectifs (1/2)
 
@@ -156,7 +156,7 @@ mail($to, $subject, $body, $headers);
 
 - Nous utilisons déjà Infomaniak pour l'hébergement web et le nom de domaine.
 - Nécessaire de commander un service de messagerie.
-- Le [support de cours][cours] explique comment faire cela.
+- Le [support de cours][support-de-cours] explique comment faire cela.
 
 ![bg right:40% h:75%](./_images/infomaniak-configuration-adresse-email-4.png)
 
@@ -165,7 +165,7 @@ mail($to, $subject, $body, $headers);
 - Préférable d'utiliser un serveur SMTP local pour le développement.
 - Permet de tester l'envoi d'e-mails sans envoyer de vrais e-mails.
 - Nous utilisons pour cela [Mailpit](https://github.com/axllent/mailpit).
-- Le [support de cours][cours] explique comment faire cela.
+- Le [support de cours][support-de-cours] explique comment faire cela.
 
 ![bg right:40% h:75%](./_images/mailpit-interface-web.png)
 
@@ -174,7 +174,7 @@ mail($to, $subject, $body, $headers);
 - Pour envoyer des e-mails en PHP, nous allons utiliser la bibliothèque
   [PHPMailer](https://github.com/PHPMailer/PHPMailer).
 - Installation manuelle pour le moment (sans Composer).
-- Le [support de cours][cours] explique comment faire cela.
+- Le [support de cours][support-de-cours] explique comment faire cela.
 
 ![bg right:40%][illustration-derriere-les-mails-smtp-pop3-imap]
 
@@ -368,7 +368,7 @@ Les résultats seront discutés au prochain cours. **Merci beaucoup !**
 - Faire les exercices.
 - Poser des questions si nécessaire.
 
-➡️ [Lien vers le cours][cours]
+➡️ [Lien vers le support de cours][support-de-cours]
 
 **N'hésitez pas à vous entraidez si vous avez des difficultés !**
 
@@ -391,7 +391,7 @@ Les résultats seront discutés au prochain cours. **Merci beaucoup !**
 
 <!-- URLs -->
 
-[cours]:
+[support-de-cours]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/06.01-gestion-et-envoi-des-e-mails
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md

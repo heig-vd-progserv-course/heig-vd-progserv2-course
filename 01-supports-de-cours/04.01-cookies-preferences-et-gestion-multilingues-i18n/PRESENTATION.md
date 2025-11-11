@@ -23,7 +23,7 @@ _class: lead
 _paginate: false
 -->
 
-[Lien vers le cours][cours]
+[Lien vers le support de cours][support-de-cours]
 
 <small>L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -37,7 +37,7 @@ _paginate: false
 <!-- _class: lead -->
 
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
-consultez le [support de cours][cours]._
+consultez le [support de cours][support-de-cours]._
 
 ## Objectifs
 
@@ -133,8 +133,8 @@ setcookie('language', '');
 
 - Tous les navigateurs modernes offrent des outils de développement (DevTools)
   pour inspecter les cookies.
-- Le [support de cours][cours] détaille comment faire cela dans différents
-  navigateurs.
+- Le [support de cours][support-de-cours] détaille comment faire cela dans
+  différents navigateurs.
 
 ![bg right:40% w:90%](./_images/visualiser-les-cookies-dans-le-navigateur.png)
 
@@ -230,7 +230,7 @@ Est-ce que vous avez des questions ?
 - Faire les exercices.
 - Poser des questions si nécessaire.
 
-➡️ [Lien vers le cours][cours]
+➡️ [Lien vers le support de cours][support-de-cours]
 
 **N'hésitez pas à vous entraidez si vous avez des difficultés !**
 
@@ -272,7 +272,7 @@ Est-ce que vous avez des questions ?
 
 <!-- URLs -->
 
-[cours]:
+[support-de-cours]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/04.01-cookies-preferences-et-gestion-multilingues-i18n
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
