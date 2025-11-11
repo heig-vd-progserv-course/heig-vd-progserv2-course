@@ -1,0 +1,41 @@
+# Récapitulatif de l'unité d'enseignement
+
+L. Delafontaine, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).
+
+Ce travail est sous licence [CC BY-SA 4.0][licence].
+
+## Ressources annexes
+
+- Supports de cours : [Lien vers le contenu](./01-supports-de-cours/README.md) ·
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/07.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/07.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/07.01-recapitulatif-de-lunite-denseignement-presentation.pdf)
+- Résultats des formulaires de feedback et évaluations GAPS :
+  [Lien vers le contenu](./02-resultats-des-formulaires-de-feedback-et-evaluations-gaps/)
+
+## Objectifs
+
+- Résumer les principaux concepts abordés durant l'unité d'enseignement.
+
+## Méthodes d'enseignement et d'apprentissage
+
+Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
+sont les suivantes :
+
+- Présentation magistrale.
+- Discussions collectives.
+
+## Méthodes d'évaluation
+
+Il n'y a pas d'évaluation pour ce cours.
+
+## À faire pour la semaine suivante
+
+Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
+il est recommandé pour le cours suivant de :
+
+- Relire les supports de cours si nécessaire.
+
+[licence]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md

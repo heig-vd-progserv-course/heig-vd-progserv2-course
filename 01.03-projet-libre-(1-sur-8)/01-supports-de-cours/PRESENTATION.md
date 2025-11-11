@@ -310,7 +310,7 @@ A faire pour le rendu final :
   [Unsplash](https://unsplash.com/photos/grayscale-photo-of-elephants-drinking-water-8oenpCXktqQ)
 - [Illustration][illustration-objectifs] par
   [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
-  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+  [Unsplash](https://unsplash.com/photos/low-angle-view-of-ball-shoots-in-the-ring-j6brni7fpvs)
 - [Illustration][illustration-composition-des-groupes] par
   [Nguyen Dang Hoang Nhu](https://unsplash.com/@nguyendhn) sur
   [Unsplash](https://unsplash.com/photos/person-writing-on-white-paper-qDgTQOYk6B8)

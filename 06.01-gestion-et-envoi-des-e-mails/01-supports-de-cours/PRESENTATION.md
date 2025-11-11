@@ -10,7 +10,7 @@ author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Gestion et envoi des e-mails
 description: Gestion et envoi des e-mails pour l'unité d'enseignement ProgServ2 enseigné à la HEIG-VD, Suisse
 url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/06.01-gestion-et-envoi-des-e-mails/01-supports-de-cours/index.html
-header: "**Gestion et envoi des e-mails**"
+header: "[**Gestion et envoi des e-mails**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/06.01-gestion-et-envoi-des-e-mails)"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
 headingDivider: 6
 math: mathjax
@@ -53,7 +53,8 @@ consultez le [support de cours][cours]._
 
 - Utiliser la bibliothèque PHPMailer pour envoyer des e-mails en PHP.
 
-**Il s'agit du dernier cours théorique de l'unité d'enseignement "ProgServ2".**
+**Il s'agit du dernier cours théorique de l'unité d'enseignement _"Programmation
+Serveur 2 (ProgServ2)"_.**
 
 ![bg right:40%][illustration-objectifs]
 
@@ -380,7 +381,7 @@ Les résultats seront discutés au prochain cours. **Merci beaucoup !**
   [Unsplash](https://unsplash.com/photos/grayscale-photo-of-elephants-drinking-water-8oenpCXktqQ)
 - [Illustration][illustration-objectifs] par
   [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
-  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+  [Unsplash](https://unsplash.com/photos/low-angle-view-of-ball-shoots-in-the-ring-j6brni7fpvs)
 - [Illustration][illustration-derriere-les-mails-smtp-pop3-imap] par
   [Joanna Kosinska](https://unsplash.com/@joannakosinska) sur
   [Unsplash](https://unsplash.com/photos/envelope-paper-lot-uGcDWKN91Fs)

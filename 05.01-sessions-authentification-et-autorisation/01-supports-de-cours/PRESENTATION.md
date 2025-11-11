@@ -10,7 +10,7 @@ author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Sessions, authentification, et autorisation
 description: Sessions, authentification, et autorisation pour l'unité d'enseignement ProgServ2 enseigné à la HEIG-VD, Suisse
 url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/05.01-sessions-authentification-et-autorisation/01-supports-de-cours/index.html
-header: "**Sessions, authentification, et autorisation**"
+header: "[**Sessions, authentification, et autorisation**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/05.01-sessions-authentification-et-autorisation)"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
 headingDivider: 6
 math: mathjax
@@ -303,7 +303,7 @@ Est-ce que vous avez des questions ?
   [Unsplash](https://unsplash.com/photos/grayscale-photo-of-elephants-drinking-water-8oenpCXktqQ)
 - [Illustration][illustration-objectifs] par
   [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
-  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+  [Unsplash](https://unsplash.com/photos/low-angle-view-of-ball-shoots-in-the-ring-j6brni7fpvs)
 - [Illustration][illustration-les-sessions] par
   [Markus Spiske](https://unsplash.com/@markusspiske) sur
   [Unsplash](https://unsplash.com/photos/text-nBwhHm69x4I)

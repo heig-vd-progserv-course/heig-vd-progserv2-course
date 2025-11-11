@@ -52,10 +52,10 @@ Les dates sont tirées du
 |    [05](#-cours-05) | 03.11. - 09.11.25        | Sessions, authentification, et autorisation          | Projet libre (5/8)                          | 🟢 Prêt     |
 |                   - | 10.11. - 16.11.25        | _Pas de cours_                                       | _Pas de cours_                              | -           |
 |    [06](#-cours-06) | 17.11. - 23.11.25        | Gestion et envoi des e-mails                         | Projet libre (6/8)                          | 🟢 Prêt     |
-|    [07](#-cours-07) | 24.11. - 30.11.25        | Récapitulatif de l'unité d'enseignement              | Projet libre (7/8)                          | 🟡 En cours |
+|    [07](#-cours-07) | 24.11. - 30.11.25        | Récapitulatif de l'unité d'enseignement              | Projet libre (7/8)                          | 🟢 Prêt     |
 |                   - | 01.12. - 07.12.25        | _Pas de cours_                                       | _Pas de cours_                              | -           |
 |                   - | 08.12. - 14.12.25        | _Pas de cours_                                       | _Pas de cours_                              | -           |
-| 🚨 [08](#-cours-08) | 15.12. - 21.12.25        | Évaluation                                           | Projet libre (8/8)                          | 🟡 En cours |
+| 🚨 [08](#-cours-08) | 15.12. - 21.12.25        | Évaluation                                           | Projet libre (8/8)                          | 🟢 Prêt     |
 |                   - | 22.12. - 28.12.25        | _Pas de cours : vacances_                            | _Pas de cours : vacances_                   | -           |
 |                   - | 29.12. - 04.01.26        | _Pas de cours : vacances_                            | _Pas de cours : vacances_                   | -           |
 |                   - | 05.01. - 11.01.26        | _Pas de cours_                                       | _Pas de cours_                              | -           |
@@ -224,18 +224,16 @@ Les dates sont tirées du
 
 ## 🕖 Cours 07
 
-### Récapitulatif de l'unité d'enseignement
+### [Récapitulatif de l'unité d'enseignement](./07.01-recapitulatif-de-lunite-denseignement/)
 
-_À venir._
-
-<!--
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu]()
-- Supports de cours : [Lien vers le contenu]() · [Presentation (web)]() ·
-  [Presentation (PDF)]()
-- Exemples de code : [Lien vers le contenu]()
-- Exercices : [Lien vers les exercices]()
--->
+- Supports de cours :
+  [Lien vers le contenu](./07.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/07.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/07.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/07.01-recapitulatif-de-lunite-denseignement-presentation.pdf)
+- Résultats des formulaires de feedback et évaluations GAPS :
+  [Lien vers le contenu](./07.01-recapitulatif-de-lunite-denseignement/02-resultats-des-formulaires-de-feedback-et-evaluations-gaps/)
 
 ### [Projet libre (7/8)](<./01.03-projet-libre-(1-sur-8)/>)
 
@@ -248,16 +246,15 @@ _À venir._
 
 ## 🕗 Cours 08
 
-### Évaluation
+### [Évaluation](./08.01-evaluation/)
 
-_À venir._
-
-<!--
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu]()
-- Supports de cours : [Lien vers le contenu]() · [Presentation (web)]() ·
-  [Presentation (PDF)]()
--->
+- Supports de cours :
+  [Lien vers le contenu](./08.01-evaluation/01-supports-de-cours/README.md) ·
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/08.01-evaluation/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/08.01-evaluation/01-supports-de-cours/08.01-evaluation-presentation.pdf)
+- Évaluation démo :
+  [Lien vers le contenu](./08.01-evaluation/02-evaluation-demo/)
 
 ### [Projet libre (8/8)](<./01.03-projet-libre-(1-sur-8)/>)
 

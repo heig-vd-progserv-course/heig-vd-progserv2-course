@@ -12,9 +12,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   ·
   [Presentation (PDF)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/01.03-projet-libre-(1-sur-8)-presentation.pdf>)
 
-[licence]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
-
 ## Objectifs
 
 - Réaliser une application web complète avec PHP, incluant une interface
@@ -43,4 +40,8 @@ Les commentaires sont fournis comme suit :
 - Un e-mail contenant la grille d'évaluation accompagnée de commentaires.
 - Discussion des résultats et questions (sur demande).
 
-🚨 **L'évaluation donne lieu à une note** (100 % de la note totale du projet).
+🚨 **L'évaluation donne lieu à une note** (100 % de la note totale du projet /
+60% de la note finale de l'unité d'enseignement).
+
+[licence]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
