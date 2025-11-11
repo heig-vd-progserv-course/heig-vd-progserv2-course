@@ -11,7 +11,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/08.01-evaluation/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/08.01-evaluation/01-supports-de-cours/08.01-evaluation-presentation.pdf)
-- Évaluation démo : [Lien vers le contenu](./01-evaluation-demo/)
+- Évaluation démo : [Lien vers le contenu](./01-evaluation-demo/README.md)
 
 ## Table des matières
 
@@ -115,8 +115,8 @@ et/ou de vous faire renvoyer**.
 - Utiliser ces objectifs pour valider vos acquis.
 - Refaire les exercices.
 - Poser des questions si nécessaire.
-- [Accéder à l'évaluation de démo](../02-evaluation-demo/) pour prendre en main
-  la plateforme d'évaluation en ligne (Eval).
+- [Accéder à l'évaluation de démo](../02-evaluation-demo/README.md) pour prendre
+  en main la plateforme d'évaluation en ligne (Eval).
 
 ## Calcul de la note finale de l'unité d'enseignement
 

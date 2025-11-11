@@ -8,7 +8,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Ressources annexes
 
 - Support de cours : [Lien vers le contenu](..)
-- Exercices : [Lien vers le contenu](./02-exercices/)
+- Exercices : [Lien vers le contenu](./02-exercices/README.md)
 
 ## Exemples de code
 

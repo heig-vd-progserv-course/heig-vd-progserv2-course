@@ -12,7 +12,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/07.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/07.01-recapitulatif-de-lunite-denseignement-presentation.pdf)
 - Résultats des formulaires de feedback et évaluations GAPS :
-  [Lien vers le contenu](../01-resultats-des-formulaires-de-feedback-et-evaluations-gaps/)
+  [Lien vers le contenu](../01-resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
 
 ## Table des matières
 
@@ -69,7 +69,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 ### Cours 01 - Programmation orientée objet (avancé)
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../01.02-programmation-orientee-objet-avance/).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../01.02-programmation-orientee-objet-avance/README.md).
 
 #### Éléments clés à retenir
 
@@ -84,7 +84,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 ### Cours 02 - Bases de données et PDO (avancé)
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../02.01-bases-de-donnees-et-pdo-avance/).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../02.01-bases-de-donnees-et-pdo-avance/README.md).
 
 #### Éléments clés à retenir
 
@@ -99,7 +99,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 ### Cours 03 - Déploiement
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../03.01-deploiement/).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../03.01-deploiement/README.md).
 
 #### Éléments clés à retenir
 
@@ -115,7 +115,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 ### Cours 04 - Cookies, préférences, et gestion multilingues (i18n)
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../04.01-cookies-preferences-et-gestion-multilingues-i18n/).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../04.01-cookies-preferences-et-gestion-multilingues-i18n/README.md).
 
 #### Éléments clés à retenir
 
@@ -131,7 +131,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 ### Cours 05 - Sessions, authentification, et autorisation
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../07.01-recapitulatif-de-lunite-denseignement/).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../07.01-recapitulatif-de-lunite-denseignement/README.md).
 
 #### Éléments clés à retenir
 
@@ -146,7 +146,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 ### Cours 06 - Gestion et envoi des e-mails
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../06.01-gestion-et-envoi-des-e-mails/).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../06.01-gestion-et-envoi-des-e-mails/README.md).
 
 #### Éléments clés à retenir
 
@@ -179,7 +179,7 @@ mon possible pour vous rendre les notes au plus vite.
 Discussions et retours sur l'unité d'enseignement.
 
 Vous pourrez les retrouver sur le
-[dépôt Git de l'unité d'enseignement](../02-resultats-des-formulaires-de-feedback-et-evaluations-gaps/).
+[dépôt Git de l'unité d'enseignement](../02-resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md).
 
 ## Conclusion
 

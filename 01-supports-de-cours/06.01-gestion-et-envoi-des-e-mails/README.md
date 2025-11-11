@@ -11,8 +11,8 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/06.01-gestion-et-envoi-des-e-mails/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/06.01-gestion-et-envoi-des-e-mails/01-supports-de-cours/06.01-gestion-et-envoi-des-e-mails-presentation.pdf)
-- Exemples de code : [Lien vers le contenu](./01-exemples-de-code/)
-- Exercices : [Lien vers le contenu](./02-exercices/)
+- Exemples de code : [Lien vers le contenu](./01-exemples-de-code/README.md)
+- Exercices : [Lien vers le contenu](./02-exercices/README.md)
 
 ## Table des matières
 
@@ -555,7 +555,7 @@ La structure de votre projet devrait ressembler à ceci :
 
 Notez l'utilisation d'un autoloader pour charger automatiquement les classes
 PHP, comme celui que nous avons créé dans le cours
-[Programmation orientée (avancé)](../../01.02-programmation-orientee-objet-avance/).
+[Programmation orientée (avancé)](../../01.02-programmation-orientee-objet-avance/README.md).
 
 Prenez quelques minutes pour examiner les fichiers de la bibliothèque PHPMailer.
 Remarquez-vous des éléments intéressants que nous aurions vus dans les cours
@@ -568,7 +568,7 @@ connexion au serveur SMTP.
 
 Par exemple, créez un fichier `mail.ini` dans le répertoire `src/config/`, comme
 étudié dans le cours
-[Bases de données et PDO (avancé)](../../02.01-bases-de-donnees-et-pdo-avance/).
+[Bases de données et PDO (avancé)](../../02.01-bases-de-donnees-et-pdo-avance/README.md).
 
 Utilisez les informations de connexion SMTP en fonction de votre environnement
 (en remplaçant les valeurs par vos propres informations) :
@@ -732,14 +732,14 @@ Nous vous invitons maintenant à consulter les exemples de code du cours afin de
 vous familiariser avec les concepts abordés.
 
 Vous trouverez les exemples de code ici :
-[Exemples de code](./01-exemples-de-code/).
+[Exemples de code](./01-exemples-de-code/README.md).
 
 ## Exercices
 
 Nous vous invitons ensuite à réaliser les exercices du cours afin de mettre en
 pratique les concepts abordés.
 
-Vous trouverez les exercices ici : [Exercices](./02-exercices/).
+Vous trouverez les exercices ici : [Exercices](./02-exercices/README.md).
 
 ## À faire pour la semaine suivante
 

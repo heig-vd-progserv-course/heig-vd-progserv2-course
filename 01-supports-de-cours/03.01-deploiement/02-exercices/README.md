@@ -8,7 +8,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Ressources annexes
 
 - Support de cours : [Lien vers le contenu](..)
-- Exemples de code : [Lien vers le contenu](./01-exemples-de-code/)
+- Exemples de code : [Lien vers le contenu](./01-exemples-de-code/README.md)
 
 ## Exercices
 
@@ -354,7 +354,7 @@ des fichiers par défaut d'Infomaniak au cas où vous en auriez besoin plus tard
 
 Transférez maintenant les fichiers de l'exemple `01-site-web-simple-avec-sqlite`
 des exemples de code disponibles ici :
-[Exemples de code](./01-exemples-de-code/01-site-web-simple-avec-sqlite/).
+[Exemples de code](./01-exemples-de-code/01-site-web-simple-avec-sqlite/README.md).
 
 Pour cela, glissez-déposez les fichiers depuis le panneau de gauche (fichiers
 locaux) vers le panneau de droite (fichiers distants) dans votre client
@@ -446,7 +446,7 @@ données que vous avez notées précédemment.
 
 Récupérez maintenant les fichiers de l'exemple `02-site-web-simple-avec-mariadb`
 des exemples de code disponibles ici :
-[Exemples de code](./01-exemples-de-code/02-site-web-simple-avec-mariadb/).
+[Exemples de code](./01-exemples-de-code/02-site-web-simple-avec-mariadb/README.md).
 
 Copiez le fichier `database.ini.example` en `database.ini.example`. Insérez-y
 les informations de connexion à la base de données que vous avez notées
@@ -527,7 +527,7 @@ fichier de configuration de la base de données MySQL/MariaDB (`database.ini`).
 
 Récupérez les fichiers de l'exemple `03-site-web-securise-avec-mysql` des
 exemples de code disponibles ici :
-[Exemples de code](./01-exemples-de-code/03-site-web-securise-avec-mysql/).
+[Exemples de code](./01-exemples-de-code/03-site-web-securise-avec-mysql/README.md).
 
 Copiez le fichier `src/config/database.ini.example` en
 `src/config/database.ini`. Insérez-y les informations de connexion à la base de

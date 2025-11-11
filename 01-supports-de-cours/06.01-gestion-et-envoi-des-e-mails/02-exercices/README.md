@@ -8,7 +8,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Ressources annexes
 
 - Support de cours : [Lien vers le contenu](..)
-- Exemples de code : [Lien vers le contenu](./01-exemples-de-code/)
+- Exemples de code : [Lien vers le contenu](./01-exemples-de-code/README.md)
 
 ## Exercices
 
@@ -63,7 +63,7 @@ Message :
 #### Solution
 
 Une solution possible est disponible dans le dossier
-[`solution-exercice-01`](./solution-exercice-01/)
+[`solution-exercice-01`](./solution-exercice-01/README.md)
 
 [licence]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
