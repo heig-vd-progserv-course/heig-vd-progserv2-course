@@ -38,10 +38,13 @@ Les commentaires sont fournis comme suit :
 🚨 **L'évaluation donne lieu à une note** (100 % de la note totale du projet /
 60% de la note finale de l'unité d'enseignement).
 
+## Table des matières
+
 - [Ressources](#ressources)
   - [Ressources annexes](#ressources-annexes)
   - [Méthodes d'enseignement et d'apprentissage](#méthodes-denseignement-et-dapprentissage)
   - [Méthodes d'évaluation](#méthodes-dévaluation)
+- [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [Introduction](#introduction)
 - [Composition des groupes](#composition-des-groupes)
