@@ -77,18 +77,18 @@ Les dates sont tirées du
 - Supports de cours :
   [Lien vers le contenu](./01-supports-de-cours/01.01-modalites-de-lunite-denseignement/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/01.01-modalites-de-lunite-denseignement/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/01.01-modalites-de-lunite-denseignement-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/01.01-modalites-de-lunite-denseignement/01.01-modalites-de-lunite-denseignement-presentation.pdf)
 
 ### Programmation orientée objet (avancé)
 
 - Supports de cours :
   [Lien vers le contenu](./01-supports-de-cours/01.02-programmation-orientee-objet-avance/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.02-programmation-orientee-objet-avance/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/01.02-programmation-orientee-objet-avance/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.02-programmation-orientee-objet-avance/01-supports-de-cours/01.02-programmation-orientee-objet-avance-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/01.02-programmation-orientee-objet-avance/01.02-programmation-orientee-objet-avance-presentation.pdf)
 - Exemples de code :
   [Lien vers le contenu](./01-supports-de-cours/01.02-programmation-orientee-objet-avance/01-exemples-de-code/README.md)
 - Exercices :

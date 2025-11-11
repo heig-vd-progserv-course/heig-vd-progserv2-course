@@ -8,9 +8,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Ressources annexes
 
 - Autres formes du support de cours :
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.02-programmation-orientee-objet-avance/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/01.02-programmation-orientee-objet-avance/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.02-programmation-orientee-objet-avance/01-supports-de-cours/01.02-programmation-orientee-objet-avance-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/01.02-programmation-orientee-objet-avance/01.02-programmation-orientee-objet-avance-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](./01-exemples-de-code/README.md)
 - Exercices : [Lien vers le contenu](./02-exercices/README.md)
 
