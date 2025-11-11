@@ -1,0 +1,7 @@
+host = "localhost"
+port = 1025
+authentication = false
+username = ""
+password = ""
+to_email = "contact@mailpit.localhost"
+to_name = "Mailpit Local SMTP"

@@ -2,7 +2,7 @@
 	"name": "HEIG-VD ProgServ2 Course Development Container",
 	"dockerComposeFile": "compose.yaml",
 	"service": "devcontainer",
-	"runServices": ["plantuml"],
+	"runServices": ["mailpit", "plantuml"],
 	"workspaceFolder": "/workspace",
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
@@ -34,6 +34,9 @@
 	"portsAttributes": {
 		"3306": {
 			"label": "MariaDB Database"
+		},
+		"8025": {
+			"label": "Mailpit SMTP Server"
 		},
 		"8080": {
 			"label": "Apache HTTP Server"

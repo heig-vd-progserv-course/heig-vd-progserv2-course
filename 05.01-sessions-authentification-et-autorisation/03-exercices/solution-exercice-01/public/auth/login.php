@@ -66,11 +66,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <main class="container">
         <h1>Se connecter</h1>
 
-        <?php if ($error): ?>
-            <article style="background-color: var(--pico-del-color);">
-                <p><strong>Erreur :</strong> <?= htmlspecialchars($error) ?></p>
-            </article>
-        <?php endif; ?>
+        <?php if ($error) { ?>
+            <p><strong>Erreur :</strong> <?= htmlspecialchars($error) ?></p>
+        <?php } ?>
 
         <form method="post">
             <label for="email">
