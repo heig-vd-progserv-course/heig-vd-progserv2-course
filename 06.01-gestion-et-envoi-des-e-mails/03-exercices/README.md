@@ -24,6 +24,15 @@ Réalisez un formulaire de contact en PHP avec la librairie
 [PHPMailer](https://github.com/PHPMailer/PHPMailer) qui permet aux personnes
 d'envoyer un e-mail pour vous contacter.
 
+> [!IMPORTANT]
+>
+> Le support de cours explique comment installer et configurer PHPMailer pour
+> envoyer des e-mails via SMTP avec un environnement de développement (avec
+> Mailpit) et un environnement de production (avec Infomaniak).
+>
+> Référez-vous au support de cours pour l'installation et la configuration de
+> PHPMailer.
+
 Le formulaire doit contenir les champs suivants :
 
 - Nom

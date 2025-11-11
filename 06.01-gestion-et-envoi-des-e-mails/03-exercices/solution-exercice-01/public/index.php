@@ -21,11 +21,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($email) || empty($subject) || empty($message)) {
         $error = 'Tous les champs sont obligatoires.';
     } else {
-        // Documentation : https://www.php.net/manual/fr/function.parse-ini-file.php
         $config = parse_ini_file(MAIL_CONFIGURATION_FILE, true);
 
         if (!$config) {
-            throw new Exception("Erreur lors de la lecture du fichier de configuration : " . MAIL_CONFIGURATION_FILE);
+            throw new Exception("Erreur lors de la lecture du fichier de configuration : " .
+                MAIL_CONFIGURATION_FILE);
         }
 
         $host = $config['host'];

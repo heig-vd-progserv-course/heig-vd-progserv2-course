@@ -16,8 +16,12 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Objectifs
 
-- Déployer une application web PHP sur un serveur web.
-- Configurer un environnement de production sécurisé.
+- Décrire les protocoles de messagerie électronique (SMTP, POP3, IMAP).
+- Expliquer les différences entre la fonction `mail()` de PHP et les
+  bibliothèques tierces pour l'envoi d'e-mails.
+- Configurer un environnement local et un environnement de production pour
+  l'envoi d'e-mails via SMTP.
+- Utiliser la bibliothèque PHPMailer pour envoyer des e-mails en PHP.
 
 ## Méthodes d'enseignement et d'apprentissage
 

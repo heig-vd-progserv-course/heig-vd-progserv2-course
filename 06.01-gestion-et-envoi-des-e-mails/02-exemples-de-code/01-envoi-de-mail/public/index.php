@@ -6,11 +6,11 @@ use PHPMailer\PHPMailer\Exception;
 
 const MAIL_CONFIGURATION_FILE = __DIR__ . '/../src/config/mail.ini';
 
-// Documentation : https://www.php.net/manual/fr/function.parse-ini-file.php
 $config = parse_ini_file(MAIL_CONFIGURATION_FILE, true);
 
 if (!$config) {
-    throw new Exception("Erreur lors de la lecture du fichier de configuration : " . MAIL_CONFIGURATION_FILE);
+    throw new Exception("Erreur lors de la lecture du fichier de configuration : " .
+        MAIL_CONFIGURATION_FILE);
 }
 
 $host = $config['host'];

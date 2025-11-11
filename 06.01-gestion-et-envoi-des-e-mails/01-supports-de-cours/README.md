@@ -93,7 +93,8 @@ messagerie.
 
 Contrairement à POP3, IMAP permet de gérer les e-mails directement sur le
 serveur, ce qui signifie que les e-mails restent sur le serveur même après avoir
-été lus. Cela permet de synchroniser les e-mails sur plusieurs appareils.
+été lus. Cela permet de synchroniser les e-mails sur plusieurs appareils,
+conservant ainsi leur état (lu, non lu, supprimé, etc.) sur tous les appareils.
 
 ## Fonctions et librairies pour envoyer des e-mails en PHP
 
@@ -202,8 +203,8 @@ Dans le contexte de cette unité d'enseignement, nous utilisons Infomaniak comme
 hébergeur web. Vous avez déjà, dans le contexte d'un précédent cours, commandé
 et configuré un :
 
-- Nom de domaine
-- Hébergement web
+- Nom de domaine.
+- Hébergement web.
 
 Pour envoyer des e-mails, il est encore nécessaire d'acquérir un service de
 messagerie auprès d'Infomaniak.
@@ -286,8 +287,6 @@ e-mail"**.
 <summary>Cliquer ici pour voir une capture d'écran illustrant l'étape</summary>
 
 ![Infomaniak - Tableau de bord du service mail lié au nom de domaine](./images/infomaniak-tableau-de-bord-du-service-mail-lie-au-nom-de-domaine.png)
-
-![Infomaniak - Créer une adresse e-mail](./images/infomaniak-creer-une-adresse-email.png)
 
 </details>
 
@@ -539,7 +538,9 @@ précédents ?
 Créez ensuite un fichier de configuration pour stocker les informations de
 connexion au serveur SMTP.
 
-Par exemple, créez un fichier `mail.ini` dans le répertoire `src/config/`.
+Par exemple, créez un fichier `mail.ini` dans le répertoire `src/config/`, comme
+étudié dans le cours
+[Bases de données et PDO (avancé)](../../02.01-bases-de-donnees-et-pdo-avance/).
 
 Utilisez les informations de connexion SMTP en fonction de votre environnement
 (en remplaçant les valeurs par vos propres informations) :
@@ -580,6 +581,8 @@ from_email = "no-reply@mailpit.localhost"
 from_name = "Mailpit Local SMTP"
 ```
 
+### Utilisation de PHPMailer pour envoyer des e-mails
+
 Votre structure de projet devrait maintenant ressembler à ceci :
 
 ```text
@@ -603,8 +606,6 @@ Votre structure de projet devrait maintenant ressembler à ceci :
         └── autoloader.php
 ```
 
-### Utilisation de PHPMailer pour envoyer des e-mails
-
 Puis, finalement, dans votre code PHP, utilisez PHPMailer pour envoyer des
 e-mails avec, par exemple, le fichier `public/index.php` suivant :
 
@@ -617,11 +618,11 @@ use PHPMailer\PHPMailer\Exception;
 
 const MAIL_CONFIGURATION_FILE = __DIR__ . '/../src/config/mail.ini';
 
-// Documentation : https://www.php.net/manual/fr/function.parse-ini-file.php
 $config = parse_ini_file(MAIL_CONFIGURATION_FILE, true);
 
 if (!$config) {
-    throw new Exception("Erreur lors de la lecture du fichier de configuration : " . MAIL_CONFIGURATION_FILE);
+   throw new Exception("Erreur lors de la lecture du fichier de configuration : " .
+         MAIL_CONFIGURATION_FILE);
 }
 
 $host = $config['host'];
