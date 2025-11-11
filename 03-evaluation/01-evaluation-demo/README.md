@@ -7,7 +7,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Ressources annexes
 
-- Support de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
+- Support de cours : [Lien vers le contenu](..)
 
 ## Évaluation démo
 

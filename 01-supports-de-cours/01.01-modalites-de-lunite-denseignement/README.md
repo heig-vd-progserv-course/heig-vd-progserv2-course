@@ -5,14 +5,16 @@ L. Delafontaine, avec l'aide de
 
 Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-## Ressources annexes
+## Ressources
+
+### Ressources annexes
 
 - Autres formes du support de cours :
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/01.01-modalites-de-lunite-denseignement/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/01.01-modalites-de-lunite-denseignement/01.01-modalites-de-lunite-denseignement-presentation.pdf)
 
-## Méthodes d'enseignement et d'apprentissage
+### Méthodes d'enseignement et d'apprentissage
 
 Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
 sont les suivantes :
@@ -20,7 +22,7 @@ sont les suivantes :
 - Présentation magistrale.
 - Discussions collectives.
 
-## Méthodes d'évaluation
+### Méthodes d'évaluation
 
 Il n'y a pas d'évaluation formelle pour ce cours.
 

@@ -19,14 +19,14 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 - Avoir un environnement de développement fonctionnel et adapté.
 
-## Méthodes d'enseignement et d'apprentissage
+### Méthodes d'enseignement et d'apprentissage
 
 Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
 sont les suivantes :
 
 - Travail en autonomie.
 
-## Méthodes d'évaluation
+### Méthodes d'évaluation
 
 L'évaluation prend la forme d'une liste de points à valider.
 

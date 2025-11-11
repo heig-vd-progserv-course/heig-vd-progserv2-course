@@ -5,7 +5,9 @@ L. Delafontaine, avec l'aide de
 
 Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-## Ressources annexes
+## Ressources
+
+### Ressources annexes
 
 - Autres formes du support de cours :
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/02.01-bases-de-donnees-et-pdo-avance/index.html)
@@ -14,41 +16,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Exemples de code : [Lien vers le contenu](./01-exemples-de-code/README.md)
 - Exercices : [Lien vers le contenu](./02-exercices/README.md)
 
-## Table des matières
-
-- [Ressources annexes](#ressources-annexes)
-- [Table des matières](#table-des-matières)
-- [Objectifs](#objectifs)
-- [Méthodes d'enseignement et d'apprentissage](#méthodes-denseignement-et-dapprentissage)
-- [Méthodes d'évaluation](#méthodes-dévaluation)
-- [Formulaires HTML et PDO, un rappel](#formulaires-html-et-pdo-un-rappel)
-  - [Structure d'un formulaire HTML](#structure-dun-formulaire-html)
-  - [Récupération des données côté serveur](#récupération-des-données-côté-serveur)
-  - [Validation côté serveur](#validation-côté-serveur)
-  - [Conservation des données en cas d'erreurs](#conservation-des-données-en-cas-derreurs)
-  - [Connexion à une base de données SQLite avec PDO](#connexion-à-une-base-de-données-sqlite-avec-pdo)
-  - [Nettoyage des données et persistance avec les requêtes préparées](#nettoyage-des-données-et-persistance-avec-les-requêtes-préparées)
-  - [Affichage sécurisé des données](#affichage-sécurisé-des-données)
-  - [Validation côté client](#validation-côté-client)
-- [Bases de données et PDO (avancé)](#bases-de-données-et-pdo-avancé)
-  - [MySQL/MariaDB](#mysqlmariadb)
-  - [Accéder à MySQL/MariaDB avec MAMP et Visual Studio Code](#accéder-à-mysqlmariadb-avec-mamp-et-visual-studio-code)
-  - [Gestion des erreurs avec les exceptions](#gestion-des-erreurs-avec-les-exceptions)
-  - [Fichiers de configuration](#fichiers-de-configuration)
-- [Conclusion](#conclusion)
-- [Exemples de code](#exemples-de-code)
-- [Exercices](#exercices)
-- [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
-
-## Objectifs
-
-- Rappeler les concepts de base des formulaires HTML, validation et sécurité.
-- Utiliser PDO pour interagir avec une base de données MySQL/MariaDB.
-- Utiliser les exceptions pour la gestion des erreurs en PHP.
-- Utiliser les fichiers de configuration pour stocker les paramètres de
-  connexion à la base de données.
-
-## Méthodes d'enseignement et d'apprentissage
+### Méthodes d'enseignement et d'apprentissage
 
 Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
 sont les suivantes :
@@ -57,7 +25,7 @@ sont les suivantes :
 - Discussions collectives.
 - Travail en autonomie.
 
-## Méthodes d'évaluation
+### Méthodes d'évaluation
 
 L'évaluation prend la forme d'exercices à réaliser en autonomie en classe ou à
 la maison.
@@ -74,6 +42,41 @@ Les retours se font de la manière suivante :
 - Corrigé des exercices.
 
 L'évaluation ne donne pas lieu à une note.
+
+## Table des matières
+
+- [Ressources](#ressources)
+  - [Ressources annexes](#ressources-annexes)
+  - [Méthodes d'enseignement et d'apprentissage](#méthodes-denseignement-et-dapprentissage)
+  - [Méthodes d'évaluation](#méthodes-dévaluation)
+- [Table des matières](#table-des-matières)
+- [Objectifs](#objectifs)
+- [Formulaires HTML et PDO, un rappel](#formulaires-html-et-pdo-un-rappel)
+  - [Structure d'un formulaire HTML](#structure-dun-formulaire-html)
+  - [Récupération des données côté serveur](#récupération-des-données-côté-serveur)
+  - [Validation côté serveur](#validation-côté-serveur)
+  - [Conservation des données en cas d'erreurs](#conservation-des-données-en-cas-derreurs)
+  - [Connexion à une base de données SQLite avec PDO](#connexion-à-une-base-de-données-sqlite-avec-pdo)
+  - [Nettoyage des données et persistance avec les requêtes préparées](#nettoyage-des-données-et-persistance-avec-les-requêtes-préparées)
+  - [Affichage sécurisé des données](#affichage-sécurisé-des-données)
+  - [Validation côté client](#validation-côté-client)
+- [Bases de données et PDO (avancé)](#bases-de-données-et-pdo-avancé-1)
+  - [MySQL/MariaDB](#mysqlmariadb)
+  - [Accéder à MySQL/MariaDB avec MAMP et Visual Studio Code](#accéder-à-mysqlmariadb-avec-mamp-et-visual-studio-code)
+  - [Gestion des erreurs avec les exceptions](#gestion-des-erreurs-avec-les-exceptions)
+  - [Fichiers de configuration](#fichiers-de-configuration)
+- [Conclusion](#conclusion)
+- [Exemples de code](#exemples-de-code)
+- [Exercices](#exercices)
+- [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
+
+## Objectifs
+
+- Rappeler les concepts de base des formulaires HTML, validation et sécurité.
+- Utiliser PDO pour interagir avec une base de données MySQL/MariaDB.
+- Utiliser les exceptions pour la gestion des erreurs en PHP.
+- Utiliser les fichiers de configuration pour stocker les paramètres de
+  connexion à la base de données.
 
 ## Formulaires HTML et PDO, un rappel
 

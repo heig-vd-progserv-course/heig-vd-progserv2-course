@@ -5,22 +5,37 @@ L. Delafontaine, avec l'aide de
 
 Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-## Ressources annexes
+## Ressources
+
+### Ressources annexes
 
 - Autres formes du support de cours :
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/07.01-recapitulatif-de-lunite-denseignement/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/07.01-recapitulatif-de-lunite-denseignement/07.01-recapitulatif-de-lunite-denseignement-presentation.pdf)
 - Résultats des formulaires de feedback et évaluations GAPS :
-  [Lien vers le contenu](../01-resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
+  [Lien vers le contenu](./01-resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
+
+### Méthodes d'enseignement et d'apprentissage
+
+Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
+sont les suivantes :
+
+- Présentation magistrale.
+- Discussions collectives.
+
+### Méthodes d'évaluation
+
+Il n'y a pas d'évaluation pour ce cours.
 
 ## Table des matières
 
-- [Ressources annexes](#ressources-annexes)
+- [Ressources](#ressources)
+  - [Ressources annexes](#ressources-annexes)
+  - [Méthodes d'enseignement et d'apprentissage](#méthodes-denseignement-et-dapprentissage)
+  - [Méthodes d'évaluation](#méthodes-dévaluation)
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
-- [Méthodes d'enseignement et d'apprentissage](#méthodes-denseignement-et-dapprentissage)
-- [Méthodes d'évaluation](#méthodes-dévaluation)
 - [Retrospective](#retrospective)
   - [Objectifs de l'unité d'enseignement](#objectifs-de-lunité-denseignement)
   - [Cours 01 - Programmation orientée objet (avancé)](#cours-01---programmation-orientée-objet-avancé)
@@ -38,18 +53,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Objectifs
 
 - Résumer les principaux concepts abordés durant l'unité d'enseignement.
-
-## Méthodes d'enseignement et d'apprentissage
-
-Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
-sont les suivantes :
-
-- Présentation magistrale.
-- Discussions collectives.
-
-## Méthodes d'évaluation
-
-Il n'y a pas d'évaluation pour ce cours.
 
 ## Retrospective
 

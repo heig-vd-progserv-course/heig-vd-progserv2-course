@@ -5,21 +5,16 @@ L. Delafontaine, avec l'aide de
 
 Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-## Ressources annexes
+## Ressources
+
+### Ressources annexes
 
 - Autres formes du support de cours :
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
 
-## Objectifs
-
-- Réaliser une application web complète avec PHP, incluant une interface
-  utilisateur, une logique métier et une persistance des données.
-- Gérer correctement l'authentification et les accès aux différentes pages.
-- Déployer et accéder à l'application web depuis Internet.
-
-## Méthodes d'enseignement et d'apprentissage
+### Méthodes d'enseignement et d'apprentissage
 
 Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
 sont les suivantes :
@@ -28,7 +23,7 @@ sont les suivantes :
 - Discussions de groupe.
 - Travail en équipe.
 
-## Méthodes d'évaluation
+### Méthodes d'évaluation
 
 L'évaluation repose sur les critères suivants :
 
@@ -42,6 +37,38 @@ Les commentaires sont fournis comme suit :
 
 🚨 **L'évaluation donne lieu à une note** (100 % de la note totale du projet /
 60% de la note finale de l'unité d'enseignement).
+
+- [Ressources](#ressources)
+  - [Ressources annexes](#ressources-annexes)
+  - [Méthodes d'enseignement et d'apprentissage](#méthodes-denseignement-et-dapprentissage)
+  - [Méthodes d'évaluation](#méthodes-dévaluation)
+- [Objectifs](#objectifs)
+- [Introduction](#introduction)
+- [Composition des groupes](#composition-des-groupes)
+- [Validation de l'idée](#validation-de-lidée)
+- [Critères d'évaluation](#critères-dévaluation)
+- [Contraintes](#contraintes)
+- [Soumission](#soumission)
+- [Notes et retours](#notes-et-retours)
+- [Conseils](#conseils)
+  - [Restez simple](#restez-simple)
+  - [Mettez en place un environnement de travail collaboratif](#mettez-en-place-un-environnement-de-travail-collaboratif)
+- [Jalons](#jalons)
+  - [Jalon 1](#jalon-1)
+  - [Jalon 2](#jalon-2)
+  - [Jalon 3](#jalon-3)
+  - [Jalon 4](#jalon-4)
+  - [Jalon 5](#jalon-5)
+  - [Jalon 6](#jalon-6)
+  - [Jalon 7](#jalon-7)
+  - [Jalon 8](#jalon-8)
+
+## Objectifs
+
+- Réaliser une application web complète avec PHP, incluant une interface
+  utilisateur, une logique métier et une persistance des données.
+- Gérer correctement l'authentification et les accès aux différentes pages.
+- Déployer et accéder à l'application web depuis Internet.
 
 ## Introduction
 

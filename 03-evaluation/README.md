@@ -5,7 +5,9 @@ L. Delafontaine, avec l'aide de
 
 Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-## Ressources annexes
+## Ressources
+
+### Ressources annexes
 
 - Autres formes du support de cours :
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03-evaluation/index.html)
@@ -13,27 +15,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
 - Évaluation démo : [Lien vers le contenu](./01-evaluation-demo/README.md)
 
-## Table des matières
-
-- [Ressources annexes](#ressources-annexes)
-- [Table des matières](#table-des-matières)
-- [Objectifs](#objectifs)
-- [Méthodes d'enseignement et d'apprentissage](#méthodes-denseignement-et-dapprentissage)
-- [Méthodes d'évaluation](#méthodes-dévaluation)
-- [Préparation à l'évaluation](#préparation-à-lévaluation)
-  - [Évaluation](#évaluation-1)
-  - [Sanctions possibles en cas de tricherie](#sanctions-possibles-en-cas-de-tricherie)
-  - [Comment se préparer ?](#comment-se-préparer-)
-- [Calcul de la note finale de l'unité d'enseignement](#calcul-de-la-note-finale-de-lunité-denseignement)
-
-## Objectifs
-
-- Définir les modalités d'évaluation pour l'unité d'enseignement ProgServ2.
-- Expliquer les critères d'évaluation.
-- Présenter les méthodes d'évaluation utilisées.
-- Évaluer les compétences acquises durant le semestre.
-
-## Méthodes d'enseignement et d'apprentissage
+### Méthodes d'enseignement et d'apprentissage
 
 Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
 sont les suivantes :
@@ -41,7 +23,7 @@ sont les suivantes :
 - Présentation magistrale.
 - Discussions collectives.
 
-## Méthodes d'évaluation
+### Méthodes d'évaluation
 
 L'évaluation prend la forme d'une évaluation écrite sur la plateforme
 d'évaluation en ligne de la HEIG-VD ([Eval](https://eval.iict-heig-vd.in)).
@@ -54,6 +36,27 @@ L'évaluation se fait en utilisant les critères suivants :
 
 🚨 **L'évaluation donne lieu à une note** (100% de la note totale de cours / 40%
 de la note finale de l'unité d'enseignement).
+
+## Table des matières
+
+- [Ressources](#ressources)
+  - [Ressources annexes](#ressources-annexes)
+  - [Méthodes d'enseignement et d'apprentissage](#méthodes-denseignement-et-dapprentissage)
+  - [Méthodes d'évaluation](#méthodes-dévaluation)
+- [Table des matières](#table-des-matières)
+- [Objectifs](#objectifs)
+- [Préparation à l'évaluation](#préparation-à-lévaluation)
+  - [Évaluation](#évaluation-1)
+  - [Sanctions possibles en cas de tricherie](#sanctions-possibles-en-cas-de-tricherie)
+  - [Comment se préparer ?](#comment-se-préparer-)
+- [Calcul de la note finale de l'unité d'enseignement](#calcul-de-la-note-finale-de-lunité-denseignement)
+
+## Objectifs
+
+- Définir les modalités d'évaluation pour l'unité d'enseignement ProgServ2.
+- Expliquer les critères d'évaluation.
+- Présenter les méthodes d'évaluation utilisées.
+- Évaluer les compétences acquises durant le semestre.
 
 ## Préparation à l'évaluation
 

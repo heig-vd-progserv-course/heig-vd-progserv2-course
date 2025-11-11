@@ -5,7 +5,9 @@ L. Delafontaine, avec l'aide de
 
 Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-## Ressources annexes
+## Ressources
+
+### Ressources annexes
 
 - Autres formes du support de cours :
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/06.01-gestion-et-envoi-des-e-mails/index.html)
@@ -14,13 +16,41 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Exemples de code : [Lien vers le contenu](./01-exemples-de-code/README.md)
 - Exercices : [Lien vers le contenu](./02-exercices/README.md)
 
+### Méthodes d'enseignement et d'apprentissage
+
+Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
+sont les suivantes :
+
+- Présentation magistrale.
+- Discussions collectives.
+- Travail en autonomie.
+
+### Méthodes d'évaluation
+
+L'évaluation prend la forme d'exercices à réaliser en autonomie en classe ou à
+la maison.
+
+L'évaluation se fait en utilisant les critères suivants :
+
+- Capacité à s'approprier des exemples de code.
+- Capacité à appliquer les exemples de code à des situations similaires.
+- Capacité à répondre avec justesse.
+- Capacité à argumenter.
+
+Les retours se font de la manière suivante :
+
+- Corrigé des exercices.
+
+L'évaluation ne donne pas lieu à une note.
+
 ## Table des matières
 
-- [Ressources annexes](#ressources-annexes)
+- [Ressources](#ressources)
+  - [Ressources annexes](#ressources-annexes)
+  - [Méthodes d'enseignement et d'apprentissage](#méthodes-denseignement-et-dapprentissage)
+  - [Méthodes d'évaluation](#méthodes-dévaluation)
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
-- [Méthodes d'enseignement et d'apprentissage](#méthodes-denseignement-et-dapprentissage)
-- [Méthodes d'évaluation](#méthodes-dévaluation)
 - [Derrière les mails : SMTP, POP3 et IMAP](#derrière-les-mails--smtp-pop3-et-imap)
   - [SMTP (Simple Mail Transfer Protocol)](#smtp-simple-mail-transfer-protocol)
   - [POP3 (Post Office Protocol version 3)](#pop3-post-office-protocol-version-3)
@@ -49,33 +79,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Configurer un environnement local et un environnement de production pour
   l'envoi d'e-mails via SMTP.
 - Utiliser la bibliothèque PHPMailer pour envoyer des e-mails en PHP.
-
-## Méthodes d'enseignement et d'apprentissage
-
-Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
-sont les suivantes :
-
-- Présentation magistrale.
-- Discussions collectives.
-- Travail en autonomie.
-
-## Méthodes d'évaluation
-
-L'évaluation prend la forme d'exercices à réaliser en autonomie en classe ou à
-la maison.
-
-L'évaluation se fait en utilisant les critères suivants :
-
-- Capacité à s'approprier des exemples de code.
-- Capacité à appliquer les exemples de code à des situations similaires.
-- Capacité à répondre avec justesse.
-- Capacité à argumenter.
-
-Les retours se font de la manière suivante :
-
-- Corrigé des exercices.
-
-L'évaluation ne donne pas lieu à une note.
 
 ## Derrière les mails : SMTP, POP3 et IMAP
 
