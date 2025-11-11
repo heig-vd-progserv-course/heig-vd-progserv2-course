@@ -10,7 +10,7 @@ author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Programmation orientée objet (avancé)
 description: Programmation orientée objet (avancé) pour l'unité d'enseignement ProgServ2 enseigné à la HEIG-VD, Suisse
 url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.02-programmation-orientee-objet-avance/01-supports-de-cours/index.html
-header: "**Programmation orientée objet (avancé)**"
+header: "[**Programmation orientée objet (avancé)**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01.02-programmation-orientee-objet-avance)"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
 headingDivider: 6
 math: mathjax
@@ -1112,7 +1112,7 @@ Est-ce que vous avez des questions ?
   [Unsplash](https://unsplash.com/photos/grayscale-photo-of-elephants-drinking-water-8oenpCXktqQ)
 - [Illustration][illustration-objectifs] par
   [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
-  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+  [Unsplash](https://unsplash.com/photos/low-angle-view-of-ball-shoots-in-the-ring-j6brni7fpvs)
 - [Illustration][illustration-variables] par
   [Jan Huber](https://unsplash.com/@jan_huber) sur
   [Unsplash](https://unsplash.com/photos/yellow-and-red-light-streaks-NjV34SrbM_g)
