@@ -5,19 +5,7 @@ L. Delafontaine, avec l'aide de
 
 Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-## Table des matières
-
-- [Table des matières](#table-des-matières)
-- [Objectifs](#objectifs)
-- [Méthodes d'enseignement et d'apprentissage](#méthodes-denseignement-et-dapprentissage)
-- [Méthodes d'évaluation](#méthodes-dévaluation)
-- [Introduction](#introduction)
-- [Validation de la mise en place de l'environnement de développement](#validation-de-la-mise-en-place-de-lenvironnement-de-développement)
-- [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
-
-## Objectifs
-
-- Avoir un environnement de développement fonctionnel et adapté.
+## Ressources
 
 ### Méthodes d'enseignement et d'apprentissage
 
@@ -31,6 +19,21 @@ sont les suivantes :
 L'évaluation prend la forme d'une liste de points à valider.
 
 L'évaluation ne donne pas lieu à une note.
+
+## Table des matières
+
+- [Ressources](#ressources)
+  - [Méthodes d'enseignement et d'apprentissage](#méthodes-denseignement-et-dapprentissage)
+  - [Méthodes d'évaluation](#méthodes-dévaluation)
+- [Table des matières](#table-des-matières)
+- [Objectifs](#objectifs)
+- [Introduction](#introduction)
+- [Validation de la mise en place de l'environnement de développement](#validation-de-la-mise-en-place-de-lenvironnement-de-développement)
+- [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
+
+## Objectifs
+
+- Avoir un environnement de développement fonctionnel et adapté.
 
 ## Introduction
 
