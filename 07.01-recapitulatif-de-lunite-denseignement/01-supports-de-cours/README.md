@@ -62,7 +62,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 ### Cours 01 - Programmation orientée objet (avancé)
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01.02-programmation-orientee-objet-avance).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../01.02-programmation-orientee-objet-avance/).
 
 #### Éléments clés à retenir
 
@@ -77,7 +77,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 ### Cours 02 - Bases de données et PDO (avancé)
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../02.01-bases-de-donnees-et-pdo-avance/).
 
 #### Éléments clés à retenir
 
@@ -92,7 +92,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 ### Cours 03 - Déploiement
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/03.01-deploiement).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../03.01-deploiement/).
 
 #### Éléments clés à retenir
 
@@ -108,7 +108,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 ### Cours 04 - Cookies, préférences, et gestion multilingues (i18n)
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/04.01-cookies-preferences-et-gestion-multilingues-i18n).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../04.01-cookies-preferences-et-gestion-multilingues-i18n/).
 
 #### Éléments clés à retenir
 
@@ -124,7 +124,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 ### Cours 05 - Sessions, authentification, et autorisation
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/07.01-recapitulatif-de-lunite-denseignement).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../07.01-recapitulatif-de-lunite-denseignement/).
 
 #### Éléments clés à retenir
 
@@ -139,7 +139,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 ### Cours 06 - Gestion et envoi des e-mails
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/06.01-gestion-et-envoi-des-e-mails).
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](../../06.01-gestion-et-envoi-des-e-mails/).
 
 #### Éléments clés à retenir
 
@@ -152,82 +152,27 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
   manière plus fiable et sécurisée.
 - Utiliser des dépendances externes simplifie le développement.
 
+### Projet libre
+
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](<../../01.03-projet-libre-(1-sur-8)/>).
+
+#### Éléments clés à retenir
+
+- Vous avez réalisé un projet libre de A à Z.
+- Vous avez déployé l'application chez un hébergeur tel qu'Infomaniak.
+- L'application est disponible sur Internet, la rendant accessible à tout le
+  monde.
+- Vous pouvez être fier.es de ce que vous avez fait ! Bravo !
+
+**Attention à la date et la forme du rendu** (voir support de cours). Je ferai
+mon possible pour vous rendre les notes au plus vite.
+
 ## Résultats des formulaires de feedback et évaluations GAPS
 
 Discussions et retours sur l'unité d'enseignement.
 
 Vous pourrez les retrouver sur le
 [dépôt Git de l'unité d'enseignement](../02-resultats-des-formulaires-de-feedback-et-evaluations-gaps/).
-
-## Préparation à l'évaluation
-
-Tout ce que vous devez savoir pour réussir l'évaluation.
-
-### Évaluation
-
-- L'unité d'enseignement se termine par une évaluation (40% de la note).
-- L'évaluation aura lieu le **16.12.2025**, de **8h30 à 10h00**.
-- Salle encore à définir (communiquée par le secrétariat COMEM+).
-- **Venez à 8h15 pour vous installer.**
-- ~90 minutes.
-- Questions ouvertes et QCM avec argumentation possible.
-- Portée sur les connaissances théoriques et les exercices (principalement sur
-  les contenus théoriques, mais lecture, compréhension, et écriture de code
-  possible).
-- Sur la plateforme d'évaluation en ligne de la HEIG-VD (via réseau _"HEIG-VD"_
-  ou VPN), comme _"Programmation serveur 1 (ProgServ1)"_.
-- **Aucune ressource autorisée**.
-
-### Sanctions possibles en cas de tricherie
-
-Source :
-[Règlement d'études Bachelor de la HEIG-VD](https://intra.heig-vd.ch/academique/cadre-de-reference/Documents/Rglt-Etudes-HEIG-VD.pdf).
-
-> **Art. 16. - Fraude, plagiat et usage de faux**
->
-> 1 - Toute fraude, y compris le plagiat ou la tentative de fraude dans les
-> travaux d'évaluation, les examens et le travail de bachelor, **entraîne la
-> note de 1.0 au module**, impliquant la non-acquisition des crédits ECTS
-> correspondants, voire l'invalidation du titre, et peut faire l'objet d'une des
-> sanctions prévues à l'article 14.
-
-> **Art. 14. - Sanctions**
->
-> 1 - L'étudiant qui ne respecte pas les règles ainsi que les directives ou les
-> consignes de la HEIG-VD, [...] est passible des sanctions disciplinaires
-> suivantes :
->
-> 1. l'avertissement ;
-> 2. l'exclusion temporaire ;
-> 3. **l'exclusion de la filière, voire du domaine** si les règlements du
->    domaine le prévoient.
-
-**Les personnes qui surveilleront l'évaluation sont informées des règles
-d'évaluation et des sanctions possibles en cas de triche.**
-
-Elles sont en charge de surveiller le bon déroulement de l'évaluation et de
-signaler les éventuels cas de triche. **Aucune tolérance ne sera accordée en cas
-de triche avérée ou de doute sur la bonne conduite de l'évaluation**.
-
-Vous avez travaillé dur pour arriver jusqu'ici et nous avons confiance en vos
-capacités à réussir cette évaluation. **Ne prenez pas le risque de nous décevoir
-et/ou de vous faire renvoyer**.
-
-### Comment se préparer ?
-
-- Relire les supports de cours avec leurs objectifs respectifs.
-- Utiliser ces objectifs pour valider vos acquis.
-- Refaire les exercices.
-- Poser des questions si nécessaire.
-- Accéder à l'évaluation de test pour prendre en main la plateforme d'évaluation
-  en ligne (Eval).
-
-## Calcul de la note finale de l'unité d'enseignement
-
-La note finale de l' unité d'enseignement est calculée en combinant les notes
-suivante :
-
-$\text{Note finale} = \text{Note de l'évaluation} * 0.4 + \text{Note du projet libre} * 0.6$
 
 ## Conclusion
 

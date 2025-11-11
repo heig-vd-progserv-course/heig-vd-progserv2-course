@@ -172,6 +172,25 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
   manière plus fiable et sécurisée.
 - Utiliser des dépendances externes simplifie le développement.
 
+### Projet libre
+
+<!-- _class: lead -->
+
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](<https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01.03-projet-libre-(1-sur-8)>).
+
+![bg brightness:2 opacity:0.2][illustration-principale]
+
+#### Éléments clés à retenir
+
+- Vous avez réalisé un projet libre de A à Z.
+- Vous avez déployé l'application chez un hébergeur tel qu'Infomaniak.
+- L'application est disponible sur Internet, la rendant accessible à tout le
+  monde.
+- Vous pouvez être fier.es de ce que vous avez fait ! Bravo !
+
+**Attention à la date et la forme du rendu** (voir support de cours). Je ferai
+mon possible pour vous rendre les notes au plus vite.
+
 ## Résultats des formulaires de feedback et évaluations GAPS
 
 <!-- _class: lead -->
@@ -191,8 +210,8 @@ Vous pourrez les retrouver sur le [dépôt Git de l'unité d'enseignement][cours
 ### Conclusion (1/3)
 
 - Jusqu'à maintenant, vous avez réalisé des applications web simples avec PHP.
-- Ces applications ont été entièrement construite par vos soins, de la
-  conception à la mise en ligne (vous pouvez être fier.es !).
+- Ces applications ont été entièrement construites par vos soins, de la
+  conception à la mise en ligne.
 - Ces applications, bien que simples, respectent les bonnes pratiques de
   développement web.
 - Néanmoins, vous avez expérimenté les défis et les complexités du développement
@@ -251,9 +270,6 @@ Apéro time! 🎉
 - [Illustration][illustration-objectifs] par
   [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
   [Unsplash](https://unsplash.com/photos/low-angle-view-of-ball-shoots-in-the-ring-j6brni7fpvs)
-- [Illustration][illustration-modalites-devaluation] par
-  [Nguyen Dang Hoang Nhu](https://unsplash.com/@nguyendhn) sur
-  [Unsplash](https://unsplash.com/photos/person-writing-on-white-paper-qDgTQOYk6B8)
 
 <!-- URLs -->
 
@@ -268,5 +284,3 @@ Apéro time! 🎉
 	https://images.unsplash.com/photo-1517486430290-35657bdcef51?fit=crop&h=720
 [illustration-objectifs]:
 	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
-[illustration-modalites-devaluation]:
-	https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?fit=crop&h=720

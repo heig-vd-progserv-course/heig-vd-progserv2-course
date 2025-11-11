@@ -24,15 +24,13 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Sanctions possibles en cas de tricherie](#sanctions-possibles-en-cas-de-tricherie)
   - [Comment se préparer ?](#comment-se-préparer-)
 - [Calcul de la note finale de l'unité d'enseignement](#calcul-de-la-note-finale-de-lunité-denseignement)
-- [Conclusion](#conclusion)
-  - [Mes derniers conseils pour la suite](#mes-derniers-conseils-pour-la-suite)
-- [Merci !](#merci-)
 
 ## Objectifs
 
 - Définir les modalités d'évaluation pour l'unité d'enseignement ProgServ2.
 - Expliquer les critères d'évaluation.
 - Présenter les méthodes d'évaluation utilisées.
+- Évaluer les compétences acquises durant le semestre.
 
 ## Préparation à l'évaluation
 
@@ -94,8 +92,8 @@ et/ou de vous faire renvoyer**.
 - Utiliser ces objectifs pour valider vos acquis.
 - Refaire les exercices.
 - Poser des questions si nécessaire.
-- Accéder à l'évaluation de test pour prendre en main la plateforme d'évaluation
-  en ligne (Eval).
+- [Accéder à l'évaluation de démo](../02-evaluation-demo/) pour prendre en main
+  la plateforme d'évaluation en ligne (Eval).
 
 ## Calcul de la note finale de l'unité d'enseignement
 
@@ -103,55 +101,6 @@ La note finale de l' unité d'enseignement est calculée en combinant les notes
 suivante :
 
 $\text{Note finale} = \text{Note de l'évaluation} * 0.4 + \text{Note du projet libre} * 0.6$
-
-## Conclusion
-
-- Jusqu'à maintenant, vous avez réalisé des applications web simples avec PHP.
-- Ces applications ont été entièrement construite par vos soins, de la
-  conception à la mise en ligne (vous pouvez être fier.es !).
-- Ces applications, bien que simples, respectent les bonnes pratiques de
-  développement web.
-- Néanmoins, vous avez expérimenté les défis et les complexités du développement
-  web et les questions d'implémentation.
-- Il existe d'autres solutions pour ne pas réinventer la roue.
-- Dans le monde professionnel, nous avons des frameworks et des bibliothèques
-  pour nous aider à gérer ces complexités.
-- Ces outils sont conçus pour :
-  1. Simplifier et accélérer le développement web.
-  2. Garantir la sécurité.
-  3. Mettre en œuvre des solutions éprouvées et efficaces.
-  4. Le but est de ne pas devoir tout (re)faire à la main.
-- Au prochain semestre, je vous souhaite d'explorer les éléments suivants :
-  - Gestion de dépendances externes avec Composer.
-  - Utilisation de frameworks PHP populaires comme Laravel ou Symfony.
-  - Utilisation du modèle MVC avec systèmes de routage et templating.
-  - Mais surtout, je vous souhaite de vous épanouir dans ce qui vous plaît le
-    plus !
-
-### Mes derniers conseils pour la suite
-
-- Posez-vous toujours les bonnes questions : _"pourquoi ?"_, _"est-ce que je
-  fais la bonne chose pour la bonne cause ?"_
-- Faites toujours ce qui est bon pour vous : la santé, les relations, les ami.es
-  sont plus important.es que le travail !
-- Ayez toujours confiance en vous et en vos tripes : faites ce que vous pensez
-  être juste !
-- Aidez les autres : la coopération vaut mieux que la compétition !
-- Restez critique : votre opinion compte et peut faire la différence (ne faites
-  pas confiance à tout ce que vous lisez, ex. l'AI !).
-
-## Merci !
-
-Encore merci pour votre attention et votre engagement tout au long de cette
-unité d'enseignement (autant ProgServ1 que ProgServ2).
-
-J'ai eu beaucoup de plaisir à enseigner cette matière et à travailler avec vous.
-
-Je vous souhaite tout le meilleur pour la suite de votre parcours académique et
-professionnel mais, surtout, que vous soyez heureux.ses ! Au plaisir de vous
-recroiser !
-
-Apéro time! 🎉
 
 [licence]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md

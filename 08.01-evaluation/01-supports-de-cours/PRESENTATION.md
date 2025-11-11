@@ -37,6 +37,7 @@ _paginate: false
 - Définir les modalités d'évaluation pour l'unité d'enseignement ProgServ2.
 - Expliquer les critères d'évaluation.
 - Présenter les méthodes d'évaluation utilisées.
+- Évaluer les compétences acquises durant le semestre.
 
 ![bg right:40%][illustration-objectifs]
 
@@ -117,8 +118,8 @@ et/ou de vous faire renvoyer**.
 - Utiliser ces objectifs pour valider vos acquis.
 - Refaire les exercices.
 - Poser des questions si nécessaire.
-- Accéder à l'évaluation de test pour prendre en main la plateforme d'évaluation
-  en ligne (Eval).
+- [Accéder à l'évaluation de démo](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/08.01-evaluation)
+  pour prendre en main la plateforme d'évaluation en ligne (Eval)
 
 ![bg right:40%][illustration-modalites-devaluation]
 
