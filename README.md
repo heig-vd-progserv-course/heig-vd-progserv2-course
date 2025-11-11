@@ -253,7 +253,7 @@ Les dates sont tirées du
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/08.01-evaluation/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/08.01-evaluation/01-supports-de-cours/08.01-evaluation-presentation.pdf)
-- Evaluation démo :
+- Évaluation démo :
   [Lien vers le contenu](./08.01-evaluation/02-evaluation-demo/)
 
 ### [Projet libre (8/8)](<./01.03-projet-libre-(1-sur-8)/>)

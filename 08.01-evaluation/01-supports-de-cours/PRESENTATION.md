@@ -7,16 +7,16 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
-title: HEIG-VD ProgServ2 Course - Evaluation
-description: Evaluation pour l'unité d'enseignement ProgServ2 à la HEIG-VD, Suisse
+title: HEIG-VD ProgServ2 Course - Évaluation
+description: Évaluation pour l'unité d'enseignement ProgServ2 à la HEIG-VD, Suisse
 url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/08.01-evaluation/01-supports-de-cours/index.html
-header: "[**Evaluation**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/08.01-evaluation)"
+header: "[**Évaluation**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/08.01-evaluation)"
 footer: "**HEIG-VD** - ProgServ2 Course 2025-2026 - CC BY-SA 4.0"
 headingDivider: 6
 math: mathjax
 -->
 
-# Evaluation
+# Évaluation
 
 <!--
 _class: lead
