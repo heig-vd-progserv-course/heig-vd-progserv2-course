@@ -7,10 +7,10 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Ressources annexes
 
-- Autre formes du support de cours :
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/08.01-evaluation/01-supports-de-cours/index.html)
+- Autres formes du support de cours :
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03-evaluation/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/08.01-evaluation/01-supports-de-cours/08.01-evaluation-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
 - Évaluation démo : [Lien vers le contenu](./01-evaluation-demo/README.md)
 
 ## Table des matières

@@ -97,9 +97,9 @@ Les dates sont tirées du
 ### Projet libre (1/8)
 
 - Supports de cours : [Lien vers le contenu](./02-projet-libre/README.md) ·
-  [Presentation (web)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/index.html>)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
-  [Presentation (PDF)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/01.03-projet-libre-(1-sur-8)-presentation.pdf>)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
 
 ## 🕑 Cours 02
 
@@ -108,9 +108,9 @@ Les dates sont tirées du
 - Supports de cours :
   [Lien vers le contenu](./01-supports-de-cours/02.01-bases-de-donnees-et-pdo-avance/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/02.01-bases-de-donnees-et-pdo-avance/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/02.01-bases-de-donnees-et-pdo-avance-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/02.01-bases-de-donnees-et-pdo-avance/02.01-bases-de-donnees-et-pdo-avance-presentation.pdf)
 - Exemples de code :
   [Lien vers le contenu](./01-supports-de-cours/02.01-bases-de-donnees-et-pdo-avance/01-exemples-de-code/README.md)
 - Exercices :
@@ -119,9 +119,9 @@ Les dates sont tirées du
 ### Projet libre (2/8)
 
 - Supports de cours : [Lien vers le contenu](./02-projet-libre/README.md) ·
-  [Presentation (web)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/index.html>)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
-  [Presentation (PDF)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/01.03-projet-libre-(1-sur-8)-presentation.pdf>)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
 
 ## 🕒 Cours 03
 
@@ -129,9 +129,9 @@ Les dates sont tirées du
 
 - Supports de cours :
   [Lien vers le contenu](./01-supports-de-cours/03.01-deploiement/README.md) ·
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03.01-deploiement/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/03.01-deploiement/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03.01-deploiement/01-supports-de-cours/03.01-deploiement-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/03.01-deploiement/03.01-deploiement-presentation.pdf)
 - Exemples de code :
   [Lien vers le contenu](./01-supports-de-cours/03.01-deploiement/01-exemples-de-code/README.md)
 - Exercices :
@@ -140,9 +140,9 @@ Les dates sont tirées du
 ### Projet libre (3/8)
 
 - Supports de cours : [Lien vers le contenu](./02-projet-libre/README.md) ·
-  [Presentation (web)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/index.html>)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
-  [Presentation (PDF)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/01.03-projet-libre-(1-sur-8)-presentation.pdf>)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
 
 ## 🕓 Cours 04
 
@@ -151,9 +151,9 @@ Les dates sont tirées du
 - Supports de cours :
   [Lien vers le contenu](./01-supports-de-cours/04.01-cookies-preferences-et-gestion-multilingues-i18n/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/04.01-cookies-preferences-et-gestion-multilingues-i18n/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/04.01-cookies-preferences-et-gestion-multilingues-i18n/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/04.01-cookies-preferences-et-gestion-multilingues-i18n/01-supports-de-cours/04.01-cookies-preferences-et-gestion-multilingues-i18n-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/04.01-cookies-preferences-et-gestion-multilingues-i18n/04.01-cookies-preferences-et-gestion-multilingues-i18n-presentation.pdf)
 - Exemples de code :
   [Lien vers le contenu](./01-supports-de-cours/04.01-cookies-preferences-et-gestion-multilingues-i18n/01-exemples-de-code/README.md)
 - Exercices :
@@ -162,9 +162,9 @@ Les dates sont tirées du
 ### Projet libre (4/8)
 
 - Supports de cours : [Lien vers le contenu](./02-projet-libre/README.md) ·
-  [Presentation (web)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/index.html>)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
-  [Presentation (PDF)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/01.03-projet-libre-(1-sur-8)-presentation.pdf>)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
 
 ## 🕔 Cours 05
 
@@ -173,9 +173,9 @@ Les dates sont tirées du
 - Supports de cours :
   [Lien vers le contenu](./01-supports-de-cours/05.01-sessions-authentification-et-autorisation/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/05.01-sessions-authentification-et-autorisation/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/05.01-sessions-authentification-et-autorisation/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/05.01-sessions-authentification-et-autorisation/01-supports-de-cours/05.01-sessions-authentification-et-autorisation-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/05.01-sessions-authentification-et-autorisation/05.01-sessions-authentification-et-autorisation-presentation.pdf)
 - Exemples de code :
   [Lien vers le contenu](./01-supports-de-cours/05.01-sessions-authentification-et-autorisation/01-exemples-de-code/README.md)
 - Exercices :
@@ -184,9 +184,9 @@ Les dates sont tirées du
 ### Projet libre (5/8)
 
 - Supports de cours : [Lien vers le contenu](./02-projet-libre/README.md) ·
-  [Presentation (web)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/index.html>)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
-  [Presentation (PDF)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/01.03-projet-libre-(1-sur-8)-presentation.pdf>)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
 
 ## 🕕 Cours 06
 
@@ -195,9 +195,9 @@ Les dates sont tirées du
 - Supports de cours :
   [Lien vers le contenu](./01-supports-de-cours/06.01-gestion-et-envoi-des-e-mails/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/06.01-gestion-et-envoi-des-e-mails/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/06.01-gestion-et-envoi-des-e-mails/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/06.01-gestion-et-envoi-des-e-mails/01-supports-de-cours/06.01-gestion-et-envoi-des-e-mails-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/06.01-gestion-et-envoi-des-e-mails/06.01-gestion-et-envoi-des-e-mails-presentation.pdf)
 - Exemples de code :
   [Lien vers le contenu](./01-supports-de-cours/06.01-gestion-et-envoi-des-e-mails/01-exemples-de-code/README.md)
 - Exercices :
@@ -206,9 +206,9 @@ Les dates sont tirées du
 ### Projet libre (6/8)
 
 - Supports de cours : [Lien vers le contenu](./02-projet-libre/README.md) ·
-  [Presentation (web)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/index.html>)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
-  [Presentation (PDF)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/01.03-projet-libre-(1-sur-8)-presentation.pdf>)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
 
 ## 🕖 Cours 07
 
@@ -217,27 +217,27 @@ Les dates sont tirées du
 - Supports de cours :
   [Lien vers le contenu](./01-supports-de-cours/07.01-recapitulatif-de-lunite-denseignement/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/07.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/07.01-recapitulatif-de-lunite-denseignement/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/07.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/07.01-recapitulatif-de-lunite-denseignement-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/07.01-recapitulatif-de-lunite-denseignement/07.01-recapitulatif-de-lunite-denseignement-presentation.pdf)
 - Résultats des formulaires de feedback et évaluations GAPS :
   [Lien vers le contenu](./01-supports-de-cours/07.01-recapitulatif-de-lunite-denseignement/02-resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
 
 ### Projet libre (7/8)
 
 - Supports de cours : [Lien vers le contenu](./02-projet-libre/README.md) ·
-  [Presentation (web)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/index.html>)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
-  [Presentation (PDF)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/01.03-projet-libre-(1-sur-8)-presentation.pdf>)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
 
 ## 🕗 Cours 08
 
 ### Évaluation
 
 - Supports de cours : [Lien vers le contenu](./03-evaluation/README.md) ·
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/08.01-evaluation/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03-evaluation/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/08.01-evaluation/01-supports-de-cours/08.01-evaluation-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
 - Évaluation démo :
   [Lien vers le contenu](./03-evaluation/0-evaluation-demo/README.md)
 

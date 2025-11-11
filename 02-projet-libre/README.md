@@ -8,9 +8,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Ressources annexes
 
 - Autres formes du support de cours :
-  [Presentation (web)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/index.html>)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
-  [Presentation (PDF)](<https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.03-projet-libre-(1-sur-8)/01-supports-de-cours/01.03-projet-libre-(1-sur-8)-presentation.pdf>)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
 
 ## Objectifs
 

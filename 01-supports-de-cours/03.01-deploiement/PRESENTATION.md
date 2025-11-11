@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Déploiement
 description: Déploiement pour l'unité d'enseignement ProgServ2 enseigné à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03.01-deploiement/01-supports-de-cours/index.html
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/03.01-deploiement/index.html
 header: "[**Déploiement**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/03.01-deploiement)"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
 headingDivider: 6

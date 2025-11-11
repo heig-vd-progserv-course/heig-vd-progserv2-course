@@ -8,9 +8,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Ressources annexes
 
 - Autres formes du support de cours :
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/07.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/07.01-recapitulatif-de-lunite-denseignement/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/07.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/07.01-recapitulatif-de-lunite-denseignement-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/07.01-recapitulatif-de-lunite-denseignement/07.01-recapitulatif-de-lunite-denseignement-presentation.pdf)
 - Résultats des formulaires de feedback et évaluations GAPS :
   [Lien vers le contenu](../01-resultats-des-formulaires-de-feedback-et-evaluations-gaps/README.md)
 

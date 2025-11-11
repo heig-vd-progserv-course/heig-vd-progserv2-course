@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Bases de données et PDO (avancé)
 description: Bases de données et PDO (avancé) pour l'unité d'enseignement ProgServ2 enseigné à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/index.html
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/02.01-bases-de-donnees-et-pdo-avance/index.html
 header: "[**Bases de données et PDO (avancé)**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance)"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
 headingDivider: 6

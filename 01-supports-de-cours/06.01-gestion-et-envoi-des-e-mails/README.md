@@ -8,9 +8,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Ressources annexes
 
 - Autres formes du support de cours :
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/06.01-gestion-et-envoi-des-e-mails/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/06.01-gestion-et-envoi-des-e-mails/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/06.01-gestion-et-envoi-des-e-mails/01-supports-de-cours/06.01-gestion-et-envoi-des-e-mails-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/06.01-gestion-et-envoi-des-e-mails/06.01-gestion-et-envoi-des-e-mails-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](./01-exemples-de-code/README.md)
 - Exercices : [Lien vers le contenu](./02-exercices/README.md)
 

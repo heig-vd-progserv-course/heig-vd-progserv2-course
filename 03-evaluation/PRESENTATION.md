@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Évaluation
 description: Évaluation pour l'unité d'enseignement ProgServ2 à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/08.01-evaluation/01-supports-de-cours/index.html
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03-evaluation/index.html
 header: "[**Évaluation**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/08.01-evaluation)"
 footer: "**HEIG-VD** - ProgServ2 Course 2025-2026 - CC BY-SA 4.0"
 headingDivider: 6

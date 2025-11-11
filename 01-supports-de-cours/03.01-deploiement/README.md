@@ -8,9 +8,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Ressources annexes
 
 - Autres formes du support de cours :
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03.01-deploiement/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/03.01-deploiement/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/03.01-deploiement/01-supports-de-cours/03.01-deploiement-presentation.pdf)traefik.nortalle.ch
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/03.01-deploiement/03.01-deploiement-presentation.pdf)traefik.nortalle.ch
 - Exemples de code : [Lien vers le contenu](./01-exemples-de-code/README.md)
 - Exercices : [Lien vers le contenu](./02-exercices/README.md)
 
