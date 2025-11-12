@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Récapitulatif de l'unité d'enseignement
 description: Récapitulatif de l'unité d'enseignement pour l'unité d'enseignement ProgServ2 à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/07.01-recapitulatif-de-lunite-denseignement/index.html
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/07.01-recapitulatif-de-lunite-denseignement/index.html
 header: "[**Récapitulatif de l'unité d'enseignement**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/07.01-recapitulatif-de-lunite-denseignement)"
 footer: "**HEIG-VD** - ProgServ2 Course 2025-2026 - CC BY-SA 4.0"
 headingDivider: 6

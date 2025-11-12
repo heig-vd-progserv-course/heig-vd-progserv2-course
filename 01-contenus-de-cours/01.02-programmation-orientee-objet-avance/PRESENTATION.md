@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Programmation orientée objet (avancé)
 description: Programmation orientée objet (avancé) pour l'unité d'enseignement ProgServ2 enseigné à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/01.02-programmation-orientee-objet-avance/index.html
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/01.02-programmation-orientee-objet-avance/index.html
 header: "[**Programmation orientée objet (avancé)**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01.02-programmation-orientee-objet-avance)"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
 headingDivider: 6

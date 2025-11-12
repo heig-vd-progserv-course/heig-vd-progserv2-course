@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Bases de données et PDO (avancé)
 description: Bases de données et PDO (avancé) pour l'unité d'enseignement ProgServ2 enseigné à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-supports-de-cours/02.01-bases-de-donnees-et-pdo-avance/index.html
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/02.01-bases-de-donnees-et-pdo-avance/index.html
 header: "[**Bases de données et PDO (avancé)**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance)"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
 headingDivider: 6
@@ -70,7 +70,7 @@ consultez le [support de cours][support-de-cours]._
 - La méthode (`method`) définit comment les données sont envoyées (`GET` ou
   `POST`).
 - Analysons l'exemple
-  [`01-simple-form.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/01-simple-form.php).
+  [`01-simple-form.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-contenus-du-cours/snippets/01-simple-form.php).
 
 ![bg vertical][illustration-methode] ![bg right:40%][illustration-url-daction]
 
@@ -79,7 +79,7 @@ consultez le [support de cours][support-de-cours]._
 - Les données des formulaires sont accessibles via les superglobales `$_GET` et
   `$_POST`.
 - Analysons l'exemple
-  [`02-get-data-server-side.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/02-get-data-server-side.php).
+  [`02-get-data-server-side.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-contenus-du-cours/snippets/02-get-data-server-side.php).
 
 ![bg right:40%][illustration-methode]
 
@@ -88,7 +88,7 @@ consultez le [support de cours][support-de-cours]._
 - Valider les données permet de garantir leur intégrité et sécurité.
 - Utiliser des filtres et des expressions régulières pour valider les données.
 - Analysons l'exemple
-  [`03-validate-data-server-side.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/03-validate-data-server-side.php).
+  [`03-validate-data-server-side.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-contenus-du-cours/snippets/03-validate-data-server-side.php).
 
 ![bg right:40%][illustration-validation-cote-serveur]
 
@@ -98,7 +98,7 @@ consultez le [support de cours][support-de-cours]._
 - Il est possible de conserver les données saisies en cas d'erreurs de
   validation.
 - Analysons l'exemple
-  [`04-keep-data-on-errors.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/04-keep-data-on-errors.php).
+  [`04-keep-data-on-errors.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-contenus-du-cours/snippets/04-keep-data-on-errors.php).
 
 ![bg right:40%][illustration-sauvegarde-des-donnees-saisies]
 
@@ -107,7 +107,7 @@ consultez le [support de cours][support-de-cours]._
 - PDO (PHP Data Objects) est une extension PHP pour accéder aux bases de données
   (SQLite, MySQL, Postgres, etc.).
 - Analysons l'exemple
-  [`05-pdo-and-sqlite.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/05-pdo-and-sqlite.php).
+  [`05-pdo-and-sqlite.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-contenus-du-cours/snippets/05-pdo-and-sqlite.php).
 
 ![bg right:40% w:80%](https://www.sqlite.org/images/sqlite370_banner.svg)
 
@@ -116,7 +116,7 @@ consultez le [support de cours][support-de-cours]._
 - Nettoyer les données évite les vulnérabilités par injections SQL.
 - PDO met à disposition les requêtes préparées.
 - Analysons l'exemple
-  [`05-pdo-and-sqlite.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/05-pdo-and-sqlite.php).
+  [`05-pdo-and-sqlite.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-contenus-du-cours/snippets/05-pdo-and-sqlite.php).
 
 ![bg right:40%][illustration-nettoyage-des-donnees-et-persistence-avec-les-requetes-preparees]
 
@@ -126,7 +126,7 @@ consultez le [support de cours][support-de-cours]._
   spéciaux lors de l'affichage des données utilisateur.
 - La fonction `htmlspecialchars()` permet d'échapper ces caractères.
 - Analysons l'exemple
-  [`06-escape-special-characters.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/06-escape-special-characters.php).
+  [`06-escape-special-characters.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-contenus-du-cours/snippets/06-escape-special-characters.php).
 
 ![bg right:40%][illustration-affichage-securise-des-donnees]
 
@@ -136,7 +136,7 @@ consultez le [support de cours][support-de-cours]._
 - **Ne remplace pas la validation côté serveur.**
 - Repose sur les attributs HTML (`required`, `type`, `min`, etc.).
 - Analysons l'exemple
-  [`07-validate-data-client-side.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/07-validate-data-client-side.php).
+  [`07-validate-data-client-side.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-contenus-du-cours/snippets/07-validate-data-client-side.php).
 
 ![bg right:40% vertical][illustration-cote-client]
 
@@ -156,7 +156,7 @@ consultez le [support de cours][support-de-cours]._
 - Les deux offrent les mêmes fonctionnalités de base.
 - PDO permet d'interagir avec MySQL/MariaDB.
 - Analysons l'exemple
-  [`08-mysql-with-constants.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/08-mysql-with-constants.php).
+  [`08-mysql-with-constants.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-contenus-du-cours/snippets/08-mysql-with-constants.php).
 
 ![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/fr/6/62/MySQL.svg)
 ![bg vertical w:80%](https://mariadb.com/wp-content/uploads/2019/11/mariadb-horizontal-blue.svg)
@@ -208,7 +208,7 @@ try {
 ### Gestion des erreurs avec les exceptions (3/3)
 
 - Analysons l'exemple
-  [`09-handle-exceptions.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/09-handle-exceptions.php).
+  [`09-handle-exceptions.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-contenus-du-cours/snippets/09-handle-exceptions.php).
 
 ![bg right:40%][illustration-gestion-des-erreurs-avec-les-exceptions]
 
@@ -224,7 +224,7 @@ try {
 ### Fichiers de configuration (2/2)
 
 - Analysons l'exemple
-  [`10-database-configuration-file.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/10-mysql-with-configuration-file.php).
+  [`10-database-configuration-file.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-contenus-du-cours/snippets/10-mysql-with-configuration-file.php).
 
 ![bg right:40%][illustration-formulaires-html-et-pdo-un-rappel]
 
