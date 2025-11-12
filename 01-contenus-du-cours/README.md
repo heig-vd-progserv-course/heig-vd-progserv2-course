@@ -41,7 +41,7 @@ Chaque dossier est structuré de la manière suivante : `xx.yy-zzz` où :
 
 ### Projet libre (1/8)
 
-- Supports de cours : [Lien vers le contenu](./02-projet-libre/README.md) ·
+- Supports de cours : [Lien vers le contenu](../02-projet-libre/README.md) ·
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
@@ -62,7 +62,7 @@ Chaque dossier est structuré de la manière suivante : `xx.yy-zzz` où :
 
 ### Projet libre (2/8)
 
-- Supports de cours : [Lien vers le contenu](./02-projet-libre/README.md) ·
+- Supports de cours : [Lien vers le contenu](../02-projet-libre/README.md) ·
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
@@ -81,7 +81,7 @@ Chaque dossier est structuré de la manière suivante : `xx.yy-zzz` où :
 
 ### Projet libre (3/8)
 
-- Supports de cours : [Lien vers le contenu](./02-projet-libre/README.md) ·
+- Supports de cours : [Lien vers le contenu](../02-projet-libre/README.md) ·
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
@@ -103,7 +103,7 @@ Chaque dossier est structuré de la manière suivante : `xx.yy-zzz` où :
 
 ### Projet libre (4/8)
 
-- Supports de cours : [Lien vers le contenu](./02-projet-libre/README.md) ·
+- Supports de cours : [Lien vers le contenu](../02-projet-libre/README.md) ·
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
@@ -125,7 +125,7 @@ Chaque dossier est structuré de la manière suivante : `xx.yy-zzz` où :
 
 ### Projet libre (5/8)
 
-- Supports de cours : [Lien vers le contenu](./02-projet-libre/README.md) ·
+- Supports de cours : [Lien vers le contenu](../02-projet-libre/README.md) ·
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
@@ -146,7 +146,7 @@ Chaque dossier est structuré de la manière suivante : `xx.yy-zzz` où :
 
 ### Projet libre (6/8)
 
-- Supports de cours : [Lien vers le contenu](./02-projet-libre/README.md) ·
+- Supports de cours : [Lien vers le contenu](../02-projet-libre/README.md) ·
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
@@ -166,7 +166,7 @@ Chaque dossier est structuré de la manière suivante : `xx.yy-zzz` où :
 
 ### Projet libre (7/8)
 
-- Supports de cours : [Lien vers le contenu](./02-projet-libre/README.md) ·
+- Supports de cours : [Lien vers le contenu](../02-projet-libre/README.md) ·
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
@@ -184,7 +184,7 @@ Chaque dossier est structuré de la manière suivante : `xx.yy-zzz` où :
 
 ### Projet libre (8/8)
 
-- Supports de cours : [Lien vers le contenu](./02-projet-libre/README.md) ·
+- Supports de cours : [Lien vers le contenu](../02-projet-libre/README.md) ·
   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02-projet-libre/02-projet-libre-presentation.pdf)
