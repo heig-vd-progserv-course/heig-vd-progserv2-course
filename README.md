@@ -4,7 +4,7 @@
 
 Bienvenue sur le dépôt principal de l'unité d'enseignement
 [Programmation serveur 2 (ProgServ2)](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=7280)
-enseigné à la
+enseignée à la
 [Haute Ecole d'Ingénierie et de Gestion du Canton de Vaud (HEIG-VD)](https://heig-vd.ch),
 Suisse !
 
@@ -20,8 +20,8 @@ Suisse !
 - Implémenter et déployer une application web simple multilingue.
 
 Grâce à ces compétences, la personne qui étudie sera en mesure de développer des
-applications web combinant plusieurs ressources avec une gestion des accès aux
-pages publiques et privées (par exemple, un gestionnaire de tâches
+applications web multilingues combinant plusieurs ressources avec une gestion
+des accès aux pages publiques et privées (par exemple, un gestionnaire de tâches
 multi-utilisateurs, une plateforme de réservations de concerts, etc.).
 
 ## ➡️ Par où commencer ?
@@ -69,11 +69,6 @@ Les dates sont tirées du
 Ce travail est sous licence
 [Creative Commons Attribution-ShareAlike 4.0 International](./LICENSE.md).
 
-[^etat]:
-    🟢 Prêt : le cours est prêt à être utilisé. 🟡 En cours : le cours est en
-    cours de rédaction/de relecture. 🔴 À faire : le cours doit être rédigé/mis
-    à jour.
-
 [^1ere-partie]:
     Le contenu **principal** de la partie. D'autres contenus annexes peuvent
     avoir lieu dans la partie. La partie dure généralement deux périodes (2 x 45
@@ -85,3 +80,8 @@ Ce travail est sous licence
     avoir lieu dans la partie. La partie dure généralement deux périodes (2 x 45
     minutes). Cependant, elle peut être plus longue ou plus courte selon la
     complexité des sujets abordés et le rythme des personnes qui étudient.
+
+[^etat]:
+    🟢 Prêt : le cours est prêt à être utilisé. 🟡 En cours : le cours est en
+    cours de rédaction/de relecture. 🔴 À faire : le cours doit être rédigé/mis
+    à jour.

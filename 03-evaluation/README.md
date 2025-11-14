@@ -118,7 +118,7 @@ et/ou de vous faire renvoyer**.
 - Utiliser ces objectifs pour valider vos acquis.
 - Refaire les exercices.
 - Poser des questions si nécessaire.
-- [Accéder à l'évaluation de démo](../02-evaluation-demo/README.md) pour prendre
+- [Accéder à l'évaluation de démo](./01-evaluation-demo/README.md) pour prendre
   en main la plateforme d'évaluation en ligne (Eval).
 
 ## Calcul de la note finale de l'unité d'enseignement
