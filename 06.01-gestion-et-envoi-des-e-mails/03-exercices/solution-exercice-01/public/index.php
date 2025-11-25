@@ -43,8 +43,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail->Host = $host;
             $mail->Port = $port;
             $mail->SMTPAuth = $authentication;
-            $mail->Username = $username;
-            $mail->Password = $password;
+            if ($authentication) {
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+                $mail->Username = $username;
+                $mail->Password = $password;
+            }
             $mail->CharSet = "UTF-8";
             $mail->Encoding = "base64";
 
