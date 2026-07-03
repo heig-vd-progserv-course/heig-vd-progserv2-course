@@ -1,0 +1,84 @@
+@startuml animal-hierarchy-example-overengineered
+skinparam noteTextAlignment center
+skinparam groupInheritance 2
+
+title Animal Hierarchy Example (Over-engineered)
+
+abstract class Animal << animal.php >> {
+  #string name
+  #float size
+
+  +__construct(string $name, float $size)
+  +getName(): string
+  +setName(string $name): void
+  +getSize(): float
+  +setSize(float $size): void
+  {abstract} +makeSound(): string
+}
+
+abstract class Fish << fish.php >> extends Animal {
+  #bool foundInSea
+}
+
+abstract class Bird << bird.php >> extends Animal {
+  #bool canFly
+}
+
+abstract class Reptile << reptile.php >> extends Animal {
+  #bool isVegetarian
+}
+
+abstract class Mammal << mammal.php >> extends Animal {
+  #bool isVegetarian
+}
+
+abstract class Amphibian << amphibian.php >> extends Animal {
+  #bool canFreeze
+}
+
+abstract class Lizard << lizard.php >> extends Reptile {}
+
+interface Pet {
+  +getNickname(): string
+  +setNickname(string $nickname): void
+}
+
+class Dog << dog.php >> extends Mammal implements Pet {
+  -string nickname
+}
+
+class Cat << cat.php >> extends Mammal implements Pet {
+  -string nickname
+}
+
+abstract class Livestock extends Mammal {
+  -float price
+  -float weight
+
+  +getPrice(): float
+  +setPrice(float $price): void
+  +getWeight(): float
+  +setWeight(float $weight): void
+}
+
+class Cow << cow.php >> extends Livestock {}
+
+class Octopus << octopus.php >> extends Fish {}
+
+class Salmon << salmon.php >> extends Fish {}
+
+class Crow << bird.php >> extends Bird {}
+
+class Turtle << reptile.php >> extends Reptile {}
+
+class Dragon << dragon.php >> extends Lizard {}
+
+legend right
+Legend
+| **Symbol** | **Meaning** | | **Symbol** | **Meaning** |  | **Symbol** | **Meaning** |
+| A | Abstract class | | << >> | Name of the file | | Circle (○) | Public field/method |
+| C | Class |  | //italic// | Abstract method | | Square (□) | Private field/method |
+| I | Interface | | | | | Diamond (◇) | Protected field/method |
+endlegend
+
+@enduml

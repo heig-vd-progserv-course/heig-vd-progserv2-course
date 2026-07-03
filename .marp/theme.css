@@ -84,23 +84,29 @@ section::after {
 	position: absolute;
 }
 
-header {
-	left: 0;
-	right: 0;
-	top: 0;
-}
-
-header a {
+header,
+footer,
+section::after,
+blockquote::before,
+blockquote::after {
 	color: var(--color-dimmed);
-	text-decoration: none;
 }
 
+header,
 footer {
 	left: 0;
 	right: 0;
+}
+
+header {
+	top: 0;
+}
+
+footer {
 	bottom: 0;
 }
 
+header a,
 footer a {
 	color: var(--color-dimmed);
 	text-decoration: none;
@@ -218,20 +224,12 @@ section mark {
 	color: var(--color-primary);
 }
 
-section header,
-section footer,
-section section::after,
-section blockquote::before,
-section blockquote::after {
-	color: var(--color-dimmed);
-}
-
 section:has(h1) > header {
 	display: none;
 }
 
 section > header {
-	font-size: 20px;
+	font-size: 66%;
 }
 
 section.lead {
@@ -268,18 +266,13 @@ section.lead table {
 }
 
 section::after {
-	right: 0;
-	bottom: 0;
-	font-size: 80%;
+	/* (Un)comment the following line to show pagination in the footer as 'current slide/total slides'. */
+	/* content: attr(data-marpit-pagination) "/" attr(data-marpit-pagination-total); */
 }
+
 section > *:first-child,
 section > header:first-child + * {
 	margin-top: 0;
-}
-
-section:not(.lead) > p,
-blockquote {
-	text-align: justify;
 }
 
 /* Blockquote */
@@ -315,27 +308,68 @@ blockquote > *:first-child {
 }
 
 /* Custom classes */
-.two-columns {
+.two-columns,
+.three-columns,
+.four-columns,
+.one-third-two-thirds-columns,
+.two-thirds-one-third-columns,
+.forty-sixty-columns {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
 	gap: 1rem;
 }
 
+.two-columns {
+	grid-template-columns: 1fr 1fr;
+}
+
 .three-columns {
-	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	gap: 1rem;
+}
+
+.four-columns {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.one-third-two-thirds-columns {
+	grid-template-columns: 1fr 2fr;
+}
+
+.two-thirds-one-third-columns {
+	gap: 2rem;
+	grid-template-columns: 2fr 1fr;
+}
+
+.forty-sixty-columns {
+	grid-template-columns: 2fr 3fr;
 }
 
 .center {
 	text-align: center;
 }
 
-.rounded {
-	margin: 1em 0 0;
+.rounded,
+.rounded img {
 	border-radius: 50%;
 }
 
-.rounded img {
-	border-radius: 50%;
+.rounded {
+	margin: 1em 0 0;
+}
+
+.margin-0 {
+	margin: 0;
+}
+
+.thumbnail {
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+	color: white;
+	-webkit-text-stroke: 0.5px black;
+	font-weight: bold;
+}
+
+.thumbnail a {
+	color: white;
+	text-decoration: none;
 }

@@ -20,14 +20,11 @@ sudo apt install --yes jpegoptim optipng
 # Install packages to optimize documents (ps2pdf)
 sudo apt install --yes ghostscript
 
-# Install packages to interact with SQLite databases
-sudo apt install --yes sqlite3 php-sqlite3
-
 # Install Apache server and PHP
-sudo apt install --yes php-common libapache2-mod-php php-cli
+sudo apt install --yes php-common libapache2-mod-php php-cli php-xdebug
 
 # Install MariaDB client and server
-sudo apt install --yes mariadb-client mariadb-server php-mysql
+sudo apt install --yes mariadb-client php-mysql
 
 ## Configure Apache server
 # Remove the default document root
@@ -42,16 +39,3 @@ sudo sed -i 's/:80>/:8080>/' /etc/apache2/sites-available/000-default.conf
 
 # Display all PHP errors
 sudo sed -i 's/display_errors = Off/display_errors = On/' /etc/php/*/apache2/php.ini
-
-## Configure MariaDB server
-# Start MariaDB server
-sudo service mariadb start
-
-# Set a password for the root user and remove anonymous users and test database
-#sudo mariadb-secure-installation
-
-# Create a database and a user for the application
-sudo mariadb --execute="CREATE DATABASE IF NOT EXISTS myapp CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;"
-sudo mariadb --execute="CREATE USER IF NOT EXISTS 'user'@'localhost' IDENTIFIED BY 'password';"
-sudo mariadb --execute="GRANT ALL PRIVILEGES ON myapp.* TO 'user'@'localhost';"
-sudo mariadb --execute="FLUSH PRIVILEGES;"

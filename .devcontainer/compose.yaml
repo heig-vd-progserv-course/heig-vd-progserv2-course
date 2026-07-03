@@ -1,17 +1,32 @@
+volumes:
+  mariadb_data:
+
 services:
   devcontainer:
-    image: mcr.microsoft.com/devcontainers/base:bookworm
+    image: mcr.microsoft.com/devcontainers/base:trixie
     command: sleep infinity
     volumes:
       - ..:/workspace:cached
 
   mailpit:
-    image: axllent/mailpit:latest
+    image: axllent/mailpit:v1.30
     ports:
       - 1025:1025
       - 8025:8025
 
+  mariadb:
+    image: mariadb:12
+    environment:
+      - MARIADB_RANDOM_ROOT_PASSWORD=true
+      - MARIADB_DATABASE=mariadb
+      - MARIADB_USER=mariadb
+      - MARIADB_PASSWORD=mariadb
+    ports:
+      - 3306:3306
+    volumes:
+      - mariadb_data:/var/lib/mysql
+
   plantuml:
-    image: plantuml/plantuml-server:latest
+    image: plantuml/plantuml-server:v1.2026.6
     ports:
       - 9090:8080

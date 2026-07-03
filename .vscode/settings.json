@@ -29,5 +29,10 @@
 		"no-trailing-punctuation": false
 	},
 	"plantuml.render": "PlantUMLServer",
-	"plantuml.server": "http://localhost:9090"
+	"plantuml.server": "http://plantuml:8080",
+	"prettier.endOfLine": "lf",
+	"prettier.printWidth": 80,
+	"prettier.proseWrap": "always",
+	"prettier.tabWidth": 2,
+	"prettier.useTabs": true
 }
