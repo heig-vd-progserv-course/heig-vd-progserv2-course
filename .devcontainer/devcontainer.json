@@ -5,7 +5,7 @@
 	"runServices": ["mailpit", "mariadb", "plantuml"],
 	"workspaceFolder": "/workspace",
 	"features": {
-		"ghcr.io/devcontainers/features/docker-from-docker:1.10.0": {
+		"ghcr.io/devcontainers/features/docker-in-docker:4.0.0": {
 			"moby": false
 		}
 	},
