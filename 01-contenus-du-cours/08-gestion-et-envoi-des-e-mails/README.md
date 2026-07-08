@@ -50,15 +50,5 @@ Les retours se font de la manière suivante :
 
 L'évaluation ne donne pas lieu à une note.
 
-## À faire pour la semaine suivante
-
-Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour le cours suivant de :
-
-- Relire les supports de cours si nécessaire.
-- Finaliser l'appropriation des exemples de code qui n'ont pas été vus en
-  classe.
-- Finaliser les exercices qui n'ont pas été terminés en classe.
-
 [licence]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md

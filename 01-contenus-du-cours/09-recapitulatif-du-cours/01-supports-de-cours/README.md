@@ -5,21 +5,40 @@ L. Delafontaine, avec l'aide de
 
 Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-## Ressources annexes
-
-- Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
-  ·
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/07.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/index.html)
-  ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/07.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/07.01-recapitulatif-de-lunite-denseignement-presentation.pdf)
-- Résultats des formulaires de feedback et évaluations GAPS :
-  [Lien vers le contenu](../02-resultats-des-formulaires-de-feedback-et-evaluations-gaps/)
+> [!TIP]
+>
+> Voici quelques informations relatives à ce contenu.
+>
+> **Ressources annexes**
+>
+> - Autres formats :
+>   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/07.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/index.html)
+>   ·
+>   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/07.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/07.01-recapitulatif-de-lunite-denseignement-presentation.pdf)
+> - Résultats des formulaires de feedback et évaluations GAPS :
+>   [Lien vers le contenu](../02-resultats-des-formulaires-de-feedback-et-evaluations-gaps/)
+>
+> **Objectifs**
+>
+> - Définir les modalités d'évaluation pour l'unité d'enseignement ProgServ2.
+> - Expliquer les critères d'évaluation.
+> - Présenter les méthodes d'évaluation utilisées.
+>
+> **Méthodes d'enseignement et d'apprentissage**
+>
+> Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
+> sont les suivantes :
+>
+> - Présentation magistrale.
+> - Discussions collectives.
+>
+> **Méthodes d'évaluation**
+>
+> Il n'y a pas d'évaluation pour ce cours.
 
 ## Table des matières
 
-- [Ressources annexes](#ressources-annexes)
 - [Table des matières](#table-des-matières)
-- [Objectifs](#objectifs)
 - [Retrospective](#retrospective)
   - [Objectifs de l'unité d'enseignement](#objectifs-de-lunité-denseignement)
   - [Cours 01 - Programmation orientée objet (avancé)](#cours-01---programmation-orientée-objet-avancé)
@@ -37,12 +56,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Conclusion](#conclusion)
   - [Mes derniers conseils pour la suite](#mes-derniers-conseils-pour-la-suite)
 - [Merci !](#merci-)
-
-## Objectifs
-
-- Définir les modalités d'évaluation pour l'unité d'enseignement ProgServ2.
-- Expliquer les critères d'évaluation.
-- Présenter les méthodes d'évaluation utilisées.
 
 ## Retrospective
 

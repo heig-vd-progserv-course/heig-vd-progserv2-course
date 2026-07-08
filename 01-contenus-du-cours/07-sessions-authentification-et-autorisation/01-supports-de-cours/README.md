@@ -5,22 +5,56 @@ L. Delafontaine, avec l'aide de
 
 Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-## Ressources annexes
-
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu](..)
-- Autres formes du support de cours :
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/05.01-sessions-authentification-et-autorisation/01-supports-de-cours/index.html)
-  ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/05.01-sessions-authentification-et-autorisation/01-supports-de-cours/05.01-sessions-authentification-et-autorisation-presentation.pdf)
-- Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
-- Exercices : [Lien vers le contenu](../03-exercices/README.md)
+> [!TIP]
+>
+> Voici quelques informations relatives à ce contenu.
+>
+> **Ressources annexes**
+>
+> - Autres formats :
+>   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/05.01-sessions-authentification-et-autorisation/01-supports-de-cours/index.html)
+>   ·
+>   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/05.01-sessions-authentification-et-autorisation/01-supports-de-cours/05.01-sessions-authentification-et-autorisation-presentation.pdf)
+> - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
+> - Exercices : [Lien vers le contenu](../03-exercices/README.md)
+>
+> **Objectifs**
+>
+> - Utiliser les sessions pour stocker des informations utilisateur.
+> - Différencier les sessions et les cookies.
+> - Implémenter l'authentification des utilisateur.trices à l'aide de sessions.
+> - Gérer l'autorisation des utilisateur.trices en fonction de leurs rôles.
+>
+> **Méthodes d'enseignement et d'apprentissage**
+>
+> Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
+> sont les suivantes :
+>
+> - Présentation magistrale.
+> - Discussions collectives.
+> - Travail en autonomie.
+>
+> **Méthodes d'évaluation**
+>
+> L'évaluation prend la forme d'exercices à réaliser en autonomie en classe ou à
+> la maison.
+>
+> L'évaluation se fait en utilisant les critères suivants :
+>
+> - Capacité à s'approprier des exemples de code.
+> - Capacité à appliquer les exemples de code à des situations similaires.
+> - Capacité à répondre avec justesse.
+> - Capacité à argumenter.
+>
+> Les retours se font de la manière suivante :
+>
+> - Corrigé des exercices.
+>
+> L'évaluation ne donne pas lieu à une note.
 
 ## Table des matières
 
-- [Ressources annexes](#ressources-annexes)
 - [Table des matières](#table-des-matières)
-- [Objectifs](#objectifs)
 - [Les sessions](#les-sessions)
   - [Démarrer une session en PHP](#démarrer-une-session-en-php)
   - [Récupérer des informations de session en PHP](#récupérer-des-informations-de-session-en-php)
@@ -35,13 +69,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Conclusion](#conclusion)
 - [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
-
-## Objectifs
-
-- Utiliser les sessions pour stocker des informations utilisateur.
-- Différencier les sessions et les cookies.
-- Implémenter l'authentification des utilisateur.trices à l'aide de sessions.
-- Gérer l'autorisation des utilisateur.trices en fonction de leurs rôles.
+- [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
 
 ## Les sessions
 
@@ -470,6 +498,16 @@ Nous vous invitons ensuite à réaliser les exercices du cours afin de mettre en
 pratique les concepts abordés.
 
 Vous trouverez les exercices ici : [Exercices](../03-exercices/README.md).
+
+## À faire pour la semaine suivante
+
+Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
+il est recommandé pour le cours suivant de :
+
+- Relire les supports de cours si nécessaire.
+- Finaliser l'appropriation des exemples de code qui n'ont pas été vus en
+  classe.
+- Finaliser les exercices qui n'ont pas été terminés en classe.
 
 [licence]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md

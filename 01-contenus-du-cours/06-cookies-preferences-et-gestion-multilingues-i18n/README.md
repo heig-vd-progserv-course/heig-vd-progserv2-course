@@ -16,8 +16,8 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Objectifs
 
-- Déployer une application web PHP sur un serveur web.
-- Configurer un environnement de production sécurisé.
+- Utiliser les cookies pour stocker les préférences des utilisateurs.
+- Implémenter la gestion multilingue (i18n) dans une application web PHP.
 
 ## Méthodes d'enseignement et d'apprentissage
 
@@ -45,16 +45,6 @@ Les retours se font de la manière suivante :
 - Corrigé des exercices.
 
 L'évaluation ne donne pas lieu à une note.
-
-## À faire pour la semaine suivante
-
-Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour le cours suivant de :
-
-- Relire les supports de cours si nécessaire.
-- Finaliser l'appropriation des exemples de code qui n'ont pas été vus en
-  classe.
-- Finaliser les exercices qui n'ont pas été terminés en classe.
 
 [licence]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md

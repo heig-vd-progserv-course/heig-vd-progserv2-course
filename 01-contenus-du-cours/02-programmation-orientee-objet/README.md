@@ -1,4 +1,4 @@
-# Programmation orientée objet (avancé)
+# Bases de données et PDO (avancé)
 
 L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).
@@ -8,17 +8,19 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Ressources annexes
 
 - Supports de cours : [Lien vers le contenu](./01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.02-programmation-orientee-objet-avance/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01.02-programmation-orientee-objet-avance/01-supports-de-cours/01.02-programmation-orientee-objet-avance-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/02.01-bases-de-donnees-et-pdo-avance-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](./02-exemples-de-code/)
 - Exercices : [Lien vers le contenu](./03-exercices/README.md)
 
 ## Objectifs
 
-- Rappeler les concepts de base de la programmation orientée objet.
-- Appliquer les notions d'interface, d'héritage et d'abstraction avec la
-  programmation orientée objet.
+- Rappeler les concepts de base des formulaires HTML, validation et sécurité.
+- Utiliser PDO pour interagir avec une base de données MySQL/MariaDB.
+- Utiliser les exceptions pour la gestion des erreurs en PHP.
+- Utiliser les fichiers de configuration pour stocker les paramètres de
+  connexion à la base de données.
 
 ## Méthodes d'enseignement et d'apprentissage
 
@@ -46,16 +48,6 @@ Les retours se font de la manière suivante :
 - Corrigé des exercices.
 
 L'évaluation ne donne pas lieu à une note.
-
-## À faire pour la semaine suivante
-
-Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour le cours suivant de :
-
-- Relire les supports de cours si nécessaire.
-- Finaliser l'appropriation des exemples de code qui n'ont pas été vus en
-  classe.
-- Finaliser les exercices qui n'ont pas été terminés en classe.
 
 [licence]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md

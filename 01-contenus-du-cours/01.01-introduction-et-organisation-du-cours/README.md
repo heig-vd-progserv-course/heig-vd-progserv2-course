@@ -24,12 +24,5 @@ sont les suivantes :
 
 Il n'y a pas d'évaluation formelle pour ce cours.
 
-## À faire pour la semaine suivante
-
-Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour le cours suivant de :
-
-- Relire les supports de cours si nécessaire.
-
 [licence]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
