@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Projet libre
 description: Projet libre pour l'unité d'enseignement ProgServ2 enseigné à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-ProgServ2-course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/index.html
+url: https://heig-vd-progserv-course.github.io/heig-vd-ProgServ2-course/02-evaluations/02-projet-libre/presentation.html
 header: "**Projet libre**"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
 headingDivider: 6
@@ -69,74 +69,7 @@ consultez le [support de cours][cours]._
 
 ## Critères d'évaluation
 
-Sur la base de critères bien définis et d'une échelle à trois points :
-
-- 0 point - Le travail est manquant, hors sujet ou montre une compréhension très
-  limitée du sujet.
-- 1 point - Le travail montre une compréhension partielle : certains éléments
-  clés sont manquants, peu clairs ou mal mis en œuvre.
-- 2 points - Le travail est complet, précis et montre une compréhension claire
-  et approfondie du sujet.
-
-$\text{Note du projet} =\frac{\text{Nombre de points obtenus}}{\text{Nombre de points totaux}} * 5 + 1$
-
-## Contraintes (1/2)
-
-- Toute l'équipe doit contribuer au projet. Dans des cas exceptionnels,
-  l'appréciation peut être individuelle.
-- Le projet respecte le cahier des charges initial.
-- Le projet doit être terminé et remis selon les instructions indiquées dans la
-  section [Soumission](#soumission-12).
-- Le projet est réalisé en PHP, avec une base de données MySQL/MariaDB, sans
-  utiliser de frameworks externes.
-- Le projet doit respecter les bonnes pratiques étudiées et acquises jusqu'ici.
-  Voir
-  [Programmation serveur 1 (ProgServ1)](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main).
-
-## Contraintes (2/2)
-
-- Vous devez indiquer vos sources si vous avez utilisé des éléments dont vous
-  n'êtes pas l'auteur.trice. Vous devez également indiquer dans votre rapport
-  final à quelles fins vous avez utilisé la ou les sources/outils.
-- Le plagiat entraîne la note de 1. Si plusieurs groupes sont impliqués, tous
-  les groupes impliqués recevront une note de 1.
-
-Le non-respect de ces contraintes peut entraîner des sanctions sévères, et ce,
-**pour chaque critère non respecté**.
-
-## Soumission (1/2)
-
-Les dates de rendu de votre projet sont les suivantes :
-
-- ProgServ2-A (mardi matin) : **21.12.2025 12h00**.
-- ProgServ2-B (mardi après-midi) : **21.12.2025 16h15**.
-
-## Soumission (2/2)
-
-Un e-mail doit être envoyé à
-[`ludovic.delafontaine@heig-vd.ch`](mailto:ludovic.delafontaine@heig-vd.ch)
-contenant une archive ZIP ou le lien vers un dépôt Git contenant :
-
-- Le code source de votre projet.
-- Le rapport contenant le cahier des charges et une conclusion au format PDF,
-  comme indiqué dans la section [Validation de l'idée](#validation-de-lidée).
-
-Tou.tes les membres du groupe sont mis.es en copie du mail.
-
-**Chaque 24h de retard (dès une (1) minute après l'heure de rendu) entraînera
-une pénalité de -1 point sur la note finale.**
-
-## Notes et retours
-
-Les notes seront saisies dans GAPS, puis envoyées par e-mail avec les retours.
-
-L'évaluation utilisera exactement la même grille de notation que celle indiquée
-dans le [support de cours][cours].
-
-Chaque critère sera accompagné d'un commentaire expliquant les points obtenus,
-d'un commentaire général sur votre travail et de la note finale.
-
-Si vous avez des questions concernant l'évaluation, n'hésitez pas !
+Voir le [support de cours][cours] pour plus de détails.
 
 ## Conseils
 

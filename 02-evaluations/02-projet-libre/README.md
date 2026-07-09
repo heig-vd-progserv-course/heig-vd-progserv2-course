@@ -45,8 +45,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > - Un e-mail contenant la grille d'évaluation accompagnée de commentaires.
 > - Discussion des résultats et questions (sur demande).
 >
-> 🚨 **L'évaluation donne lieu à une note** (100 % de la note > totale du projet
-> / 50% de la note finale du cours).
+> 🚨 **L'évaluation donne lieu à une note** (50% de la note finale du cours).
 
 ## Table des matières
 
