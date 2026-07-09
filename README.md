@@ -32,7 +32,8 @@ multi-utilisateurs, une plateforme de réservations de concerts, etc.).
 ## ➡️ Par où commencer ?
 
 Vous ne savez pas par où commencer ? Jetez un œil à
-l'[Introduction et organisation du cours](#TODO) pour en savoir plus.
+l'[Introduction et organisation du cours](./01-contenus-du-cours/01-introduction-et-organisation-du-cours/README.md)
+pour en savoir plus.
 
 ## 📅 Programme 2026-2027
 

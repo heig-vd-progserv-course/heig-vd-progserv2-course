@@ -15,8 +15,8 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 >   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/08-sessions-authentification-et-autorisation/presentation.html)
 >   ·
 >   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/08-sessions-authentification-et-autorisation/08-sessions-authentification-et-autorisation-presentation.pdf)
-> - Exemples de code : [Lien vers le contenu](./01-exemples-de-code/)
-> - Exercices : [Lien vers le contenu](./02-exercices/README.md)
+> - Exemples de code : [Code source](./01-exemples-de-code/)
+> - Exercices : [Énoncés et solutions](./02-exercices/README.md)
 >
 > **Objectifs**
 >
