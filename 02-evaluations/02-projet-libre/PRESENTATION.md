@@ -1,0 +1,279 @@
+---
+marp: true
+---
+
+<!--
+theme: custom-marp-theme
+size: 16:9
+paginate: true
+author: L. Delafontaine, avec l'aide de GitHub Copilot
+title: HEIG-VD ProgServ2 Course - Projet libre
+description: Projet libre pour l'unité d'enseignement ProgServ2 enseigné à la HEIG-VD, Suisse
+url: https://heig-vd-progserv-course.github.io/heig-vd-ProgServ2-course/02-evaluations/02-projet-libre/presentation.html
+header: "**Projet libre**"
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
+headingDivider: 6
+math: mathjax
+-->
+
+# Projet libre
+
+<!--
+_class: lead
+_paginate: false
+-->
+
+[Lien vers le cours][cours]
+
+<small>L. Delafontaine, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).</small>
+
+<small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
+
+![bg opacity:0.1][illustration-principale]
+
+## _Retrouvez plus de détails dans le support de cours_
+
+<!-- _class: lead -->
+
+_Cette présentation est un résumé du support de cours. Pour plus de détails,
+consultez le [support de cours][cours]._
+
+## Objectifs
+
+- Réaliser une application web complète, incluant une interface utilisateur, une
+  logique métier et une persistance des données.
+- Gérer correctement l'authentification et les accès aux différentes pages.
+- Déployer et accéder à l'application web depuis Internet.
+
+![bg right:40%][illustration-objectifs]
+
+## Composition des groupes
+
+- Deux (2) ou trois (3) personnes par groupe.
+- Si vous n'avez pas de partenaire, le corps enseignant vous en attribuera un.e.
+- Groupes à annoncer dans un document Google Sheets, comme décrit dans le
+  [support de cours][cours].
+
+![bg right:40%][illustration-composition-des-groupes]
+
+## Validation de l'idée
+
+- Nous pourrions vous demander de modifier votre idée si elle est trop simple ou
+  trop complexe.
+- Nous vous aiderons à trouver une bonne idée si nécessaire.
+- Un cahier des charges est attendu dans les deux premières semaines du projet
+  Les détails sont dans le [support de cours][cours].
+
+![bg right:40%][illustration-validation-de-lidee]
+
+## Critères d'évaluation
+
+Voir le [support de cours][cours] pour plus de détails.
+
+## Conseils
+
+<!-- _class: lead -->
+
+### Restez simple
+
+Évitez les fonctionnalités superflues :
+
+- N'essayez pas d'en faire trop.
+- Concentrez-vous sur l'essentiel.
+- Faites-le bien.
+
+Ne soyez pas Numérobis du film _Astérix et Obélix : Mission Cléopâtre_ !
+
+<small>Regardez la scène du film ici :
+[YouTube](https://www.youtube.com/watch?v=dEP7aEyTOf0)</small>
+
+![bg right:39%](./images/asterix-et-obelix-mission-cleopatre-porte-au-plafond.png)
+
+### Mettez en place un environnement de travail collaboratif
+
+- Utilisez des outils de gestion de projet (GitHub, Trello, etc. pour organiser
+  votre travail).
+- Assurez-vous que chaque membre du groupe a ses tâches et responsabilités.
+- Des ressources sont disponibles dans le [support de cours][cours].
+
+## Questions
+
+<!-- _class: lead -->
+
+Est-ce que vous avez des questions ?
+
+## Jalons
+
+- Réunions hebdomadaires pour discuter de l'avancement.
+- Espace pour faire le point.
+- Court et efficace (5-10 minutes) :
+  - Tour de table.
+  - Réponses aux éventuels questions/besoins.
+- Part intégrante à la note finale.
+
+![bg right:40%][illustration-jalons]
+
+### Jalon 1
+
+A faire avant le prochain cours :
+
+- ✅ Constitution et annonces des groupes.
+- ✅ Choix du projet et de ses fonctionnalités.
+- ✅ Élaboration initiale du cahier des charges (brouillon).
+
+**Ce jalon ne compte pas dans l'évaluation finale.**
+
+### Jalon 2
+
+- Tour de table - validation du travail effectué jusqu'à présent.
+- Réponses aux éventuels questions/besoins.
+
+A faire pour le prochain cours :
+
+- ✅ Finaliser le cahier des charges.
+- ✅ Mettre en place son environnement de travail collaboratif.
+- ✅ Se répartir le travail entre les différents membres du groupe.
+
+### Jalon 3
+
+- Tour de table - validation du travail effectué jusqu'à présent.
+- Réponses aux éventuels questions/besoins.
+
+A faire pour le prochain cours :
+
+- ✅ Avoir mis en place une base de données pour l'application.
+- ✅ Avoir une version déployée de l'application sur Internet.
+- ✅ Avoir commencé à implémenter les pages principales de l'application.
+
+### Jalon 4
+
+- Tour de table - validation du travail effectué jusqu'à présent.
+- Réponses aux éventuels questions/besoins.
+
+A faire pour le prochain cours :
+
+- ✅ Mettre en place la gestion multilingue à l'aide d'un cookie.
+
+### Jalon 5
+
+- Tour de table - validation du travail effectué jusqu'à présent.
+- Réponses aux éventuels questions/besoins.
+
+A faire pour le prochain cours :
+
+- ✅ Avoir commencé à mettre en place le système d'authentification.
+
+### Jalon 6
+
+- Tour de table - validation du travail effectué jusqu'à présent.
+- Réponses aux éventuels questions/besoins.
+
+A faire pour le prochain cours :
+
+- ✅ Finaliser le système d'authentification avec envoi de mails.
+
+#### ProgServ2-A (mardi matin) (1/2)
+
+|   # | Groupe                   | Heure de passage |
+| --: | :----------------------- | :--------------- |
+|   1 | Léa, Grégory (9)         | 10h30            |
+|   2 | Carla, Cindy, Steve (6)  | 10h40            |
+|   3 | Luca, Sacha, Ryad (1)    | 10h50            |
+|   4 | Luka, Nabil, Mathias (5) | 11h00            |
+|   5 | Inês, Rania (3)          | 11h10            |
+|   6 | Marc, Ana, Charline (7)  | 11h20            |
+
+#### ProgServ2-A (mardi matin) (2/2)
+
+|   # | Groupe                   | Heure de passage |
+| --: | :----------------------- | :--------------- |
+|   7 | Pierre, Raul, Romain (2) | 11h30            |
+|   8 | Lilou, Aissya (8)        | 11h40            |
+|   9 | Matteo, Ella, Aïdan (4)  | 11h50            |
+
+#### ProgServ2-B (mardi après-midi) (1/2)
+
+|   # | Groupe                    | Heure de passage |
+| --: | :------------------------ | :--------------- |
+|   1 | Loann, Elia, Marike (9)   | 14h45            |
+|   2 | Etienne, Teicir (7)       | 14h55            |
+|   3 | Sarah, Sasita, Enya (1)   | 15h05            |
+|   4 | Chloé, Benoît, Camilo (6) | 15h15            |
+|   5 | Inoé, Léa, Yannis (8)     | 15h25            |
+|   6 | Dylan, Valentin (4)       | 15h35            |
+
+#### ProgServ2-B (mardi après-midi) (2/2)
+
+|   # | Groupe                        | Heure de passage |
+| --: | :---------------------------- | :--------------- |
+|   7 | Gabriel, Nuno, Tanguy (2)     | 15h45            |
+|   8 | Christophe, Loic, Loriane (5) | 15h55            |
+|   9 | Thierry, Lilliana (3)         | 16h05            |
+
+### Jalon 7
+
+- Tour de table - validation du travail effectué jusqu'à présent.
+- Réponses aux éventuels questions/besoins.
+- S'assurer que tout le monde a bien tout ce qu'il lui faut pour finaliser le
+  projet.
+
+A faire pour le prochain cours :
+
+- ✅ Arriver gentiment au bout de l'application.
+- ✅ Réviser pour l'évaluation.
+
+### Jalon 8
+
+- Réponses aux éventuels questions/besoins.
+- S'assurer que tout le monde a bien tout ce qu'il lui faut pour finaliser le
+  projet.
+
+A faire pour le rendu final :
+
+- ✅ Avoir terminé l'application.
+- ✅ Rendre le projet en respectant la forme du rendu final.
+
+**Ce jalon ne compte pas dans l'évaluation finale.**
+
+## Sources
+
+- [Illustration principale][illustration-principale] par
+  [Richard Jacobs](https://unsplash.com/@rj2747) sur
+  [Unsplash](https://unsplash.com/photos/grayscale-photo-of-elephants-drinking-water-8oenpCXktqQ)
+- [Illustration][illustration-objectifs] par
+  [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
+  [Unsplash](https://unsplash.com/photos/low-angle-view-of-ball-shoots-in-the-ring-j6brni7fpvs)
+- [Illustration][illustration-composition-des-groupes] par
+  [Nguyen Dang Hoang Nhu](https://unsplash.com/@nguyendhn) sur
+  [Unsplash](https://unsplash.com/photos/person-writing-on-white-paper-qDgTQOYk6B8)
+- [Illustration][illustration-composition-des-groupes] par
+  [Josh Calabrese](https://unsplash.com/@joshcala) sur
+  [Unsplash](https://unsplash.com/photos/five-men-riding-row-boat-Ev1XqeVL2wI)
+- [Illustration][illustration-validation-de-lidee] par
+  [Nicole Baster](https://unsplash.com/@nicolebaster) sur
+  [Unsplash](https://unsplash.com/photos/traffic-light-aGx-CFsM3fE)
+- Scène du film _Astérix et Obélix : Mission Cléopâtre (2002)_ par Alain Chabat
+- [Illustration][illustration-jalons] par
+  [Nick Fewings](https://unsplash.com/@jannerboy62) sur
+  [Unsplash](https://unsplash.com/photos/gray-spiral-staircase-with-brown-wooden-railings-0920v3yp79k)
+
+<!-- URLs -->
+
+[cours]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01.03-projet-libre-(1-sur-8)
+[license]:
+	https://github.com/heig-vd-progserv-course/heig-vd-ProgServ2-course/blob/main/LICENSE.md
+
+<!-- Illustrations -->
+
+[illustration-principale]:
+	https://images.unsplash.com/photo-1517486430290-35657bdcef51?fit=crop&h=720
+[illustration-objectifs]:
+	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
+[illustration-composition-des-groupes]:
+	https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?fit=crop&h=720
+[illustration-validation-de-lidee]:
+	https://images.unsplash.com/photo-1543075137-5a97903aaa7a?fit=crop&h=720
+[illustration-jalons]:
+	https://images.unsplash.com/photo-1617890085410-2cc61f307318?fit=crop&h=720
