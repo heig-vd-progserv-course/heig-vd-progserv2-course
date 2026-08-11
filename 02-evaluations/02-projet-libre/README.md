@@ -99,9 +99,9 @@ bloc d'information en haut de ce contenu.
 
 ## Composition des groupes
 
-Vous travaillerez en groupes de deux (2) personnes. Vous pouvez choisir votre ou
-vos partenaires. Si vous n'avez pas de partenaire, le corps enseignant vous en
-attribuera un.e.
+Vous travaillerez en groupes de deux (2) à trois (3) personnes. Vous pouvez
+choisir votre ou vos partenaires. Si vous n'avez pas de partenaire, le corps
+enseignant vous en attribuera un.e.
 
 S'il y a un nombre impair de personnes, un seul groupe de trois personnes est
 autorisé. Si plusieurs personnes veulent former des groupes de trois, un seul
@@ -109,7 +109,7 @@ groupe final sera tiré au sort et les personnes restantes devront former des
 groupes de deux.
 
 Pour annoncer votre groupe, remplissez le document suivant :
-[[ProgServ2 2026-2027] Composition des groupes](#TODO).
+[[ProgServ2 2026-2027] Composition des groupes](https://docs.google.com/spreadsheets/d/1eM__51AeuMM1oUo9dBEKmrTcozjE77lGYfLypIWGv1A/edit?usp=sharing).
 
 ## Validation de l'idée
 
@@ -148,7 +148,30 @@ le lien vers le dépôt GitHub contenant le cahier des charges initial.
 Une application web complète avec PHP, incluant une interface utilisateur, une
 logique métier et une persistance des données dans une base de données
 MySQL/MariaDB, déployée sur Internet en utilisant toutes les bonnes pratiques
-étudiées et acquises jusqu'ici dans le cursus de formation.
+étudiées et acquises dans ce cours et jusqu'ici dans le cursus de formation.
+
+Le tout devra être rendu sur un dépôt GitHub et sera évalué selon les critères
+décrits ci-dessous.
+
+Nous vous avons mis un template de projet sur GitHub pour vous aider à démarrer.
+Vous pouvez le trouver ici :
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course-php-template>.
+
+A l'aide du bouton "Use this template" (ou "Utiliser ce modèle" en français) en
+haut à droite de la page, vous pouvez créer un nouveau dépôt GitHub pour votre
+projet libre sur le compte GitHub d'une des personnes de votre groupe.
+
+Invitez ensuite les autres membres de votre groupe à collaborer sur ce dépôt
+GitHub.
+
+Chaque membre du groupe pourra ensuite cloner ce dépôt sur sa machine locale et
+commencer à travailler dessus à l'aide du processus de développement GitHub que
+vous avez acquis dans les précédents cours.
+
+Prenez le temps de bien lire le fichier `README.md` du template de projet pour
+avoir toutes les informations nécessaires pour démarrer votre projet libre. Vous
+pouvez modifier ce document comme vous le souhaitez pour l'adapter à votre
+projet.
 
 ## Présentation du projet
 
@@ -211,17 +234,17 @@ se déroulera de la manière suivante :
    - Ses besoins éventuels en termes de soutien.
 2. Réponses aux éventuels questions/besoins.
 
-|   # | Critère                                                                                                                          | Rendu(s) attendu(s)                                                                                                                                                         | Délai     |
-| --: | :------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------- |
-|   1 | Le cahier des charges initial est complet et reflète les fonctionnalités principales de l'application.                           | La ou les PRs qui implémentent le document Markdown du cahier des charges initial.                                                                                          | Séance 2  |
-|   2 | Une maquette de l'interface utilisateur est fournie et reflète les fonctionnalités principales de l'application.                 | La ou les PRs qui implémentent la maquette de l'interface utilisateur (lien Figma, document PDF ou autre).                                                                  | Séance 3  |
-|   3 | Le schéma de la base de données comporte au moins trois (3) tables et reflète les relations entre les différentes entités.       | La ou les PRs qui implémentent le modèle logique (MLD), le modèle conceptuel (MCD) et le modèle physique (MPD) de la base de données (diagrammes PNG, JPEG, SVG ou autre)   | Séance 4  |
-|   4 | L'application est déployée et est accessible sur Internet (à l'aide d'Infomaniak avec une base de données MySQL/MariaDB dédiée). | La ou les PRs qui implémentent le déploiement et l'URL pour accéder à l'application avec interaction avec la base de données (instructions de déploiement et lien d'accès). | Séance 5  |
-|   5 | L'application utilise correctement les mécanismes de la programmation orientée objet.                                            | La ou les PRs qui implémentent la POO et le code source de l'application.                                                                                                   | Séance 6  |
-|   6 | L'application est entièrement protégée des attaques courantes (par exemple : injection SQL, XSS, etc.).                          | La ou les PRs qui implémentent la sécurité et le code source de l'application.                                                                                              | Séance 7  |
-|   7 | La gestion multilingue (i18n) est implémentée et fonctionne correctement.                                                        | La ou les PRs qui implémentent la gestion multilingue et le code source de l'application.                                                                                   | Séance 8  |
-|   8 | La gestion des sessions, de l'authentification et de l'autorisation est implémentée et fonctionne correctement.                  | La ou les PRs qui implémentent la gestion des sessions, de l'authentification et de l'autorisation et le code source de l'application.                                      | Séance 9  |
-|   9 | Les e-mails sont correctement envoyés depuis l'application.                                                                      | La ou les PRs qui implémentent l'envoi d'e-mails et le code source de l'application.                                                                                        | Séance 10 |
+|   # | Critère                                                                                                                              | Rendu(s) attendu(s)                                                                                                                                                         | Délai     |
+| --: | :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------- |
+|   1 | Le cahier des charges initial est complet et reflète les fonctionnalités principales de l'application.                               | La ou les PRs qui implémentent le document Markdown du cahier des charges initial.                                                                                          | Séance 2  |
+|   2 | Une maquette de l'interface utilisateur est fournie et reflète les fonctionnalités principales de l'application.                     | La ou les PRs qui implémentent la maquette de l'interface utilisateur (lien Figma, document PDF ou autre).                                                                  | Séance 3  |
+|   3 | Le schéma de la base de données comporte au moins trois (3) tables et reflète les relations entre les différentes entités.           | La ou les PRs qui implémentent le modèle logique (MLD), le modèle conceptuel (MCD) et le modèle physique (MPD) de la base de données (diagrammes PNG, JPEG, SVG ou autre)   | Séance 4  |
+|   4 | L'application est déployée et est accessible sur Internet (à l'aide d'Infomaniak avec une base de données MySQL/MariaDB dédiée).     | La ou les PRs qui implémentent le déploiement et l'URL pour accéder à l'application avec interaction avec la base de données (instructions de déploiement et lien d'accès). | Séance 5  |
+|   5 | L'application utilise correctement les mécanismes de la programmation orientée objet dans tous les aspects de l'application.         | La ou les PRs qui implémentent la POO et le code source de l'application.                                                                                                   | Séance 6  |
+|   6 | L'application est entièrement protégée des attaques courantes (par exemple : injection SQL, XSS, etc.).                              | La ou les PRs qui implémentent la sécurité et le code source de l'application.                                                                                              | Séance 7  |
+|   7 | La gestion multilingue (i18n) est implémentée et fonctionne correctement sur toutes les pages.                                       | La ou les PRs qui implémentent la gestion multilingue et le code source de l'application.                                                                                   | Séance 8  |
+|   8 | La gestion des sessions, de l'authentification et de l'autorisation est implémentée et fonctionne correctement sur toutes les pages. | La ou les PRs qui implémentent la gestion des sessions, de l'authentification et de l'autorisation et le code source de l'application.                                      | Séance 9  |
+|   9 | Les e-mails sont correctement envoyés depuis l'application.                                                                          | La ou les PRs qui implémentent l'envoi d'e-mails et le code source de l'application.                                                                                        | Séance 10 |
 
 ### Présentation finale du projet
 
@@ -381,7 +404,8 @@ améliorez/rajoutez de nouvelles choses ensuite.
 - Concentrez-vous sur l'essentiel.
 - Faites-le bien.
 
-Ne soyez pas Numérobis du film _Astérix et Obélix : Mission Cléopâtre_ !
+Ne soyez pas Numérobis du film _Astérix et Obélix : Mission Cléopâtre_ (voir la
+scène du film ici : [YouTube](https://www.youtube.com/watch?v=dEP7aEyTOf0)) !
 
 ### Mettez en place un environnement de travail collaboratif
 

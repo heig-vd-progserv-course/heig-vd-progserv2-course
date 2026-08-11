@@ -118,6 +118,6 @@ Ce type de justification est acceptable.
 
 De notre expérience, les personnes qui n'utilisent pas d'outils d'intelligence
 artificielle pour faire leur travail sont généralement celles qui ont une bonne
-compréhension du code qu'elles écrivent et de son fonctionnement, et qui sont
-capables de l'expliquer et de le maintenir par la suite et obtiennent de
-meilleurs résultats.
+compréhension du code qu'elles écrivent et de son fonctionnement. De plus, elles
+sont capables de l'expliquer et de le maintenir par la suite. Ces personnes
+obtiennent généralement de meilleurs résultats.

@@ -1,4 +1,4 @@
-# Bases de données MySQL/MariaDB et déploiement - Exemples de code
+# Réutiliser des parties d'interface - Exemples de code
 
 L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).

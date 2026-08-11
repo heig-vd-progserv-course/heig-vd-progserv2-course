@@ -67,7 +67,26 @@ consultez le [support de cours][cours]._
 
 ![bg right:40%][illustration-validation-de-lidee]
 
-## Critères d'évaluation
+## Travail à réaliser
+
+- Une application web complète avec PHP, incluant une interface utilisateur, une
+  logique métier et une persistance des données.
+- Rendu sur un dépôt GitHub avec un README détaillé.
+- Un template vous est fourni pour vous aider à démarrer, mais vous êtes libre
+  de l'adapter à vos besoins.
+
+![bg right:40%][illustration-principale]
+
+## Présentation du projet
+
+- Une présentation de votre projet sera faite devant le corps enseignant.
+- Tous les membres du groupe doivent participer à la présentation.
+
+![bg right:40%][illustration-principale]
+
+## Échelle d'évaluation, grilles d'évaluation, contraintes, soumission et notes et retours
+
+<!-- _class: lead -->
 
 Voir le [support de cours][cours] pour plus de détails.
 
@@ -85,156 +104,22 @@ Voir le [support de cours][cours] pour plus de détails.
 
 Ne soyez pas Numérobis du film _Astérix et Obélix : Mission Cléopâtre_ !
 
-<small>Regardez la scène du film ici :
+<small>Voir la scène du film ici :
 [YouTube](https://www.youtube.com/watch?v=dEP7aEyTOf0)</small>
 
 ![bg right:39%](./images/asterix-et-obelix-mission-cleopatre-porte-au-plafond.png)
 
 ### Mettez en place un environnement de travail collaboratif
 
-- Utilisez des outils de gestion de projet (GitHub, Trello, etc. pour organiser
-  votre travail).
+- Utilisez des outils de gestion de projet (GitHub, Trello, etc.) pour organiser
+  votre travail.
 - Assurez-vous que chaque membre du groupe a ses tâches et responsabilités.
-- Des ressources sont disponibles dans le [support de cours][cours].
 
 ## Questions
 
 <!-- _class: lead -->
 
 Est-ce que vous avez des questions ?
-
-## Jalons
-
-- Réunions hebdomadaires pour discuter de l'avancement.
-- Espace pour faire le point.
-- Court et efficace (5-10 minutes) :
-  - Tour de table.
-  - Réponses aux éventuels questions/besoins.
-- Part intégrante à la note finale.
-
-![bg right:40%][illustration-jalons]
-
-### Jalon 1
-
-A faire avant le prochain cours :
-
-- ✅ Constitution et annonces des groupes.
-- ✅ Choix du projet et de ses fonctionnalités.
-- ✅ Élaboration initiale du cahier des charges (brouillon).
-
-**Ce jalon ne compte pas dans l'évaluation finale.**
-
-### Jalon 2
-
-- Tour de table - validation du travail effectué jusqu'à présent.
-- Réponses aux éventuels questions/besoins.
-
-A faire pour le prochain cours :
-
-- ✅ Finaliser le cahier des charges.
-- ✅ Mettre en place son environnement de travail collaboratif.
-- ✅ Se répartir le travail entre les différents membres du groupe.
-
-### Jalon 3
-
-- Tour de table - validation du travail effectué jusqu'à présent.
-- Réponses aux éventuels questions/besoins.
-
-A faire pour le prochain cours :
-
-- ✅ Avoir mis en place une base de données pour l'application.
-- ✅ Avoir une version déployée de l'application sur Internet.
-- ✅ Avoir commencé à implémenter les pages principales de l'application.
-
-### Jalon 4
-
-- Tour de table - validation du travail effectué jusqu'à présent.
-- Réponses aux éventuels questions/besoins.
-
-A faire pour le prochain cours :
-
-- ✅ Mettre en place la gestion multilingue à l'aide d'un cookie.
-
-### Jalon 5
-
-- Tour de table - validation du travail effectué jusqu'à présent.
-- Réponses aux éventuels questions/besoins.
-
-A faire pour le prochain cours :
-
-- ✅ Avoir commencé à mettre en place le système d'authentification.
-
-### Jalon 6
-
-- Tour de table - validation du travail effectué jusqu'à présent.
-- Réponses aux éventuels questions/besoins.
-
-A faire pour le prochain cours :
-
-- ✅ Finaliser le système d'authentification avec envoi de mails.
-
-#### ProgServ2-A (mardi matin) (1/2)
-
-|   # | Groupe                   | Heure de passage |
-| --: | :----------------------- | :--------------- |
-|   1 | Léa, Grégory (9)         | 10h30            |
-|   2 | Carla, Cindy, Steve (6)  | 10h40            |
-|   3 | Luca, Sacha, Ryad (1)    | 10h50            |
-|   4 | Luka, Nabil, Mathias (5) | 11h00            |
-|   5 | Inês, Rania (3)          | 11h10            |
-|   6 | Marc, Ana, Charline (7)  | 11h20            |
-
-#### ProgServ2-A (mardi matin) (2/2)
-
-|   # | Groupe                   | Heure de passage |
-| --: | :----------------------- | :--------------- |
-|   7 | Pierre, Raul, Romain (2) | 11h30            |
-|   8 | Lilou, Aissya (8)        | 11h40            |
-|   9 | Matteo, Ella, Aïdan (4)  | 11h50            |
-
-#### ProgServ2-B (mardi après-midi) (1/2)
-
-|   # | Groupe                    | Heure de passage |
-| --: | :------------------------ | :--------------- |
-|   1 | Loann, Elia, Marike (9)   | 14h45            |
-|   2 | Etienne, Teicir (7)       | 14h55            |
-|   3 | Sarah, Sasita, Enya (1)   | 15h05            |
-|   4 | Chloé, Benoît, Camilo (6) | 15h15            |
-|   5 | Inoé, Léa, Yannis (8)     | 15h25            |
-|   6 | Dylan, Valentin (4)       | 15h35            |
-
-#### ProgServ2-B (mardi après-midi) (2/2)
-
-|   # | Groupe                        | Heure de passage |
-| --: | :---------------------------- | :--------------- |
-|   7 | Gabriel, Nuno, Tanguy (2)     | 15h45            |
-|   8 | Christophe, Loic, Loriane (5) | 15h55            |
-|   9 | Thierry, Lilliana (3)         | 16h05            |
-
-### Jalon 7
-
-- Tour de table - validation du travail effectué jusqu'à présent.
-- Réponses aux éventuels questions/besoins.
-- S'assurer que tout le monde a bien tout ce qu'il lui faut pour finaliser le
-  projet.
-
-A faire pour le prochain cours :
-
-- ✅ Arriver gentiment au bout de l'application.
-- ✅ Réviser pour l'évaluation.
-
-### Jalon 8
-
-- Réponses aux éventuels questions/besoins.
-- S'assurer que tout le monde a bien tout ce qu'il lui faut pour finaliser le
-  projet.
-
-A faire pour le rendu final :
-
-- ✅ Avoir terminé l'application.
-- ✅ Rendre le projet en respectant la forme du rendu final.
-
-**Ce jalon ne compte pas dans l'évaluation finale.**
 
 ## Sources
 
