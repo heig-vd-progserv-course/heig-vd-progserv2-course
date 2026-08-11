@@ -7,29 +7,10 @@ $pets = [];
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
-
-    <title>Page d'accueil | ninetendogs</title>
-    <meta name="description" content="ninetendogs - Gestionnaire d'animaux de compagnie">
-</head>
+<?php require_once __DIR__ . '/../views/head.php'; ?>
 
 <body class="container">
-    <header>
-        <nav>
-            <ul>
-                <li><strong>ninetendogs</strong></li>
-            </ul>
-            <ul>
-                <li><a href="./index.php">Accueil</a></li>
-                <li><a href="./create.php">Nouvel animal</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php require_once __DIR__ . '/../views/header.php'; ?>
     <main>
         <center>
             <div class="logo">
@@ -74,13 +55,7 @@ $pets = [];
             </table>
         </div>
     </main>
-    <footer>
-        <center>
-            <small>
-                Un projet réalisé dans le cadre du cours <a href="https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course">ProgServ1</a> enseigné à la <a href="https://heig-vd.ch">HEIG-VD</a>.
-            </small>
-        </center>
-    </footer>
+    <?php require_once __DIR__ . '/../views/footer.php'; ?>
 </body>
 
 </html>

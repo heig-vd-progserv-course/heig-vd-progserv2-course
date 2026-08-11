@@ -58,7 +58,8 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Inclusion de fichiers](#inclusion-de-fichiers)
 - [Structure des pages web avec PHP](#structure-des-pages-web-avec-php)
 - [Réutiliser des parties d'interface](#réutiliser-des-parties-dinterface-1)
-  - [Structure des fichiers](#structure-des-fichiers)
+  - [Structure initiale d'une page web](#structure-initiale-dune-page-web)
+  - [Structurer les fichiers](#structurer-les-fichiers)
   - [Sortir les parties communes dans des fichiers séparés](#sortir-les-parties-communes-dans-des-fichiers-séparés)
   - [Inclure les fichiers dans les pages web](#inclure-les-fichiers-dans-les-pages-web)
   - [Créer des composants réutilisables](#créer-des-composants-réutilisables)
@@ -352,7 +353,122 @@ dans toutes les pages web qui incluent ce fichier.
 Maintenant que nous avons sorti les parties communes dans des fichiers séparés,
 nous allons les inclure dans chaque page web.
 
+Pour cela, nous allons utiliser la fonction `require_once` pour inclure les
+fichiers dans chaque page web.
+
+Par exemple, dans le fichier `index.php`, nous allons inclure les fichiers
+`head.php`, `header.php` et `footer.php` de la manière suivante :
+
+> [!NOTE]
+>
+> Pour rappel, l'affichage ci-dessous est un "git diff" qui montre les
+> modifications à apporter au fichier `index.php` pour inclure les fichiers
+> d'interface. Les lignes précédées d'un signe `-` sont à supprimer, et celles
+> précédées d'un signe `+` sont à ajouter.
+
+```diff
+diff --git a/public/index.php b/public/index.php
+index f988025..edddce8 100644
+--- a/public/index.php
++++ b/public/index.php
+@@ -7,29 +7,10 @@ $pets = [];
+ <!DOCTYPE html>
+ <html lang="fr">
+
+-<head>
+-    <meta charset="utf-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1">
+-    <meta name="color-scheme" content="light dark">
+-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+-    <link rel="stylesheet" href="./css/styles.css">
+-
+-    <title>Page d'accueil | ninetendogs</title>
+-    <meta name="description" content="ninetendogs - Gestionnaire d'animaux de compagnie">
+-</head>
++<?php require_once __DIR__ . '/../views/head.php'; ?>
+
+ <body class="container">
+-    <header>
+-        <nav>
+-            <ul>
+-                <li><strong>ninetendogs</strong></li>
+-            </ul>
+-            <ul>
+-                <li><a href="./index.php">Accueil</a></li>
+-                <li><a href="./create.php">Nouvel animal</a></li>
+-            </ul>
+-        </nav>
+-    </header>
++    <?php require_once __DIR__ . '/../views/header.php'; ?>
+     <main>
+         <center>
+             <div class="logo">
+@@ -74,13 +55,7 @@ $pets = [];
+             </table>
+         </div>
+     </main>
+-    <footer>
+-        <center>
+-            <small>
+-                Un projet réalisé dans le cadre du cours <a href="https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course">ProgServ1</a> enseigné à
+la <a href="https://heig-vd.ch">HEIG-VD</a>.
+-            </small>
+-        </center>
+-    </footer>
++    <?php require_once __DIR__ . '/../views/footer.php'; ?>
+ </body>
+
+ </html>
+```
+
+Ici, toutes les parties communes ont été remplacées par des inclusions de
+fichiers, ce qui rend le code plus lisible et plus maintenable. Si nous voulons
+modifier l'en-tête ou le pied de page, il suffit de le faire dans les fichiers
+`header.php` et `footer.php`, et les modifications seront automatiquement
+répercutées dans toutes les pages web qui incluent ces fichiers.
+
+De même avec le bloc `<head>`, si nous voulons modifier les métadonnées ou les
+liens vers les fichiers CSS, il suffit de le faire dans le fichier `head.php`,
+et les modifications seront automatiquement répercutées dans toutes les pages
+web qui incluent ce fichier.
+
+Avec les modifications apportées, nous avons maintenant une structure de
+fichiers plus claire et organisée, et nous avons réutilisé les parties communes
+dans plusieurs pages web.
+
+Par contre, le titre de la page est toujours statique et ne change pas en
+fonction de la page web. Il serait donc possible de rendre le titre dynamique en
+utilisant une variable PHP.
+
 ### Créer des composants réutilisables
+
+Avec cette nouvelle structure de fichiers, nous avons maintenant la possibilité
+de créer des composants réutilisables pour notre application web.
+
+Si nous modifions le fichier `head.php` pour utiliser une variable PHP pour le
+titre de la page, nous pourrions avoir quelque chose comme ceci :
+
+```php
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title><?= $title ?? 'ninetendogs' ?></title>
+    <meta name="description" content="<?= $description ?? "ninetendogs - Gestionnaire d'animaux de compagnie" ?>">
+</head>
+```
+
+Ici, deux variables PHP `$title` et `$description` sont utilisées pour définir
+le titre et la description de la page. Si ces variables ne sont pas définies,
+des valeurs par défaut sont utilisées grâce à l'opérateur `??` (voir
+[documentation PHP](hhttps://www.php.net/manual/en/language.operators.comparison.php)).
+
+Si ces variables sont définies dans le fichier PHP qui inclut le fichier
+`head.php`, elles seront utilisées pour définir le titre et la description de la
+page. Sinon, les valeurs par défaut seront utilisées.
 
 ## Exemples de code
 
