@@ -53,7 +53,7 @@ consultez le [support de cours][cours]._
 
 - Utiliser la bibliothèque PHPMailer pour envoyer des e-mails en PHP.
 
-**Il s'agit du dernier cours théorique du cours _"Programmation Serveur 2
+**Il s'agit du dernier cours théorique du cours _"Programmation serveur 2
 (ProgServ2)"_.**
 
 ![bg right:40%][illustration-objectifs]

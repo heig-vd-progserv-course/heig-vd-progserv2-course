@@ -1,4 +1,4 @@
-# Bases de données MySQL/MariaDB et déploiement - Exercices
+# Réutiliser des parties d'interface - Exercices
 
 L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).
