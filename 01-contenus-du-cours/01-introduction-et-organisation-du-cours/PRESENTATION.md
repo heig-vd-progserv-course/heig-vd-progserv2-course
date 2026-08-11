@@ -7,16 +7,16 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
-title: HEIG-VD ProgServ2 Course - Modalités de l'unité d'enseignement
-description: Modalités de l'unité d'enseignement pour l'unité d'enseignement ProgServ2 enseigné à la HEIG-VD, Suisse
+title: HEIG-VD ProgServ2 Course - Introduction et organisation du cours
+description: Introduction et organisation du cours pour le cours ProgServ2 enseigné à la HEIG-VD, Suisse
 url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/01-introduction-et-organisation-du-cours/presentation.html
-header: "[**Modalités de l'unité d'enseignement**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/01-introduction-et-organisation-du-cours/README.md)"
+header: "[**Introduction et organisation du cours**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/01-introduction-et-organisation-du-cours/README.md)"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
 headingDivider: 6
 math: mathjax
 -->
 
-# Modalités de l'unité d'enseignement
+# Introduction et organisation du cours
 
 <!--
 _class: lead
@@ -32,20 +32,49 @@ _paginate: false
 
 ![bg opacity:0.1][illustration-principale]
 
-## Bienvenue à l'unité d'enseignement Programmation serveur 2 (ProgServ2) !
+## Bienvenue au cours Programmation serveur 2 (ProgServ2) !
 
 <!-- _class: lead -->
 
 ## Qui suis-je
 
+<div class="one-third-two-thirds-columns">
 <div class="center">
+
+**Ludovic  
+Delafontaine**
 
 <img src="https://avatars.githubusercontent.com/u/5037444?v=4" alt="Ludovic Delafontaine" width="200" class="rounded">
 
-**Ludovic Delafontaine**  
-[E-mail](mailto:ludovic.delafontaine@heig-vd.ch) ·
-[GitHub](https://github.com/ludelafo)
+[Mail](mailto:ludovic.delafontaine@heig-vd.ch) ·
+[GitHub](https://github.com/ludelafo) ·
+[LinkedIn](https://www.linkedin.com/in/ludelafo/)
 
+</div>
+<div>
+
+<small>
+
+**Parcours**
+
+- 2011-2015 : CFC en informatique @ ETML.
+- 2015-2019 : BSc en informatique @ HEIG-VD.
+- 2020-2024 : Collaborateur Ra&D @ HEIG-VD.
+- 2023-2026 : Artios + Enseignement @ HEIG-VD.
+
+**Enseignement**
+
+- [DAI](https://github.com/heig-vd-dai-course/heig-vd-dai-course) &
+  [MVP](https://github.com/heig-vd-mvp-course/heig-vd-mvp-course) @ TIC.
+- [ProgServ1](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course),
+  [ProgServ2](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course)
+  &
+  [DévProdMéd](https://github.com/heig-vd-devprodmed-course/heig-vd-devprodmed-course)
+  @ COMEM.
+
+</small>
+
+</div>
 </div>
 
 ## Mes objectifs et souhaits pour ProgServ2
@@ -65,14 +94,14 @@ enseignement.
 ## Comment me contacter
 
 Selon vos préférences, vous pouvez utiliser l'un des canaux suivants pour toutes
-questions relatives à l'unité d'enseignement :
+questions relatives au cours :
 
 - En personne, durant les sessions de cours ou en dehors.
 - Par e-mail
   ([ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch)).
 - Microsoft Teams :
-  - Dans le canal Teams de l'unité d'enseignement (de préférence - n'hésitez pas
-    à vous entraider si je ne suis pas disponible).
+  - Dans le canal Teams du cours (de préférence - n'hésitez pas à vous entraider
+    si je ne suis pas disponible).
   - Message privé sur Teams (à éviter si possible).
 
 ## _Retrouvez plus de détails dans le support de cours_
@@ -84,47 +113,41 @@ consultez le [support de cours][cours]._
 
 ## Objectifs
 
-- Lister les objectifs de l'unité d'enseignement.
-- Lister les modalités d'organisation de l'unité d'enseignement.
+- Lister les objectifs du cours.
+- Lister les modalités d'organisation du cours.
 - Lister les modalités d'évaluation.
 
 ![bg right:40%][illustration-objectifs]
 
-## Objectifs de l'unité d'enseignement (1/2)
+## Objectifs du cours (1/2)
 
-Selon la
-[fiche d'unité](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=7280),
-à la fin de cette unité d'enseignement, vous devriez être capable de :
+À la fin de ce cours, vous devriez être capable de :
 
 > - Structurer un code serveur avec les concepts de la programmation orientée
 >   objet.
 > - Mettre en place les principes de session/cookie pour gérer une
 >   authentification simple.
-> - Implémenter et déployer une application web simple multilingue.
-> - Persister les données dans une base de données centralisée.
+> - Mettre en place les principes de sécurité pour protéger une application web
+>   contre les attaques les plus courantes.
+> - Réutiliser des parties d'interface pour simplifier le développement d'une
+>   application web.
 
-## Objectifs de l'unité d'enseignement (2/2)
+## Objectifs du cours (2/2)
 
-En résumé, vous devriez être capable de :
-
-- Appliquer tous les concepts vu en
-  [Programmation serveur 1 (ProgServ1)](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
-  dans le contexte d'un projet libre.
-- Utiliser des concepts avancés de la programmation orientée objet.
-- Déployer et accéder à votre propre application en ligne et persister les
-  données dans une base de données dédiée.
-- Gérer les préférences et l'authentification des utilisateur.trices.
+> - Implémenter une application web multilingue.
+> - Déployer une application web avec une base de données dédiée.
+> - Envoyer des e-mails depuis une application web.
 
 ---
 
 <!-- _class: lead -->
 
 > Grâce à ces compétences, la personne qui étudie sera en mesure de développer
-> des applications web combinant plusieurs ressources avec une gestion des accès
+> des applications web combinant plusieurs aspects avec une gestion des accès
 > aux pages publiques et privées (par exemple, un gestionnaire de tâches
 > multi-utilisateurs, une plateforme de réservations de concerts, etc.).
 
-## Modalités d'organisation de l'unité d'enseignement
+## Modalités d'organisation du cours
 
 - En présentiel chaque semaine dans cette même salle.
 - Déroulement en quatre phases pour un meilleur apprentissage :
@@ -132,7 +155,8 @@ En résumé, vous devriez être capable de :
   - Exemples de code à explorer.
   - Exercices à faire en classe ou à la maison.
   - Projet libre à avancer en classe et à la maison.
-- Espace de discussion pour poser des questions et avoir de l'aide.
+  - Espace de discussion pour poser des questions et obtenir de l'aide (**il n'y
+    a pas de questions bêtes !**, je suis payé pour ça).
 
 ### Exemples de code
 
@@ -151,11 +175,11 @@ En résumé, vous devriez être capable de :
 
 ## Modalités d'évaluation
 
-L'unité d'enseignement sera évaluée à l'aide des éléments suivants :
+Le cours sera évaluée à l'aide des éléments suivants :
 
 - Un projet libre par groupe de deux (2) à trois (3) étudiant.es à réaliser tout
-  au long de l'unité d'enseignement.
-- Une évaluation écrite en fin d'unité d'enseignement.
+  au long du cours.
+- Une évaluation intermédiaire écrite.
 
 ![bg right:40%][illustration-modalites-devaluation]
 
@@ -165,24 +189,24 @@ L'unité d'enseignement sera évaluée à l'aide des éléments suivants :
 - Projet libre avec un cahier des charges à définir.
 - Réunions régulières pour faire le point sur l'avancement.
 - Grille d'évaluation disponible à l'avance.
+- 50% de la note finale du cours.
 
 ![bg right:40%][illustration-projet]
 
-### Évaluation écrite
+### Évaluation intermédiaire
 
-- Évaluation sur :
-  - Les connaissances théoriques acquises tout au long de l'unité
-    d'enseignement.
-  - Les exercices.
+- Évaluation sur toutes les connaissances et compétences acquises tout au long
+  du cours.
 - Durée d'environ 90 minutes.
-- Sur la plateforme d'évaluation en ligne de la HEIG-VD.
+- Papier et crayon.
 - **Aucune aide autorisée.**
+- 50% de la note finale du cours.
 
 ![bg right:40%][illustration-modalites-devaluation]
 
 ## Besoin de rafraîchissement ?
 
-L'unité d'enseignement ProgServ2 s'appuie sur les connaissances acquises en
+Le cours ProgServ2 s'appuie sur les connaissances acquises en
 [ProgServ1](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course).
 
 J'essaie de faire mon possible pour rappeler les concepts clés de cette unité
@@ -192,39 +216,101 @@ Néanmoins, si vous avez besoin d'un rafraîchissement plus approfondi, je vous
 invite à (re)voir les supports de cours de
 [ProgServ1](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course).
 
-## _"Qu'en est-il de ChatGPT, etc. ?"_ (1/3)
+## La programmation et l'anglais
+
+Le domaine de la programmation est très largement anglophone. La majorité des
+ressources que vous trouverez dans votre carrière sont en anglais.
+
+Dans le but de vous préparer à cette réalité, les exemples de code que nous
+utiliserons dans les cours seront en anglais (commentaires en français par
+contre).
+
+Le reste du cours restera néanmoins en français. Si l'anglais est une barrière
+pour vous, n'hésitez pas à me le faire savoir.
+
+## _"Qu'en est-il de ChatGPT, etc. ?"_
+
+<!-- _class: lead -->
+
+## _"Qu'en est-il de ChatGPT, etc. ?"_ (1)
 
 **Vous pouvez utiliser tous les outils que vous souhaitez** (notes personnelles,
-Internet, outils d'IA, etc.), **sauf pendant l'évaluation**. Vous pourrez les
-utiliser dans la vie réelle, alors mieux vaut apprendre à vous en servir dès
-maintenant.
+Internet, outils d'IA, etc.), **sauf pendant les évaluations** (sauf mention
+contraire). Vous pouvez les utiliser dans la vie réelle ; il serait utopique de
+ma part de vous en priver.
 
-Cependant, d'après notre expérience, ces outils ne sont pas suffisamment fiables
-pour être utilisés sans supervision. Ils peuvent vous aider, mais ils ne
-remplacent pas vos propres connaissances et compétences.
+Cependant, d'après mon expérience, **ces outils ne sont pas suffisamment
+fiables** pour être utilisés sans supervision. **Ils peuvent vous aider, mais
+ils ne remplacent pas vos propres connaissances et compétences**.
 
-## _"Qu'en est-il de ChatGPT, etc. ?"_ (2/3)
+## _"Qu'en est-il de ChatGPT, etc. ?"_ (2)
 
 Concentrez-vous sur la compréhension des concepts et des principes qui
-sous-tendent les tâches sur lesquelles vous travaillez. Une fois que vous
-maîtrisez les concepts, vous pouvez utiliser ces outils pour vous aider dans la
-mise en œuvre.
+sous-tendent les tâches sur lesquelles vous travaillez.
 
-**Votre intégrité personnelle et académique est en jeu.** Si nous avons des
-doutes sur votre travail, nous vous demanderons de nous l'expliquer. Vous
-pourriez être pénalisé si quelque chose semble suspect.
+Une fois que vous maîtrisez les concepts, vous pouvez utiliser ces outils pour
+vous aider dans la mise en œuvre.
 
-## _"Qu'en est-il de ChatGPT, etc. ?"_ (3/3)
+Au risque d'utiliser une analogie un peu vieillotte : apprenez à calculer avant
+de vouloir utiliser une calculatrice.
 
-Quelques règles concernant l'utilisation de ces outils :
+Une excellente vidéo sur le sujet :
+[_"La Fabrique à Idiots"_ - Micode](https://www.youtube.com/watch?v=4xq6bVbS-Pw).
 
-- Vous **devez être capable d'expliquer ce que vous avez fait et pourquoi vous
-  l'avez fait**.
-- Vous **devez indiquer quand vous avez utilisé une aide externe** (outils et
-  sources).
-- Vous **devez être capable de faire le travail par vous-même**. Ces outils vont
-  et viennent ($$$, fin de vie, etc.), vous ne devez pas vous y fier
-  entièrement.
+## _"Qu'en est-il de ChatGPT, etc. ?"_ (3)
+
+Quelques règles concernant l'utilisation de ces outils pour vos rendus :
+
+- Vous **devez indiquer quand, pourquoi et comment vous avez utilisé une aide
+  externe** (la raison, outils, sources, etc.), **soit dans le code, soit dans
+  un rapport annexe**.
+- Vous **devez expliquer le fonctionnement du code que vous avez utilisé**, que
+  ce soit du code généré par des outils d'intelligence artificielle ou du code
+  copié depuis des sources externes, **et comment il s'intègre dans votre
+  travail**.
+
+## _"Qu'en est-il de ChatGPT, etc. ?"_ (4)
+
+- En cas de doutes de notre part, vous pourriez être questionné.e.
+- **Si vos explications ne sont pas convaincantes, injustifiées dans le contexte
+  ou si vous n'êtes pas transparent.e sur l'utilisation de ces outils**, je
+  considère que vous n'avez pas acquis les compétences nécessaires du cours.
+  **Vous serez alors pénalisé.e avec la note 1 pour l'évaluation concernée**.
+- En cas de doutes, n'hésitez pas à me contacter pour discuter de votre
+  utilisation de ces outils.
+
+<center>
+
+**Votre intégrité personnelle et académique est en jeu**.
+
+</center>
+
+## _Qu'en est-il de ChatGPT, etc. ?"_ (5)
+
+**Tout le monde va utiliser l'AI lorsque vous sortirez de vos études.**
+
+**C'est justement grâce à un esprit critique et une bonne compréhension des
+concepts** que vous saurez utiliser efficacement les outils à disposition (AI ou
+autre) et **que vous pourrez vous démarquer des autres**.
+
+À titre personnel, je pense qu'une personne issue du monde de l'ingénierie ne
+fait bien son travail que si elle le remet en question.
+
+---
+
+<!--
+_header: ""
+_footer: ""
+_paginate: false
+-->
+
+<div class="thumbnail">
+
+[_"La Fabrique à Idiots"_ - Micode, 15.01.2026](https://www.youtube.com/watch?v=4xq6bVbS-Pw)
+
+![bg](./images/la-fabrique-a-idiots-micode.jpg)
+
+</div>
 
 ## Bibliographie et ressources utilisées
 
@@ -241,29 +327,6 @@ Quelques règles concernant l'utilisation de ces outils :
 <!-- _class: lead -->
 
 Est-ce que vous avez des questions ?
-
----
-
-Est-ce que les personnes suivantes pourraient venir me voir à la fin du cours
-(par groupe) ? Je veux juste parler de ProgServ1. :)
-
-<div class="two-columns">
-<div>
-
-- Steve B., Albertina B., Rania M., Lilou M., Loriane M., Nabil M. et Luka S.
-- Ivan K. et Mathias N.
-- Jennifer F., Kristina T. et Maureen G.
-- Liliana K. et Thierry K.
-
-</div>
-<div>
-
-- Carla H.
-- Tanguy V. et Thomas D.
-- Valentin F.
-
-</div>
-</div>
 
 ## Sources
 

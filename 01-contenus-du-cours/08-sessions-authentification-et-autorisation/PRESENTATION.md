@@ -8,7 +8,7 @@ size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Sessions, authentification, et autorisation
-description: Sessions, authentification, et autorisation pour l'unité d'enseignement ProgServ2 enseigné à la HEIG-VD, Suisse
+description: Sessions, authentification, et autorisation pour le cours ProgServ2 enseigné à la HEIG-VD, Suisse
 url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/08-sessions-authentification-et-autorisation/presentation.html
 header: "[**Sessions, authentification, et autorisation**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/08-sessions-authentification-et-autorisation/README.md)"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'

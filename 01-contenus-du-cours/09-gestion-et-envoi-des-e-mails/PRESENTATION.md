@@ -8,7 +8,7 @@ size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Gestion et envoi des e-mails
-description: Gestion et envoi des e-mails pour l'unité d'enseignement ProgServ2 enseigné à la HEIG-VD, Suisse
+description: Gestion et envoi des e-mails pour le cours ProgServ2 enseigné à la HEIG-VD, Suisse
 url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/09-gestion-et-envoi-des-e-mails/presentation.html
 header: "[**Gestion et envoi des e-mails**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/09-gestion-et-envoi-des-e-mails/README.md)"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
@@ -53,8 +53,8 @@ consultez le [support de cours][cours]._
 
 - Utiliser la bibliothèque PHPMailer pour envoyer des e-mails en PHP.
 
-**Il s'agit du dernier cours théorique de l'unité d'enseignement _"Programmation
-Serveur 2 (ProgServ2)"_.**
+**Il s'agit du dernier cours théorique du cours _"Programmation Serveur 2
+(ProgServ2)"_.**
 
 ![bg right:40%][illustration-objectifs]
 
@@ -356,7 +356,7 @@ Est-ce que vous avez des questions ?
 ## Feedback
 
 Le [formulaire de feedback][feedback] vous **permet de partager votre retour**
-sur l'unité d'enseignement _"ProgServ2"_ et sur le projet libre.
+sur le cours _"ProgServ2"_ et sur le projet libre.
 
 Il ne prend **que quelques minutes** et est **anonyme**.
 

@@ -14,9 +14,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > - Autres formats :
 >   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/07-cookies-preferences-et-gestion-multilingues-i18n/presentation.html)
 >   ·
->   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/07-cookies-preferences-et-gestion-multilingues-i18n/07-cookies-preferences-et-gestion-multilingues-i18n-presentation.pdf)
-> - Exemples de code : [Code source](./01-exemples-de-code/)
-> - Exercices : [Énoncés et solutions](./02-exercices/README.md)
+>   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/07-cookies-preferences-et-gestion-multilingues-i18n/07-cookies-preferences-et-gestion-multilingues-i18n-presentation.pdf).
+> - Exemples de code : [Code source](./01-exemples-de-code/README.md).
+> - Exercices : [Énoncés et solutions](./02-exercices/README.md).
 >
 > **Objectifs**
 >
@@ -28,7 +28,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
 > sont les suivantes :
 >
-> - Présentation magistrale.
+> - Présentation.
 > - Discussions collectives.
 > - Travail en autonomie.
 >
@@ -270,13 +270,12 @@ implémentée de plusieurs façons, notamment :
 
 ### Fichiers de traduction
 
-Dans le contexte de cette unité d'enseignement, nous allons utiliser des cookies
-pour stocker les préférences de langue des utilisateurs et adapter le contenu de
-l'application en fonction de ces préférences grâce à des fichiers de traduction
-simples.
+Dans le contexte de ce cours, nous allons utiliser des cookies pour stocker les
+préférences de langue des utilisateurs et adapter le contenu de l'application en
+fonction de ces préférences grâce à des fichiers de traduction simples.
 
 D'autres approches plus avancées existent, mais elles ne sont pas abordées dans
-cette unité d'enseignement.
+ce cours.
 
 Une approche simple pour gérer la traduction des chaînes de caractères en PHP
 consiste à utiliser des tableaux associatifs pour stocker les traductions. Par
@@ -344,23 +343,24 @@ traduction est une méthode simple et efficace pour commencer.
 
 ## Exemples de code
 
-Nous vous invitons maintenant à consulter les exemples de code du cours afin de
-vous familiariser avec les concepts abordés.
+Nous vous invitons maintenant à consulter les exemples de code de la séance afin
+de mieux comprendre les concepts abordés.
 
 Vous trouverez les exemples de code ici :
-[Exemples de code](./01-exemples-de-code/).
+[Exemples de code](./01-exemples-de-code/README.md).
 
 ## Exercices
 
-Nous vous invitons ensuite à réaliser les exercices du cours afin de mettre en
-pratique les concepts abordés.
+Nous vous invitons maintenant à réaliser les exercices de la séance afin de
+mettre en pratique les concepts abordés.
 
-Vous trouverez les exercices ici : [Exercices](./02-exercices/README.md).
+Vous trouverez les exercices et leur corrigé ici :
+[Exercices](./02-exercices/README.md).
 
 ## À faire pour la semaine suivante
 
 Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour le cours suivant de :
+il est recommandé pour la séance suivante de :
 
 - Relire les supports de cours si nécessaire.
 - Finaliser l'appropriation des exemples de code qui n'ont pas été vus en

@@ -15,8 +15,8 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 >   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/05-programmation-orientee-objet/presentation.html)
 >   ·
 >   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/05-programmation-orientee-objet/05-programmation-orientee-objet-presentation.pdf)
-> - Exemples de code : [Code source](./01-exemples-de-code/)
-> - Exercices : [Énoncés et solutions](./02-exercices/README.md)
+> - Exemples de code : [Code source](./01-exemples-de-code/README.md).
+> - Exercices : [Énoncés et solutions](./02-exercices/README.md).
 >
 > **Objectifs**
 >
@@ -29,7 +29,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
 > sont les suivantes :
 >
-> - Présentation magistrale.
+> - Présentation.
 > - Discussions collectives.
 > - Travail en autonomie.
 >
@@ -65,7 +65,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Tableaux et boucles](#tableaux-et-boucles)
   - [Formulaires HTML, validation et sécurité](#formulaires-html-validation-et-sécurité)
 - [Programmation orientée objet (base)](#programmation-orientée-objet-base)
-- [Programmation orientée objet](#programmation-orientée-objet-avancé-1)
+- [Programmation orientée objet](#programmation-orientée-objet-1)
   - [Interfaces](#interfaces)
   - [Héritage](#héritage)
   - [Abstraction](#abstraction)
@@ -82,8 +82,8 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > [!TIP]
 >
 > Des difficultés à comprendre certains concepts de PHP présentés dans ce
-> support de cours ? Consultez les supports de cours pour l'unité d'enseignement
-> Programmation serveur 1 (ProgServ1) pour vous aider :
+> support de cours ? Consultez les supports de cours pour le cours Programmation
+> serveur 1 (ProgServ1) pour vous aider :
 > <https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main>.
 >
 > N'hésitez pas à poser des questions si besoin !
@@ -395,7 +395,7 @@ function greet(string $name = "World"): string {
 ```php
 <?php
 // Fichier `index.php`
-require "functions.php"; // On inclut le fichier
+require_once "functions.php"; // On inclut le fichier
 
 // La fonction `greet()` est définie dans le fichier importé
 // et peut être utilisée ici
@@ -405,12 +405,12 @@ echo $greetings; // "Hello, Alice!"
 
 Il existe plusieurs façons d'importer des fichiers en PHP :
 
-- `include '<file>.php';` : Inclut et évalue le fichier spécifié. Si le fichier
-  n'est pas trouvé, une alerte est émise, mais le reste du code est exécuté. Ce
-  n'est pas recommandé.
-- `require '<file>.php';` : Inclut et évalue le fichier spécifié. Si le fichier
-  n'est pas trouvé, une erreur fatale est émise et le reste du code n'est pas
-  exécuté. C'est la méthode recommandée.
+- `include_once '<file>.php';` : Inclut et évalue le fichier spécifié. Si le
+  fichier n'est pas trouvé, une alerte est émise, mais le reste du code est
+  exécuté. Ce n'est pas recommandé.
+- `require_once '<file>.php';` : Inclut et évalue le fichier spécifié. Si le
+  fichier n'est pas trouvé, une erreur fatale est émise et le reste du code
+  n'est pas exécuté. C'est la méthode recommandée.
 
 #### Fonctions prédéfinies
 
@@ -889,8 +889,8 @@ les besoins.
 
 #### Inclusion manuelle
 
-Pour inclure des fichiers en PHP, nous pouvons utiliser les fonctions `include`
-et `require`.
+Pour inclure des fichiers en PHP, nous pouvons utiliser les fonctions
+`include_once` et `require_once`.
 
 Si nous prenons le diagramme de classes suivant :
 
@@ -939,7 +939,7 @@ Le fichier `Pet.php` pourrait contenir la classe abstraite `Pet` qui hérite de
 ```php
 <?php
 // Pet.php
-require 'Animal.php';
+require_once 'Animal.php';
 
 abstract class Pet extends Animal {
     protected string $nickname;
@@ -965,7 +965,7 @@ classe abstraite `Pet` :
 ```php
 <?php
 // Dog.php
-require 'Pet.php';
+require_once 'Pet.php';
 
 class Dog extends Pet {
     public function __construct(string $name, float $size, string $nickname) {
@@ -984,7 +984,7 @@ classe abstraite `Pet` :
 ```php
 <?php
 // Cat.php
-require 'Pet.php';
+require_once 'Pet.php';
 
 class Cat extends Pet {
     public function __construct(string $name, float $size, string $nickname) {
@@ -1003,8 +1003,8 @@ application, où nous incluons les fichiers nécessaires et créons des objets :
 ```php
 <?php
 // index.php
-require 'Dog.php';
-require 'Cat.php';
+require_once 'Dog.php';
+require_once 'Cat.php';
 
 $dog = new Dog("Nalia", 30.5, "Naliouille");
 $cat = new Cat("Tofu", 10.0, "Sushi");
@@ -1016,19 +1016,19 @@ echo $cat->getName() . " says: " . $cat->makeSound() . "<br>";
 Avec le code actuel, nous sommes confronté à un problème d'import.
 
 En effet, PHP va exécuter le fichier `index.php` et va rencontrer la ligne
-`require 'Dog.php';`. PHP va alors inclure le fichier `Dog.php`.
+`require_once 'Dog.php';`. PHP va alors inclure le fichier `Dog.php`.
 
 Le fichier `Dog.php` importe lui-même le fichier `Pet.php` avec la ligne
-`require 'Pet.php';`.
+`require_once 'Pet.php';`.
 
 Le fichier `Pet.php` importe lui-même le fichier `Animal.php` avec la ligne
-`require 'Animal.php';`.
+`require_once 'Animal.php';`.
 
 Jusqu'ici, tout va bien.
 
-Le même processus se produit pour la ligne `require 'Cat.php';` dans le fichier
-`index.php`, qui inclut `Cat.php`, mais ce fichier contient lui-même une ligne
-`require 'Pet.php';`.
+Le même processus se produit pour la ligne `require_once 'Cat.php';` dans le
+fichier `index.php`, qui inclut `Cat.php`, mais ce fichier contient lui-même une
+ligne `require_once 'Pet.php';`.
 
 Hors, le fichier `Pet.php` a déjà été inclus une première fois, donc PHP va
 générer une erreur fatale :
@@ -1038,11 +1038,11 @@ Fatal error: Cannot declare class Pet, because the name is already in use in /pa
 ```
 
 Pour éviter ce problème, nous pouvons utiliser `require_once` au lieu de
-`require`. Cela garantit que chaque fichier n'est inclus qu'une seule fois, même
-s'il est référencé plusieurs fois.
+`require_once`. Cela garantit que chaque fichier n'est inclus qu'une seule fois,
+même s'il est référencé plusieurs fois.
 
 Ainsi, tous les fichiers `Dog.php`, `Cat.php` et `Pet.php` doivent utiliser
-`require_once` au lieu de `require` :
+`require_once` au lieu de `require_once` :
 
 ```php
 <?php
@@ -1243,7 +1243,7 @@ lieu d'inclure chaque fichier de classe individuellement :
 ```php
 <?php
 // index.php
-require 'autoloader.php'; // Plus besoin d'inclure chaque fichier de classe manuellement
+require_once 'autoloader.php'; // Plus besoin d'inclure chaque fichier de classe manuellement
 
 use Animals\Pets\Dog;
 use Animals\Pets\Cat;
@@ -1301,23 +1301,24 @@ pour éviter une complexité excessive.
 
 ## Exemples de code
 
-Nous vous invitons maintenant à consulter les exemples de code du cours afin de
-vous familiariser avec les concepts abordés.
+Nous vous invitons maintenant à consulter les exemples de code de la séance afin
+de mieux comprendre les concepts abordés.
 
 Vous trouverez les exemples de code ici :
-[Exemples de code](./01-exemples-de-code/).
+[Exemples de code](./01-exemples-de-code/README.md).
 
 ## Exercices
 
-Nous vous invitons ensuite à réaliser les exercices du cours afin de mettre en
-pratique les concepts abordés.
+Nous vous invitons maintenant à réaliser les exercices de la séance afin de
+mettre en pratique les concepts abordés.
 
-Vous trouverez les exercices ici : [Exercices](./02-exercices/README.md).
+Vous trouverez les exercices et leur corrigé ici :
+[Exercices](./02-exercices/README.md).
 
 ## À faire pour la semaine suivante
 
 Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour le cours suivant de :
+il est recommandé pour la séance suivante de :
 
 - Relire les supports de cours si nécessaire.
 - Finaliser l'appropriation des exemples de code qui n'ont pas été vus en

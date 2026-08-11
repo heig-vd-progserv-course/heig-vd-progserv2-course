@@ -1,68 +1,48 @@
 # Évaluation intermédiaire
 
-L. Delafontaine, avec l'aide de
-[GitHub Copilot](https://github.com/features/copilot).
-
-Ce travail est sous licence [CC BY-SA 4.0][licence].
-
-> [!TIP]
->
-> Voici quelques informations relatives à ce contenu.
->
-> **Objectifs**
->
-> - Définir les modalités d'évaluation pour l'unité d'enseignement ProgServ2.
-> - Expliquer les critères d'évaluation.
-> - Présenter les méthodes d'évaluation utilisées.
-> - Évaluer les compétences acquises durant le semestre.
->
-> **Méthodes d'enseignement et d'apprentissage**
->
-> Les méthodes d'enseignement et d'apprentissage utilisées pour animer le
-> contenu sont les suivantes :
->
-> - Présentation.
-> - Discussions collectives.
->
-> **Méthodes d'évaluation**
->
-> L'évaluation repose sur les critères suivants :
->
-> - Capacité à répondre avec justesse.
-> - Capacité à argumenter.
-> - Capacité à synthétiser.
->
-> 🚨 **L'évaluation donne lieu à une note** (50% de la note finale du cours).
+- Date : 25.11.2026, de 16h30 à 18h00.
 
 ## Table des matières
 
 - [Table des matières](#table-des-matières)
-- [Préparation à l'évaluation](#préparation-à-lévaluation)
-  - [Évaluation](#évaluation)
-  - [Sanctions possibles en cas de tricherie](#sanctions-possibles-en-cas-de-tricherie)
-  - [Comment se préparer ?](#comment-se-préparer-)
-- [Calcul de la note finale de l'unité d'enseignement](#calcul-de-la-note-finale-de-lunité-denseignement)
+- [Objectifs](#objectifs)
+- [Déroulement](#déroulement)
+- [Ressources autorisées](#ressources-autorisées)
+- [Sanctions possibles en cas de tricherie](#sanctions-possibles-en-cas-de-tricherie)
+- [Comment se préparer ?](#comment-se-préparer-)
 
-## Préparation à l'évaluation
+## Objectifs
 
-Tout ce que vous devez savoir pour réussir l'évaluation.
+L'évaluation vise à évaluer à la fois les connaissances théoriques et les
+compétences pratiques de l'étudiant.e, en mettant l'accent la compréhension, la
+qualité du code, la structure de l'application, et la capacité à suivre les
+bonnes pratiques de développement avec PHP.
 
-### Évaluation
+## Déroulement
 
-- L'unité d'enseignement se termine par une évaluation (40% de la note).
-- L'évaluation aura lieu le **16.12.2025**, de **8h30 à 10h00**.
-- Salle encore à définir (communiquée par le secrétariat COMEM+).
-- **Venez à 8h15 pour vous installer.**
-- ~90 minutes.
-- Questions ouvertes et QCM avec argumentation possible.
-- Portée sur les connaissances théoriques et les exercices (principalement sur
-  les contenus théoriques, mais lecture, compréhension, et écriture de code
-  possible).
-- Sur la plateforme d'évaluation en ligne de la HEIG-VD (via réseau _"HEIG-VD"_
-  ou VPN), comme _"Programmation serveur 1 (ProgServ1)"_.
-- **Aucune ressource autorisée**.
+L'évaluation sera réalisée sur papier et portera sur les concepts fondamentaux
+abordés en cours.
 
-### Sanctions possibles en cas de tricherie
+L'évaluation dure 90 minutes (1 heure 30 minutes).
+
+L'étudiant.e devra répondre à une série de questions concernant les notions clés
+du développement web avec PHP.
+
+Les questions peuvent porter sur des notions théoriques, des bout de code à
+expliquer/compléter, des questions à choix multiples, etc.
+
+Chaque contenu de cours a une section "Objectifs" à votre disposition pour vous
+aider à préparer cette évaluation.
+
+Comme Programmation serveur 2 (ProgServ2) repose sur les concepts de
+Programmation serveur 1 (ProgServ1), il est normal que certaines questions
+reposent sur des notions vues dans ProgServ1 appliquées à ProgServ2.
+
+## Ressources autorisées
+
+- Aucune.
+
+## Sanctions possibles en cas de tricherie
 
 Source :
 [Règlement d'études Bachelor de la HEIG-VD](https://intra.heig-vd.ch/academique/cadre-de-reference/Documents/Rglt-Etudes-HEIG-VD.pdf).
@@ -72,8 +52,8 @@ Source :
 > 1 - Toute fraude, y compris le plagiat ou la tentative de fraude dans les
 > travaux d'évaluation, les examens et le travail de bachelor, **entraîne la
 > note de 1.0 au module**, impliquant la non-acquisition des crédits ECTS
-> correspondants, voire l'invalidation du titre, et peut faire l'objet d'une des
-> sanctions prévues à l'article 14.
+> correspondants, **voire l'invalidation du titre**, et peut faire l'objet d'une
+> des sanctions prévues à l'article 14.
 
 > **Art. 14. - Sanctions**
 >
@@ -97,19 +77,12 @@ Vous avez travaillé dur pour arriver jusqu'ici et nous avons confiance en vos
 capacités à réussir cette évaluation. **Ne prenez pas le risque de nous décevoir
 et/ou de vous faire renvoyer**.
 
-### Comment se préparer ?
+**Le non-respect de ces consignes sera sanctionné avec la note 1 pour l'ensemble
+de l'évaluation.**
+
+## Comment se préparer ?
 
 - Relire les supports de cours avec leurs objectifs respectifs.
 - Utiliser ces objectifs pour valider vos acquis.
 - Refaire les exercices.
 - Poser des questions si nécessaire.
-
-## Calcul de la note finale de l'unité d'enseignement
-
-La note finale de l' unité d'enseignement est calculée en combinant les notes
-suivante :
-
-$\text{Note finale} = \text{Note de l'évaluation} * 0.4 + \text{Note du projet libre} * 0.6$
-
-[licence]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md

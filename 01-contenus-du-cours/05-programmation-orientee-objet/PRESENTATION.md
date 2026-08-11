@@ -8,7 +8,7 @@ size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Programmation orientée objet
-description: Programmation orientée objet pour l'unité d'enseignement ProgServ2 enseigné à la HEIG-VD, Suisse
+description: Programmation orientée objet pour le cours ProgServ2 enseigné à la HEIG-VD, Suisse
 url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/05-programmation-orientee-objet/presentation.html
 header: "[**Programmation orientée objet**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/05-programmation-orientee-objet/README.md)"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
@@ -339,8 +339,8 @@ echo add(2.5, "Hello") . "<br>";
 ### Importation de fichiers (1/2)
 
 - L'importation permet de réutiliser du code défini dans d'autres fichiers.
-- Il est recommandé d'utiliser `require` (erreur et arrête l'exécution) plutôt
-  que `include` (avertissement mais continue l'exécution).
+- Il est recommandé d'utiliser `require_once` (erreur et arrête l'exécution)
+  plutôt que `include_once` (avertissement mais continue l'exécution).
 
 ![bg right:40%][illustration-importation-de-fichiers]
 
@@ -357,7 +357,7 @@ function greet(string $name = "World"): string {
 ```php
 <?php
 // Fichier index.php
-require "functions.php";
+require_once "functions.php";
 
 echo greet("Alice"); // "Hello, Alice!"
 ```
@@ -801,7 +801,7 @@ $shape = new Shape("green"); // Erreur fatale : Cannot instantiate abstract clas
 #### Inclusion manuelle
 
 - L'inclusion manuelle consiste à inclure chaque fichier de classe
-  individuellement avec `require` ou `include`.
+  individuellement avec `require_once` ou `include_once`.
 - Cela peut devenir fastidieux dans les projets avec de nombreuses classes.
 - Il est préférable d'utiliser `require_once` ou `include_once` pour éviter les
   inclusions multiples.
@@ -850,7 +850,7 @@ abstract class Animal {
 ```php
 <?php
 // Pet.php
-require 'Animal.php';
+require_once 'Animal.php';
 
 abstract class Pet extends Animal {
     protected string $nickname;
@@ -875,7 +875,7 @@ abstract class Pet extends Animal {
 ```php
 <?php
 // Dog.php
-require 'Pet.php';
+require_once 'Pet.php';
 
 class Dog extends Pet {
     public function __construct(string $name, float $size, string $nickname) {
@@ -893,7 +893,7 @@ class Dog extends Pet {
 ```php
 <?php
 // Cat.php
-require 'Pet.php';
+require_once 'Pet.php';
 
 class Cat extends Pet {
     public function __construct(string $name, float $size, string $nickname) {
@@ -911,8 +911,8 @@ class Cat extends Pet {
 ```php
 <?php
 // index.php
-require 'Dog.php';
-require 'Cat.php';
+require_once 'Dog.php';
+require_once 'Cat.php';
 
 $dog = new Dog("Nalia", 30.5, "Naliouille");
 $cat = new Cat("Tofu", 10.0, "Sushi");
@@ -1048,7 +1048,7 @@ spl_autoload_register(function ($class) {
 ```php
 <?php
 // index.php
-require 'autoloader.php'; // Plus besoin d'inclure chaque fichier de classe manuellement
+require_once 'autoloader.php'; // Plus besoin d'inclure chaque fichier de classe manuellement
 
 use Animals\Pets\Dog;
 use Animals\Pets\Cat;
