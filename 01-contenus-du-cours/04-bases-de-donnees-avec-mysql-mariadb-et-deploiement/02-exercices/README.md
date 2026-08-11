@@ -35,7 +35,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 #### Consignes
 
 En repartant de l'exemple
-[_"Base de données MySQL/MariaDB"_](../01-exemples-de-code/02-base-de-donnees-mysql-mariadb/)
+[_"Base de données MySQL/MariaDB"_](../01-exemples-de-code/02-base-de-donnees-mysql-mariadb/README.md)
 disponible dans les exemples de code, développer une application web en PHP qui
 permet de gérer une liste d'outils.
 

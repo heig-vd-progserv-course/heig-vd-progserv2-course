@@ -7,16 +7,16 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
-title: HEIG-VD ProgServ2 Course - Récapitulatif de l'unité d'enseignement
-description: Récapitulatif de l'unité d'enseignement pour l'unité d'enseignement ProgServ2 à la HEIG-VD, Suisse
+title: HEIG-VD ProgServ2 Course - Récapitulatif du cours
+description: Récapitulatif du cours pour le cours ProgServ2 à la HEIG-VD, Suisse
 url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/09-recapitulatif-du-cours/presentation.html
-header: "[**Récapitulatif de l'unité d'enseignement**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/09-recapitulatif-du-cours/README.md)"
+header: "[**Récapitulatif du cours**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/09-recapitulatif-du-cours/README.md)"
 footer: "**HEIG-VD** - ProgServ2 Course 2025-2026 - CC BY-SA 4.0"
 headingDivider: 6
 math: mathjax
 -->
 
-# Récapitulatif de l'unité d'enseignement
+# Récapitulatif du cours
 
 <!--
 _class: lead
@@ -32,7 +32,7 @@ _paginate: false
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
-## Récapitulatif de l'unité d'enseignement
+## Récapitulatif du cours
 
 <!-- _class: lead -->
 
@@ -44,7 +44,7 @@ Vous l'avez fait, bravo ! 🎉
 
 Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
-### Objectifs de l'unité d'enseignement
+### Objectifs du cours
 
 > En résumé, vous devriez être capable de :
 >
@@ -60,7 +60,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01.05-programmation-orientee-objet-avance).
+[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01.05-programmation-orientee-objet-avance).
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -79,7 +79,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance).
+[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance).
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -98,7 +98,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/03.01-deploiement).
+[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/03.01-deploiement).
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -118,7 +118,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/04.01-cookies-preferences-et-gestion-multilingues-i18n).
+[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/04.01-cookies-preferences-et-gestion-multilingues-i18n).
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -138,7 +138,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/07.01-recapitulatif-de-lunite-denseignement).
+[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/07.01-recapitulatif-de-lunite-denseignement).
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -157,7 +157,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/06.01-gestion-et-envoi-des-e-mails).
+[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/06.01-gestion-et-envoi-des-e-mails).
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -176,7 +176,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](<https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01.03-projet-libre-(1-sur-8)>).
+[Retrouvez ce cours sur le dépôt Git du cours](<https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01.03-projet-libre-(1-sur-8)>).
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -195,11 +195,11 @@ mon possible pour vous rendre les notes au plus vite.
 
 <!-- _class: lead -->
 
-Discussions et retours sur l'unité d'enseignement.
+Discussions et retours sur le cours.
 
 <small>
 
-Vous pourrez les retrouver sur le [dépôt Git de l'unité d'enseignement][cours].
+Vous pourrez les retrouver sur le [dépôt Git du cours][cours].
 
 </small>
 

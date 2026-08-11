@@ -303,16 +303,10 @@ Les contraintes pour ce travail sont les suivantes :
 
 ## Soumission
 
-La date de rendu est à décider ensemble pour les deux classes (soit avant ou
-après les vacances de Noël) à l'aide du sondage suivant :
-[ProgServ2 2026-2027 - Date de rendu du projet](#TODO).
-
-<!--
 Votre travail doit être remis comme suit :
 
-- ProgServ2-A (mardi matin) : **21.12.2025 12h00**.
-- ProgServ2-B (mardi après-midi) : **21.12.2025 16h15**.
--->
+- ProgServ2-A (mercredi matin) : **12.01.2026 12h00**.
+- ProgServ2-B (mercredi après-midi) : **12.01.2026 16h15**.
 
 Le rendu du cahier des charges et de votre projet final être effectué sous la
 forme d'un dépôt GitHub (le même que celui utilisé pour le cahier des charges

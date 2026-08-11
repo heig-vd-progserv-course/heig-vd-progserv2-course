@@ -14,9 +14,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > - Autres formats :
 >   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/08-sessions-authentification-et-autorisation/presentation.html)
 >   ·
->   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/08-sessions-authentification-et-autorisation/08-sessions-authentification-et-autorisation-presentation.pdf)
-> - Exemples de code : [Code source](./01-exemples-de-code/)
-> - Exercices : [Énoncés et solutions](./02-exercices/README.md)
+>   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/08-sessions-authentification-et-autorisation/08-sessions-authentification-et-autorisation-presentation.pdf).
+> - Exemples de code : [Code source](./01-exemples-de-code/README.md).
+> - Exercices : [Énoncés et solutions](./02-exercices/README.md).
 >
 > **Objectifs**
 >
@@ -30,7 +30,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
 > sont les suivantes :
 >
-> - Présentation magistrale.
+> - Présentation.
 > - Discussions collectives.
 > - Travail en autonomie.
 >
@@ -266,10 +266,10 @@ d'authentification et d'autorisation dans les applications web.
 > et ne devraient pas être utilisés tels quels dans des applications en
 > production.
 >
-> Dans le contexte de cette unité d'enseignement, l'objectif est de comprendre
-> les concepts d'authentification et d'autorisation, ainsi que la manière dont
-> les sessions peuvent être utilisées pour les gérer. Cependant, ces exemples
-> peuvent contenir des vulnérabilités de sécurité.
+> Dans le contexte de ce cours, l'objectif est de comprendre les concepts
+> d'authentification et d'autorisation, ainsi que la manière dont les sessions
+> peuvent être utilisées pour les gérer. Cependant, ces exemples peuvent
+> contenir des vulnérabilités de sécurité.
 >
 > Pour des applications réelles, il est recommandé de suivre les meilleures
 > pratiques en matière de sécurité et de consulter des experts en sécurité
@@ -486,23 +486,24 @@ bibliothèques et de frameworks spécialisés.
 
 ## Exemples de code
 
-Nous vous invitons maintenant à consulter les exemples de code du cours afin de
-vous familiariser avec les concepts abordés.
+Nous vous invitons maintenant à consulter les exemples de code de la séance afin
+de mieux comprendre les concepts abordés.
 
 Vous trouverez les exemples de code ici :
-[Exemples de code](./01-exemples-de-code/).
+[Exemples de code](./01-exemples-de-code/README.md).
 
 ## Exercices
 
-Nous vous invitons ensuite à réaliser les exercices du cours afin de mettre en
-pratique les concepts abordés.
+Nous vous invitons maintenant à réaliser les exercices de la séance afin de
+mettre en pratique les concepts abordés.
 
-Vous trouverez les exercices ici : [Exercices](./02-exercices/README.md).
+Vous trouverez les exercices et leur corrigé ici :
+[Exercices](./02-exercices/README.md).
 
 ## À faire pour la semaine suivante
 
 Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour le cours suivant de :
+il est recommandé pour la séance suivante de :
 
 - Relire les supports de cours si nécessaire.
 - Finaliser l'appropriation des exemples de code qui n'ont pas été vus en

@@ -14,9 +14,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > - Autres formats :
 >   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement/presentation.html)
 >   ·
->   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement-presentation.pdf)
-> - Exemples de code : [Code source](./01-exemples-de-code/)
-> - Exercices : [Énoncés et solutions](./02-exercices/README.md)
+>   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement-presentation.pdf).
+> - Exemples de code : [Code source](./01-exemples-de-code/README.md).
+> - Exercices : [Énoncés et solutions](./02-exercices/README.md).
 >
 > **Objectifs**
 >
@@ -31,7 +31,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
 > sont les suivantes :
 >
-> - Présentation magistrale.
+> - Présentation.
 > - Discussions collectives.
 > - Travail en autonomie.
 >
@@ -80,8 +80,8 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > [!TIP]
 >
 > Des difficultés à comprendre certains concepts de PHP présentés dans ce
-> support de cours ? Consultez les supports de cours pour l'unité d'enseignement
-> Programmation serveur 1 (ProgServ1) pour vous aider :
+> support de cours ? Consultez les supports de cours pour le cours Programmation
+> serveur 1 (ProgServ1) pour vous aider :
 > <https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main>.
 >
 > N'hésitez pas à poser des questions si besoin !
@@ -274,8 +274,8 @@ un fichier unique sur le disque. Elle est idéale pour les applications de petit
 à moyenne taille, les applications embarquées, ou les environnements de
 développement.
 
-Dans l'unité d'enseignement ProgServ1, nous avons déjà vu comment utiliser
-SQLite avec PDO pour sa simplicité.
+Dans le cours ProgServ1, nous avons déjà vu comment utiliser SQLite avec PDO
+pour sa simplicité.
 
 Voici comment utiliser PDO pour se connecter à une base de données SQLite :
 
@@ -819,23 +819,24 @@ données.
 
 ## Exemples de code
 
-Nous vous invitons maintenant à consulter les exemples de code du cours afin de
-vous familiariser avec les concepts abordés.
+Nous vous invitons maintenant à consulter les exemples de code de la séance afin
+de mieux comprendre les concepts abordés.
 
 Vous trouverez les exemples de code ici :
-[Exemples de code](./01-exemples-de-code/).
+[Exemples de code](./01-exemples-de-code/README.md).
 
 ## Exercices
 
-Nous vous invitons ensuite à réaliser les exercices du cours afin de mettre en
-pratique les concepts abordés.
+Nous vous invitons maintenant à réaliser les exercices de la séance afin de
+mettre en pratique les concepts abordés.
 
-Vous trouverez les exercices ici : [Exercices](./02-exercices/README.md).
+Vous trouverez les exercices et leur corrigé ici :
+[Exercices](./02-exercices/README.md).
 
 ## À faire pour la semaine suivante
 
 Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour le cours suivant de :
+il est recommandé pour la séance suivante de :
 
 - Relire les supports de cours si nécessaire.
 - Finaliser l'appropriation des exemples de code qui n'ont pas été vus en

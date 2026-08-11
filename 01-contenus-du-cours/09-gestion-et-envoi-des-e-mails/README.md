@@ -14,9 +14,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > - Autres formats :
 >   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/09-gestion-et-envoi-des-e-mails/presentation.html)
 >   ·
->   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/09-gestion-et-envoi-des-e-mails/09-gestion-et-envoi-des-e-mails-presentation.pdf)
-> - Exemples de code : [Code source](./01-exemples-de-code/)
-> - Exercices : [Énoncés et solutions](./02-exercices/README.md)
+>   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/09-gestion-et-envoi-des-e-mails/09-gestion-et-envoi-des-e-mails-presentation.pdf).
+> - Exemples de code : [Code source](./01-exemples-de-code/README.md).
+> - Exercices : [Énoncés et solutions](./02-exercices/README.md).
 >
 > **Objectifs**
 >
@@ -32,7 +32,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
 > sont les suivantes :
 >
-> - Présentation magistrale.
+> - Présentation.
 > - Discussions collectives.
 > - Travail en autonomie.
 >
@@ -227,9 +227,9 @@ Dans le contexte d'un environnement de production, il est crucial de configurer
 correctement le serveur SMTP pour garantir la fiabilité et la sécurité de
 l'envoi des e-mails.
 
-Dans le contexte de cette unité d'enseignement, nous utilisons Infomaniak comme
-hébergeur web. Vous avez déjà, dans le contexte d'un précédent cours, commandé
-et configuré un :
+Dans le contexte de ce cours, nous utilisons Infomaniak comme hébergeur web.
+Vous avez déjà, dans le contexte d'un précédent cours, commandé et configuré un
+:
 
 - Nom de domaine.
 - Hébergement web.
@@ -555,7 +555,7 @@ La structure de votre projet devrait ressembler à ceci :
 
 Notez l'utilisation d'un autoloader pour charger automatiquement les classes
 PHP, comme celui que nous avons créé dans le cours
-[Programmation orientée (avancé)](../../01.05-programmation-orientee-objet-avance/).
+[Programmation orientée objet](../05-programmation-orientee-objet/README.md).
 
 Prenez quelques minutes pour examiner les fichiers de la bibliothèque PHPMailer.
 Remarquez-vous des éléments intéressants que nous aurions vus dans les cours
@@ -568,7 +568,7 @@ connexion au serveur SMTP.
 
 Par exemple, créez un fichier `mail.ini` dans le répertoire `src/config/`, comme
 étudié dans le cours
-[Bases de données MySQL/MariaDB et déploiement](../../02.01-bases-de-donnees-et-pdo-avance/).
+[Bases de données MySQL/MariaDB et déploiement](../04-bases-de-donnees-avec-mysql-mariadb-et-deploiement/README.md).
 
 Utilisez les informations de connexion SMTP en fonction de votre environnement
 (en remplaçant les valeurs par vos propres informations) :
@@ -707,10 +707,10 @@ PHPMailer.
 
 ## Conclusion
 
-Au travers de ce dernier cours de l'unité d'enseignement, vous avez acquis les
-compétences nécessaires pour intégrer la fonctionnalité d'envoi d'e-mails dans
-vos applications PHP, ce qui est une compétence essentielle pour de nombreux
-projets web.
+Au travers de ce dernier cours du cours, vous avez acquis les compétences
+nécessaires pour intégrer la fonctionnalité d'envoi d'e-mails dans vos
+applications PHP, ce qui est une compétence essentielle pour de nombreux projets
+web.
 
 Nous avons couvert les protocoles de messagerie électronique tels que SMTP, POP3
 et IMAP, ainsi que les différences entre la fonction `mail()` de PHP et les
@@ -735,7 +735,7 @@ Nous vous invitons maintenant à consulter les exemples de code du cours afin de
 vous familiariser avec les concepts abordés.
 
 Vous trouverez les exemples de code ici :
-[Exemples de code](../02-exemples-de-code/).
+[Exemples de code](../02-exemples-de-code/README.md).
 
 ## Exercices
 
@@ -747,7 +747,7 @@ Vous trouverez les exercices ici : [Exercices](../03-exercices/README.md).
 ## À faire pour la semaine suivante
 
 Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
-il est recommandé pour le cours suivant de :
+il est recommandé pour la séance suivante de :
 
 - Relire les supports de cours si nécessaire.
 - Finaliser l'appropriation des exemples de code qui n'ont pas été vus en
