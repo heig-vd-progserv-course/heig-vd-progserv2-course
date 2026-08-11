@@ -5,6 +5,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     <link rel="stylesheet" href="./css/styles.css">
 
-    <title><?= $title ?? 'ninetendogs' ?></title>
-    <meta name="description" content="<?= $description ?? "ninetendogs - Gestionnaire d'animaux de compagnie" ?>">
+    <title><?= htmlspecialchars($title ?? 'ninetendogs') ?></title>
+    <meta name="description" content="<?= htmlspecialchars($description ?? "ninetendogs - Gestionnaire d'animaux de compagnie") ?>">
 </head>

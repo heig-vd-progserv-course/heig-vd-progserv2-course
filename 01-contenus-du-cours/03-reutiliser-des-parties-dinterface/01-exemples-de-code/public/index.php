@@ -1,16 +1,20 @@
 <?php
 require_once __DIR__ . '/../src/constants.php';
+require_once __DIR__ . '/../src/functions.php';
 
-$pets = [];
+$pets = getPets();
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 
-<?php require_once __DIR__ . '/../views/head.php'; ?>
+<?php render('head', [
+    'title' => "Page d'accueil | ninetendogs",
+    'description' => "ninetendogs - Gestionnaire d'animaux de compagnie - Page d'accueil",
+]); ?>
 
 <body class="container">
-    <?php require_once __DIR__ . '/../views/header.php'; ?>
+    <?php render('header'); ?>
     <main>
         <center>
             <div class="logo">
@@ -41,8 +45,8 @@ $pets = [];
                     <?php foreach ($pets as $pet) { ?>
                         <tr>
                             <td><?= htmlspecialchars($pet['name']) ?></td>
-                            <td><?= PET_SPECIES[htmlspecialchars($pet['species'])] ?></td>
-                            <td><?= PET_SEXES[htmlspecialchars($pet['sex'])] ?></td>
+                            <td><?= htmlspecialchars(PET_SPECIES[$pet['species']]) ?></td>
+                            <td><?= htmlspecialchars(PET_SEXES[$pet['sex']]) ?></td>
                             <td><?= htmlspecialchars($pet['birthday']) ?></td>
                             <td>
                                 <a href="./view.php?id=<?= htmlspecialchars($pet['id']) ?>">
@@ -55,7 +59,7 @@ $pets = [];
             </table>
         </div>
     </main>
-    <?php require_once __DIR__ . '/../views/footer.php'; ?>
+    <?php render('footer'); ?>
 </body>
 
 </html>

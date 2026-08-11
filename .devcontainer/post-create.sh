@@ -26,6 +26,9 @@ sudo apt install --yes php-common libapache2-mod-php php-cli php-xdebug
 # Install MariaDB client and server
 sudo apt install --yes mariadb-client php-mysql
 
+# Install packages to interact with SQLite databases
+sudo apt install --yes php-sqlite3 sqlite3
+
 ## Configure Apache server
 # Remove the default document root
 sudo rm -rf /var/www/html

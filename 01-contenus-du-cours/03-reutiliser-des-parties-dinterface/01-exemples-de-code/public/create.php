@@ -1,6 +1,6 @@
 <?php
-$title = "Créer un nouvel animal";
-$description = "ninetendogs - Gestionnaire d'animaux de compagnie - Création d'un animal de compagnie";
+require_once __DIR__ . '/../src/constants.php';
+require_once __DIR__ . '/../src/functions.php';
 
 // Définition des valeurs par défaut de l'animal de compagnie
 $name = $_POST["name"] ?? '';
@@ -16,17 +16,55 @@ $notes = $_POST["notes"] ?? '';
 
 // Gestion de la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    print_r($_POST);
+    // Validation de l'animal de compagnie
+    $errors = validatePet(
+        $name,
+        $species,
+        $nickname,
+        $sex,
+        $birthday,
+        $color,
+        $personalities,
+        $size,
+        $weight,
+        $notes,
+    );
+
+    // S'il n'y a pas d'erreurs, ajoute l'animal de compagnie à la base de données
+    if (empty($errors)) {
+        $newPetId = addPet(
+            $name,
+            $species,
+            $nickname ?: null,
+            $sex,
+            $birthday ?: null,
+            $color ?: null,
+            $personalities ?: null,
+            $size ?: null,
+            $weight ?: null,
+            $notes ?: null,
+        );
+
+        if ($newPetId !== null) {
+            header('Location: ./view.php?id=' . $newPetId);
+            exit;
+        } else {
+            $errors = array_push($errors, "Une erreur est survenue lors de l'ajout de l'animal de compagnie.");
+        }
+    }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 
-<?php require_once __DIR__ . '/../views/head.php'; ?>
+<?php render('head', [
+    'title' => "Créer un nouvel animal | ninetendogs",
+    'description' => "ninetendogs - Gestionnaire d'animaux de compagnie - Création d'un animal de compagnie",
+]); ?>
 
 <body class="container">
-    <?php require_once __DIR__ . '/../views/header.php'; ?>
+    <?php render('header'); ?>
     <main>
         <h1>Créer un nouvel animal de compagnie</h1>
 
@@ -54,41 +92,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             <label for="species">Espèce</label>
             <select id="species" name="species" required>
-                <option
-                    value="dog"
-                    <?= $species === "dog" ? "selected" : "" ?> />
-                Chien
-                </option>
-                <option
-                    value="cat"
-                    <?= $species === "cat" ? "selected" : "" ?> />
-                Chat
-                </option>
-                <option
-                    value="lizard"
-                    <?= $species === "lizard" ? "selected" : "" ?> />
-                Lézard
-                </option>
-                <option
-                    value="snake"
-                    <?= $species === "snake" ? "selected" : "" ?> />
-                Serpent
-                </option>
-                <option
-                    value="bird"
-                    <?= $species === "bird" ? "selected" : "" ?> />
-                Oiseau
-                </option>
-                <option
-                    value="rabbit"
-                    <?= $species === "rabbit" ? "selected" : "" ?> />
-                Lapin
-                </option>
-                <option
-                    value="other"
-                    <?= $species === "other" ? "selected" : "" ?> />
-                Autre
-                </option>
+                <?php foreach (PET_SPECIES as $value => $label) { ?>
+                    <option
+                        value="<?= htmlspecialchars($value) ?>"
+                        <?= $species === $value ? "selected" : "" ?>>
+                        <?= htmlspecialchars($label) ?>
+                    </option>
+                <?php } ?>
             </select>
 
             <label for="nickname">Surnom (optionnel)</label>
@@ -103,23 +113,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <fieldset>
                 <legend>Sexe</legend>
 
-                <input
-                    type="radio"
-                    id="male"
-                    name="sex"
-                    value="male"
-                    required
-                    <?= $sex === "male" ? "checked" : "" ?> />
-                <label for="male">Mâle</label>
-
-                <input
-                    type="radio"
-                    id="female"
-                    name="sex"
-                    value="female"
-                    required
-                    <?= $sex === "female" ? "checked" : "" ?> />
-                <label for="female">Femelle</label>
+                <?php foreach (PET_SEXES as $value => $label) { ?>
+                    <input
+                        type="radio"
+                        id="<?= htmlspecialchars($value) ?>"
+                        name="sex"
+                        value="<?= htmlspecialchars($value) ?>"
+                        required
+                        <?= $sex === $value ? "checked" : "" ?> />
+                    <label for="<?= htmlspecialchars($value) ?>"><?= htmlspecialchars($label) ?></label>
+                <?php } ?>
             </fieldset>
 
             <label for="birthday">Date de naissance</label>
@@ -141,49 +144,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <fieldset>
                 <legend>Personnalité (optionnel)</legend>
 
-                <input
-                    type="checkbox"
-                    id="friendly"
-                    name="personalities[]"
-                    value="friendly"
-                    <?= in_array("friendly", $personalities) ? "checked" : "" ?> />
-                <label for="friendly">Gentil</label>
-
-                <input
-                    type="checkbox"
-                    id="playful"
-                    name="personalities[]"
-                    value="playful"
-                    <?= in_array("playful", $personalities) ? "checked" : "" ?> />
-                <label for="playful">Joueur</label>
-
-                <input
-                    type="checkbox"
-                    id="lazy"
-                    name="personalities[]"
-                    value="lazy" <?= in_array("lazy", $personalities) ? "checked" : "" ?> />
-                <label for="lazy">Paresseux</label>
-
-                <input
-                    type="checkbox"
-                    id="shy"
-                    name="personalities[]"
-                    value="shy" <?= in_array("shy", $personalities) ? "checked" : "" ?> />
-                <label for="shy">Timide</label>
-
-                <input
-                    type="checkbox"
-                    id="curious"
-                    name="personalities[]"
-                    value="curious" <?= in_array("curious", $personalities) ? "checked" : "" ?> />
-                <label for="curious">Curieux</label>
-
-                <input
-                    type="checkbox"
-                    id="aggressive"
-                    name="personalities[]"
-                    value="aggressive" <?= in_array("aggressive", $personalities) ? "checked" : "" ?> />
-                <label for="aggressive">Agressif</label>
+                <?php foreach (PET_PERSONALITIES as $value => $label) { ?>
+                    <input
+                        type="checkbox"
+                        id="<?= htmlspecialchars($value) ?>"
+                        name="personalities[]"
+                        value="<?= htmlspecialchars($value) ?>"
+                        <?= in_array($value, $personalities) ? "checked" : "" ?> />
+                    <label for="<?= htmlspecialchars($value) ?>"><?= htmlspecialchars($label) ?></label>
+                <?php } ?>
             </fieldset>
 
             <label for="size">Taille en cm (optionnel)</label>
@@ -215,7 +184,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <button type="submit">Créer le nouvel animal</button>
         </form>
     </main>
-    <?php require_once __DIR__ . '/../views/footer.php'; ?>
+    <?php render('footer'); ?>
 </body>
 
 </html>
