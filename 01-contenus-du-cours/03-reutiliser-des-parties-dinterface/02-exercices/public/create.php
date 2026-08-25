@@ -39,36 +39,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
-
-    <title>Page de création | ninetendogs</title>
-    <meta name="description" content="ninetendogs - Gestionnaire d'animaux de compagnie - Création d'un animal de compagnie">
-</head>
+<?php require __DIR__ . '/../components/head.php'; ?>
 
 <body class="container">
-    <header>
-        <nav>
-            <ul>
-                <li><strong>ninetendogs</strong></li>
-            </ul>
-            <ul>
-                <li><a href="./index.php">Accueil</a></li>
-                <li><a href="./create.php">Nouvel animal</a></li>
-            </ul>
-        </nav>
-
-        <nav aria-label="breadcrumb">
-            <ul>
-                <li><a href="./index.php">Accueil</a></li>
-                <li>Nouvel animal</li>
-            </ul>
-        </nav>
-    </header>
+    <?php require __DIR__ . '/../components/header.php'; ?>
     <main>
         <h1>Créer un nouvel animal de compagnie</h1>
 
@@ -167,13 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <button type="submit">Créer le nouvel animal</button>
         </form>
     </main>
-    <footer>
-        <center>
-            <small>
-                Un projet réalisé dans le cadre du cours <a href="https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course">ProgServ1</a> enseigné à la <a href="https://heig-vd.ch">HEIG-VD</a>.
-            </small>
-        </center>
-    </footer>
+    <?php require __DIR__ . '/../components/footer.php'; ?>
 </body>
 
 </html>
