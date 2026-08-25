@@ -10,14 +10,8 @@ $sql = "CREATE TABLE IF NOT EXISTS pets (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     species TEXT NOT NULL,
-    nickname TEXT,
     sex TEXT NOT NULL,
-    birthday DATE NOT NULL,
-    color TEXT,
-    personalities TEXT,
-    size INTEGER,
-    weight FLOAT,
-    notes TEXT
+    birthday DATE NOT NULL
 );";
 
 // On prépare la requête SQL

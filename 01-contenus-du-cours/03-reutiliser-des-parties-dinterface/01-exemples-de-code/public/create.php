@@ -5,14 +5,8 @@ require_once __DIR__ . '/../src/functions.php';
 // Définition des valeurs par défaut de l'animal de compagnie
 $name = $_POST["name"] ?? '';
 $species = $_POST["species"] ?? '';
-$nickname = $_POST["nickname"] ?? '';
 $sex = $_POST["sex"] ?? '';
 $birthday = $_POST["birthday"] ?? '';
-$color = $_POST["color"] ?? '';
-$personalities = $_POST["personalities"] ?? [];
-$size = $_POST["size"] ?? '';
-$weight = $_POST["weight"] ?? '';
-$notes = $_POST["notes"] ?? '';
 
 // Gestion de la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -20,14 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $errors = validatePet(
         $name,
         $species,
-        $nickname,
         $sex,
         $birthday,
-        $color,
-        $personalities,
-        $size,
-        $weight,
-        $notes,
     );
 
     // S'il n'y a pas d'erreurs, ajoute l'animal de compagnie à la base de données
@@ -35,18 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $newPetId = addPet(
             $name,
             $species,
-            $nickname ?: null,
             $sex,
-            $birthday ?: null,
-            $color ?: null,
-            $personalities ?: null,
-            $size ?: null,
-            $weight ?: null,
-            $notes ?: null,
+            $birthday,
         );
 
         if ($newPetId !== null) {
-            header('Location: ./view.php?id=' . $newPetId);
+            header('Location: ./index.php');
             exit;
         } else {
             $errors = array_push($errors, "Une erreur est survenue lors de l'ajout de l'animal de compagnie.");
@@ -101,15 +83,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <?php } ?>
             </select>
 
-            <label for="nickname">Surnom (optionnel)</label>
-            <input
-                type="text"
-                id="nickname"
-                name="nickname"
-                value="<?= htmlspecialchars($nickname) ?>"
-                minlength="2"
-                maxlength="50" />
-
             <fieldset>
                 <legend>Sexe</legend>
 
@@ -133,53 +106,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 value="<?= htmlspecialchars($birthday) ?>"
                 required
                 max="<?= date("Y-m-d") ?>" />
-
-            <label for="color">Couleur (optionnel)</label>
-            <input
-                type="color"
-                id="color"
-                name="color"
-                value="<?= htmlspecialchars($color) ?>" />
-
-            <fieldset>
-                <legend>Personnalité (optionnel)</legend>
-
-                <?php foreach (PET_PERSONALITIES as $value => $label) { ?>
-                    <input
-                        type="checkbox"
-                        id="<?= htmlspecialchars($value) ?>"
-                        name="personalities[]"
-                        value="<?= htmlspecialchars($value) ?>"
-                        <?= in_array($value, $personalities) ? "checked" : "" ?> />
-                    <label for="<?= htmlspecialchars($value) ?>"><?= htmlspecialchars($label) ?></label>
-                <?php } ?>
-            </fieldset>
-
-            <label for="size">Taille en cm (optionnel)</label>
-            <input
-                type="number"
-                id="size"
-                name="size"
-                value="<?= htmlspecialchars($size) ?>"
-                min="1" />
-
-            <label for="weight">Poids en kg (optionnel)</label>
-            <input
-                type="number"
-                id="weight"
-                name="weight"
-                value="<?= htmlspecialchars($weight) ?>"
-                min="0.1"
-                step="0.1" />
-
-            <label for="notes">Notes (optionnel)</label>
-            <textarea
-                id="notes"
-                name="notes"
-                rows="4"
-                cols="50"
-                minlength="10"
-                maxlength="500"><?= htmlspecialchars($notes) ?></textarea>
 
             <button type="submit">Créer le nouvel animal</button>
         </form>

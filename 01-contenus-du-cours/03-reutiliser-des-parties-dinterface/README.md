@@ -54,7 +54,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
-- [Conclusion](#conclusion)
 - [Inclusion de fichiers](#inclusion-de-fichiers)
 - [Structure des pages web avec PHP](#structure-des-pages-web-avec-php)
 - [Réutiliser des parties d'interface](#réutiliser-des-parties-dinterface-1)
@@ -80,9 +79,10 @@ bloc d'information en haut de ce contenu.
 
 ## Inclusion de fichiers
 
-Nous avions vu en Programmation serveur 1 que l'inclusion de fichiers permet de
-réutiliser du code dans plusieurs fichiers PHP, notamment les fichiers de
-fonctions et des constantes.
+Nous avions vu en
+[Programmation serveur 1 (ProgServ1)](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
+que l'inclusion de fichiers permet de réutiliser du code dans plusieurs fichiers
+PHP, notamment les fichiers de fonctions et des constantes.
 
 Cela permet de créer des applications web modulaires et maintenables.
 
@@ -102,24 +102,30 @@ fonctions pour inclure des fichiers en PHP, telles que `include`, `require`,
   est appelée plusieurs fois. Si le fichier n'est pas trouvé, une erreur fatale
   est générée et le script s'arrête.
 
-`require` et `require_once` est généralement préféré pour inclure des fichiers essentiels à
-l'exécution du script.
+`require` et `require_once` est généralement préféré pour inclure des fichiers
+essentiels à l'exécution du script.
 
-Nous préférons utiliser `require_once` pour inclure des fichiers de fonctions et des
-fichiers de constantes, car cela garantit que le fichier n'est inclus qu'une seule fois, évitant ainsi les erreurs de redéfinition de fonctions ou de constantes.
+Nous préférons utiliser `require_once` pour inclure des fichiers de fonctions et
+des fichiers de constantes, car cela garantit que le fichier n'est inclus qu'une
+seule fois, évitant ainsi les erreurs de redéfinition de fonctions ou de
+constantes.
 
-`require` est couramment utilisé pour des parties d'interface réutilisables car, elles, peuvent être incluses plusieurs fois dans le même fichier.
+`require` est couramment utilisé pour des parties d'interface réutilisables car,
+elles, peuvent être incluses plusieurs fois dans le même fichier.
 
 ## Structure des pages web avec PHP
 
-Également étudié en Programmation serveur 1, la structure des pages web avec PHP
-consiste souvent à mélanger du code PHP et du code HTML dans un même fichier.
+Également étudié en
+[Programmation serveur 1 (ProgServ1)](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course),
+la structure des pages web avec PHP consiste souvent à mélanger du code PHP et
+du code HTML dans un même fichier.
 
 Cependant, pour améliorer la lisibilité et la maintenabilité du code, il est
 recommandé de séparer le code PHP et le code HTML en utilisant des fichiers
 d'inclusion.
 
-Vous vous souvenez peut-être que dans le mini-projet de Programmation serveur 1,
+Vous vous souvenez peut-être que dans le mini-projet de
+[Programmation serveur 1 (ProgServ1)](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course),
 nous avions différentes pages qui partageaient la même structure HTML, notamment
 l'en-tête et le pied de page.
 
@@ -137,15 +143,18 @@ d'interface, telles que l'en-tête et le pied de page, dans plusieurs pages web.
 
 ### Structure initiale d'une page web
 
-Si nous reprenons la structure initiale d'une page web du mini-projet de
-Programmation serveur 1, nous avons le code suivant dans le fichier `index.php`
-:
+Si nous reprenons la structure initiale du mini-projet de
+[Programmation serveur 1 (ProgServ1)](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course),
+nous avons les pages suivantes (versions simplifiées par rapport à la version
+originale) :
 
 ```php
+// index.php
 <?php
 require_once __DIR__ . '/../src/constants.php';
+require_once __DIR__ . '/../src/functions.php';
 
-$pets = [];
+$pets = getPets();
 ?>
 
 <!DOCTYPE html>
@@ -197,7 +206,6 @@ $pets = [];
                         <th>Espèce</th>
                         <th>Sexe</th>
                         <th>Date de naissance</th>
-                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -207,11 +215,6 @@ $pets = [];
                             <td><?= htmlspecialchars(PET_SPECIES[$pet['species']]) ?></td>
                             <td><?= htmlspecialchars(PET_SEXES[$pet['sex']]) ?></td>
                             <td><?= htmlspecialchars($pet['birthday']) ?></td>
-                            <td>
-                                <a href="./view.php?id=<?= htmlspecialchars($pet['id']) ?>">
-                                    <button>Voir</button>
-                                </a>
-                            </td>
                         </tr>
                     <?php } ?>
                 </tbody>
@@ -230,11 +233,194 @@ $pets = [];
 </html>
 ```
 
-A première vue, ce code peut sembler correct et fonctionnel. Cependant, il
-présente plusieurs problèmes de lisibilité et de maintenabilité. En effet, si
-nous voulons modifier l'en-tête ou le pied de page, nous devons le faire dans
-chaque fichier PHP, ce qui peut rapidement devenir fastidieux et source
-d'erreurs.
+```php
+<?php
+require_once __DIR__ . '/../src/functions.php';
+
+// Définition des valeurs par défaut de l'animal de compagnie
+$name = $_POST["name"] ?? '';
+$species = $_POST["species"] ?? '';
+$sex = $_POST["sex"] ?? '';
+$birthday = $_POST["birthday"] ?? '';
+
+// Gestion de la soumission du formulaire
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Validation de l'animal de compagnie
+    $errors = validatePet(
+        $name,
+        $species,
+        $sex,
+        $birthday,
+    );
+
+    // S'il n'y a pas d'erreurs, ajoute l'animal de compagnie à la base de données
+    if (empty($errors)) {
+        $newPetId = addPet(
+            $name,
+            $species,
+            $sex,
+            $birthday ?: null,
+        );
+
+        if ($newPetId !== null) {
+            header('Location: ./index.php');
+            exit;
+        } else {
+            $errors = array_push($errors, "Une erreur est survenue lors de l'ajout de l'animal de compagnie.");
+        }
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Page de création | ninetendogs</title>
+    <meta name="description" content="ninetendogs - Gestionnaire d'animaux de compagnie - Création d'un animal de compagnie">
+</head>
+
+<body class="container">
+    <header>
+        <nav>
+            <ul>
+                <li><strong>ninetendogs</strong></li>
+            </ul>
+            <ul>
+                <li><a href="./index.php">Accueil</a></li>
+                <li><a href="./create.php">Nouvel animal</a></li>
+            </ul>
+        </nav>
+
+        <nav aria-label="breadcrumb">
+            <ul>
+                <li><a href="./index.php">Accueil</a></li>
+                <li>Nouvel animal</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Créer un nouvel animal de compagnie</h1>
+
+        <?php if ($_SERVER["REQUEST_METHOD"] === "POST") { ?>
+            <?php if (!empty($errors)) { ?>
+                <p style="color: red;">Le formulaire contient des erreurs :</p>
+                <ul>
+                    <?php foreach ($errors as $error) { ?>
+                        <li><?= $error ?></li>
+                    <?php } ?>
+                </ul>
+            <?php } ?>
+        <?php } ?>
+
+        <form action="./create.php" method="POST">
+            <label for="name">Nom</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                value="<?= htmlspecialchars($name) ?>"
+                minlength="2"
+                maxlength="50"
+                required />
+
+            <label for="species">Espèce</label>
+            <select id="species" name="species" required>
+                <option
+                    value="dog"
+                    <?= $species === "dog" ? "selected" : "" ?> />
+                Chien
+                </option>
+                <option
+                    value="cat"
+                    <?= $species === "cat" ? "selected" : "" ?> />
+                Chat
+                </option>
+                <option
+                    value="lizard"
+                    <?= $species === "lizard" ? "selected" : "" ?> />
+                Lézard
+                </option>
+                <option
+                    value="snake"
+                    <?= $species === "snake" ? "selected" : "" ?> />
+                Serpent
+                </option>
+                <option
+                    value="bird"
+                    <?= $species === "bird" ? "selected" : "" ?> />
+                Oiseau
+                </option>
+                <option
+                    value="rabbit"
+                    <?= $species === "rabbit" ? "selected" : "" ?> />
+                Lapin
+                </option>
+                <option
+                    value="other"
+                    <?= $species === "other" ? "selected" : "" ?> />
+                Autre
+                </option>
+            </select>
+
+            <fieldset>
+                <legend>Sexe</legend>
+
+                <input
+                    type="radio"
+                    id="male"
+                    name="sex"
+                    value="male"
+                    required
+                    <?= $sex === "male" ? "checked" : "" ?> />
+                <label for="male">Mâle</label>
+
+                <input
+                    type="radio"
+                    id="female"
+                    name="sex"
+                    value="female"
+                    required
+                    <?= $sex === "female" ? "checked" : "" ?> />
+                <label for="female">Femelle</label>
+            </fieldset>
+
+            <label for="birthday">Date de naissance</label>
+            <input
+                type="date"
+                id="birthday"
+                name="birthday"
+                value="<?= htmlspecialchars($birthday) ?>"
+                required
+                max="<?= date("Y-m-d") ?>" />
+
+            <button type="submit">Créer le nouvel animal</button>
+        </form>
+    </main>
+    <footer>
+        <center>
+            <small>
+                Un projet réalisé dans le cadre du cours <a href="https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course">ProgServ1</a> enseigné à la <a href="https://heig-vd.ch">HEIG-VD</a>.
+            </small>
+        </center>
+    </footer>
+</body>
+
+</html>
+```
+
+A première vue, ces deux pages peuvent sembler correctes et fonctionnelles.
+
+Cependant, elles présente plusieurs problèmes de lisibilité et de
+maintenabilité. En effet, si nous voulons modifier l'en-tête ou le pied de page,
+nous devons le faire dans chaque fichier PHP, ce qui peut rapidement devenir
+fastidieux et source d'erreurs.
 
 Il serait donc possible d'améliorer la structure de notre application web en
 séparant les parties communes dans des fichiers d'inclusion.
@@ -262,6 +448,10 @@ serveur 1) :
 
 ```text
 project/
+├── components/
+│   ├── footer.php
+│   ├── head.php
+│   └── header.php
 ├── public/
 │   ├── css/
 │   │   └── styles.css
@@ -272,16 +462,12 @@ project/
 ├── src/
 │   ├── constants.php
 │   └── functions.php
-├── views/
-│   ├── footer.php
-│   ├── head.php
-│   └── header.php
 ├── README.md
 └── petsmanager.db
 ```
 
 - Les pages web se trouvent dans le dossier `public/`.
-- Les fichiers d'inclusion se trouvent dans le dossier `views/`.
+- Les fichiers d'inclusion se trouvent dans le dossier `components/`.
 - Les fichiers sources du projet se trouvent dans le dossier `src/`. Ici, les
   fichiers `constants.php` et `functions.php` sont présents, mais d'autres
   fichiers sources peuvent être ajoutés au besoin.
@@ -289,9 +475,9 @@ project/
 ### Sortir les parties communes dans des fichiers séparés
 
 Afin de réutiliser les parties communes dans plusieurs pages web, nous allons
-sortir ces parties dans des fichiers séparés dans le dossier `views/`.
+sortir ces parties dans des fichiers séparés dans le dossier `components/`.
 
-Il suffit de créer trois fichiers PHP dans le dossier `views/` :
+Il suffit de créer trois fichiers PHP dans le dossier `components/` :
 
 - `head.php` : qui contient le bloc `<head>` de la page web.
 - `header.php` : qui contient l'en-tête (header) de la page web.
@@ -353,8 +539,8 @@ dans toutes les pages web qui incluent ce fichier.
 Maintenant que nous avons sorti les parties communes dans des fichiers séparés,
 nous allons les inclure dans chaque page web.
 
-Pour cela, nous allons utiliser la fonction `require` pour inclure les
-fichiers dans chaque page web.
+Pour cela, nous allons utiliser la fonction `require` pour inclure les fichiers
+dans chaque page web.
 
 Par exemple, dans le fichier `index.php`, nous allons inclure les fichiers
 `head.php`, `header.php` et `footer.php` de la manière suivante :
@@ -385,7 +571,7 @@ index f988025..edddce8 100644
 -    <title>Page d'accueil | ninetendogs</title>
 -    <meta name="description" content="ninetendogs - Gestionnaire d'animaux de compagnie">
 -</head>
-+<?php require __DIR__ . '/../views/head.php'; ?>
++<?php require __DIR__ . '/../components/head.php'; ?>
 
  <body class="container">
 -    <header>
@@ -399,7 +585,7 @@ index f988025..edddce8 100644
 -            </ul>
 -        </nav>
 -    </header>
-+    <?php require __DIR__ . '/../views/header.php'; ?>
++    <?php require __DIR__ . '/../components/header.php'; ?>
      <main>
          <center>
              <div class="logo">
@@ -415,7 +601,7 @@ la <a href="https://heig-vd.ch">HEIG-VD</a>.
 -            </small>
 -        </center>
 -    </footer>
-+    <?php require __DIR__ . '/../views/footer.php'; ?>
++    <?php require __DIR__ . '/../components/footer.php'; ?>
  </body>
 
  </html>
@@ -466,6 +652,11 @@ le titre et la description de la page. Si ces variables ne sont pas définies,
 des valeurs par défaut sont utilisées grâce à l'opérateur `??` (voir
 [documentation PHP](https://www.php.net/manual/en/language.operators.comparison.php)).
 
+Notez également que les deux variables sont échappées avec `htmlspecialchars()`.
+Même si ces valeurs proviennent de notre propre code, prendre l'habitude
+d'échapper systématiquement tout ce qui est affiché dans du HTML évite les
+failles de type XSS.
+
 > [!IMPORTANT]
 >
 > Notez bien que l'opérateur `??` est utilisé **à l'intérieur** de l'appel à
@@ -473,11 +664,6 @@ des valeurs par défaut sont utilisées grâce à l'opérateur `??` (voir
 > `htmlspecialchars($title) ?? 'ninetendogs'`, la valeur par défaut ne serait
 > jamais utilisée : `htmlspecialchars()` ne retourne jamais `null` et une
 > variable non définie provoquerait un avertissement.
-
-Notez également que les deux variables sont échappées avec
-`htmlspecialchars()`. Même si ces valeurs proviennent de notre propre code,
-prendre l'habitude d'échapper systématiquement tout ce qui est affiché dans du
-HTML évite les failles de type XSS.
 
 Si ces variables sont définies dans le fichier PHP qui inclut le fichier
 `head.php`, elles seront utilisées pour définir le titre et la description de la
@@ -523,33 +709,36 @@ nous trompons dans son nom, aucune erreur n'est signalée : la valeur par défau
 est utilisée silencieusement.
 
 Pour rendre cette relation explicite, nous pouvons écrire une fonction qui
-affiche une vue en lui passant ses valeurs en paramètres. Créons pour cela un
-fichier `src/functions.php` :
+affiche une vue en lui passant ses valeurs en paramètres. Ajoutons une nouvelle
+fonction `render()` dans le fichier `functions.php` :
 
 ```php
-<?php
-
-function render(string $view, array $data = []): void
-{
+function render(string $component, array $data = []): void {
     // Le chemin est calculé avant `extract()` afin qu'une valeur de `$data` ne
-    // puisse pas écraser la variable `$viewPath`
-    $viewPath = __DIR__ . '/../views/' . $view . '.php';
+    // puisse pas écraser la variable `$componentPath`.
+    $componentPath = __DIR__ . '/../components/' . $component . '.php';
 
     // `extract()` transforme les clés du tableau en variables locales à la
     // fonction. `EXTR_SKIP` empêche d'écraser les variables qui existent déjà
-    // ici (`$view`, `$data` et `$viewPath`)
+    // ici (`$component`, `$data` et `$componentPath`).
     extract($data, EXTR_SKIP);
 
     // `require` et non `require_once`, afin de pouvoir afficher plusieurs fois
-    // la même vue dans une même page
-    require $viewPath;
+    // le même composant dans une même page.
+    require $componentPath;
 }
 ```
+
+Cette fonction prend en paramètre le nom du composant à afficher et un tableau
+associatif de valeurs à passer à la vue. Elle calcule le chemin du fichier
+correspondant, puis utilise la fonction `extract()` pour transformer les clés du
+tableau en variables locales à la fonction. Enfin, elle inclut le fichier du
+composant avec `require`.
 
 La fonction `extract()` (voir
 [documentation PHP](https://www.php.net/manual/en/function.extract.php))
 transforme les clés d'un tableau associatif en variables. Ainsi, le tableau
-`['title' => 'Accueil']` met la variable `$title` à disposition de la vue.
+`['title' => 'Accueil']` met la variable `$title` à disposition du composant.
 
 Ce qui change ici est important : ces variables sont créées **à l'intérieur de
 la fonction** `render()`. Elles n'existent donc que le temps d'afficher la vue
@@ -648,7 +837,7 @@ soit nécessaire de créer des variables globales.
 
 > [!TIP]
 >
-> Cette manière de faire — une vue, des valeurs passées en paramètres — est
+> Cette manière de faire - un composant, des valeurs passées en paramètres - est
 > exactement le principe des _composants_ que vous retrouverez dans les moteurs
 > de templates (Twig, Blade) et dans les bibliothèques d'interface côté client
 > (React, Vue). Les valeurs passées à un composant y sont souvent appelées des
@@ -657,8 +846,9 @@ soit nécessaire de créer des variables globales.
 ## Résumé
 
 PHP met à disposition plusieurs fonctions pour inclure des fichiers dans un
-script, telles que `include`, `require`, `include_once` et `require_once`. Ces
-fonctions permettent de réutiliser du code dans plusieurs fichiers PHP,
+script, telles que `include`, `require`, `include_once` et `require_once`.
+
+Ces fonctions permettent de réutiliser du code dans plusieurs fichiers PHP,
 notamment les fichiers de fonctions et des constantes.
 
 En utilisant ce mécanisme d'inclusion de fichiers, nous pouvons également

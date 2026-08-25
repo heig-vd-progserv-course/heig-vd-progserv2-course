@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/database.php';
-require_once __DIR__ . '/constants.php';
 
 function getPets(): array {
     global $pdo;
@@ -46,12 +45,12 @@ function validatePet(
         array_push($errors, "Le sexe n'est pas valide.");
     }
 
-    if (empty($birthday)) {
-        array_push($errors, "La date de naissance est obligatoire.");
-    } else if (strtotime($birthday) === false) {
-        array_push($errors, "La date de naissance n'est pas valide.");
-    } else if (strtotime($birthday) > time()) {
-        array_push($errors, "La date de naissance ne peut pas être dans le futur.");
+    if (!empty($birthday)) {
+        if (strtotime($birthday) === false) {
+            array_push($errors, "La date de naissance n'est pas valide.");
+        } else if (strtotime($birthday) > time()) {
+            array_push($errors, "La date de naissance ne peut pas être dans le futur.");
+        }
     }
 
     return $errors;
@@ -61,7 +60,7 @@ function addPet(
     string $name,
     string $species,
     string $sex,
-    string $birthday,
+    ?string $birthday,
 ): ?int {
     global $pdo;
 
@@ -97,31 +96,4 @@ function addPet(
     $lastInsertId = $pdo->lastInsertId();
 
     return $lastInsertId;
-}
-
-/**
- * Affiche une partie d'interface (un "composant") stockée dans le dossier
- * `components`.
- *
- * Les valeurs passées dans `$data` sont transformées en variables utilisables
- * directement dans le composant. Par exemple,
- * `render('head', ['title' => 'Accueil'])` met la variable `$title` à
- * disposition du fichier `components/head.php`.
- *
- * @param string $component Nom du fichier de vue, sans le dossier ni l'extension `.php`.
- * @param array $data Valeurs à mettre à disposition du composant.
- */
-function render(string $component, array $data = []): void {
-    // Le chemin est calculé avant `extract()` afin qu'une valeur de `$data` ne
-    // puisse pas écraser la variable `$componentPath`.
-    $componentPath = __DIR__ . '/../components/' . $component . '.php';
-
-    // `extract()` transforme les clés du tableau en variables locales à la
-    // fonction. `EXTR_SKIP` empêche d'écraser les variables qui existent déjà
-    // ici (`$component`, `$data` et `$componentPath`).
-    extract($data, EXTR_SKIP);
-
-    // `require` et non `require_once`, afin de pouvoir afficher plusieurs fois
-    // le même composant dans une même page.
-    require $componentPath;
 }

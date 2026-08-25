@@ -1,4 +1,4 @@
-# Réutiliser des parties d'interface - Exercices
+# Rappels sur PHP - Exercices
 
 L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).
@@ -32,19 +32,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ### Exercice 1
 
-#### Consignes
-
-En reprenant une version simplifiée du mini-projet des animaux de compagnie
-réalisé dans le cours
-[Programmation serveur 1 (ProgServ1)](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
-présent dans ce dossier, adaptez le code pour que les parties d'interface
-communes soient réutilisables avec l'approche de réutilisation des parties
-d'interface.
-
-#### Solution
-
-Une solution possible est disponible dans le dossier
-[`01-exemples-de-code`](../01-exemples-de-code/README.md) de ce contenu.
+Mettez en place un environnement de développement PHP pour le
+[projet libre](../../../02-evaluations/02-projet-libre/README.md) pour votre
+équipe.
 
 [licence]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
