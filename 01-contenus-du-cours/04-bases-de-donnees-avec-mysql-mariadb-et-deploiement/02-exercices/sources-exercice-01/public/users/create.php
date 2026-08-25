@@ -1,49 +1,49 @@
 <?php
 require __DIR__ . '/../../src/utils/autoloader.php';
 
-use Tools\ToolsManager;
-use Tools\Tool;
+use Users\UsersManager;
+use Users\User;
 
-// Création d'une instance de ToolsManager
-$toolsManager = new ToolsManager();
+// Création d'une instance de UsersManager
+$usersManager = new UsersManager();
 
 // Gère la soumission du formulaire
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Récupération des données du formulaire
-    $name = $_POST["name"];
-    $type = $_POST["type"];
-    $purchaseDate = $_POST["purchase-date"];
-    $price = $_POST["price"];
+    $firstName = $_POST["first-name"];
+    $lastName = $_POST["last-name"];
+    $email = $_POST["email"];
+    $age = $_POST["age"];
 
     $errors = [];
 
     try {
-        // Création d'un nouvel objet `Tool`
-        $tool = new Tool(
-            null,
-            $name,
-            $type,
-            new \DateTime($purchaseDate),
-            (float) $price
+        // Création d'un nouvel objet `User`
+        $user = new User(
+            null, // Comme c'est une création, l'ID est null. La base de données l'assignera automatiquement.
+            $firstName,
+            $lastName,
+            $email,
+            $age
         );
     } catch (InvalidArgumentException $e) {
         $errors[] = $e->getMessage();
     }
 
-    // S'il n'y a pas d'erreurs, ajout de l'outil
+    // S'il n'y a pas d'erreurs, ajout de l'utilisateur
     if (empty($errors)) {
         try {
-            // Ajout de l'outil à la base de données
-            $toolId = $toolsManager->addTool($tool);
+            // Ajout de l'utilisateur à la base de données
+            $usersManager->addUser($user);
 
-            // Redirection vers la page d'accueil avec tous les outils
+            // Redirection vers la page d'accueil avec tous les utilisateurs
             header("Location: index.php");
             exit();
         } catch (PDOException $e) {
             // Liste des codes d'erreurs : https://en.wikipedia.org/wiki/SQLSTATE
             if ($e->getCode() === "23000") {
-                // Erreur de contrainte d'unicité (par exemple, nom déjà utilisé)
-                $errors[] = "L'outil existe déjà.";
+                // Erreur de contrainte d'unicité (par exemple, email déjà utilisé)
+                $errors[] = "L'adresse e-mail est déjà utilisée.";
             } else {
                 $errors[] = "Erreur lors de l'interaction avec la base de données : " . $e->getMessage();
             }
@@ -64,14 +64,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     <link rel="stylesheet" href="../css/custom.css">
 
-    <title>Créer un nouvel outil | MyApp</title>
+    <title>Créer un.e nouvel.le utilisateur.trice | MyApp</title>
 </head>
 
 <body>
     <main class="container">
-        <h1>Créer un nouvel outil</h1>
+        <h1>Créer un.e nouvel.le utilisateur.trice</h1>
 
-        <p><a href="../index.php">Accueil</a> > <a href="index.php">Gestion des outils</a> > Création d'un nouvel outil</p>
+        <p><a href="../index.php">Accueil</a> > <a href="index.php">Gestion des utilisateur.trices</a> > Création d'un.e utilisateur.trice</p>
 
         <?php if ($_SERVER["REQUEST_METHOD"] === "POST") { ?>
             <?php if (empty($errors)) { ?>
@@ -87,21 +87,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <?php } ?>
 
         <form action="create.php" method="POST">
-            <label for="name">Nom</label>
-            <input type="text" id="name" name="name" value="<?= htmlspecialchars($name ?? ''); ?>" required minlength="2">
+            <label for="first-name">Prénom</label>
+            <input type="text" id="first-name" name="first-name" value="<?= htmlspecialchars($firstName ?? ''); ?>" required minlength="2">
 
-            <label for="type">Type</label>
-            <select id="type" name="type" required>
-                <?php foreach (Tool::TYPES as $key => $value) { ?>
-                    <option value="<?= $key ?>" <?php if (isset($type) && $type === $key) echo "selected"; ?>><?= $value ?></option>
-                <?php } ?>
-            </select>
+            <label for="last-name">Nom</label>
+            <input type="text" id="last-name" name="last-name" value="<?= htmlspecialchars($lastName ?? ''); ?>" required minlength="2">
 
-            <label for="purchase-date">Date d'achat</label>
-            <input type="date" id="purchase-date" name="purchase-date" value="<?= htmlspecialchars($purchaseDate ?? ''); ?>" required>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" value="<?= htmlspecialchars($email ?? ''); ?>" required>
 
-            <label for="price">Prix</label>
-            <input type="number" id="price" name="price" value="<?= htmlspecialchars($price ?? ''); ?>" required min="0">
+            <label for="age">Âge</label>
+            <input type="number" id="age" name="age" value="<?= htmlspecialchars($age ?? ''); ?>" required min="0">
 
             <button type="submit">Créer</button>
         </form>

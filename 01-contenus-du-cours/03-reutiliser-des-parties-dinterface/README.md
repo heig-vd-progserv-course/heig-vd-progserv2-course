@@ -70,9 +70,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Objectifs
 
-Ce second contenu théorique a pour but de vous rappeler les concepts de base
-liés aux inclusions de fichiers et à la réutilisation de parties d'interface
-dans une application web.
+Ce contenu a pour but de vous rappeler les concepts de base liés aux inclusions
+de fichiers et à la réutilisation de parties d'interface dans une application
+web.
 
 La liste complète des objectifs est disponible dans la section _"Objectifs"_ du
 bloc d'information en haut de ce contenu.

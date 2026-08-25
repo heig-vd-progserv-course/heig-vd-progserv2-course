@@ -1,7 +1,7 @@
 <?php
 
 class Database implements DatabaseInterface {
-    const DATABASE_CONFIGURATION_FILE = __DIR__ . '/../config/database.ini';
+    const DATABASE_CONFIGURATION_FILE = __DIR__ . '/../../config/database.ini';
 
     private $pdo;
 
