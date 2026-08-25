@@ -47,10 +47,10 @@ L'application doit permettre de :
 
 Chaque outil doit avoir les propriétés suivantes :
 
-- ID (généré automatiquement)
-- Nom (string - unique)
-- Type (string, par exemple "bêche", "râteau", "tondeuse", etc.)
-- Date d'achat (date)
+- ID (généré automatiquement).
+- Nom (string - unique).
+- Type (string, par exemple "bêche", "râteau", "tondeuse", etc.).
+- Date d'achat (date), avec les précisions suivantes :
   - Documentation pour un champ de type `date` côté navigateur (client)
     disponible ici :
     <https://developer.mozilla.org/fr/docs/Web/HTML/Element/input/date>.
@@ -59,7 +59,7 @@ Chaque outil doit avoir les propriétés suivantes :
   - Documentation pour un champ de type `DATE` côté base de données
     (MySQL/MariaDB) disponible ici :
     <https://dev.mysql.com/doc/refman/8.0/en/datetime.html>.
-- Prix (float)
+- Prix (float).
 
 L'application doit utiliser une base de données MySQL ou MariaDB pour stocker
 les outils et utiliser un fichier de configuration pour les paramètres de

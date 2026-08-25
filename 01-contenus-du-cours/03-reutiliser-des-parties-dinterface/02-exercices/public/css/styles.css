@@ -1,0 +1,36 @@
+/* Classe personnalisée pour le logo */
+.logo {
+	margin-bottom: 10px;
+	width: 200px;
+	padding: 20px;
+	border-radius: 100%;
+	background-color: #0172ad;
+}
+
+/* Styles pour que l'élément principal de la page prenne toute la hauteur disponible */
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1;
+}
+
+/* Styles pour avoir une pastille de couleur pour afficher la couleur de l'animal de compagnie */
+.color-chip {
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	display: inline-block;
+	border: 1px solid #0003;
+	box-shadow: inset 0 0 0 1px #fff4;
+	vertical-align: center;
+}
+
+/* Styles pour que les boutons prennent la largeur totale de leur conteneur */
+.button-full-width {
+	margin-bottom: var(--pico-spacing);
+	width: 100%;
+}

@@ -23,7 +23,9 @@ _class: lead
 _paginate: false
 -->
 
-[Lien vers le cours][cours]
+[<img src="https://raw.githubusercontent.com/primer/octicons/refs/heads/main/icons/mark-github-24.svg" style="vertical-align: middle; width: 32px;" alt="GitHub logo"> `github.com/heig-vd-progserv-course/heig-vd-progserv2-course`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course)
+
+[Visualiser le contenu complet sur GitHub][contenu-complet].
 
 <small>L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -104,12 +106,14 @@ questions relatives au cours :
     si je ne suis pas disponible).
   - Message privé sur Teams (à éviter si possible).
 
-## _Retrouvez plus de détails dans le support de cours_
+## Retrouvez le contenu complet de cette présentation sur GitHub
 
 <!-- _class: lead -->
 
-_Cette présentation est un résumé du support de cours. Pour plus de détails,
-consultez le [support de cours][cours]._
+_Cette présentation est un résumé du contenu complet disponible sur GitHub._
+
+_Pour plus de détails, retrouvez le contenu complet [ici][contenu-complet] ou en
+cliquant sur l'en-tête de ce document._
 
 ## Objectifs
 
@@ -357,8 +361,8 @@ Est-ce que vous avez des questions ?
 
 <!-- URLs -->
 
-[cours]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01.01-modalites-de-lunite-denseignement
+[contenu-complet]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/01-introduction-et-organisation-du-cours/README.md
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
 
