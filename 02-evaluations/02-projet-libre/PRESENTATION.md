@@ -23,7 +23,9 @@ _class: lead
 _paginate: false
 -->
 
-[Lien vers le cours][cours]
+[<img src="https://raw.githubusercontent.com/primer/octicons/refs/heads/main/icons/mark-github-24.svg" style="vertical-align: middle; width: 32px;" alt="GitHub logo"> `github.com/heig-vd-progserv-course/heig-vd-progserv2-course`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course)
+
+[Visualiser le contenu complet sur GitHub][contenu-complet].
 
 <small>L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -32,12 +34,14 @@ _paginate: false
 
 ![bg opacity:0.1][illustration-principale]
 
-## _Retrouvez plus de détails dans le support de cours_
+## Retrouvez le contenu complet de cette présentation sur GitHub
 
 <!-- _class: lead -->
 
-_Cette présentation est un résumé du support de cours. Pour plus de détails,
-consultez le [support de cours][cours]._
+_Cette présentation est un résumé du contenu complet disponible sur GitHub._
+
+_Pour plus de détails, retrouvez le contenu complet [ici][contenu-complet] ou en
+cliquant sur l'en-tête de ce document._
 
 ## Objectifs
 
@@ -53,7 +57,7 @@ consultez le [support de cours][cours]._
 - Deux (2) ou trois (3) personnes par groupe.
 - Si vous n'avez pas de partenaire, le corps enseignant vous en attribuera un.e.
 - Groupes à annoncer dans un document Google Sheets, comme décrit dans le
-  [support de cours][cours].
+  [support de cours][contenu-complet].
 
 ![bg right:40%][illustration-composition-des-groupes]
 
@@ -63,7 +67,7 @@ consultez le [support de cours][cours]._
   trop complexe.
 - Nous vous aiderons à trouver une bonne idée si nécessaire.
 - Un cahier des charges est attendu dans les deux premières semaines du projet
-  Les détails sont dans le [support de cours][cours].
+  Les détails sont dans le [support de cours][contenu-complet].
 
 ![bg right:40%][illustration-validation-de-lidee]
 
@@ -88,7 +92,7 @@ consultez le [support de cours][cours]._
 
 <!-- _class: lead -->
 
-Voir le [support de cours][cours] pour plus de détails.
+Voir le [support de cours][contenu-complet] pour plus de détails.
 
 ## Conseils
 
@@ -145,8 +149,8 @@ Est-ce que vous avez des questions ?
 
 <!-- URLs -->
 
-[cours]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01.03-projet-libre-(1-sur-8)
+[contenu-complet]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/02-evaluations/02-projet-libre/README.md
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-ProgServ2-course/blob/main/LICENSE.md
 

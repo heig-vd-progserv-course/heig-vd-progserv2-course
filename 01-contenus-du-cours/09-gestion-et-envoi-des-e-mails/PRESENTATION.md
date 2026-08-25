@@ -23,7 +23,9 @@ _class: lead
 _paginate: false
 -->
 
-[Lien vers le cours][cours]
+[<img src="https://raw.githubusercontent.com/primer/octicons/refs/heads/main/icons/mark-github-24.svg" style="vertical-align: middle; width: 32px;" alt="GitHub logo"> `github.com/heig-vd-progserv-course/heig-vd-progserv2-course`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course)
+
+[Visualiser le contenu complet sur GitHub][contenu-complet].
 
 <small>L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -32,12 +34,14 @@ _paginate: false
 
 ![bg opacity:0.1][illustration-principale]
 
-## _Retrouvez plus de détails dans le support de cours_
+## Retrouvez le contenu complet de cette présentation sur GitHub
 
 <!-- _class: lead -->
 
-_Cette présentation est un résumé du support de cours. Pour plus de détails,
-consultez le [support de cours][cours]._
+_Cette présentation est un résumé du contenu complet disponible sur GitHub._
+
+_Pour plus de détails, retrouvez le contenu complet [ici][contenu-complet] ou en
+cliquant sur l'en-tête de ce document._
 
 ## Objectifs (1/2)
 
@@ -156,7 +160,7 @@ mail($to, $subject, $body, $headers);
 
 - Nous utilisons déjà Infomaniak pour l'hébergement web et le nom de domaine.
 - Nécessaire de commander un service de messagerie.
-- Le [support de cours][cours] explique comment faire cela.
+- Le [support de cours][contenu-complet] explique comment faire cela.
 
 ![bg right:40% h:75%](./images/infomaniak-configuration-adresse-email-4.png)
 
@@ -165,7 +169,7 @@ mail($to, $subject, $body, $headers);
 - Préférable d'utiliser un serveur SMTP local pour le développement.
 - Permet de tester l'envoi d'e-mails sans envoyer de vrais e-mails.
 - Nous utilisons pour cela [Mailpit](https://github.com/axllent/mailpit).
-- Le [support de cours][cours] explique comment faire cela.
+- Le [support de cours][contenu-complet] explique comment faire cela.
 
 ![bg right:40% h:75%](./images/mailpit-interface-web.png)
 
@@ -174,7 +178,7 @@ mail($to, $subject, $body, $headers);
 - Pour envoyer des e-mails en PHP, nous allons utiliser la bibliothèque
   [PHPMailer](https://github.com/PHPMailer/PHPMailer).
 - Installation manuelle pour le moment (sans Composer).
-- Le [support de cours][cours] explique comment faire cela.
+- Le [support de cours][contenu-complet] explique comment faire cela.
 
 ![bg right:40%][illustration-derriere-les-mails-smtp-pop3-imap]
 
@@ -371,9 +375,9 @@ Les résultats seront discutés au prochain cours. **Merci beaucoup !**
 - Faire les exercices.
 - Poser des questions si nécessaire.
 
-➡️ [Lien vers le cours][cours]
+➡️ [Visualiser le contenu complet sur GitHub][contenu-complet].
 
-**N'hésitez pas à vous entraidez si vous avez des difficultés !**
+**N'hésitez pas à vous entraider si vous avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
@@ -394,8 +398,8 @@ Les résultats seront discutés au prochain cours. **Merci beaucoup !**
 
 <!-- URLs -->
 
-[cours]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/06.01-gestion-et-envoi-des-e-mails
+[contenu-complet]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/09-gestion-et-envoi-des-e-mails/README.md
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
 [feedback]: https://framaforms.org/progserv2-2025-2026-feedback-1762260178

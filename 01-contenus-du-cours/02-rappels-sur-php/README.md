@@ -514,6 +514,17 @@ foreach ($users as $user) {
     echo "City: {$user['city']}<br>";
     echo "<br>";
 }
+
+// Nouveauté Programmation serveur 2 (ProgServ2) : boucles `foreach` avec clé et valeur.
+// `$username` contient la clé.
+// `$user` contient la valeur de l'élément du tableau.
+foreach ($users as $username => $user) {
+    echo "Username: $username<br>";
+    echo "Name: {$user['name']}<br>";
+    echo "Age: {$user['age']}<br>";
+    echo "City: {$user['city']}<br>";
+    echo "<br>";
+}
 ```
 
 ## Formulaires HTML, validation et sécurité

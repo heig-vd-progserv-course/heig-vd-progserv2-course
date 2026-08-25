@@ -63,7 +63,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Inclure les fichiers dans les pages web](#inclure-les-fichiers-dans-les-pages-web)
   - [Créer des composants réutilisables](#créer-des-composants-réutilisables)
   - [Passer des paramètres explicites avec une fonction](#passer-des-paramètres-explicites-avec-une-fonction)
-- [Résumé](#résumé)
+- [Conclusion](#conclusion)
 - [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
 - [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
@@ -149,7 +149,7 @@ nous avons les pages suivantes (versions simplifiées par rapport à la version
 originale) :
 
 ```php
-// index.php
+// src/index.php
 <?php
 require_once __DIR__ . '/../src/constants.php';
 require_once __DIR__ . '/../src/functions.php';
@@ -234,6 +234,7 @@ $pets = getPets();
 ```
 
 ```php
+// src/create.php
 <?php
 require_once __DIR__ . '/../src/functions.php';
 
@@ -554,10 +555,10 @@ Par exemple, dans le fichier `index.php`, nous allons inclure les fichiers
 
 ```diff
 diff --git a/public/index.php b/public/index.php
-index f988025..edddce8 100644
+index 1305035..f4606e5 100755
 --- a/public/index.php
 +++ b/public/index.php
-@@ -7,29 +7,10 @@ $pets = [];
+@@ -8,29 +8,10 @@ $pets = getPets();
  <!DOCTYPE html>
  <html lang="fr">
 
@@ -589,15 +590,15 @@ index f988025..edddce8 100644
      <main>
          <center>
              <div class="logo">
-@@ -74,13 +55,7 @@ $pets = [];
+@@ -69,13 +50,7 @@ $pets = getPets();
              </table>
          </div>
      </main>
 -    <footer>
 -        <center>
 -            <small>
--                Un projet réalisé dans le cadre du cours <a href="https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course">ProgServ1</a> enseigné à
-la <a href="https://heig-vd.ch">HEIG-VD</a>.
+-                Un projet réalisé dans le cadre du cours <a href="https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course">ProgServ1</a> enseigné à la <a href="https://heig-vd.ch"
+>HEIG-VD</a>.
 -            </small>
 -        </center>
 -    </footer>
@@ -605,6 +606,68 @@ la <a href="https://heig-vd.ch">HEIG-VD</a>.
  </body>
 
  </html>
+```
+
+```diff
+diff --git a/public/create.php b/public/create.php
+index 83a44c1..1ceafc8 100755
+--- a/public/create.php
++++ b/public/create.php
+@@ -39,36 +39,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
+ <!DOCTYPE html>
+ <html lang="fr">
+
+-<head>
+-    <meta charset="utf-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1">
+-    <meta name="color-scheme" content="light dark">
+-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+-    <link rel="stylesheet" href="./css/styles.css">
+-
+-    <title>Page de création | ninetendogs</title>
+-    <meta name="description" content="ninetendogs - Gestionnaire d'animaux de compagnie - Création d'un animal de compagnie">
+-</head>
++<?php require __DIR__ . '/../components/head.php'; ?>
+
+ <body class="container">
+-    <header>
+-        <nav>
+-            <ul>
+-                <li><strong>ninetendogs</strong></li>
+-            </ul>
+-            <ul>
+-                <li><a href="./index.php">Accueil</a></li>
+-                <li><a href="./create.php">Nouvel animal</a></li>
+-            </ul>
+-        </nav>
+-
+-        <nav aria-label="breadcrumb">
+-            <ul>
+-                <li><a href="./index.php">Accueil</a></li>
+-                <li>Nouvel animal</li>
+-            </ul>
+-        </nav>
+-    </header>
++    <?php require __DIR__ . '/../components/header.php'; ?>
+     <main>
+         <h1>Créer un nouvel animal de compagnie</h1>
+
+@@ -167,13 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
+             <button type="submit">Créer le nouvel animal</button>
+         </form>
+     </main>
+-    <footer>
+-        <center>
+-            <small>
+-                Un projet réalisé dans le cadre du cours <a href="https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course">ProgServ1</a> enseigné à la <a href="https://heig-vd.ch"
+>HEIG-VD</a>.
+-            </small>
+-        </center>
+-    </footer>
++    <?php require __DIR__ . '/../components/footer.php'; ?>
+ </body>
+
+ </html
 ```
 
 Ici, toutes les parties communes ont été remplacées par des inclusions de
@@ -647,6 +710,27 @@ titre de la page, nous pourrions avoir quelque chose comme ceci :
 </head>
 ```
 
+<details>
+<summary>Afficher le diff</summary>
+
+```diff
+diff --git a/components/head.php b/components/head.php
+index 6dc7416..b06225a 100644
+--- a/components/head.php
++++ b/components/head.php
+@@ -5,6 +5,6 @@
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+     <link rel="stylesheet" href="./css/styles.css">
+
+-    <title>Page d'accueil | ninetendogs</title>
+-    <meta name="description" content="ninetendogs - Gestionnaire d'animaux de compagnie">
++    <title><?= htmlspecialchars($title ?? 'ninetendogs') ?></title>
++    <meta name="description" content="<?= htmlspecialchars($description ?? "ninetendogs - Gestionnaire d'animaux de compagnie") ?>">
+ </head>
+```
+
+</details>
+
 Ici, deux variables PHP `$title` et `$description` sont utilisées pour définir
 le titre et la description de la page. Si ces variables ne sont pas définies,
 des valeurs par défaut sont utilisées grâce à l'opérateur `??` (voir
@@ -671,24 +755,45 @@ page :
 
 ```diff
 diff --git a/public/index.php b/public/index.php
-index edddce8..8e014a9 100644
+index f4606e5..d07f4b6 100755
 --- a/public/index.php
 +++ b/public/index.php
-@@ -1,6 +1,9 @@
- <?php
+@@ -2,6 +2,9 @@
  require_once __DIR__ . '/../src/constants.php';
+ require_once __DIR__ . '/../src/functions.php';
 
 +$title = "Page d'accueil | ninetendogs";
 +$description = "ninetendogs - Gestionnaire d'animaux de compagnie - Page d'accueil";
 +
- $pets = [];
+ $pets = getPets();
  ?>
 ```
 
 Ici, dans la page d'accueil, le titre et la description sont définis pour
-refléter le contenu de la page. Si nous ne définissons pas ces variables dans
-une autre page, elles ne seront pas définies et les valeurs par défaut seront
-utilisées.
+refléter le contenu de la page. Si nous ne définissons pas ces variables, elles
+ne seront pas définies et les valeurs par défaut seront utilisées.
+
+```diff
+diff --git a/public/create.php b/public/create.php
+index 1ceafc8..b60a6bc 100755
+--- a/public/create.php
++++ b/public/create.php
+@@ -1,6 +1,9 @@
+ <?php
+ require_once __DIR__ . '/../src/functions.php';
+
++$title = "Créer un nouvel animal de compagnie | ninetendogs";
++$description = "ninetendogs - Gestionnaire d'animaux de compagnie - Créer un nouvel animal";
++
+ // Définition des valeurs par défaut de l'animal de compagnie
+ $name = $_POST["name"] ?? '';
+ $species = $_POST["species"] ?? '';
+```
+
+Ici, dans la page de création d'un animal de compagnie, le titre et la
+description sont définis pour refléter le contenu de la page. Si nous ne
+définissons pas ces variables, elles ne seront pas définies et les valeurs par
+défaut seront utilisées.
 
 Ainsi chaque page web peut définir son propre titre et sa propre description, ce
 qui est important pour le référencement (SEO) et l'expérience utilisateur.
@@ -709,8 +814,8 @@ nous trompons dans son nom, aucune erreur n'est signalée : la valeur par défau
 est utilisée silencieusement.
 
 Pour rendre cette relation explicite, nous pouvons écrire une fonction qui
-affiche une vue en lui passant ses valeurs en paramètres. Ajoutons une nouvelle
-fonction `render()` dans le fichier `functions.php` :
+affiche un composant en lui passant ses valeurs en paramètres. Ajoutons une
+nouvelle fonction `render()` dans le fichier `functions.php` :
 
 ```php
 function render(string $component, array $data = []): void {
@@ -729,8 +834,39 @@ function render(string $component, array $data = []): void {
 }
 ```
 
+<details>
+<summary>Afficher le diff</summary>
+
+```diff
+diff --git a/src/functions.php b/src/functions.php
+index 4e9cf26..c95a2ec 100755
+--- a/src/functions.php
++++ b/src/functions.php
+@@ -97,3 +97,18 @@ function addPet(
+
+     return $lastInsertId;
+ }
++
++function render(string $component, array $data = []): void {
++    // Le chemin est calculé avant `extract()` afin qu'une valeur de `$data` ne
++    // puisse pas écraser la variable `$componentPath`.
++    $componentPath = __DIR__ . '/../components/' . $component . '.php';
++
++    // `extract()` transforme les clés du tableau en variables locales à la
++    // fonction. `EXTR_SKIP` empêche d'écraser les variables qui existent déjà
++    // ici (`$component`, `$data` et `$componentPath`).
++    extract($data, EXTR_SKIP);
++
++    // `require` et non `require_once`, afin de pouvoir afficher plusieurs fois
++    // le même composant dans une même page.
++    require $componentPath;
++}
+```
+
+</details>
+
 Cette fonction prend en paramètre le nom du composant à afficher et un tableau
-associatif de valeurs à passer à la vue. Elle calcule le chemin du fichier
+associatif de valeurs à passer au composant. Elle calcule le chemin du fichier
 correspondant, puis utilise la fonction `extract()` pour transformer les clés du
 tableau en variables locales à la fonction. Enfin, elle inclut le fichier du
 composant avec `require`.
@@ -741,95 +877,106 @@ transforme les clés d'un tableau associatif en variables. Ainsi, le tableau
 `['title' => 'Accueil']` met la variable `$title` à disposition du composant.
 
 Ce qui change ici est important : ces variables sont créées **à l'intérieur de
-la fonction** `render()`. Elles n'existent donc que le temps d'afficher la vue
-et ne "polluent" pas le reste de la page.
+la fonction** `render()`. Elles n'existent donc que le temps d'afficher le
+composant et ne "polluent" pas le reste de la page.
 
 Nous pouvons maintenant remplacer les inclusions par des appels à `render()`
 dans la page d'accueil :
 
 ```diff
 diff --git a/public/index.php b/public/index.php
-index 8e014a9..b3c1f42 100644
+index d07f4b6..4c50d2b 100755
 --- a/public/index.php
 +++ b/public/index.php
-@@ -1,9 +1,7 @@
- <?php
+@@ -2,19 +2,19 @@
  require_once __DIR__ . '/../src/constants.php';
-+require_once __DIR__ . '/../src/functions.php';
+ require_once __DIR__ . '/../src/functions.php';
 
 -$title = "Page d'accueil | ninetendogs";
 -$description = "ninetendogs - Gestionnaire d'animaux de compagnie - Page d'accueil";
 -
- $pets = [];
+ $pets = getPets();
  ?>
 
-@@ -11,10 +9,13 @@ $pets = [];
  <!DOCTYPE html>
  <html lang="fr">
 
--<?php require __DIR__ . '/../views/head.php'; ?>
+-<?php require __DIR__ . '/../components/head.php'; ?>
 +<?php render('head', [
 +    'title' => "Page d'accueil | ninetendogs",
 +    'description' => "ninetendogs - Gestionnaire d'animaux de compagnie - Page d'accueil",
 +]); ?>
 
  <body class="container">
--    <?php require __DIR__ . '/../views/header.php'; ?>
+-    <?php require __DIR__ . '/../components/header.php'; ?>
 +    <?php render('header'); ?>
      <main>
-@@ -60,7 +61,7 @@ $pets = [];
+         <center>
+             <div class="logo">
+@@ -53,7 +53,7 @@ $pets = getPets();
+             </table>
+         </div>
      </main>
--    <?php require __DIR__ . '/../views/footer.php'; ?>
+-    <?php require __DIR__ . '/../components/footer.php'; ?>
 +    <?php render('footer'); ?>
  </body>
+
+ </html>
 ```
 
 Le titre et la description ne sont plus des variables globales définies en haut
-du fichier : ils sont écrits directement à l'endroit où la vue est affichée. En
-lisant l'appel à `render()`, nous savons immédiatement quelles valeurs sont
-transmises au fichier `head.php`.
+du fichier : ils sont écrits directement à l'endroit où le composant est
+affiché. En lisant l'appel à `render()`, nous savons immédiatement quelles
+valeurs sont transmises au fichier `head.php`.
 
-Les vues qui n'ont besoin d'aucune valeur, comme `header.php` et `footer.php`,
-s'affichent simplement avec `render('header')` et `render('footer')`, car le
-paramètre `$data` possède une valeur par défaut (`[]`).
+Les composants qui n'ont besoin d'aucune valeur, comme `header.php` et
+`footer.php`, s'affichent simplement avec `render('header')` et
+`render('footer')`, car le paramètre `$data` possède une valeur par défaut
+(`[]`).
 
 Nous appliquons exactement la même transformation à la page de création d'un
 animal de compagnie, dans le fichier `create.php` :
 
 ```diff
 diff --git a/public/create.php b/public/create.php
-index 4a7d0e1..c95b8a3 100644
+index b60a6bc..7ccb29a 100755
 --- a/public/create.php
 +++ b/public/create.php
-@@ -1,8 +1,6 @@
+@@ -1,9 +1,6 @@
  <?php
- require_once __DIR__ . '/../src/constants.php';
-+require_once __DIR__ . '/../src/functions.php';
+ require_once __DIR__ . '/../src/functions.php';
 
--$title = "Créer un nouvel animal";
--$description = "ninetendogs - Gestionnaire d'animaux de compagnie - Création d'un animal de compagnie";
+-$title = "Créer un nouvel animal de compagnie | ninetendogs";
+-$description = "ninetendogs - Gestionnaire d'animaux de compagnie - Créer un nouvel animal";
 -
  // Définition des valeurs par défaut de l'animal de compagnie
  $name = $_POST["name"] ?? '';
-@@ -25,10 +23,13 @@
+ $species = $_POST["species"] ?? '';
+@@ -42,10 +39,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
  <!DOCTYPE html>
  <html lang="fr">
 
--<?php require __DIR__ . '/../views/head.php'; ?>
+-<?php require __DIR__ . '/../components/head.php'; ?>
 +<?php render('head', [
-+    'title' => "Créer un nouvel animal | ninetendogs",
-+    'description' => "ninetendogs - Gestionnaire d'animaux de compagnie - Création d'un animal de compagnie",
++    'title' => "Créer un nouvel animal de compagnie | ninetendogs",
++    'description' => "ninetendogs - Gestionnaire d'animaux de compagnie - Créer un nouvel animal",
 +]); ?>
 
  <body class="container">
--    <?php require __DIR__ . '/../views/header.php'; ?>
+-    <?php require __DIR__ . '/../components/header.php'; ?>
 +    <?php render('header'); ?>
      <main>
-@@ -217,7 +218,7 @@
+         <h1>Créer un nouvel animal de compagnie</h1>
+
+@@ -144,7 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
+             <button type="submit">Créer le nouvel animal</button>
+         </form>
      </main>
--    <?php require __DIR__ . '/../views/footer.php'; ?>
+-    <?php require __DIR__ . '/../components/footer.php'; ?>
 +    <?php render('footer'); ?>
  </body>
+
+ </html>
 ```
 
 Chaque page définit ainsi son propre titre et sa propre description, sans qu'il
@@ -838,12 +985,12 @@ soit nécessaire de créer des variables globales.
 > [!TIP]
 >
 > Cette manière de faire - un composant, des valeurs passées en paramètres - est
-> exactement le principe des _composants_ que vous retrouverez dans les moteurs
-> de templates (Twig, Blade) et dans les bibliothèques d'interface côté client
-> (React, Vue). Les valeurs passées à un composant y sont souvent appelées des
-> _props_ (pour _properties_).
+> exactement le principe que vous retrouverez dans les moteurs de templates
+> (Twig, Blade) et dans les bibliothèques d'interface côté client (React, Vue)
+> dans d'autres langages. Les valeurs passées à un composant y sont souvent
+> appelées des _props_ (pour _properties_).
 
-## Résumé
+## Conclusion
 
 PHP met à disposition plusieurs fonctions pour inclure des fichiers dans un
 script, telles que `include`, `require`, `include_once` et `require_once`.
@@ -857,8 +1004,8 @@ l'en-tête et le pied de page. Nous utilisons `require_once` pour les fichiers d
 fonctions et de constantes, et `require` pour les parties d'interface, car
 celles-ci peuvent devoir être incluses plusieurs fois dans une même page.
 
-Enfin, en écrivant une fonction `render()` qui affiche une vue à partir d'un
-tableau de valeurs, nous rendons explicite ce que chaque partie d'interface
+Enfin, en écrivant une fonction `render()` qui affiche un composant à partir
+d'un tableau de valeurs, nous rendons explicite ce que chaque partie d'interface
 attend. Les valeurs sont passées en paramètres au moment de l'affichage plutôt
 que par des variables globales, ce qui est le principe des _composants_ que vous
 retrouverez dans de nombreux autres langages et bibliothèques.

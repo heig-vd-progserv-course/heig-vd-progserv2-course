@@ -23,7 +23,9 @@ _class: lead
 _paginate: false
 -->
 
-[Lien vers le cours][cours]
+[<img src="https://raw.githubusercontent.com/primer/octicons/refs/heads/main/icons/mark-github-24.svg" style="vertical-align: middle; width: 32px;" alt="GitHub logo"> `github.com/heig-vd-progserv-course/heig-vd-progserv2-course`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course)
+
+[Visualiser le contenu complet sur GitHub][contenu-complet].
 
 <small>L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -32,456 +34,779 @@ _paginate: false
 
 ![bg opacity:0.1][illustration-principale]
 
-## _Retrouvez plus de détails dans le support de cours_
+## Retrouvez le contenu complet de cette présentation sur GitHub
 
 <!-- _class: lead -->
 
-_Cette présentation est un résumé du support de cours. Pour plus de détails,
-consultez le [support de cours][cours]._
+_Cette présentation est un résumé du contenu complet disponible sur GitHub._
 
-## Objectifs
+_Pour plus de détails, retrouvez le contenu complet [ici][contenu-complet] ou en
+cliquant sur l'en-tête de ce document._
 
-- Rappeler les concepts de base de la programmation orientée objet.
-- Appliquer les notions d'interface, d'héritage et d'abstraction avec la
-  programmation orientée objet.
+## Objectifs (1/2)
+
+- Lister les concepts clés de la POO.
+- Expliquer les avantages et les désavantages de la POO.
+- Créer des classes et des objets en PHP.
+- Définir des attributs et des méthodes dans une classe.
+- Utiliser l'encapsulation pour protéger les données des objets.
 
 ![bg right:40%][illustration-objectifs]
 
-## PHP, un rappel
+## Objectifs (2/2)
 
-<!-- _class: lead -->
+- Définir des constructeurs et des destructeurs pour initialiser et nettoyer les
+  objets.
+- Utiliser des constantes dans les classes.
 
-### Architecture client-serveur (1/2)
+![bg right:40%][illustration-objectifs]
 
-- La plupart des applications web modernes reposent sur une architecture dite
-  _"client-serveur"_ :
-  1. Un client (navigateur web) envoie une requête à un serveur.
-  2. Le serveur répond aux requêtes des différents clients.
-  3. Le client affiche le résultat de la requête.
-- PHP repose sur cette même architecture.
+## Buts de la programmation orientée objet (POO)
 
-### Architecture client-serveur (2/2)
+- Paradigme de programmation basé sur des objets (= façon de penser/représenter
+  l'information).
+- Permet de créer des programmes modulaires et réutilisables.
+- Permet de modéliser des entités du monde réel plus faciles à maintenir.
 
-- PHP fonctionne grâce aux outils suivants :
-  - Un serveur web.
-  - PHP installé sur le serveur web.
-  - Un navigateur web.
-  - Un éditeur de code (pour le développement).
+![bg right:40%][illustration-buts-de-la-programmation-orientee-objet]
 
-![bg right:40% contain](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/raw/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/images/architecture-client-serveur-avec-php.png)
+## Concepts clés de la POO (1/2)
 
-### Variables (1/2)
+<div class="two-columns">
+<div>
 
-- PHP est un language de programmation à typage dynamique.
-- Il n'y a pas besoin de déclarer le type de données d'une variable.
-- Le type de données d'une variable est déterminé par la valeur qui lui est
-  assignée.
+- **Classes** : modèles qui définissent les propriétés et les comportements des
+  objets.
+- **Objets** : instances (= création en mémoire) des classes qui représentent
+  des entités concrètes.
+- **Attributs** : variables qui stockent l'état des objets.
 
-![bg right:40%][illustration-variables]
+</div>
+<div>
 
-### Variables (2/2)
+- **Méthodes** : fonctions qui définissent les comportements des objets.
+- **Encapsulation** : protection des données des objets en limitant l'accès
+  direct.
+- **Constructeurs et destructeurs** : méthodes spéciales pour initialiser et
+  nettoyer les objets.
 
-- Une variable commence toujours par le symbole `$` en PHP.
-- Une valeur lui est affectée (= donnée) avec l'opérateur `=`.
-- Une variable peut changer de type en cours d'exécution.
+</div>
+</div>
+
+## Concepts clés de la POO (2/2)
+
+Il existe d'autres concepts, mais ils ne seront pas abordés dans ce cours :
+
+- Héritage/polymorphisme
+- Interfaces
+- Namespaces
+- Exceptions
+- Etc.
+
+</div>
+</div>
+
+![bg right:40%][illustration-buts-de-la-programmation-orientee-objet]
+
+## Avantages de la POO
+
+- **Lisibilité** : le code est organisé en classes et objets, ce qui le rend
+  plus facile à comprendre.
+- **Réutilisabilité** : les classes peuvent être réutilisées, ce qui réduit la
+  duplication de code.
+- **Maintenabilité** : les modifications apportées à une classe n'affectent pas
+  les autres classes, ce qui facilite la maintenance du code.
+
+![bg right:40%][illustration-avantages-de-la-poo]
+
+## Désavantages de la POO
+
+- **Complexité** : la POO peut être plus complexe que la programmation
+  procédurale, ce qui peut rendre le code plus difficile à comprendre pour les
+  débutants.
+- **Performance** : la POO peut être moins performante que la programmation
+  procédurale, car elle nécessite plus de ressources pour créer et gérer des
+  objets.
+
+![bg right:40% ][illustration-desavantages-de-la-poo]
+
+## La POO en PHP
+
+- La POO est prise en charge par PHP depuis la version 5.
+- PHP propose toutes les fonctionnalités de la POO (classes, objets, attributs,
+  méthodes, encapsulation, constructeurs et les destructeurs).
+- Explorons certains de ces concepts en PHP.
+
+![bg right:40%][illustration-principale]
+
+### Classes (1/2)
+
+- Une classe est un modèle qui définit les propriétés et les comportements des
+  objets.
+- Dans PHP, une classe est définie à l'aide du mot-clé `class`.
+- Par convention, les noms de classes commencent sont en Pascal case (par
+  exemple, `JeSuisUneClasse`).
+
+![bg right:40%][illustration-classes]
+
+### Classes (2/2)
 
 ```php
 <?php
-$variable = "Hello";                        // string
-$variable = 42;                             // int
-$variable = 3.14;                           // float
-$variable = true;                           // bool
-$variable = [true, 2, "3", 4 => [5, 6, 7]]; // array
-$variable = null;                           // null
-```
-
-### Constantes (1/2)
-
-- Les constantes sont des valeurs qui ne peuvent pas être modifiées.
-- Les constantes sont déclarées avec le mot-clé `const` ou avec la fonction
-  `define()`.
-- La convention veut que les constantes soient écrites en majuscules.
-
-![bg right:40%][illustration-constantes]
-
-### Constantes (2/2)
-
-```php
-<?php
-define("PI", 3.14159); // Définition d'une constante
-const EULER = 2.71828; // Définition d'une constante
-
-echo PI;    // Affiche 3.14159
-echo EULER; // Affiche 2.71828
-
-PI = 3.14; // Erreur : les constantes ne peuvent pas être modifiées
-```
-
-### Opérateurs (1/2)
-
-- Permet d'effectuer des opérations sur des variables et des valeurs.
-- Opérateurs arithmétiques : `+`, `-`, `*`, `/`, `%` (modulo)
-- Opérateurs de comparaison : `==` (égal), `!=` (différent), `>` (supérieur),
-  `<` (inférieur)
-- Opérateurs logiques : `&&` (et), `||` (ou), `!` (non/inversion)
-
-![bg right:40%][illustration-operateurs]
-
-### Opérateurs (2/2)
-
-```php
-<?php
-
-$a = 10;
-$b = 5;
-$c = 15;
-$d = 15;
-
-// L'opérateur `===` permet de vérifier la valeur et le type (à préférer).
-if ($a > $b && $c === $d) {
-  echo "Condition met!";
-} else {
-  echo "Condition not met!";
+class Person {
+    public $name;
+    public $age;
 }
 ```
 
-### Structures conditionnelles (1/4)
-
-- Permettent de contrôler le flux d'exécution d'un programme.
-- Utilisent les opérateurs de comparaison et logiques.
-- Elles se composent de `if`, `else`, `elseif` et `switch`.
-
-![bg right:40%][illustration-structures-conditionnelles]
-
-### Structures conditionnelles (2/4)
-
-```php
-<?php
-$age = 20;
-
-if ($age < 18) {
-    echo "You are a minor.";
-} elseif ($age >= 18 && $age < 65) {
-    echo "You are an adult.";
-} else {
-    echo "You are a senior.";
+```java
+// Équivalent en Java
+public class Person {
+    public String name;
+    public int age;
 }
 ```
 
-### Structures conditionnelles (3/4)
+### Instanciation d'objets (1/2)
+
+- Un objet est une instance d'une classe.
+- On crée un objet en utilisant le mot-clé `new` suivi du nom de la classe suivi
+  de parenthèses (`()`).
+- Par convention, les noms d'objets sont écrits en Camel case (par exemple,
+  `$jeSuisUnObjet`).
+
+![bg right:40%][illustration-instanciation-dobjets]
+
+### Instanciation d'objets (2/2)
+
+```php
+$person1 = new Person();
+$person2 = new Person();
+```
+
+```java
+// Équivalent en Java
+Person person1 = new Person();
+Person person2 = new Person();
+```
+
+### Attributs (1/2)
+
+- Les attributs sont des variables qui stockent l'état des objets.
+- Accédées selon leur visibilité :
+  - `public` : accessibles de partout.
+  - `protected` : accessibles dans la classe et ses sous-classes.
+  - `private` : accessibles uniquement dans la classe.
+- Accessible via l'opérateur `->`.
+
+![bg right:40%][illustration-attributs]
+
+### Attributs (2/2)
 
 <div class="two-columns">
 <div>
 
 ```php
 <?php
-$day = "Monday";
+class Person {
+    public $name;
+    public $age;
+}
 
-switch ($day) {
-    case "Monday":
-        echo "It's Monday!";
-        break;
-    case "Tuesday":
-        echo "It's Tuesday!";
-        break;
-    case "Wednesday":
-        echo "It's Wednesday!";
-        break;
-// ...
+$person = new Person();
+
+$person->name = "Alice";
+$person->age = 30;
+
+echo $person->name . "<br>";
+echo $person->age;
 ```
 
 </div>
 <div>
 
-```php
-// ...
-    case "Thursday":
-        echo "It's Thursday!";
-        break;
-    case "Friday":
-        echo "It's Friday!";
-        break;
-    case "Saturday":
-        echo "It's Saturday!";
-        break;
-    case "Sunday":
-        echo "It's Sunday!";
-        break;
+```java
+// Équivalent en Java
+public class Person {
+    public String name;
+    public int age;
 }
+
+Person person = new Person();
+
+person.name = "Alice";
+person.age = 30;
+
+System.out.println(person.name);
+System.out.println(person.age);
 ```
 
 </div>
 </div>
 
-### Structures conditionnelles (4/4)
+### Méthodes (1/3)
 
-<div class="two-columns">
-<div>
+- Fonctions qui définissent les comportements des objets.
+- Définies dans la classe avec leur visibilité (`public`, `protected`,
+  `private`).
+- Accédées via l'opérateur `->`.
+- Le mot-clé `$this` permet de faire référence à l'objet courant.
 
-```php
-<?php
-$day = "Monday";
+![bg right:40%][illustration-methodes]
 
-switch ($day) {
-    case "Monday":
-    case "Tuesday":
-    case "Wednesday":
-    case "Thursday":
-    case "Friday":
-        echo "It's a weekday!";
-        break;
-// ...
-```
-
-</div>
-<div>
-
-```php
-// ...
-    case "Saturday":
-    case "Sunday":
-        echo "It's the weekend!";
-        break;
-    default:
-        echo "Invalid day!";
-        break;
-}
-```
-
-</div>
-</div>
-
-### Fonctions
-
-- Ensemble d'instructions pour effectuer une tâche spécifique
-- Inspirée des fonctions mathématiques :
-  - $f(x) = x^2$
-  - où $x$ est un paramètre
-  - $f(2) = 4$, $f(3) = 9$, etc.
-- Permettent de structurer le code en blocs réutilisables.
-
-![bg right:40%][illustration-fonctions]
-
-#### Fonctions sans paramètres
+### Méthodes (2/3)
 
 ```php
 <?php
-function greet() {
-    return "Hello, World!";
+class Person {
+    public $name;
+    public $age;
+
+    public function greet() {
+        return "Hi, my name is " .$this->name . " and I am " . $this->age . " years old.";
+    }
 }
 
-// 1. Exécute la fonction `greet()`
-// 2. Récupère la valeur de retour
-// 3. Affecte (= donne) cette valeur à la variable `$greetings`
-$greetings = greet();
+$person = new Person();
 
-// Affiche le résultat ("Hello, World!")
-echo $greetings;
+$person->name = "Alice";
+$person->age = 30;
+
+echo $person->greet();
 ```
 
-#### Fonctions avec paramètres
+### Méthodes (3/3)
 
-```php
-<?php
-function greet($name) {
-    return "Hello, " . $name . "!";
+```java
+// Équivalent en Java
+public class Person {
+    public String name;
+    public int age;
+
+    public String greet() {
+        return "Hi, my name is " + this.name + " and I am " + this.age + " years old.";
+    }
 }
 
-$greetings = greet("Alice");
-echo $greetings . "<br>";       // "Hello, Alice!"
-echo greet("Bob") . "<br>";     // "Hello, Bob!"
+Person person = new Person();
+
+person.name = "Alice";
+person.age = 30;
+
+System.out.println(person.greet());
 ```
 
-#### Fonctions avec des paramètres par défaut
+### Encapsulation (1/3)
+
+- Protection des données des objets en limitant l'accès direct (avec `public`,
+  `protected` et `private`).
+- Permet de contrôler l'accès aux données et de garantir l'intégrité des objets.
+- Utilisation de méthodes pour accéder (appelées _"getters"_) et modifier les
+  attributs (appelées _"setters"_ en anglais).
+
+![bg right:40%][illustration-encapsulation]
+
+### Encapsulation (2/3)
 
 ```php
 <?php
-function greet($name = "World") {
-    return "Hello, " . $name . "!";
-}
+class Person {
+    private $name; // Attribut privé
+    private $age; // Attribut privé
 
-echo greet() . "<br>";          // "Hello, World!" (utilise la valeur par défaut)
-echo greet("Alice") . "<br>";   // "Hello, Alice!" (utilise l'argument fourni)
-```
+    public function setName($name) {
+        if (strlen($name) < 3) {
+            return "Name must be at least 3 characters long.";
+        }
 
-#### Fonctions avec typage des paramètres et du retour (1/2)
-
-- Depuis la version 7.1 de PHP, il est possible de typer les paramètres et le
-  retour des fonctions.
-
-```php
-<?php
-function greet(string $name = "World"): string {
-    return "Hello, " . $name . "!";
-}
-
-function add(int $a, int $b): int {
-    return $a + $b;
-}
-```
-
-#### Fonctions avec typage des paramètres et du retour (2/2)
-
-- Le typage permet de s'assurer que les arguments passés à une fonction sont du
-  bon type.
-
-```php
-echo greet() . "<br>";          // "Hello, World!"
-echo greet("Alice") . "<br>";   // "Hello, Alice!"
-echo greet(42) . "<br>";        // "Hello, 42!" (conversion implicite)
-echo add(2, 3) . "<br>";        // 5
-
-// Erreur 1 : Implicit conversion from float 2.5 to int loses precision
-// Erreur 2 : Argument #2 ($b) must be of type int, string given
-echo add(2.5, "Hello") . "<br>";
-```
-
-### Importation de fichiers (1/2)
-
-- L'importation permet de réutiliser du code défini dans d'autres fichiers.
-- Il est recommandé d'utiliser `require_once` (erreur et arrête l'exécution)
-  plutôt que `include_once` (avertissement mais continue l'exécution).
-
-![bg right:40%][illustration-importation-de-fichiers]
-
-### Importation de fichiers (2/2)
-
-```php
-<?php
-// Fichier functions.php
-function greet(string $name = "World"): string {
-    return "Hello, " . $name . "!";
-}
-```
-
-```php
-<?php
-// Fichier index.php
-require_once "functions.php";
-
-echo greet("Alice"); // "Hello, Alice!"
-```
-
-### Tableaux et boucles
-
-<!-- _class: lead -->
-
-#### Tableaux (1/2)
-
-- Les tableaux sont des collections de valeurs.
-- Les tableaux sont déclarés entre des crochets (`[]`) ou avec la fonction
-  `array()`.
-- Les valeurs peuvent être de n'importe quel type.
-- Il existe trois types de tableaux en PHP : indexés, associatifs et
-  multidimensionnels.
-
-![bg right:40%][illustration-tableaux]
-
-#### Tableaux (2/2)
-
-```php
-<?php
-// Tableau indexé numériquement
-$fruits = ['apple', 'banana', 'orange'];
-
-echo $fruits[0] . "<br>"; // "apple"
-
-// Tableau associatif
-$person = [
-    'name' => 'Alice',
-    'age' => 30,
-    'city' => 'New York'
-];
-
-echo $person['name'] . "<br>"; // "Alice"
-```
-
-#### Boucles (1/5)
-
-- Les boucles sont des structures de contrôle qui permettent d'exécuter un bloc
-  de code plusieurs fois.
-- Elles sont utilisées pour parcourir des tableaux ou des collections de
-  données.
-- Il existe plusieurs types de boucles en PHP : `for`, `while`, `do...while` et
-  `foreach`.
-
-![bg right:40%][illustration-boucles]
-
-#### Boucles (2/5)
-
-```php
-<?php
-// Affiche les nombres de 0 à 9
-for ($i = 0; $i < 10; $i++) {
-    echo "$i<br>";
-}
-```
-
-#### Boucles (3/5)
-
-```php
-<?php
-$i = 0;
-
-// Affiche les nombres de 0 à 9
-while ($i < 10) {
-    echo "$i<br>";
-    $i++;
-}
-```
-
-#### Boucles (4/5)
-
-```php
-<?php
-$randomNumber = null;
-
-do {
-    // La fonction `rand()` génère un nombre aléatoire entre 1 et 10
-    $randomNumber = rand(1, 10);
-    echo "The random number is $randomNumber<br>";
-} while ($randomNumber < 8);
-```
-
-#### Boucles (5/5)
-
-```php
-<?php
-$users = [
-    'john' => [
-        'name' => 'John Doe',
-        'age' => 30,
-        'city' => 'New York',
-    ],
-    'jane' => [
-        'name' => 'Jane Doe',
-        'age' => 25,
-        'city' => 'Los Angeles',
-    ],
-];
+        $this->name = $name;
+    }
 ```
 
 ---
 
 ```php
-// `$user` contient la valeur de l'élément du tableau
-foreach ($users as $user) {
-    echo "Name: {$user['name']}<br>";
-    echo "Age: {$user['age']}<br>";
-    echo "City: {$user['city']}<br>";
-    echo "<br>";
+    public function getName() {
+        return $this->name;
+    }
+
+    public function setAge($age) {
+        if ($age < 0) {
+            return "Age cannot be negative.";
+        }
+
+        $this->age = $age;
+    }
+
+    public function getAge() {
+        return $this->age;
+    }
 }
 ```
 
-### Formulaires HTML, validation et sécurité
+---
 
-- Les formulaires HTML permettent de collecter des données.
-- Les données des formulaires sont stockées dans les superglobales `$_POST` et
-  `$_GET`.
-- Il est nécessaire de traiter et valider les données pour éviter des
-  vulnérabilités.
+```php
+$person = new Person();
 
-![bg right:40%][illustration-formulaires-html-validation-et-securite]
+$error = $person->setName("Alice");
+
+if (!empty($error)) {
+	echo $error . "<br>";
+}
+
+$error = $person->setAge(30);
+
+if (!empty($error)) {
+	echo $error . "<br>";
+}
+
+echo $person->getName() . "<br>"; // Affiche "Alice"
+echo $person->getAge() . "<br>";  // Affiche 30
+```
+
+---
+
+```php
+$error = $person->setName("AS");
+
+if (!empty($error)) {
+    echo $error . "<br>";
+}
+
+$error = $person->setAge(-1);
+
+if (!empty($error)) {
+    echo $error . "<br>";
+}
+
+$person->name = "Bob"; // Erreur : l'attribut est privé
+```
+
+### Encapsulation (3/3)
+
+```java
+// Équivalent en Java
+public class Person {
+    private String name; // Attribut privé
+    private int age; // Attribut privé
+
+    public String setName(String name) {
+        if (name.length() < 3) {
+            return "Name must be at least 3 characters long.";
+        }
+
+        this.name = name;
+
+        return null;
+    }
+```
+
+---
+
+```java
+    public String getName() {
+        return this.name;
+    }
+
+    public String setAge(int age) {
+        if (age < 0) {
+            return "Age cannot be negative.";
+        }
+
+        this.age = age;
+
+        return null;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+}
+```
+
+---
+
+```java
+    public String getName() {
+        return this.name;
+    }
+
+    public String setAge(int age) {
+        if (age < 0) {
+            return "Age cannot be negative.";
+        }
+
+        this.age = age;
+
+        return null;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+}
+```
+
+---
+
+```java
+Person person = new Person();
+
+String error = person.setName("Alice");
+
+if (error != null) {
+    System.out.println(error);
+}
+
+error = person.setAge(30);
+
+if (error != null) {
+    System.out.println(error);
+}
+
+System.out.println(person.getName()); // Affiche "Alice"
+System.out.println(person.getAge());  // Affiche 30
+```
+
+---
+
+```java
+error = person.setName("AS");
+
+if (error != null) {
+    System.out.println(error);
+}
+
+error = person.setAge(-1);
+
+if (error != null) {
+    System.out.println(error);
+}
+
+person.name = "Bob"; // Erreur : l'attribut est privé
+```
+
+### Constructeurs et destructeurs (1/3)
+
+- **Constructeur** : méthode spéciale appelée lors de la création d'un objet.
+  Permet d'initialiser les attributs de l'objet.
+- **Destructeur** : méthode spéciale appelée lors de la destruction d'un objet
+  pour libérer les ressources (rarement utilisé en PHP).
+
+![bg right:40%][illustration-constructeurs-et-destructeurs]
+
+### Constructeurs et destructeurs (2/3)
+
+```php
+<?php
+class Person {
+    private $name;
+    private $age;
+
+    public function __construct($name, $age) {
+        $this->name = $name;
+        $this->age = $age;
+    }
+
+    public function __destruct() {
+        echo $this->name . " is being destroyed.<br>";
+    }
+
+    public function greet() {
+        return "Hi, my name is " . $this->name . " and I am " . $this->age . " years old.";
+    }
+}
+```
+
+---
+
+```php
+$alice = new Person("Alice", 30);
+$bob = new Person("Bob", 25);
+$evelyn = new Person("Evelyn", 40);
+
+echo $alice->greet() . "<br>";
+echo $bob->greet() . "<br>";
+echo $evelyn->greet() . "<br>";
+
+// L'objet `$bob` a maintenant la valeur `null`.
+// L'objet est donc détruit et le destructeur est appelé.
+$bob = null;
+
+// L'objet `$evelyn` référence maintenant le même objet que `$alice`.
+// L'objet `$evelyn` n'est plus utilisé et est donc détruit.
+$evelyn = $alice;
+
+// L'objet `$alice` sera automatiquement détruit à la fin du script.
+// Son destructeur sera appelé.
+```
+
+### Constructeurs et destructeurs (3/3)
+
+_Pas de destructeur explicite comme en PHP._
+
+```java
+// Équivalent en Java
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String greet() {
+        return "Hi, my name is " + this.name + " and I am " + this.age + " years old.";
+    }
+}
+```
+
+---
+
+```java
+Person alice = new Person("Alice", 30);
+Person bob = new Person("Bob", 25);
+Person evelyn = new Person("Evelyn", 40);
+
+System.out.println(alice.greet());
+System.out.println(bob.greet());
+System.out.println(evelyn.greet());
+
+// En Java, il n'y a pas de destructeur explicite.
+// Mais tout objet avec une valeur `null` est éligible pour le garbage collector.
+bob = null;
+
+// L'objet `evelyn` référence maintenant le même objet que `alice`.
+// L'objet `evelyn` n'est plus utilisé et sera éligible pour le garbage collector.
+evelyn = alice;
+
+// L'objet `alice` sera éligible pour le garbage collector à la fin du programme.
+```
+
+### Constantes (1/3)
+
+- Les constantes sont des valeurs qui ne changent pas pendant l'exécution du
+  programme.
+- Elles peuvent être définies dans une classe.
+- Accessibles via l'opérateur `::` (opérateur de résolution de portée).
+- En majuscules par convention (par exemple, `MA_CONSTANTE`).
+
+![bg right:40%][illustration-constantes]
+
+### Constantes (2/3)
+
+```php
+<?php
+class Person {
+    const ROLE_MANAGER = 'Manager';
+    const ROLE_DEVELOPER = 'Developer';
+    const ROLE_DESIGNER = 'Designer';
+    const ROLE_EMPLOYEE = 'Employee';
+
+    private $name;
+    private $role;
+
+    public function __construct($name, $role) {
+        $this->name = $name;
+        $this->role = $role;
+    }
+
+    public function greet() {
+        return "Hi, my name is " . $this->name . ". I work as a " . $this->role . " at my company.";
+    }
+}
+```
+
+---
+
+```php
+$alice = new Person("Alice", Person::ROLE_DEVELOPER);
+$bob = new Person("Bob", Person::ROLE_MANAGER);
+$evelyn = new Person("Evelyn", Person::ROLE_DESIGNER);
+
+// Affiche "Hi, my name is Alice. I work as a Developer at my company."
+echo $alice->greet() . "<br>";
+
+// Affiche "Hi, my name is Bob. I work as a Manager at my company."
+echo $bob->greet() . "<br>";
+
+// Affiche "Hi, my name is Evelyn. I work as a Designer at my company."
+echo $evelyn->greet();
+```
+
+### Constantes (3/3)
+
+```java
+// Équivalent en Java
+public class Person {
+    public static final String ROLE_MANAGER = "Manager";
+    public static final String ROLE_DEVELOPER = "Developer";
+    public static final String ROLE_DESIGNER = "Designer";
+    public static final String ROLE_EMPLOYEE = "Employee";
+
+    private String name;
+    private String role;
+
+    public Person(String name, String role) {
+        this.name = name;
+        this.role = role;
+    }
+
+    public String greet() {
+        return "Hi, my name is " + this.name + ". I work as a " + this.role + " at my company.";
+    }
+}
+```
+
+---
+
+```java
+Person alice = new Person("Alice", Person.ROLE_DEVELOPER);
+Person bob = new Person("Bob", Person.ROLE_MANAGER);
+Person evelyn = new Person("Evelyn", Person.ROLE_DESIGNER);
+
+// Affiche "Hi, my name is Alice. I work as a Developer at my company."
+System.out.println(alice.greet());
+
+// Affiche "Hi, my name is Bob. I work as a Manager at my company."
+System.out.println(bob.greet());
+
+// Affiche "Hi, my name is Evelyn. I work as a Designer at my company."
+System.out.println(evelyn.greet());
+```
+
+## Conclusion
+
+- La POO permet de créer des programmes modulaires et réutilisables.
+- Améliore la lisibilité, la réutilisabilité et la maintenabilité du code.
+- PHP prend en charge la POO et propose toutes les fonctionnalités nécessaires
+  pour créer des classes et des objets.
+
+![bg right:40%][illustration-principale]
+
+## Questions
+
+<!-- _class: lead -->
+
+Est-ce que vous avez des questions ?
+
+## Feedback
+
+Le [formulaire de feedback][feedback] vous **permet de partager votre retour**
+sur l'unité d'enseignement _"ProgServ1"_.
+
+Il ne prend **que quelques minutes** et est **anonyme**. Vous pouvez aussi y
+**demander un/des cours d'appui**.
+
+Les résultats seront discutés au prochain cours. **Merci beaucoup !**
+
+[![bg right:40% w:85%][feedback-qr-code]][feedback]
+
+## À vous de jouer !
+
+- (Re)lire le [support de cours][course-material].
+- Réaliser le [mini-projet][mini-project].
+- Faire les [exercices][exercices].
+- Poser des questions si nécessaire.
+- Partager vos retours à l'aide du [formulaire de feedback][feedback].
+
+**Entraidez-vous si vous avez des difficultés !**
+
+![bg right:40%][illustration-a-vous-de-jouer]
+
+## Sources (1/2)
+
+- [Illustration principale][illustration-principale] par
+  [Richard Jacobs](https://unsplash.com/@rj2747) sur
+  [Unsplash](https://unsplash.com/photos/grayscale-photo-of-elephants-drinking-water-8oenpCXktqQ)
+- [Illustration][illustration-objectifs] par
+  [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
+  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- [Illustration][illustration-buts-de-la-programmation-orientee-objet] par
+  [Eric Prouzet](https://unsplash.com/@eprouzet) sur
+  [Unsplash](https://unsplash.com/photos/assorted-color-mugs-on-rack-5lUMTeo7-bE)
+- [Illustration][illustration-avantages-de-la-poo] par
+  [Thomas Le](https://unsplash.com/@thomasble) sur
+  [Unsplash](https://unsplash.com/photos/white-arrow-up-yoPOtxc0s6c)
+- [Illustration][illustration-desavantages-de-la-poo] par
+  [Ussama Azam](https://unsplash.com/@ussamaazam) sur
+  [Unsplash](https://unsplash.com/photos/pink-arrow-neon-sign-26h317_UMYM)
+- [Illustration][illustration-classes] par
+  [Feliphe Schiarolli](https://unsplash.com/@flpschi) sur
+  [Unsplash](https://unsplash.com/photos/photography-of-school-room-hes6nUC1MVc)
+- [Illustration][illustration-instanciation-dobjets] par
+  [Kenny Eliason](https://unsplash.com/@neonbrand) sur
+  [Unsplash](https://unsplash.com/photos/a-group-of-people-in-a-room-with-a-projector-screen-1-aA2Fadydc)
+- [Illustration][illustration-attributs] par
+  [Pearse O'Halloran](https://unsplash.com/@pearseoh) sur
+  [Unsplash](https://unsplash.com/photos/black-and-white-wooden-wall-decor-t0N-LwOu0hg)
+
+## Sources (2/2)
+
+- [Illustration][illustration-methodes] par
+  [Birmingham Museums Trust](https://unsplash.com/@birminghammuseumstrust) sur
+  [Unsplash](https://unsplash.com/photos/grayscale-photo-of-people-in-a-street-y3TC9H0261s)
+- [Illustration][illustration-encapsulation] par
+  [Erol Ahmed](https://unsplash.com/@erol) sur
+  [Unsplash](https://unsplash.com/photos/close-up-photography-of-brown-wooden-card-catalog-Y3KEBQlB1Zk)
+- [Illustration][illustration-constructeurs-et-destructeurs] par
+  [Scott Blake](https://unsplash.com/@sunburned_surveyor) sur
+  [Unsplash](https://unsplash.com/photos/seven-construction-workers-standing-on-white-field-x-ghf9LjrVg)
+- [Illustration][illustration-constantes] par
+  [Lluvia Morales](https://unsplash.com/@hi_lluvia) sur
+  [Unsplash](https://unsplash.com/photos/brown-concrete-blocks-in-close-up-photography-tO2FyAcS03s)
+- [Illustration][illustration-a-vous-de-jouer] par
+  [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
+  [Unsplash](https://unsplash.com/photos/white-sony-ps4-dualshock-controller-over-persons-palm-FJFPuE1MAOM)
+
+<!-- URLs -->
+
+[presentation-web]:
+	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/index.html
+[presentation-pdf]:
+	https://heig-vd-progserv-course.github.io/heig-vd-progserv1-course/07-programmation-orientee-objet/01-theorie/07-programmation-orientee-objet-presentation.pdf
+[course-material]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/07-programmation-orientee-objet/01-theorie/README.md
+[license]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
+[mini-project]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/07-programmation-orientee-objet/02-mini-project/README.md
+[exercices]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/07-programmation-orientee-objet/03-exercices/README.md
+[feedback]: https://framaforms.org/progserv1-2024-2025-feedback-1745321495
+[feedback-qr-code]:
+	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/progserv1-2024-2025-feedback-1745321495
+
+<!-- Illustrations -->
+
+[illustration-principale]:
+	https://images.unsplash.com/photo-1517486430290-35657bdcef51?fit=crop&h=720
+[illustration-objectifs]:
+	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
+[illustration-buts-de-la-programmation-orientee-objet]:
+	https://images.unsplash.com/photo-1563696629964-8c3ce077cf3e?fit=crop&h=720
+[illustration-avantages-de-la-poo]:
+	https://images.unsplash.com/photo-1551657531-a303c5f54203?fit=crop&h=720
+[illustration-desavantages-de-la-poo]:
+	https://images.unsplash.com/photo-1572314961011-aece24e1cc48?fit=crop&h=720
+[illustration-classes]:
+	https://images.unsplash.com/photo-1510531704581-5b2870972060?fit=crop&h=720
+[illustration-instanciation-dobjets]:
+	https://images.unsplash.com/photo-1524178232363-1fb2b075b655?fit=crop&h=720
+[illustration-attributs]:
+	https://images.unsplash.com/photo-1510913415497-e34c432bd039?fit=crop&h=720
+[illustration-methodes]:
+	https://images.unsplash.com/photo-1583737097406-5a4b42b37b97?fit=crop&h=720
+[illustration-encapsulation]:
+	https://images.unsplash.com/photo-1511721285502-9f81e79be874?fit=crop&h=720
+[illustration-constructeurs-et-destructeurs]:
+	https://images.unsplash.com/photo-1541888946425-d81bb19240f5?fit=crop&h=720
+[illustration-constantes]:
+	https://images.unsplash.com/photo-1629608444154-6d052691632f?fit=crop&h=720
+[illustration-a-vous-de-jouer]:
+	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720
 
 ## Programmation orientée objet (base) (1/2)
 
@@ -1099,9 +1424,9 @@ Est-ce que vous avez des questions ?
 - Faire les exercices.
 - Poser des questions si nécessaire.
 
-➡️ [Lien vers le cours][cours]
+➡️ [Visualiser le contenu complet sur GitHub][contenu-complet].
 
-**N'hésitez pas à vous entraidez si vous avez des difficultés !**
+**N'hésitez pas à vous entraider si vous avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
@@ -1152,8 +1477,8 @@ Est-ce que vous avez des questions ?
 
 <!-- URLs -->
 
-[cours]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01.05-programmation-orientee-objet-avance
+[contenu-complet]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/README.md
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
 

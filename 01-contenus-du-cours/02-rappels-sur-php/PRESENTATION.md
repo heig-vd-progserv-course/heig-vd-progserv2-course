@@ -23,7 +23,9 @@ _class: lead
 _paginate: false
 -->
 
-[Lien vers le cours][cours]
+[<img src="https://raw.githubusercontent.com/primer/octicons/refs/heads/main/icons/mark-github-24.svg" style="vertical-align: middle; width: 32px;" alt="GitHub logo"> `github.com/heig-vd-progserv-course/heig-vd-progserv2-course`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course)
+
+[Visualiser le contenu complet sur GitHub][contenu-complet].
 
 <small>L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -32,12 +34,14 @@ _paginate: false
 
 ![bg opacity:0.1][illustration-principale]
 
-## _Retrouvez plus de détails dans le support de cours_
+## Retrouvez le contenu complet de cette présentation sur GitHub
 
 <!-- _class: lead -->
 
-_Cette présentation est un résumé du support de cours. Pour plus de détails,
-consultez le [support de cours][cours]._
+_Cette présentation est un résumé du contenu complet disponible sur GitHub._
+
+_Pour plus de détails, retrouvez le contenu complet [ici][contenu-complet] ou en
+cliquant sur l'en-tête de ce document._
 
 ## Objectifs
 
@@ -279,7 +283,7 @@ $person = [
 echo $person['name'] . "<br>"; // "Alice"
 ```
 
-### Boucles (1/5)
+### Boucles (1/6)
 
 - Les boucles sont des structures de contrôle qui permettent d'exécuter un bloc
   de code plusieurs fois.
@@ -290,7 +294,7 @@ echo $person['name'] . "<br>"; // "Alice"
 
 ![bg right:40%][illustration-boucles]
 
-### Boucles (2/5)
+### Boucles (2/6)
 
 ```php
 <?php
@@ -300,7 +304,7 @@ for ($i = 0; $i < 10; $i++) {
 }
 ```
 
-### Boucles (3/5)
+### Boucles (3/6)
 
 ```php
 <?php
@@ -313,7 +317,7 @@ while ($i < 10) {
 }
 ```
 
-### Boucles (4/5)
+### Boucles (4/6)
 
 ```php
 <?php
@@ -326,7 +330,7 @@ do {
 } while ($randomNumber < 8);
 ```
 
-### Boucles (5/5)
+### Boucles (5/6)
 
 ```php
 <?php
@@ -349,6 +353,23 @@ $users = [
 ```php
 // `$user` contient la valeur de l'élément du tableau
 foreach ($users as $user) {
+    echo "Name: {$user['name']}<br>";
+    echo "Age: {$user['age']}<br>";
+    echo "City: {$user['city']}<br>";
+    echo "<br>";
+}
+```
+
+### Boucles (6/6)
+
+Nouveauté Programmation serveur 2 (ProgServ2) : boucles `foreach` avec clé et
+valeur.
+
+```php
+// `$username` contient la clé.
+// `$user` contient la valeur de l'élément du tableau.
+foreach ($users as $username => $user) {
+    echo "Username: $username<br>";
     echo "Name: {$user['name']}<br>";
     echo "Age: {$user['age']}<br>";
     echo "City: {$user['city']}<br>";
@@ -498,9 +519,9 @@ Est-ce que vous avez des questions ?
 - Explorer les exemples de code.
 - Poser des questions si nécessaire.
 
-➡️ [Lien vers le cours][cours]
+➡️ [Visualiser le contenu complet sur GitHub][contenu-complet].
 
-**N'hésitez pas à vous entraidez si vous avez des difficultés !**
+**N'hésitez pas à vous entraider si vous avez des difficultés !**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
@@ -551,8 +572,8 @@ Est-ce que vous avez des questions ?
 
 <!-- URLs -->
 
-[cours]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01.02-rappels-sur-php-avance
+[contenu-complet]:
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/02-rappels-sur-php/README.md
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
 

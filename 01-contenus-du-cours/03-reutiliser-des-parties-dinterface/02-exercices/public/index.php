@@ -2,19 +2,35 @@
 require_once __DIR__ . '/../src/constants.php';
 require_once __DIR__ . '/../src/functions.php';
 
-$title = "Page d'accueil | ninetendogs";
-$description = "ninetendogs - Gestionnaire d'animaux de compagnie - Page d'accueil";
-
 $pets = getPets();
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 
-<?php require __DIR__ . '/../components/head.php'; ?>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Page d'accueil | ninetendogs</title>
+    <meta name="description" content="ninetendogs - Gestionnaire d'animaux de compagnie">
+</head>
 
 <body class="container">
-    <?php require __DIR__ . '/../components/header.php'; ?>
+    <header>
+        <nav>
+            <ul>
+                <li><strong>ninetendogs</strong></li>
+            </ul>
+            <ul>
+                <li><a href="./index.php">Accueil</a></li>
+                <li><a href="./create.php">Nouvel animal</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <center>
             <div class="logo">
@@ -53,7 +69,13 @@ $pets = getPets();
             </table>
         </div>
     </main>
-    <?php require __DIR__ . '/../components/footer.php'; ?>
+    <footer>
+        <center>
+            <small>
+                Un projet réalisé dans le cadre du cours <a href="https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course">ProgServ1</a> enseigné à la <a href="https://heig-vd.ch">HEIG-VD</a>.
+            </small>
+        </center>
+    </footer>
 </body>
 
 </html>
