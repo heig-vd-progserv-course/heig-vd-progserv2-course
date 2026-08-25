@@ -2,6 +2,9 @@
 require_once __DIR__ . '/../src/constants.php';
 require_once __DIR__ . '/../src/functions.php';
 
+$title = "Page d'accueil | ninetendogs";
+$description = "ninetendogs - Gestionnaire d'animaux de compagnie - Page d'accueil";
+
 $pets = getPets();
 ?>
 

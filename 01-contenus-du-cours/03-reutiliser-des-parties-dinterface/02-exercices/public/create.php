@@ -1,6 +1,9 @@
 <?php
 require_once __DIR__ . '/../src/functions.php';
 
+$title = "Créer un nouvel animal de compagnie | ninetendogs";
+$description = "ninetendogs - Gestionnaire d'animaux de compagnie - Créer un nouvel animal";
+
 // Définition des valeurs par défaut de l'animal de compagnie
 $name = $_POST["name"] ?? '';
 $species = $_POST["species"] ?? '';
