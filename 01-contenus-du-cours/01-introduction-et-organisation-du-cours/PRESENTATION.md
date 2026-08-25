@@ -213,8 +213,8 @@ Le cours sera évaluée à l'aide des éléments suivants :
 Le cours ProgServ2 s'appuie sur les connaissances acquises en
 [ProgServ1](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course).
 
-J'essaie de faire mon possible pour rappeler les concepts clés de cette unité
-d'enseignement avant de rentrer dans les concepts propres à ProgServ2.
+J'essaie de faire mon possible pour rappeler les concepts clés de ProgServ1
+avant de rentrer dans les concepts propres à ProgServ2.
 
 Néanmoins, si vous avez besoin d'un rafraîchissement plus approfondi, je vous
 invite à (re)voir les supports de cours de

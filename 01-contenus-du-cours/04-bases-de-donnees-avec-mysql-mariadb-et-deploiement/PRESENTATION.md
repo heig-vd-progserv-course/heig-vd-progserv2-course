@@ -55,6 +55,8 @@ cliquant sur l'en-tête de ce document._
 
 - Utiliser les fichiers de configuration pour stocker les paramètres de
   connexion à la base de données.
+- Acquérir un hébergement web et y déployer une application web avec une base de
+  données MySQL/MariaDB.
 
 ![bg right:40%][illustration-objectifs]
 
@@ -74,7 +76,7 @@ cliquant sur l'en-tête de ce document._
 - La méthode (`method`) définit comment les données sont envoyées (`GET` ou
   `POST`).
 - Analysons l'exemple
-  [`01-simple-form.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/01-simple-form.php).
+  [`01-simple-form`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement/01-exemples-de-code/01-simple-form/create.php).
 
 ![bg vertical][illustration-methode] ![bg right:40%][illustration-url-daction]
 
@@ -83,7 +85,7 @@ cliquant sur l'en-tête de ce document._
 - Les données des formulaires sont accessibles via les superglobales `$_GET` et
   `$_POST`.
 - Analysons l'exemple
-  [`02-get-data-server-side.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/02-get-data-server-side.php).
+  [`02-get-data-server-side`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement/01-exemples-de-code/02-get-data-server-side/create.php).
 
 ![bg right:40%][illustration-methode]
 
@@ -92,7 +94,7 @@ cliquant sur l'en-tête de ce document._
 - Valider les données permet de garantir leur intégrité et sécurité.
 - Utiliser des filtres et des expressions régulières pour valider les données.
 - Analysons l'exemple
-  [`03-validate-data-server-side.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/03-validate-data-server-side.php).
+  [`03-validate-data-server-side`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement/01-exemples-de-code/03-validate-data-server-side/create.php).
 
 ![bg right:40%][illustration-validation-cote-serveur]
 
@@ -102,7 +104,7 @@ cliquant sur l'en-tête de ce document._
 - Il est possible de conserver les données saisies en cas d'erreurs de
   validation.
 - Analysons l'exemple
-  [`04-keep-data-on-errors.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/04-keep-data-on-errors.php).
+  [`04-keep-data-on-errors`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement/01-exemples-de-code/04-keep-data-on-errors/create.php).
 
 ![bg right:40%][illustration-sauvegarde-des-donnees-saisies]
 
@@ -111,7 +113,7 @@ cliquant sur l'en-tête de ce document._
 - PDO (PHP Data Objects) est une extension PHP pour accéder aux bases de données
   (SQLite, MySQL, Postgres, etc.).
 - Analysons l'exemple
-  [`05-pdo-and-sqlite.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/05-pdo-and-sqlite.php).
+  [`05-pdo-and-sqlite`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement/01-exemples-de-code/05-pdo-and-sqlite/create.php).
 
 ![bg right:40% w:80%](https://www.sqlite.org/images/sqlite370_banner.svg)
 
@@ -120,7 +122,7 @@ cliquant sur l'en-tête de ce document._
 - Nettoyer les données évite les vulnérabilités par injections SQL.
 - PDO met à disposition les requêtes préparées.
 - Analysons l'exemple
-  [`05-pdo-and-sqlite.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/05-pdo-and-sqlite.php).
+  [`05-pdo-and-sqlite`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement/01-exemples-de-code/05-pdo-and-sqlite/create.php).
 
 ![bg right:40%][illustration-nettoyage-des-donnees-et-persistence-avec-les-requetes-preparees]
 
@@ -130,7 +132,7 @@ cliquant sur l'en-tête de ce document._
   spéciaux lors de l'affichage des données utilisateur.
 - La fonction `htmlspecialchars()` permet d'échapper ces caractères.
 - Analysons l'exemple
-  [`06-escape-special-characters.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/06-escape-special-characters.php).
+  [`06-escape-special-characters`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement/01-exemples-de-code/06-escape-special-characters/create.php).
 
 ![bg right:40%][illustration-affichage-securise-des-donnees]
 
@@ -140,11 +142,11 @@ cliquant sur l'en-tête de ce document._
 - **Ne remplace pas la validation côté serveur.**
 - Repose sur les attributs HTML (`required`, `type`, `min`, etc.).
 - Analysons l'exemple
-  [`07-validate-data-client-side.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/07-validate-data-client-side.php).
+  [`07-validate-data-client-side`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement/01-exemples-de-code/07-validate-data-client-side/create.php).
 
 ![bg right:40% vertical][illustration-cote-client]
 
-## Bases de données MySQL/MariaDB et déploiement
+## Bases de données MySQL/MariaDB
 
 - Dans un environnement de production, SQLite n'est pas toujours adapté.
 - MySQL/MariaDB est un système de gestion de base de données (SGBD) plus
@@ -160,28 +162,23 @@ cliquant sur l'en-tête de ce document._
 - Les deux offrent les mêmes fonctionnalités de base.
 - PDO permet d'interagir avec MySQL/MariaDB.
 - Analysons l'exemple
-  [`08-mysql-with-constants.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/08-mysql-with-constants.php).
+  [`08-mysql-with-constants`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement/01-exemples-de-code/08-mysql-with-constants/create.php).
 
 ![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/fr/6/62/MySQL.svg)
 ![bg vertical w:80%](https://mariadb.com/wp-content/uploads/2019/11/mariadb-horizontal-blue.svg)
 
-### Accéder à MySQL/MariaDB avec MAMP et Visual Studio Code (1/2)
+### MariaDB avec Docker Compose et phpMyAdmin (1/2)
 
-- Une base de données MySQL est accessible via MAMP.
-- L'utilisateur par défaut est `root`, sans mot de passe.
+Le
+[template pour le projet libre](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course-php-template)
+contient une configuration Docker Compose pour démarrer une base de données
+MariaDB et y accéder avec phpMyAdmin.
 
-![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/fr/6/62/MySQL.svg)
-![bg vertical w:80%](https://mariadb.com/wp-content/uploads/2019/11/mariadb-horizontal-blue.svg)
+Le fichier `compose.yaml` décrit l'utilisateur, le mot de passe et le nom de la
+base de données à créer.
 
-### Accéder à MySQL/MariaDB avec MAMP et Visual Studio Code (2/2)
-
-- Pour accéder à la base de données, utilisez:
-  - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
-  - Visual Studio Code avec
-    [Database Client](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-database-client2).
-
-![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/fr/6/62/MySQL.svg)
-![bg vertical w:80%](https://mariadb.com/wp-content/uploads/2019/11/mariadb-horizontal-blue.svg)
+Pour démarrer les services, utilisez la commande suivante : `docker compose up`.
+Pour arrêter, utilisez `Ctrl+C`.
 
 ### Gestion des erreurs avec les exceptions (1/3)
 
@@ -212,7 +209,7 @@ try {
 ### Gestion des erreurs avec les exceptions (3/3)
 
 - Analysons l'exemple
-  [`09-handle-exceptions.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/09-handle-exceptions.php).
+  [`09-handle-exceptions`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement/01-exemples-de-code/09-handle-exceptions/create.php).
 
 ![bg right:40%][illustration-gestion-des-erreurs-avec-les-exceptions]
 
@@ -228,9 +225,25 @@ try {
 ### Fichiers de configuration (2/2)
 
 - Analysons l'exemple
-  [`10-database-configuration-file.php`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance/01-supports-de-cours/snippets/10-mysql-with-configuration-file.php).
+  [`10-database-configuration-file`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement/01-exemples-de-code/10-mysql-with-configuration-file/create.php).
 
 ![bg right:40%][illustration-formulaires-html-et-pdo-un-rappel]
+
+## Déployer une application web avec une base de données MySQL/MariaDB
+
+Comme déjà vu dans les cours
+[ProgServ1](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
+et
+[DévAppliS](https://github.com/heig-vd-devapplis-course/heig-vd-devapplis-course),
+nous allons utiliser le service d'hébergement web
+[Infomaniak](https://www.infomaniak.com/) pour déployer notre application web
+avec une base de données MySQL/MariaDB.
+
+Pour acquérir un hébergement web avec Infomaniak avec une base de données
+MariaDB, référez-vous au contenu
+[Déployer un site ou une application web sur Internet](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-contenus-du-cours/06.02-deployer-un-site-ou-une-application-web-sur-internet).
+
+**Le support de cours vous donne une marche à suivre.**
 
 ## Conclusion
 

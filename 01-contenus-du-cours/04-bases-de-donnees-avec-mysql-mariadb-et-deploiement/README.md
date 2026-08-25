@@ -25,6 +25,8 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > - Utiliser les exceptions pour la gestion des erreurs en PHP.
 > - Utiliser les fichiers de configuration pour stocker les paramètres de
 >   connexion à la base de données.
+> - Acquérir un hébergement web et y déployer une application web avec une base
+>   de données MySQL/MariaDB.
 >
 > **Méthodes d'enseignement et d'apprentissage**
 >
@@ -56,6 +58,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Table des matières
 
 - [Table des matières](#table-des-matières)
+- [Objectifs](#objectifs)
 - [Formulaires HTML et PDO, un rappel](#formulaires-html-et-pdo-un-rappel)
   - [Structure d'un formulaire HTML](#structure-dun-formulaire-html)
   - [Récupération des données côté serveur](#récupération-des-données-côté-serveur)
@@ -65,15 +68,29 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Nettoyage des données et persistance avec les requêtes préparées](#nettoyage-des-données-et-persistance-avec-les-requêtes-préparées)
   - [Affichage sécurisé des données](#affichage-sécurisé-des-données)
   - [Validation côté client](#validation-côté-client)
-- [Bases de données MySQL/MariaDB et déploiement](#bases-de-données-mysqlmariadb-et-déploiement-1)
+- [Bases de données MySQL/MariaDB](#bases-de-données-mysqlmariadb)
   - [MySQL/MariaDB](#mysqlmariadb)
-  - [Accéder à MySQL/MariaDB avec MAMP et Visual Studio Code](#accéder-à-mysqlmariadb-avec-mamp-et-visual-studio-code)
+  - [MariaDB avec Docker Compose et phpMyAdmin](#mariadb-avec-docker-compose-et-phpmyadmin)
   - [Gestion des erreurs avec les exceptions](#gestion-des-erreurs-avec-les-exceptions)
   - [Fichiers de configuration](#fichiers-de-configuration)
+- [Déployer une application web avec une base de données MySQL/MariaDB](#déployer-une-application-web-avec-une-base-de-données-mysqlmariadb)
 - [Conclusion](#conclusion)
 - [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
 - [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
+
+## Objectifs
+
+Ce contenu a pour but de vous rappeler les concepts de base liés aux formulaires
+HTML, à la validation côté serveur et côté client, à la persistance des données
+avec PDO et à la gestion des erreurs avec les exceptions.
+
+Nous aborderons les concepts de base des bases de données MySQL/MariaDB et nous
+verrons comment déployer une application web avec une base de données
+MySQL/MariaDB sur un hébergeur web.
+
+La liste complète des objectifs est disponible dans la section _"Objectifs"_ du
+bloc d'information en haut de ce contenu.
 
 ## Formulaires HTML et PDO, un rappel
 
@@ -82,7 +99,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > Des difficultés à comprendre certains concepts de PHP présentés dans ce
 > support de cours ? Consultez les supports de cours pour le cours Programmation
 > serveur 1 (ProgServ1) pour vous aider :
-> <https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main>.
+> <https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>.
 >
 > N'hésitez pas à poser des questions si besoin !
 
@@ -116,7 +133,7 @@ simple :
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer au fichier
-> [`01-simple-form.php`](./snippets/01-simple-form.php).
+> [`01-simple-form`](./01-exemples-de-code/01-simple-form/create.php).
 
 Dans cet exemple :
 
@@ -138,7 +155,7 @@ Dans cet exemple :
 >
 > Il est recommandé d'utiliser la méthode `POST` pour les formulaires pour des
 > raisons de sécurité et de confidentialité car les données sont envoyées dans
-> le corps de la requête HTTP et ne sont pas visibles dans l'URL.
+> le corps de la requête HTTP et non dans l'URL.
 >
 > La méthode `GET` peut être utilisée pour des formulaires de recherche ou
 > lorsque les données ne sont pas sensibles, mais elle expose les données dans
@@ -169,7 +186,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer au fichier
-> [`02-get-data-server-side.php`](./snippets/02-get-data-server-side.php).
+> [`02-get-data-server-side`](./01-exemples-de-code/01-simple-form/create.php).
 
 Grâce à la condition `if ($_SERVER["REQUEST_METHOD"] === "POST")`, on s'assure
 que le code ne s'exécute que lorsque le formulaire est soumis via la méthode
@@ -207,7 +224,7 @@ if ($age < 0) {
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer au fichier
-> [`03-validate-data-server-side.php`](./snippets/03-validate-data-server-side.php).
+> [`03-validate-data-server-side`](./01-exemples-de-code/03-validate-data-server-side/create.php).
 
 Le tableau `$errors` est utilisé pour collecter les messages d'erreur. Chaque
 condition vérifie une règle de validation spécifique, et si la règle n'est pas
@@ -246,7 +263,7 @@ en PHP :
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer au fichier
-> [`04-keep-data-on-errors.php`](./snippets/04-keep-data-on-errors.php).
+> [`04-keep-data-on-errors`](./01-exemples-de-code/04-keep-data-on-errors/create.php).
 
 Dans cet exemple, l'attribut `value` de l'élément `<input>` est défini pour
 conserver la valeur saisie par l'utilisateur.
@@ -300,7 +317,7 @@ $stmt->execute();
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer au fichier
-> [`05-pdo-and-sqlite.php`](./snippets/05-pdo-and-sqlite.php).
+> [`05-pdo-and-sqlite`](./01-exemples-de-code/05-pdo-and-sqlite/create.php).
 
 Dans cet exemple, nous créons une connexion à une base de données SQLite stockée
 dans le fichier `mydatabase.db`. Nous définissons ensuite une requête SQL pour
@@ -353,8 +370,8 @@ exit();
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer au fichiers
-> [`05-pdo-and-sqlite.php`](./snippets/05-pdo-and-sqlite.php) et
-> [`index-sqlite.php`](./snippets/index-sqlite.php).
+> [`05-pdo-and-sqlite`](./01-exemples-de-code/05-pdo-and-sqlite.php) et
+> [`index-sqlite`](./01-exemples-de-code/index-sqlite/create.php).
 
 Grâce aux requêtes préparées, les valeurs des variables sont liées aux
 paramètres de la requête SQL. Les valeurs sont automatiquement échappées par
@@ -369,6 +386,9 @@ suppression de la table `users`.
 En échappant automatiquement les valeurs, PDO empêche ce type d'attaque, car le
 code malveillant est traité comme une simple chaîne de caractères et non comme
 une commande SQL.
+
+Nous reviendrons plus spécifiquement sur ces notions de sécurité dans un futur
+contenu.
 
 ### Affichage sécurisé des données
 
@@ -386,8 +406,8 @@ Voici comment afficher les données de manière sécurisée :
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer aux fichiers
-> [`06-escape-special-characters.php`](./snippets/06-escape-special-characters.php)
-> et [`index-sqlite.php`](./snippets/index-sqlite.php).
+> [`06-escape-special-characters`](./01-exemples-de-code/06-escape-special-characters.php)
+> et [`index-sqlite`](./01-exemples-de-code/index-sqlite/create.php).
 
 Ici, `htmlspecialchars()` convertit les caractères spéciaux en entités HTML,
 empêchant ainsi l'exécution de code malveillant si l'utilisateur a saisi du HTML
@@ -445,14 +465,14 @@ de validation côté client :
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer aux fichiers
-> [`07-validate-data-client-side.php`](./snippets/07-validate-data-client-side.php)
-> et [`index-sqlite.php`](./snippets/index-sqlite.php).
+> [`07-validate-data-client-side`](./01-exemples-de-code/07-validate-data-client-side.php)
+> et [`index-sqlite`](./01-exemples-de-code/index-sqlite/create.php).
 
 Grâce aux attributs `required`, `minlength`, `type="email"`, et `min`, le
 navigateur effectue une validation de base avant de permettre la soumission du
 formulaire.
 
-## Bases de données MySQL/MariaDB et déploiement
+## Bases de données MySQL/MariaDB
 
 Dans un environnement de production, SQLite peut ne pas être suffisant en raison
 de ses limitations en termes de concurrence et de fonctionnalités avancées. Pour
@@ -474,11 +494,11 @@ sur l'un ou l'autre dans le monde professionnel.
 Voici comment se connecter à une base de données MySQL/MariaDB avec PDO :
 
 ```php
-const DB_HOST = 'localhost';
+const DB_HOST = '127.0.0.1';
 const DB_PORT = 3306;
-const DB_NAME = 'mydatabase';
-const DB_USER = 'myuser';
-const DB_PASSWORD = 'mypassword';
+const DB_NAME = 'my_database';
+const DB_USER = 'username';
+const DB_PASSWORD = 'password';
 
 $dsn = "mysql:host=" . DB_HOST . ";port=" . DB_PORT . ";dbname=" . DB_NAME . ";charset=utf8mb4";
 
@@ -488,8 +508,8 @@ $pdo = new PDO($dsn, DB_USER, DB_PASSWORD);
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer aux fichiers
-> [`08-mysql-with-constants.php`](./snippets/08-mysql-with-constants.php) et
-> [`index-mysql.php`](./snippets/index-mysql.php).
+> [`08-mysql-with-constants`](./01-exemples-de-code/08-mysql-with-constants.php)
+> et [`index-mysql`](./01-exemples-de-code/index-mysql/create.php).
 
 Dans cet exemple, nous définissons les paramètres de connexion à la base de
 données, y compris l'hôte, le port, le nom de la base de données, l'utilisateur
@@ -534,39 +554,71 @@ $stmt->execute();
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer aux fichiers
-> [`08-mysql-with-constants.php`](./snippets/08-mysql-with-constants.php) et
-> [`index-mysql.php`](./snippets/index-mysql.php).
+> [`08-mysql-with-constants`](./01-exemples-de-code/08-mysql-with-constants.php)
+> et [`index-mysql`](./01-exemples-de-code/index-mysql/create.php).
 
 En dehors de la syntaxe SQL, l'utilisation de PDO avec MySQL/MariaDB reste
 similaire à celle avec SQLite, notamment en ce qui concerne les requêtes
 préparées et la liaison des paramètres.
 
-### Accéder à MySQL/MariaDB avec MAMP et Visual Studio Code
+### MariaDB avec Docker Compose et phpMyAdmin
 
-Lors de l'installation de MAMP sur votre machine, MySQL/MariaDB est déjà inclus
-et prêt à l'emploi. Par défaut, l'utilisateur est `root` sans mot de passe. Il
-serait recommandé de créer un nouvel utilisateur avec des privilèges limités
-pour vos applications web. Mais comme il s'agit d'un environnement de
-développement local, vous pouvez utiliser l'utilisateur `root` sans mot de passe
-pour simplifier les choses.
+Le template mis à votre disposition pour le projet libre
+(<https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course-php-template>)
+met à disposition une base de données MariaDB prête à l'emploi à l'aide de
+Docker Compose.
 
-MySQL est donc directement à votre disposition pour vos applications web en
-développement.
+La base de données est décrite dans le fichier `compose.yaml` et est configurée
+pour être accessible depuis votre application web PHP.
 
-Pour interagir avec MySQL/MariaDB, vous pouvez utiliser un client graphique
-comme [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) ou des
-extensions pour Visual Studio Code comme
-[Database Client](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-database-client2).
+En plus de la base de données MariaDB, le template inclut également phpMyAdmin,
+un outil web pratique pour gérer et interagir avec votre base de données MariaDB
+via une interface graphique depuis votre navigateur web.
+
+Pour démarrer la stack Docker Compose avec la base de données MariaDB et
+phpMyAdmin, vous pouvez utiliser la commande suivante dans le terminal à la
+racine du projet :
+
+```bash
+docker compose up
+```
+
+Ceci démarrera les conteneurs Docker pour votre application web, la base de
+données MariaDB et phpMyAdmin.
+
+Vous pouvez ensuite accéder à phpMyAdmin en ouvrant votre navigateur et en
+naviguant vers l'URL suivante : <http://localhost:9090>.
+
+Par défaut, les informations de connexion pour accéder à la base de données sont
+les suivantes :
+
+- Utilisateur : `username`
+- Mot de passe : `password`
+- Nom de la base de données : `my_database`
+
+Il est possible de modifier le fichier `compose.yaml` pour changer ces
+paramètres si nécessaire.
+
+MariaDB et phpMyAdmin sont donc directement à votre disposition pour vos
+applications web en développement.
 
 Il vous suffira de configurer la connexion avec les paramètres nécessaires pour
 accéder à votre serveur MySQL/MariaDB local (hôte, port, utilisateur, mot de
 passe).
 
+Pour arrêter la stack Docker Compose, vous pouvez utiliser `Ctrl+C` dans le
+terminal où la commande `docker compose up` a été exécutée, ou utiliser la
+commande suivante dans un autre terminal à la racine du projet :
+
+```bash
+docker compose down
+```
+
 ### Gestion des erreurs avec les exceptions
 
 Lorsque l'on interagit avec une base de données, il est possible que des erreurs
-se produisent, par exemple en cas de problème de connexion, de requête SQL
-invalide, ou de violation de contraintes (comme une clé unique).
+se produisent, par exemple en cas de problème de connexion, de requêtes SQL
+invalides, ou de violation de contraintes (comme une clé unique).
 
 De ce fait, lorsqu'une erreur survient, PDO peut générer une exception.
 
@@ -580,9 +632,10 @@ manière appropriée.
 
 Une analogie courante pour comprendre les exceptions est de les comparer à des
 "signaux d'alarme" dans un programme. Lorsqu'une erreur se produit, l'exception
-est jetée pour signaler qu'il y a un problème. Le programme peut alors attraper
-cette exception et décider comment y répondre, par exemple en affichant un
-message d'erreur à l'utilisateur ou en effectuant une action de récupération.
+est jetée pour signaler qu'il y a un problème. Le programme peut alors
+"attraper" cette exception et décider comment y répondre, par exemple en
+affichant un message d'erreur à l'utilisateur ou en effectuant une action de
+récupération.
 
 Les signaux d'alarme peuvent émerger quelque part dans le code, et, si personne
 ne les entend/attrape, le programme s'arrête brusquement. En revanche, si
@@ -736,8 +789,8 @@ if (empty($errors)) {
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer aux fichiers
-> [`09-handle-exceptions.php`](./snippets/09-handle-exceptions.php) et
-> [`index-mysql.php`](./snippets/index-mysql.php).
+> [`09-handle-exceptions`](./01-exemples-de-code/09-handle-exceptions.php) et
+> [`index-mysql`](./01-exemples-de-code/index-mysql/create.php).
 
 Notez l'utilisation de plusieurs blocs `catch` pour gérer différents types
 d'exceptions. Le premier bloc capture les exceptions spécifiques à PDO, tandis
@@ -758,7 +811,7 @@ Voici un exemple simple de fichier de configuration `config/database.ini` :
 ```php
 host = "127.0.0.1"
 port = 3306
-database = "myapp"
+database = "my_database"
 username = "username"
 password = "password"
 ```
@@ -790,14 +843,14 @@ $pdo = new PDO("mysql:host=$host;port=$port;charset=utf8mb4", $username, $passwo
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer aux fichiers
-> [`10-database-configuration-file.php`](./snippets/10-database-configuration-file.php)
-> et [`index-mysql.php`](./snippets/index-mysql.php).
+> [`10-database-configuration-file`](./01-exemples-de-code/10-database-configuration-file.php)
+> et [`index-mysql`](./01-exemples-de-code/index-mysql/create.php).
 
 En utilisant un fichier de configuration, il est important de s'assurer que ce
 fichier n'est pas accessible publiquement via le serveur web pour des raisons de
 sécurité. Il est recommandé de placer le fichier de configuration en dehors du
-répertoire racine du serveur web, ou de configurer le serveur pour restreindre
-l'accès à ce fichier.
+répertoire des pages publiques accessibles par le serveur web (en dehors du
+dossier `public` de notre projet).
 
 Lors de l'utilisation de Git pour le contrôle de version, il est également
 conseillé d'ajouter le fichier de configuration à `.gitignore` pour éviter de le
@@ -805,12 +858,73 @@ committer dans le dépôt, surtout s'il contient des informations sensibles, et
 d'utiliser plutôt un fichier de configuration d'exemple (par exemple,
 `database.ini.example`) dans le dépôt.
 
+## Déployer une application web avec une base de données MySQL/MariaDB
+
+Lorsque vous développez une application web, vous utilisez une base de données
+locale pour tester et développer votre application.
+
+Cependant, lorsque vous êtes prêt à déployer votre application sur un serveur de
+production, vous devez configurer une base de données MySQL/MariaDB sur ce
+serveur et adapter votre application pour qu'elle puisse se connecter à cette
+base de données distante.
+
+Comme déjà vu dans les cours
+[Programmation serveur 1 (ProgServ1)](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
+et
+[Développer une application web simple (DévAppliS)](https://github.com/heig-vd-devapplis-course/heig-vd-devapplis-course),
+nous allons utiliser le service d'hébergement web
+[Infomaniak](https://www.infomaniak.com/) pour déployer notre application web
+avec une base de données MySQL/MariaDB.
+
+Pour acquérir un hébergement web avec Infomaniak avec une base de données
+MariaDB, référez-vous au contenu
+[Déployer un site ou une application web sur Internet](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main/01-contenus-du-cours/06.02-deployer-un-site-ou-une-application-web-sur-internet).
+
+Vous aurez besoin de ce contenu pour déployer votre
+[projet libre](../../02-evaluations/02-projet-libre/README.md) sur Infomaniak.
+
+> [!NOTE]
+>
+> **Prenez le temps de bien lire le contenu du cours pour comprendre les étapes
+> nécessaires au déploiement d'une application web avec une base de données
+> MySQL/MariaDB.** Vous n'aurez besoin que d'un seul déploiement par groupe pour
+> le projet libre, mais il est important que chaque membre du groupe comprenne
+> les étapes nécessaires pour déployer une application web avec une base de
+> données MySQL/MariaDB de façon autonome.
+
+Si vous le souhaitez, vous pouvez créer un sous-domaine (comme présenté dans le
+contenu mentionné ci-dessus) par membre du groupe pour que tout le monde puisse
+déployer son application web avec une base de données MySQL/MariaDB sur
+Infomaniak. Cela permettra à chaque membre du groupe de pratiquer le déploiement
+d'une application web avec une base de données MySQL/MariaDB de façon autonome,
+et de mieux comprendre les étapes nécessaires pour le déploiement.
+
+Les étapes résumées pour déployer une application web avec une base de données
+MySQL/MariaDB sur Infomaniak sont les suivantes :
+
+1. Acquérir un hébergement web avec Infomaniak en utilisant un nom de domaine ou
+   un sous-domaine existant ou en acquérant un nouveau nom de domaine.
+2. Créer une base de données MySQL/MariaDB sur Infomaniak et noter les
+   informations de connexion (hôte, port, nom de la base de données,
+   utilisateur, mot de passe).
+3. Créer un site web PHP sur Infomaniak et configurer le répertoire racine pour
+   votre application web.
+4. Téléverser les fichiers de votre application web sur le serveur Infomaniak en
+   utilisant un client FTP ou SFTP.
+5. Adapter votre application web pour qu'elle se connecte à la base de données
+   MySQL/MariaDB sur Infomaniak en utilisant les informations de connexion
+   notées précédemment.
+6. Tester votre application web sur Infomaniak pour vous assurer qu'elle
+   fonctionne correctement avec la base de données MySQL/MariaDB.
+
 ## Conclusion
 
 Dans ce cours, nous avons exploré les concepts avancés liés aux bases de données
 et à l'utilisation de PDO en PHP. Nous avons vu comment interagir avec des bases
-de données MySQL/MariaDB, gérer les erreurs avec des exceptions, et utiliser des
-fichiers de configuration pour stocker les paramètres de connexion.
+de données MySQL/MariaDB localement avec Docker Compose et phpMyAdmin ainsi que
+dans un environnement de production sur Infomaniak, gérer les erreurs avec des
+exceptions, et utiliser des fichiers de configuration pour stocker les
+paramètres de connexion.
 
 Un rappel des concepts de base des formulaires HTML, de la validation et de la
 sécurité a également été fait pour s'assurer que les données saisies par les

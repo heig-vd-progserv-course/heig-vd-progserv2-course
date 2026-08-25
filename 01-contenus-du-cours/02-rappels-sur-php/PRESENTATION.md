@@ -51,22 +51,86 @@ cliquant sur l'en-tête de ce document._
 
 ## Architecture client-serveur (1/2)
 
-- La plupart des applications web modernes reposent sur une architecture dite
-  _"client-serveur"_ :
-  1. Un client (navigateur web) envoie une requête à un serveur.
-  2. Le serveur répond aux requêtes des différents clients.
-  3. Le client affiche le résultat de la requête.
-- PHP repose sur cette même architecture.
+La plupart des applications web modernes reposent sur une architecture dite
+_"client-serveur"_ :
+
+1. Un client (navigateur web) envoie une requête à un serveur.
+2. Le serveur traite la requête.
+3. Le serveur renvoie une réponse aux différents clients.
+4. Le client affiche le résultat de la requête.
+
+**PHP repose sur cette même architecture.**
 
 ## Architecture client-serveur (2/2)
 
-- PHP fonctionne grâce aux outils suivants :
-  - Un serveur web.
-  - PHP installé sur le serveur web.
-  - Un navigateur web.
-  - Un éditeur de code (pour le développement).
+PHP fonctionne grâce aux outils suivants :
 
-![bg right:40% contain](https://raw.githubusercontent.com/heig-vd-progserv-course/heig-vd-progserv1-course/refs/heads/main/01-contenus-du-cours/01.02-introduction-a-php/images/architecture-client-serveur-avec-php.svg)
+- Un serveur web pour gérer les requêtes HTTP.
+- Un interpréteur PHP pour exécuter le code PHP.
+- Une base de données pour stocker les données.
+- Un espace de stockage pour stocker les fichiers de l'application.
+- Un navigateur web (le client) pour effectuer les requêtes et afficher les
+  résultats des requêtes.
+
+---
+
+![bg h:85%](./images/architecture-typique-dune-application-web-php.svg)
+
+### Serveur web
+
+- Gère les requêtes HTTP.
+- Distribue les ressources (fichiers HTML, CSS, JavaScript, images, etc.).
+- Exemples : Apache, Nginx.
+
+![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/commons/1/10/Apache_HTTP_server_logo_%282019-present%29.svg)
+![bg right:40% w:80% vertical](https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg)
+
+### Interpréteur PHP
+
+- Exécute le code PHP.
+- Génère du contenu dynamique.
+- Communique avec la base de données.
+
+![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg)
+
+### Base de données
+
+- Stocke les données de l'application.
+- Exemples : MySQL/MariaDB, PostgreSQL, SQLite.
+
+![bg right:40% w:80%](https://www.sqlite.org/images/sqlite370_banner.svg)
+![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/fr/6/62/MySQL.svg)
+![bg vertical w:80%](https://mariadb.com/wp-content/uploads/2019/11/mariadb-horizontal-blue.svg)
+
+### Espace de stockage
+
+- Stocke les fichiers de l'application.
+- Exemples : FTP, SFTP, stockage en ligne.
+- Les outils tels que FileZilla (Windows/Linux) ou Cyberduck (macOS) permettent
+  de transférer les fichiers vers le serveur web.
+
+![bg right:40% h:70%](https://upload.wikimedia.org/wikipedia/commons/0/01/FileZilla_logo.svg)
+![bg right:40% h:80% vertical](https://upload.wikimedia.org/wikipedia/commons/4/48/Cyberduck_icon.png)
+
+### Hébergement (1/2)
+
+- Services pour héberger une application web PHP.
+- Fournit le serveur web, l'interpréteur PHP, la base de données et l'espace de
+  stockage.
+- Exemples : Infomaniak, OVH, AWS, DigitalOcean.
+
+![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/commons/f/f6/Logo_infomaniak_bleu.svg)
+![bg right:40% w:80% vertical](https://upload.wikimedia.org/wikipedia/commons/4/45/Logo_OVH.svg)
+
+### Hébergement (2/2)
+
+Dans ce cours, nous allons utiliser Infomaniak :
+
+- Hébergeur suisse populaire.
+- Offre des services adaptés aux applications PHP.
+- Propose un programme étudiant pour des hébergements gratuits.
+
+![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/commons/f/f6/Logo_infomaniak_bleu.svg)
 
 ## Variables (1/2)
 

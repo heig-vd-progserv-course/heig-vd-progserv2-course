@@ -54,6 +54,11 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [Architecture client-serveur](#architecture-client-serveur)
+  - [Serveur web](#serveur-web)
+  - [Interpréteur PHP](#interpréteur-php)
+  - [Base de données](#base-de-données)
+  - [Espace de stockage](#espace-de-stockage)
+  - [Hébergement](#hébergement)
 - [Variables](#variables)
 - [Constantes](#constantes)
 - [Opérateurs](#opérateurs)
@@ -86,7 +91,7 @@ bloc d'information en haut de ce contenu.
 > Des difficultés à comprendre certains concepts de PHP présentés dans ce
 > support de cours ? Consultez les supports de cours pour le cours Programmation
 > serveur 1 (ProgServ1) pour vous aider :
-> <https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/tree/main>.
+> <https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>.
 >
 > N'hésitez pas à poser des questions si besoin !
 
@@ -97,7 +102,75 @@ envoie des requêtes au serveur, qui traite ces requêtes et renvoie des répons
 Cette architecture permet de séparer la logique de présentation (côté client) de
 la logique de traitement (côté serveur).
 
-![Architecture client-serveur](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/raw/main/01-modalites-de-lunite-denseignement-et-introduction-a-php/01-theorie/images/architecture-client-serveur-avec-php.png)
+![Architecture client-serveur](./images/architecture-typique-dune-application-web-php.svg)
+
+### Serveur web
+
+Le serveur web est responsable de la gestion des requêtes HTTP et de la
+distribution des ressources (fichiers HTML, CSS, JavaScript, images, etc.) aux
+clients (navigateurs web). Il peut également gérer la communication avec
+l'interpréteur PHP pour exécuter le code PHP et générer des pages web
+dynamiques.
+
+Il existe plusieurs serveurs web populaires, notamment Apache et Nginx. Ces
+serveurs web peuvent être configurés pour fonctionner avec PHP via différents
+modules.
+
+### Interpréteur PHP
+
+L'interpréteur PHP est un programme qui lit et exécute le code PHP. Il peut être
+intégré au serveur web ou fonctionner comme un processus séparé. L'interpréteur
+PHP traite les requêtes entrantes, exécute le code PHP et renvoie les résultats
+au serveur web pour qu'ils soient envoyés au client.
+
+### Base de données
+
+La base de données est utilisée pour stocker et gérer les données de
+l'application. Elle permet de stocker des informations telles que les
+utilisateurs, les produits, les commandes, etc.
+
+Les bases de données relationnelles comme MySQL et PostgreSQL sont couramment
+utilisées avec les applications PHP.
+
+### Espace de stockage
+
+L'espace de stockage est utilisé pour stocker les fichiers de l'application,
+tels que les fichiers PHP, les fichiers de configuration, les images, les
+documents, etc. Il est important de gérer correctement les permissions d'accès
+aux fichiers pour assurer la sécurité de l'application.
+
+De façon traditionnelle, les fichiers de l'application sont transférés sur le
+serveur via FTP/SFTP où le transfert est effectué à la main. Dans un contexte
+professionnel, le transfert est automatisé via des outils de déploiement continu
+(CI/CD) qui ne sont pas abordés dans ce cours.
+
+Le transfert via FTP (File Transfer Protocol) ou SFTP (SSH File Transfer
+Protocol) est une méthode courante pour transférer les fichiers de l'application
+sur le serveur web. FTP est un protocole non sécurisé, tandis que SFTP utilise
+une connexion SSH sécurisée.
+
+Afin de transférer les fichiers via FTP/SFTP, vous aurez besoin des informations
+de connexion fournies par votre hébergeur, telles que l'adresse du serveur, le
+nom d'utilisateur et le mot de passe et d'un client FTP/SFTP comme FileZilla
+(Windows/Linux) ou Cyberduck (macOS).
+
+### Hébergement
+
+L'hébergement est le service qui permet de rendre une application web accessible
+sur Internet. Il existe plusieurs types d'hébergement, notamment l'hébergement
+partagé, l'hébergement VPS (Virtual Private Server) et l'hébergement dédié.
+
+Dans le contexte de ce cours, nous utilisons Infomaniak comme hébergeur.
+
+Infomaniak est un hébergeur web suisse qui propose des services d'hébergement
+partagé, VPS et dédié. Il offre également des services de nom de domaine, de
+certificats SSL, de messagerie électronique, etc.
+
+Infomaniak propose un programme étudiant qui permet aux étudiants de bénéficier
+d'un hébergement web gratuit pendant une année.
+
+Il existe de nombreux autres hébergeurs web qui proposent des services
+similaires, notamment OVH, DigitalOcean, AWS, etc.
 
 ## Variables
 

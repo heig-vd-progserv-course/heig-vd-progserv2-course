@@ -15,6 +15,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Table des matières](#table-des-matières)
 - [Exercices](#exercices)
   - [Exercice 1](#exercice-1)
+  - [Exercice 2](#exercice-2)
 
 ## Exercices
 
@@ -34,10 +35,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 #### Consignes
 
-En repartant de l'exemple
-[_"Base de données MySQL/MariaDB"_](../01-exemples-de-code/02-base-de-donnees-mysql-mariadb/README.md)
-disponible dans les exemples de code, développer une application web en PHP qui
-permet de gérer une liste d'outils.
+En vous basant sur les sources prévues pour l'exercice 1
+([`sources-exercice-01`](./sources-exercice-01/)), adaptez cette application web
+pour permettre la gestion d'une liste d'outils.
 
 L'application doit permettre de :
 
@@ -61,9 +61,9 @@ Chaque outil doit avoir les propriétés suivantes :
     <https://dev.mysql.com/doc/refman/8.0/en/datetime.html>.
 - Prix (float).
 
-L'application doit utiliser une base de données MySQL ou MariaDB pour stocker
-les outils et utiliser un fichier de configuration pour les paramètres de
-connexion à la base de données.
+L'application doit utiliser une base de données MariaDB pour stocker les outils
+et utiliser un fichier de configuration pour les paramètres de connexion à la
+base de données.
 
 L'interface utilisateur doit être simple et intuitive, avec des formulaires pour
 ajouter des outils, et une table pour afficher la liste des outils et des
@@ -86,3 +86,8 @@ Une solution possible est disponible dans le dossier
 
 [licence]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
+
+### Exercice 2
+
+Déployez ensuite l'application web de l'exercice 1 sur Infomaniak en suivant les
+instructions fournies dans le contenu du cours.

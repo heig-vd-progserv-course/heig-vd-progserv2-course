@@ -41,8 +41,8 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 
 ## Objectifs
 
-Ce premier contenu théorique a pour but de vous donner les modalités de l'unité
-d'enseignement et une introduction à PHP.
+Ce premier contenu théorique a pour but de vous donner une introduction au cours
+et vous présenter son organisation.
 
 La liste complète des objectifs est disponible dans la section _"Objectifs"_ du
 bloc d'information en haut de ce contenu.
