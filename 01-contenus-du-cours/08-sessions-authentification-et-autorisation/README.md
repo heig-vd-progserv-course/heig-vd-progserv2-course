@@ -278,8 +278,8 @@ d'authentification et d'autorisation dans les applications web.
 > Les ressources suivantes fournissent des informations supplémentaires sur
 > l'authentification et l'autorisation sécurisées :
 >
-> - [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
-> - [OWASP Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
+> - [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html).
+> - [OWASP Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html).
 >
 > Dans de futures unités d'enseignement, vous utiliserez des bibliothèques et
 > des frameworks qui intègrent des mécanismes d'authentification et
