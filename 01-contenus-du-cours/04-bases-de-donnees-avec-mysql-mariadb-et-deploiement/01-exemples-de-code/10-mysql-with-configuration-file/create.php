@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $stmt->execute();
 
             // Redirection vers la page d'accueil avec tous les utilisateurs
-            header("Location: index-mysql.php");
+            header("Location: ./index.php");
             exit();
         } catch (PDOException $e) {
             // Liste des codes d'erreurs : https://en.wikipedia.org/wiki/SQLSTATE
@@ -143,7 +143,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <?php } ?>
         <?php } ?>
 
-        <form action="10-mysql-with-configuration-file.php" method="POST">
+        <form action="create.php" method="POST">
             <label for="first-name">Prénom</label>
             <input type="text" id="first-name" name="first-name" value="<?= htmlspecialchars($firstName ?? '') ?>" required minlength="2">
 

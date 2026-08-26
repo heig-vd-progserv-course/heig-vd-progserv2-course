@@ -9,8 +9,8 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Réutiliser des parties d'interface
 description: Réutiliser des parties d'interface pour le cours ProgServ2 enseigné à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/03-reutiliser-des-parties-dinterface/presentation.html
-header: "[**Réutiliser des parties d'interface**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/03-reutiliser-des-parties-dinterface/README.md)"
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/05-reutiliser-des-parties-dinterface/presentation.html
+header: "[**Réutiliser des parties d'interface**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/05-reutiliser-des-parties-dinterface/README.md)"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
 headingDivider: 6
 math: mathjax
@@ -85,7 +85,7 @@ cliquant sur l'en-tête de ce document._
 En reprenant le mini-projet de
 [Programmation serveur 1 (ProgServ1)](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course),
 les pages web sont structurées ainsi (voir
-[exemples de code](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/03-reutiliser-des-parties-dinterface/01-exemples-de-code))
+[exemples de code](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-reutiliser-des-parties-dinterface/01-exemples-de-code))
 :
 
 - `index.php` et `create.php` contiennent chacun toute la structure HTML.
@@ -281,7 +281,7 @@ Est-ce que vous avez des questions ?
 <!-- URLs -->
 
 [contenu-complet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/03-reutiliser-des-parties-dinterface/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/05-reutiliser-des-parties-dinterface/README.md
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
 

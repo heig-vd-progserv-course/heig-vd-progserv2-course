@@ -4,6 +4,18 @@ const DATABASE_FILE = __DIR__ . '/mydatabase.db';
 
 $pdo = new PDO("sqlite:" . DATABASE_FILE);
 
+$sql = "CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
+    age INTEGER NOT NULL
+);";
+
+$stmt = $pdo->prepare($sql);
+
+$stmt->execute();
+
 // Définition de la requête SQL pour récupérer tous les utilisateurs
 $sql = "SELECT * FROM users";
 

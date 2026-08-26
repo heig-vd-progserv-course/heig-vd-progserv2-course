@@ -62,7 +62,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01.05-programmation-orientee-objet-avance).
+[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01.03-programmation-orientee-objet-avance).
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 

@@ -9,8 +9,8 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Gestion et envoi des e-mails
 description: Gestion et envoi des e-mails pour le cours ProgServ2 enseigné à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/09-gestion-et-envoi-des-e-mails/presentation.html
-header: "[**Gestion et envoi des e-mails**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/09-gestion-et-envoi-des-e-mails/README.md)"
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/10-gestion-et-envoi-des-e-mails/presentation.html
+header: "[**Gestion et envoi des e-mails**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/10-gestion-et-envoi-des-e-mails/README.md)"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
 headingDivider: 6
 math: mathjax
@@ -399,7 +399,7 @@ Les résultats seront discutés au prochain cours. **Merci beaucoup !**
 <!-- URLs -->
 
 [contenu-complet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/09-gestion-et-envoi-des-e-mails/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/10-gestion-et-envoi-des-e-mails/README.md
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
 [feedback]: https://framaforms.org/progserv2-2025-2026-feedback-1762260178

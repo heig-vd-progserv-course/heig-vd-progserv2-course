@@ -1,11 +1,10 @@
 {
 	"name": "HEIG-VD ProgServ2 Course Development Container",
-	"dockerComposeFile": "compose.yaml",
-	"service": "devcontainer",
-	"runServices": ["mailpit", "mariadb", "plantuml"],
+	"image": "mcr.microsoft.com/devcontainers/base:trixie",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
 	"workspaceFolder": "/workspace",
 	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:4.0.0": {
+		"ghcr.io/devcontainers/features/docker-in-docker:4.1.0": {
 			"moby": false
 		}
 	},
@@ -28,7 +27,7 @@
 			]
 		}
 	},
-	"forwardPorts": [3306, 8025, 8080, 9090],
+	"forwardPorts": [3306, 8025, 8080, 8888, 9090],
 	"portsAttributes": {
 		"3306": {
 			"label": "MariaDB Database"
@@ -39,8 +38,11 @@
 		"8080": {
 			"label": "Apache HTTP Server"
 		},
-		"9090": {
+		"8888": {
 			"label": "PlantUML Server"
+		},
+		"9090": {
+			"label": "phpMyAdmin Web Interface"
 		}
 	},
 	// Execute the post-create.sh script once the container is created

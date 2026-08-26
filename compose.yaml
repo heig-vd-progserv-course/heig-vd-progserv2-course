@@ -1,0 +1,49 @@
+volumes:
+  mariadb_data:
+
+services:
+  mailpit:
+    container_name: mailpit
+    image: axllent/mailpit:v1.30
+    ports:
+      - 1025:1025
+      - 8025:8025
+
+  mariadb:
+    container_name: mariadb
+    image: mariadb:12
+    restart: unless-stopped
+    environment:
+      - MARIADB_RANDOM_ROOT_PASSWORD=yes
+      - MARIADB_USER=username
+      - MARIADB_PASSWORD=password
+      - MARIADB_DATABASE=my_database
+    ports:
+      - 3306:3306
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin:5
+    restart: unless-stopped
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    environment:
+      - PMA_HOST=mariadb
+      - PMA_PORT=3306
+      - PMA_DATABASE=my_database
+    ports:
+      - 9090:80
+
+  plantuml:
+    image: plantuml/plantuml-server:v1.2026.6
+    ports:
+      - 8888:8080
