@@ -73,15 +73,15 @@ cliquant sur l'en-tête de ce document._
 
 ---
 
-![bg h:80%](./images/exemple-dun-cookie-pour-la-gestion-des-preferences-de-langue-part-1.png)
+![bg h:80%](./images/exemple-dun-cookie-pour-la-gestion-des-preferences-de-langue-01.svg)
 
 ---
 
-![bg h:80%](./images/exemple-dun-cookie-pour-la-gestion-des-preferences-de-langue-part-2.png)
+![bg h:80%](./images/exemple-dun-cookie-pour-la-gestion-des-preferences-de-langue-02.svg)
 
 ---
 
-![bg h:80%](./images/exemple-dun-cookie-pour-la-gestion-des-preferences-de-langue-part-3.png)
+![bg h:80%](./images/exemple-dun-cookie-pour-la-gestion-des-preferences-de-langue-03.svg)
 
 ### Créer des cookies en PHP
 

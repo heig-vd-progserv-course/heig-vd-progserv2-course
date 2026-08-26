@@ -8,7 +8,7 @@ const DEFAULT_COLOR = '#ffffff';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_COOKIE[COOKIE_NAME])) {
     setcookie(COOKIE_NAME, '');
 
-    header('Location: index.php');
+    header('Location: ./index.php');
     exit;
 }
 
@@ -42,12 +42,12 @@ $color = $_COOKIE[COOKIE_NAME] ?? null;
 <body>
     <?php if ($color) { ?>
         <h1>Votre couleur préférée est : <?= htmlspecialchars($color) ?></h1>
-        <form method="post">
+        <form action="./index.php" method="post">
             <input type="submit" value="Supprimer la préférence">
         </form>
     <?php } else { ?>
         <h1>Choisissez votre couleur préférée :</h1>
-        <form method="post">
+        <form action="./index.php" method="post">
             <input type="color" name="color" value="<?= htmlspecialchars($color) ?>" required>
             <input type="submit" value="Enregistrer">
         </form>

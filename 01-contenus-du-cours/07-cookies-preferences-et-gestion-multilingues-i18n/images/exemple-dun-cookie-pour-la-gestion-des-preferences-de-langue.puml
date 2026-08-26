@@ -6,13 +6,15 @@ skinparam sequenceMessageAlign direction
 skinparam wrapWidth 250
 autonumber
 
-!$TITLE = "Exemple d'un cookie pour la gestion des préférences de langue"
-!$MULTIPAGE = 0
+' Uncomment to visualize the diagram in multiparts
+'!define MULTI_PART
 
-!if ($MULTIPAGE)
-    right footer $TITLE (%page%/%lastpage%)
+!$TITLE = "Exemple d'un cookie pour la gestion des préférences de langue"
+
+!if (%variable_exists("MULTI_PART"))
+  right footer $TITLE (%page%/%lastpage%) 
 !else
-    ignore newpage
+  ignore newpage
 !endif
 
 title $TITLE

@@ -108,7 +108,7 @@ Le diagramme ci-dessous illustre le processus de création et de lecture des
 cookies entre le navigateur et le serveur pour la gestion des préférences de
 langue :
 
-![Exemple d'un cookie pour la gestion des préférences de langue](./images/exemple-dun-cookie-pour-la-gestion-des-preferences-de-langue.png)
+![Exemple d'un cookie pour la gestion des préférences de langue](./images/exemple-dun-cookie-pour-la-gestion-des-preferences-de-langue.svg)
 
 ### Créer des cookies en PHP
 
@@ -123,11 +123,13 @@ jours :
 <?php
 // Définit un cookie 'language'
 // avec la valeur 'fr'
-// qui expire dans 30 jours.
+// qui expire dans 30 jours
+// valide pour tout le site ("/").
 setcookie(
     'language',
     'fr',
-    time() + (30 * 24 * 60 * 60)
+    time() + (30 * 24 * 60 * 60),
+    "/"
 );
 ```
 
@@ -186,7 +188,7 @@ définissant une date d'expiration dans le passé :
 <?php
 // Supprime le cookie en le recréant
 // avec une date d'expiration dans le passé.
-setcookie('language', '', time() - 3600);
+setcookie('language', '', time() - 3600, "/");
 ```
 
 Cela indique au navigateur de supprimer le cookie `language` en le recréant avec
@@ -201,7 +203,7 @@ sans spécifier de date d'expiration. Par exemple :
 <?php
 // Supprime le cookie en lui
 // donnant une valeur vide.
-setcookie('language', '');
+setcookie('language', '', 0, "/");
 ```
 
 Lorsque le navigateur reçoit cette réponse, il supprimera le cookie `language`.
