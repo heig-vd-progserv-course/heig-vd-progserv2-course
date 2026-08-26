@@ -9,8 +9,8 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Programmation orientée objet
 description: Programmation orientée objet pour le cours ProgServ2 enseigné à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/05-programmation-orientee-objet/presentation.html
-header: "[**Programmation orientée objet**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/05-programmation-orientee-objet/README.md)"
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/03-programmation-orientee-objet/presentation.html
+header: "[**Programmation orientée objet**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/03-programmation-orientee-objet/README.md)"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
 headingDivider: 6
 math: mathjax
@@ -152,7 +152,7 @@ réutilisables et faciles à maintenir.
 <!-- _class: lead -->
 
 Analysons l'exemple
-[`01-classe-simple`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/01-classe-simple/README.md).
+[`01-classe-simple`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/03-programmation-orientee-objet/01-exemples-de-code/01-classe-simple/README.md).
 
 ### Instanciation d'objets
 
@@ -169,7 +169,7 @@ Analysons l'exemple
 <!-- _class: lead -->
 
 Analysons l'exemple
-[`01-classe-simple`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/01-classe-simple/README.md).
+[`01-classe-simple`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/03-programmation-orientee-objet/01-exemples-de-code/01-classe-simple/README.md).
 
 ### Attributs
 
@@ -187,7 +187,7 @@ Analysons l'exemple
 <!-- _class: lead -->
 
 Analysons l'exemple
-[`01-classe-simple`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/01-classe-simple/README.md).
+[`01-classe-simple`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/03-programmation-orientee-objet/01-exemples-de-code/01-classe-simple/README.md).
 
 ### Méthodes
 
@@ -204,7 +204,7 @@ Analysons l'exemple
 <!-- _class: lead -->
 
 Analysons l'exemple
-[`02-classe-avec-une-methode-greet`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/02-classe-avec-une-methode-greet/README.md).
+[`02-classe-avec-une-methode-greet`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/03-programmation-orientee-objet/01-exemples-de-code/02-classe-avec-une-methode-greet/README.md).
 
 ### Encapsulation
 
@@ -221,7 +221,7 @@ Analysons l'exemple
 <!-- _class: lead -->
 
 Analysons l'exemple
-[`03-classe-avec-des-setters-et-des-getters`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/03-classe-avec-des-setters-et-des-getters/README.md).
+[`03-classe-avec-des-setters-et-des-getters`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/03-programmation-orientee-objet/01-exemples-de-code/03-classe-avec-des-setters-et-des-getters/README.md).
 
 ### Constructeurs et destructeurs
 
@@ -237,7 +237,7 @@ Analysons l'exemple
 <!-- _class: lead -->
 
 Analysons l'exemple
-[`04-classe-avec-un-constructeur-et-un-destructeur`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/04-classe-avec-un-constructeur-et-un-destructeur/README.md).
+[`04-classe-avec-un-constructeur-et-un-destructeur`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/03-programmation-orientee-objet/01-exemples-de-code/04-classe-avec-un-constructeur-et-un-destructeur/README.md).
 
 ### Constantes
 
@@ -254,7 +254,7 @@ Analysons l'exemple
 <!-- _class: lead -->
 
 Analysons l'exemple
-[`05-classe-avec-des-constantes`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/05-classe-avec-des-constantes/README.md).
+[`05-classe-avec-des-constantes`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/03-programmation-orientee-objet/01-exemples-de-code/05-classe-avec-des-constantes/README.md).
 
 ### Interfaces
 
@@ -269,7 +269,7 @@ Analysons l'exemple
 <!-- _class: lead -->
 
 Analysons l'exemple
-[`07-interfaces`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/07-interfaces/README.md).
+[`07-interfaces`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/03-programmation-orientee-objet/01-exemples-de-code/07-interfaces/README.md).
 
 ### Héritage
 
@@ -283,7 +283,7 @@ Analysons l'exemple
 <!-- _class: lead -->
 
 Analysons l'exemple
-[`08-heritage`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/08-heritage/README.md).
+[`08-heritage`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/03-programmation-orientee-objet/01-exemples-de-code/08-heritage/README.md).
 
 ### Classes abstraites
 
@@ -298,7 +298,7 @@ Analysons l'exemple
 <!-- _class: lead -->
 
 Analysons l'exemple
-[`09-classes-abstraites`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/09-classes-abstraites/README.md).
+[`09-classes-abstraites`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/03-programmation-orientee-objet/01-exemples-de-code/09-classes-abstraites/README.md).
 
 ### Inclusion des fichiers et classes
 
@@ -317,9 +317,9 @@ Analysons l'exemple
 <!-- _class: lead -->
 
 Analysons les exemples
-[`10-inclusion-manuelle-avec-require`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/10-inclusion-manuelle-avec-require/README.md)
+[`10-inclusion-manuelle-avec-require`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/03-programmation-orientee-objet/01-exemples-de-code/10-inclusion-manuelle-avec-require/README.md)
 et
-[`11-inclusion-manuelle-avec-require-once`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/11-inclusion-manuelle-avec-require-once/README.md).
+[`11-inclusion-manuelle-avec-require-once`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/03-programmation-orientee-objet/01-exemples-de-code/11-inclusion-manuelle-avec-require-once/README.md).
 
 ### Limites de l'héritage et de l'abstraction
 
@@ -413,7 +413,7 @@ Est-ce que vous avez des questions ?
 <!-- URLs -->
 
 [contenu-complet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/03-programmation-orientee-objet/README.md
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
 

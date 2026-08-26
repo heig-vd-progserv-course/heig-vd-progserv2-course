@@ -12,9 +12,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > **Ressources annexes**
 >
 > - Autres formats :
->   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/09-gestion-et-envoi-des-e-mails/presentation.html)
+>   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/10-gestion-et-envoi-des-e-mails/presentation.html)
 >   ·
->   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/09-gestion-et-envoi-des-e-mails/09-gestion-et-envoi-des-e-mails-presentation.pdf).
+>   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/10-gestion-et-envoi-des-e-mails/10-gestion-et-envoi-des-e-mails-presentation.pdf).
 > - Exemples de code : [Code source](./01-exemples-de-code/README.md).
 > - Exercices : [Énoncés et solutions](./02-exercices/README.md).
 >
@@ -555,7 +555,7 @@ La structure de votre projet devrait ressembler à ceci :
 
 Notez l'utilisation d'un autoloader pour charger automatiquement les classes
 PHP, comme celui que nous avons créé dans le cours
-[Programmation orientée objet](../05-programmation-orientee-objet/README.md).
+[Programmation orientée objet](../03-programmation-orientee-objet/README.md).
 
 Prenez quelques minutes pour examiner les fichiers de la bibliothèque PHPMailer.
 Remarquez-vous des éléments intéressants que nous aurions vus dans les cours

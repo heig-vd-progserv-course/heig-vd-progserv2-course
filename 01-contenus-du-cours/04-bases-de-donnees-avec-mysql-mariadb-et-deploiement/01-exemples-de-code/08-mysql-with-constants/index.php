@@ -10,6 +10,29 @@ $dsn = "mysql:host=" . DB_HOST . ";port=" . DB_PORT . ";dbname=" . DB_NAME . ";c
 
 $pdo = new PDO($dsn, DB_USER, DB_PASSWORD);
 
+// Création de la base de données si elle n'existe pas
+$sql = "CREATE DATABASE IF NOT EXISTS `" . DB_NAME . "` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+
+// Sélection de la base de données
+$sql = "USE `" . DB_NAME . "`;";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+
+// Création de la table `users` si elle n'existe pas
+$sql = "CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    age INT NOT NULL
+);";
+
+$stmt = $pdo->prepare($sql);
+
+$stmt->execute();
+
 // Définition de la requête SQL pour récupérer tous les utilisateurs
 $sql = "SELECT * FROM users";
 
