@@ -14,9 +14,12 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 - [Table des matières](#table-des-matières)
 - [Exercices](#exercices)
-  - [Exercice 1](#exercice-1)
-  - [Exercice 2](#exercice-2)
+  - [Exercice 1a](#exercice-1a)
+  - [Exercice 1b](#exercice-1b)
+  - [Exercice 2a](#exercice-2a)
+  - [Exercice 2b](#exercice-2b)
   - [Exercice 3](#exercice-3)
+  - [Exercice 4](#exercice-4)
 
 ## Exercices
 
@@ -32,7 +35,150 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > Il est donc important de les faire par vous-même avant de vérifier vos
 > réponses avec les solutions fournies.
 
-### Exercice 1
+### Exercice 1a
+
+#### Consignes
+
+Réalisez une classe `Person` avec PHP qui représente une personne avec les
+attributs `firstName`, `lastName`, `age` et `email`. Implémentez les méthodes
+suivantes :
+
+- `__construct(string $firstName, string $lastName, int $age, string $email)` :
+  constructeur pour initialiser les attributs.
+- Tous les setters et getters pour les attributs `firstName`, `lastName`, `age`
+  et `email`.
+- `getFullName()` : retourne le nom complet de la personne (prénom + nom).
+- `isAdult()` : retourne `true` si la personne est majeure (18 ans ou plus),
+  `false` sinon.
+- `getEmailDomain()` : retourne le domaine de l'email (par exemple, pour
+  `jane.doe@example.com`, retourne `example.com`). Vous pouvez utiliser la
+  fonction [`explode`](https://www.php.net/manual/fr/function.explode.php) de
+  PHP pour séparer l'email par le caractère `@` et retourner la deuxième partie.
+  Si l'email n'est pas valide, retournez une chaîne vide.
+
+Contraintes :
+
+- Utilisez la visibilité `private` pour les attributs.
+- Utilisez la visibilité `public` pour les méthodes.
+- Toutes les méthodes doivent avoir des types de retour et des types de
+  paramètres appropriés.
+
+#### Solution
+
+Une solution possible est disponible dans le dossier
+[`solution-exercice-01a`](./solution-exercice-01a/)
+
+### Exercice 1b
+
+#### Consignes
+
+En utilisant la classe `Person` créée dans l'exercice précédent, instantiez deux
+objets `Person` avec les données suivantes :
+
+- Personne 1 :
+  - Prénom : `Jane`
+  - Nom : `Doe`
+  - Âge : `25`
+  - Email : `jane.doe@example.com`
+- Personne 2 :
+  - Prénom : `John`
+  - Nom : `Smith`
+  - Âge : `17`
+  - Email : `john.smith`
+
+Ensuite, effectuez les opérations suivantes :
+
+- Affichez le nom complet de chaque personne en utilisant la méthode
+  `getFullName()`.
+- Vérifiez si chaque personne est majeure en utilisant la méthode `isAdult()`.
+- Affichez le e-mail de chaque personne en utilisant la méthode `getEmail()`.
+- Affichez le domaine de l'email de chaque personne en utilisant la méthode
+  `getEmailDomain()`. Pour la personne avec un email invalide, affichez un
+  message indiquant que l'email est invalide.
+
+#### Solution
+
+Une solution possible est disponible dans le dossier
+[`solution-exercice-01b`](./solution-exercice-01b/)
+
+### Exercice 2a
+
+#### Consignes
+
+Réalisez une classe `Vehicle` avec PHP qui représente un véhicule avec les
+attributs `numberOfWheels`, `color`, `brand` et `model`.
+
+Implémentez les méthodes suivantes :
+
+- `__construct($numberOfWheels, $color, $brand, $model)` : constructeur pour
+  initialiser les attributs.
+- Tous les setters et getters pour les attributs `numberOfWheels`, `color`,
+  `brand` et `model`.
+- `getDescription()` : retourne une description du véhicule sous la forme
+  `"Brand Model, Color, Number of wheels"`. Par exemple, pour un véhicule de
+  marque `Toyota`, modèle `Corolla`, couleur `Red` et 4 roues, la méthode
+  retourne `"Toyota Corolla, Red, 4 wheels"`.
+- `type()` : retourne le type de véhicule en fonction du nombre de roues :
+  - Si le nombre de roues est 2, retourne `"Motorcycle"`.
+  - Si le nombre de roues est 4, retourne `"Car"`.
+  - Si le nombre de roues est supérieur à 4, retourne `"Truck"`.
+  - Sinon, retourne `"Unknown"`.
+
+Contraintes :
+
+- Utilisez la visibilité `private` pour les attributs.
+- Utilisez la visibilité `public` pour les méthodes.
+- Utilisez une ou des constantes pour définir les marques de véhicules (par
+  exemple, `TOYOTA`, `YAMAHA`, etc.) et/ou les types de véhicule si vous le
+  souhaitez. **Astuce** : vous pouvez utiliser la syntaxe `self::` pour accéder
+  aux constantes de la classe depuis l'intérieur de la classe, notamment dans la
+  méthode `type()`.
+
+#### Solution
+
+Une solution possible est disponible dans le dossier
+[`solution-exercice-02a`](./solution-exercice-02a/)
+
+### Exercice 2b
+
+#### Consignes
+
+En utilisant la classe `Vehicle` créée dans l'exercice précédent, instantiez
+deux objets `Vehicle` avec les données suivantes :
+
+- Véhicule 1 :
+  - Nombre de roues : `4`
+  - Couleur : `Red`
+  - Marque : `Toyota`
+  - Modèle : `Corolla`
+- Véhicule 2 :
+  - Nombre de roues : `2`
+  - Couleur : `Black`
+  - Marque : `Yamaha`
+  - Modèle : `MT-07`
+- Véhicule 3 :
+  - Nombre de roues : `6`
+  - Couleur : `Blue`
+  - Marque : `Volvo`
+  - Modèle : `FH16`
+- Véhicule 4 :
+  - Nombre de roues : `0`
+  - Couleur : `Green`
+  - Marque : `UFO`
+  - Modèle : `X-2000`
+
+Ensuite, effectuez les opérations suivantes :
+
+- Affichez la description de chaque véhicule en utilisant la méthode
+  `getDescription()`.
+- Affichez le type de chaque véhicule en utilisant la méthode `type()`.
+
+#### Solution
+
+Une solution possible est disponible dans le dossier
+[`solution-exercice-02b`](./solution-exercice-02b/)
+
+### Exercice 3
 
 #### Consignes
 
@@ -110,9 +256,9 @@ Implémentez les méthodes suivantes :
 #### Solution
 
 Une solution possible est disponible dans le dossier
-[`solution-exercice-01`](./solution-exercice-01/)
+[`solution-exercice-03`](./solution-exercice-01/)
 
-### Exercice 2
+### Exercice 4
 
 #### Consignes
 
@@ -174,103 +320,7 @@ $calculator->clear();
 #### Solution
 
 Une solution possible est disponible dans le dossier
-[`solution-exercice-02`](./solution-exercice-02/).
-
-### Exercice 3
-
-#### Consignes
-
-Mettre en place une hiérarchie de classes pour représenter la structure de
-personnages de jeux vidéos appartenant aux classes suivantes :
-
-- Assassin.es (`Assassins`).
-- Mages (`Mages`).
-- Guerrier.es (`Warriors`).
-
-Utiliser les classes abstraites et les namespaces pour organiser le code.
-
-La hiérarchie est la suivante :
-
-```text
-./
-├── public/
-│   └── index.php
-└── src/
-    ├── classes/
-    │   └── Characters/
-    │       ├── Assassins/
-    │       │   ├── AbstractAssassin.php
-    │       │   ├── Ninja.php
-    │       │   └── Spy.php
-    │       ├── Mages/
-    │       │   ├── AbstractMage.php
-    │       │   ├── Witch.php
-    │       │   └── Wizard.php
-    │       ├── Warriors/
-    │       │   ├── AbstractWarrior.php
-    │       │   ├── Pyrotechnician.php
-    │       │   └── Soldier.php
-    │       └── AbstractCharacter.php
-    └── utils/
-        └── autoloader.php
-```
-
-La classe abstraite `AbstractCharacter` doit définir les propriétés et méthodes
-communes à tous les personnages, telles que :
-
-- `name` (string, protégé).
-- `age` (int, protégé).
-- `weapon` (string, protégé).
-- `universe` (string, protégé) : l'univers fictif d'origine du personnage.
-- `attack()` (méthode abstraite) : chaque sous-classe doit implémenter sa propre
-  version de cette méthode.
-
-Chaque sous-classe doit implémenter le constructeur pour initialiser les
-propriétés spécifiques et la méthode `attack()` pour retourner une chaîne
-décrivant l'attaque du personnage.
-
-Voici un exemple d'utilisation attendue :
-
-```php
-<?php
-require_once __DIR__ . '/../src/utils/autoloader.php';
-
-use Characters\Assassins\Ninja;
-use Characters\Assassins\Spy;
-use Characters\Mages\Wizard;
-use Characters\Mages\Witch;
-use Characters\Warriors\Soldier;
-use Characters\Warriors\Pyrotechnician;
-
-$ninja = new Ninja("Ibuki", 19, "Street Fighter");
-$spy = new Spy("Agent 47", 40, "Hitman");
-$wizard = new Wizard("Gandalf", 100, "Lord of the Rings");
-$witch = new Witch("Hermione Granger", 30, "Harry Potter");
-$soldier = new Soldier("Master Chief", 45, "Halo");
-$pyrotechnician = new Pyrotechnician("Jinx", 28, "Arcane");
-
-$characters = [$ninja, $spy, $wizard, $witch, $soldier, $pyrotechnician];
-
-foreach ($characters as $character) {
-    echo $character->attack() . "<br>";
-}
-```
-
-Avec la sortie attendue :
-
-```text
-Ibuki (Street Fighter) silently attacks with a katana!
-Agent 47 (Hitman) silently attacks with a silenced pistol!
-Gandalf (Lord of the Rings) casts a spell with a magic staff!
-Hermione Granger (Harry Potter) casts a spell with a magic wand!
-Master Chief (Halo) attacks with a assault rifle!
-Jinx (Arcane) attacks with a fireworks!
-```
-
-#### Solution
-
-Une solution possible est disponible dans le dossier
-[`solution-exercice-03`](./solution-exercice-03/).
+[`solution-exercice-04`](./solution-exercice-02/).
 
 [licence]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md

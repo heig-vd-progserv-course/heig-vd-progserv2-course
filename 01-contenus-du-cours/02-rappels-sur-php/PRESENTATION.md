@@ -581,6 +581,7 @@ Est-ce que vous avez des questions ?
 
 - (Re)lire le support de cours.
 - Explorer les exemples de code.
+- Faire les exercices.
 - Poser des questions si nécessaire.
 
 ➡️ [Visualiser le contenu complet sur GitHub][contenu-complet].
