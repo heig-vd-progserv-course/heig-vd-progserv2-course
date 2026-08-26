@@ -117,6 +117,8 @@ session_destroy();
 
 ### Différences entre sessions et cookies
 
+<small>
+
 |                  | Cookies                                         | Sessions                                          |
 | ---------------- | ----------------------------------------------- | ------------------------------------------------- |
 | **Stockage**     | Côté client (navigateur)                        | Côté serveur - cookie pour identifier la session. |
@@ -124,11 +126,13 @@ session_destroy();
 | **Taille**       | Limitée (environ 4 Ko par cookie)               | Limitée par la mémoire serveur                    |
 | **Durée de vie** | Configurable                                    | Courte par défaut                                 |
 
+</small>
+
 ## Authentification et autorisation
 
 - Les sessions permettent de gérer l'authentification et l'autorisation.
 - **Concepts essentiels mais difficiles à implémenter correctement ! Dans de
-  futurs unités d'enseignement, nous verrons des solutions plus robustes.**
+  futurs cours, nous verrons des solutions plus robustes.**
 
 ![bg right:40%][illustration-authentification]
 ![bg right:40% vertical][illustration-autorisation]
