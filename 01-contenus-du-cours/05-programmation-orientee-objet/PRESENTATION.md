@@ -151,7 +151,8 @@ réutilisables et faciles à maintenir.
 
 <!-- _class: lead -->
 
-Analysons l'exemple [`01-classe-simple`](#TODO).
+Analysons l'exemple
+[`01-classe-simple`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/01-classe-simple/README.md).
 
 ### Instanciation d'objets
 
@@ -167,7 +168,8 @@ Analysons l'exemple [`01-classe-simple`](#TODO).
 
 <!-- _class: lead -->
 
-Analysons l'exemple [`01-classe-simple`](#TODO).
+Analysons l'exemple
+[`01-classe-simple`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/01-classe-simple/README.md).
 
 ### Attributs
 
@@ -184,7 +186,8 @@ Analysons l'exemple [`01-classe-simple`](#TODO).
 
 <!-- _class: lead -->
 
-Analysons l'exemple [`01-classe-simple`](#TODO).
+Analysons l'exemple
+[`01-classe-simple`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/01-classe-simple/README.md).
 
 ### Méthodes
 
@@ -200,7 +203,8 @@ Analysons l'exemple [`01-classe-simple`](#TODO).
 
 <!-- _class: lead -->
 
-Analysons l'exemple [`02-classe-avec-une-methode-greet`](#TODO).
+Analysons l'exemple
+[`02-classe-avec-une-methode-greet`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/02-classe-avec-une-methode-greet/README.md).
 
 ### Encapsulation
 
@@ -216,7 +220,8 @@ Analysons l'exemple [`02-classe-avec-une-methode-greet`](#TODO).
 
 <!-- _class: lead -->
 
-Analysons l'exemple [`03-classe-avec-setters-et-getters`](#TODO).
+Analysons l'exemple
+[`03-classe-avec-des-setters-et-des-getters`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/03-classe-avec-des-setters-et-des-getters/README.md).
 
 ### Constructeurs et destructeurs
 
@@ -231,7 +236,8 @@ Analysons l'exemple [`03-classe-avec-setters-et-getters`](#TODO).
 
 <!-- _class: lead -->
 
-Analysons l'exemple [`04-classe-avec-un-constructeur-et-un-destructeur`](#TODO).
+Analysons l'exemple
+[`04-classe-avec-un-constructeur-et-un-destructeur`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/04-classe-avec-un-constructeur-et-un-destructeur/README.md).
 
 ### Constantes
 
@@ -247,7 +253,8 @@ Analysons l'exemple [`04-classe-avec-un-constructeur-et-un-destructeur`](#TODO).
 
 <!-- _class: lead -->
 
-Analysons l'exemple [`05-classe-avec-constantes`](#TODO).
+Analysons l'exemple
+[`05-classe-avec-des-constantes`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/05-classe-avec-des-constantes/README.md).
 
 ### Interfaces
 
@@ -261,7 +268,8 @@ Analysons l'exemple [`05-classe-avec-constantes`](#TODO).
 
 <!-- _class: lead -->
 
-Analysons l'exemple [`07-interfaces`](#TODO).
+Analysons l'exemple
+[`07-interfaces`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/07-interfaces/README.md).
 
 ### Héritage
 
@@ -274,7 +282,8 @@ Analysons l'exemple [`07-interfaces`](#TODO).
 
 <!-- _class: lead -->
 
-Analysons l'exemple [`08-heritage`](#TODO).
+Analysons l'exemple
+[`08-heritage`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/08-heritage/README.md).
 
 ### Classes abstraites
 
@@ -288,7 +297,8 @@ Analysons l'exemple [`08-heritage`](#TODO).
 
 <!-- _class: lead -->
 
-Analysons l'exemple [`09-classes-abstraites`](#TODO).
+Analysons l'exemple
+[`09-classes-abstraites`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/09-classes-abstraites/README.md).
 
 ### Inclusion des fichiers et classes
 
@@ -306,8 +316,10 @@ Analysons l'exemple [`09-classes-abstraites`](#TODO).
 
 <!-- _class: lead -->
 
-Analysons les exemples [`10-inclusion-manuelle-avec-require`](#TODO) et
-[`11-inclusion-manuelle-avec-require_once`](#TODO).
+Analysons les exemples
+[`10-inclusion-manuelle-avec-require`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/10-inclusion-manuelle-avec-require/README.md)
+et
+[`11-inclusion-manuelle-avec-require-once`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/05-programmation-orientee-objet/01-exemples-de-code/11-inclusion-manuelle-avec-require-once/README.md).
 
 ### Limites de l'héritage et de l'abstraction
 
@@ -331,7 +343,8 @@ Analysons les exemples [`10-inclusion-manuelle-avec-require`](#TODO) et
   pour créer des classes et des objets.
 - Les concepts avancés de la POO, tels que les interfaces, l'héritage et
   l'abstraction, permettent de créer des applications modulaires et
-  maintenables.
+  maintenables, mais il faut les utiliser avec parcimonie pour éviter une
+  complexité excessive.
 
 ## Questions
 
