@@ -20,9 +20,15 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 >
 > **Objectifs**
 >
-> - Rappeler les concepts de base de la programmation orientée objet.
-> - Appliquer les notions d'interface, d'héritage et d'abstraction avec la
->   programmation orientée objet.
+> - Lister les concepts clés de la POO.
+> - Expliquer les avantages et les désavantages de la POO.
+> - Créer des classes et des objets en PHP.
+> - Définir des attributs et des méthodes dans une classe.
+> - Utiliser l'encapsulation pour protéger les données des objets.
+> - Définir des constructeurs et des destructeurs pour initialiser et nettoyer
+>   les objets.
+> - Utiliser des constantes dans les classes.
+> - Appliquer les notions d'interface, d'héritage et d'abstraction.
 >
 > **Méthodes d'enseignement et d'apprentissage**
 >
@@ -55,14 +61,22 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
-- [La programmation orientée objet, un paradigme de programmation](#la-programmation-orientée-objet-un-paradigme-de-programmation)
-- [Interfaces](#interfaces)
-- [Héritage](#héritage)
-- [Abstraction](#abstraction)
+- [Buts de la programmation orientée objet (POO)](#buts-de-la-programmation-orientée-objet-poo)
+- [Concepts clés de la POO](#concepts-clés-de-la-poo)
+- [Avantages de la POO](#avantages-de-la-poo)
+- [Désavantages de la POO](#désavantages-de-la-poo)
+- [La POO en PHP](#la-poo-en-php)
+  - [Classes](#classes)
+  - [Instanciation d'objets](#instanciation-dobjets)
+  - [Attributs](#attributs)
+  - [Méthodes](#méthodes)
+  - [Encapsulation](#encapsulation)
+  - [Constructeurs et destructeurs](#constructeurs-et-destructeurs)
+  - [Constantes](#constantes)
+  - [Interfaces](#interfaces)
+  - [Héritage](#héritage)
+  - [Classes abstraites](#classes-abstraites)
 - [Inclusion des fichiers et classes](#inclusion-des-fichiers-et-classes)
-  - [Inclusion manuelle](#inclusion-manuelle)
-  - [Espaces de noms (namespaces)](#espaces-de-noms-namespaces)
-  - [Inclusion automatique (autoloader)](#inclusion-automatique-autoloader)
 - [Limites de l'héritage et de l'abstraction](#limites-de-lhéritage-et-de-labstraction)
 - [Conclusion](#conclusion)
 - [Exemples de code](#exemples-de-code)
@@ -71,27 +85,18 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Objectifs
 
-TODO
+Dans ce contenu, nous allons aborder la programmation orientée objet (POO) en
+PHP.
 
+Vous avez déjà étudié la programmation orientée objet dans de précédents cours,
+mais nous allons approfondir vos connaissances et explorer de nouvelles
+fonctionnalités et concepts liés à la POO avec PHP.
 
-## Objectifs
+Nous allons voir les concepts clés de la POO, les avantages et des désavantages
+de la POO, ainsi que de son utilisation en PHP.
 
-Dans ce dernier cours, nous allons aborder la programmation orientée objet (POO)
-en PHP. Nous allons voir les concepts clés de la POO, tels que les classes, les
-objets, les attributs, les méthodes, l'encapsulation, les constructeurs et les
-destructeurs, ainsi que les constantes. Nous allons également discuter des
-avantages et des désavantages de la POO, ainsi que de son utilisation en PHP.
-
-De façon plus concise, les personnes qui étudient devraient être capables de :
-
-- Lister les concepts clés de la POO.
-- Expliquer les avantages et les désavantages de la POO.
-- Créer des classes et des objets en PHP.
-- Définir des attributs et des méthodes dans une classe.
-- Utiliser l'encapsulation pour protéger les données des objets.
-- Définir des constructeurs et des destructeurs pour initialiser et nettoyer les
-  objets.
-- Utiliser des constantes dans les classes.
+La liste complète des objectifs est disponible dans la section _"Objectifs"_ du
+bloc d'information en haut de ce contenu.
 
 ## Buts de la programmation orientée objet (POO)
 
@@ -125,13 +130,17 @@ cohérentes.
   nettoyer les objets. Les constructeurs sont appelés lors de la création d'un
   objet, tandis que les destructeurs sont appelés lors de la destruction de
   l'objet.
-
-Il existe d'autres concepts clés de la POO, tels que l'héritage et le
-polymorphisme, qui permettent de créer des relations entre les classes et de
-réutiliser le code ainsi que les méthodes statiques et pleins d'autres concepts
-avancés comme les interfaces, les traits, les namespaces, les exceptions, etc.
-
-Cependant, ces concepts ne seront pas abordés dans ce cours.
+- **Interfaces** : contrats qui définissent un ensemble de méthodes que les
+  classes doivent implémenter. Les interfaces permettent de garantir que
+  certaines fonctionnalités sont présentes dans les classes qui les
+  implémentent.
+- **Héritage** : mécanisme qui permet à une classe d'hériter des propriétés et
+  des méthodes d'une autre classe. L'héritage favorise la réutilisation du code
+  et la création de hiérarchies de classes.
+- **Classes abstraites** : concept qui permet de définir des classes qui ne
+  peuvent pas être instanciées directement, mais qui servent de base pour
+  d'autres classes. Les classes abstraites permettent de créer des modèles
+  génériques et de définir des comportements communs à plusieurs classes.
 
 ## Avantages de la POO
 
@@ -174,8 +183,8 @@ Voici un exemple simple de classe en PHP :
 ```php
 <?php
 class Person {
-    public $name;
-    public $age;
+    public string $name;
+    public int $age;
 }
 ```
 
@@ -315,10 +324,10 @@ Voici un exemple de classe avec une méthode :
 ```php
 <?php
 class Person {
-    public $name;
-    public $age;
+    public string $name;
+    public int $age;
 
-    public function greet() {
+    public function greet(): string {
         return "Hi, my name is " . $this->name .
             " and I am " . $this->age .
             " years old.";
@@ -395,30 +404,34 @@ exemple :
 ```php
 <?php
 class Person {
-    private $name; // Attribut privé
-    private $age; // Attribut privé
+    private string $name; // Attribut privé
+    private int $age; // Attribut privé
 
-    public function setName($name) {
+    public function setName(string $name): ?string {
         if (strlen($name) < 3) {
             return "Name must be at least 3 characters long.";
         }
 
         $this->name = $name;
+
+        return null;
     }
 
-    public function getName() {
+    public function getName(): string {
         return $this->name;
     }
 
-    public function setAge($age) {
+    public function setAge(int $age): ?string {
         if ($age < 0) {
             return "Age cannot be negative.";
         }
 
         $this->age = $age;
+
+        return null;
     }
 
-    public function getAge() {
+    public function getAge(): int {
         return $this->age;
     }
 }
@@ -577,10 +590,10 @@ en assignant une nouvelle valeur à la variable qui référait à l'objet).
 ```php
 <?php
 class Person {
-    private $name;
-    private $age;
+    private string $name;
+    private int $age;
 
-    public function __construct($name, $age) {
+    public function __construct(string $name, int $age) {
         $this->name = $name;
         $this->age = $age;
     }
@@ -589,7 +602,7 @@ class Person {
         echo $this->name . " is being destroyed.<br>";
     }
 
-    public function greet() {
+    public function greet(): string {
         return "Hi, my name is " . $this->name . " and I am " . $this->age . " years old.";
     }
 }
@@ -692,15 +705,15 @@ class Person {
     const ROLE_DESIGNER = 'Designer';
     const ROLE_EMPLOYEE = 'Employee';
 
-    private $name;
-    private $role;
+    private string $name;
+    private string $role;
 
-    public function __construct($name, $role) {
+    public function __construct(string $name, string $role) {
         $this->name = $name;
         $this->role = $role;
     }
 
-    public function greet() {
+    public function greet(): string {
         return "Hi, my name is " . $this->name . ". I work as a " . $this->role . " at my company.";
     }
 }
@@ -781,109 +794,7 @@ Par défaut, les constantes sont `public`, ce qui signifie qu'elles peuvent êtr
 accédées depuis l'extérieur de la classe sans avoir besoin de méthodes d'accès.
 Cependant, elles ne peuvent pas être modifiées une fois définies.
 
-## Conclusion
-
-La programmation orientée objet (POO) est un paradigme de programmation qui
-permet de structurer le code en regroupant les données et les comportements dans
-des entités appelées classes.
-
-Elle offre de nombreux avantages, tels que la lisibilité, la réutilisabilité et
-la maintenabilité du code. PHP prend en charge la POO depuis la version 5,
-permettant de créer des classes et des objets, d'utiliser l'encapsulation, et de
-définir des attributs et des méthodes.
-
-La POO est un outil puissant pour structurer le code et faciliter le
-développement d'applications complexes. Cependant, elle peut introduire une
-certaine complexité. Il faut savoir l'utiliser judicieusement en fonction des
-besoins de l'application.
-
-Au travers de ce dernier cours, nous avons vu les concepts clés de la POO, tels
-que les classes, les objets, les attributs, les méthodes, l'encapsulation, les
-constructeurs et destructeurs, ainsi que les constantes. Nous avons également
-abordé les avantages et les désavantages de la POO, ainsi que son utilisation en
-PHP.
-
-
-## La programmation orientée objet, un paradigme de programmation
-
-La programmation orientée objet (POO) est un paradigme de programmation qui
-utilise des "objets" pour représenter des données et des comportements.
-
-La programmation orientée objet permet de structurer le code de manière plus
-modulaire et réutilisable.
-
-```php
-<?php
-class User {
-    // Propriétés (attributs)
-    private string $firstName;
-    private string $lastName;
-
-    // Constructeur
-    public function __construct(string $firstName, string $lastName) {
-        $this->firstName = $firstName;
-        $this->lastName = $lastName;
-    }
-
-    // Méthodes
-    public function getFirstName(): string {
-        return $this->firstName;
-    }
-
-    public function setFirstName(string $firstName): void {
-        $this->firstName = $firstName;
-    }
-
-    public function getLastName(): string {
-        return $this->lastName;
-    }
-
-    public function setLastName(string $lastName): void {
-        $this->lastName = $lastName;
-    }
-
-    public function getFullName(): string {
-        return "{$this->firstName} {$this->lastName}";
-    }
-}
-```
-
-Les attributs (propriétés) sont des variables qui stockent l'état de l'objet,
-tandis que les méthodes sont des fonctions qui définissent le comportement de
-l'objet.
-
-Grâce aux dernières versions de PHP, il est possible de typer les attributs
-d'une classe de la même manière que pour les paramètres et le retour des
-fonctions.
-
-Les attributs et les méthodes peuvent avoir différents niveaux de visibilité :
-`public`, `protected` et `private`. Il est recommandé d'utiliser `protected` ou
-`private` pour les attributs afin de favoriser l'encapsulation.
-
-Grâce à l'encapsulation, les attributs d'une classe ne sont pas accessibles
-directement depuis l'extérieur de la classe. On utilise des méthodes publiques
-pour accéder et modifier les attributs (communément appelées _getters_ et
-_setters_).
-
-Le constructeur est une méthode spéciale qui est appelée lors de la création
-d'un objet.
-
-Une classe est instanciée (créée) à l'aide du mot-clé `new`, ce qui crée un
-nouvel objet de cette classe :
-
-```php
-// Création d'objets (instanciation)
-$user1 = new User("Alice", "Smith");
-$user2 = new User("Bob", "Johnson");
-
-// Utilisation des méthodes
-echo $user1->getFirstName() . "<br>";   // "Alice"
-echo $user2->getFullName() . "<br>";    // "Bob Johnson"
-$user2->setLastName("Doe");             // Modifie le nom de famille de Bob
-echo $user2->getFullName() . "<br>";    // "Bob Doe"
-```
-
-## Interfaces
+### Interfaces
 
 Les interfaces définissent un contrat que les classes doivent respecter. Elles
 spécifient quelles méthodes une classe doit implémenter sans définir leur
@@ -943,7 +854,7 @@ Le polymorphisme permet de traiter différents types d'objets de manière unifor
 lorsqu'ils implémentent la même interface. Ici, tous les animaux peuvent être
 traités de la même manière grâce à l'interface `AnimalInterface`.
 
-## Héritage
+### Héritage
 
 L'héritage permet à une classe (classe fille) d'hériter des propriétés et
 méthodes d'une autre classe (classe parent), favorisant la réutilisation du
@@ -1033,7 +944,7 @@ echo $tomato->getColor();      // "Red"
 Ces classes peuvent être ensuite utilisées pour créer des objets représentant
 des plantes spécifiques.
 
-## Abstraction
+### Classes abstraites
 
 Les classes abstraites permettent de définir une base commune avec des méthodes
 partiellement implémentées. Elles ne peuvent pas être instanciées directement.
@@ -1162,23 +1073,33 @@ la lisibilité et la maintenabilité. Chaque classe peut être définie dans son
 propre fichier, et ces fichiers peuvent être inclus dans d'autres fichiers selon
 les besoins.
 
-### Inclusion manuelle
-
-Pour inclure des fichiers en PHP, nous pouvons utiliser les fonctions
-`include_once` et `require_once`.
+Pour inclure des fichiers en PHP, nous pouvons utiliser les fonctions `include`,
+`include_once`, `require` et `require_once`.
 
 Si nous prenons le diagramme de classes suivant :
 
-![Exemple de diagramme de classes](./images/animal-hierarchy-example.png)
+![Exemple de diagramme de classes](./images/animal-hierarchy-example.svg)
 
 Nous avons plusieurs classes abstraites et concrètes représentant différents
-animaux. Chaque classe peut être définie dans son propre fichier.
+animaux. Chaque classe peut être définie dans son propre fichier et importée
+avec `require` selon l'arborescence suivante :
+
+```text
+./
+├── public/
+│   └── index.php
+└── src/
+    ├── Animal.php
+    ├── Cat.php
+    ├── Dog.php
+    └── Pet.php
+```
 
 Le fichier `Animal.php` pourrait contenir la classe abstraite `Animal` :
 
 ```php
 <?php
-// Animal.php
+// src/Animal.php
 abstract class Animal {
     protected string $name;
     protected float $size;
@@ -1213,8 +1134,8 @@ Le fichier `Pet.php` pourrait contenir la classe abstraite `Pet` qui hérite de
 
 ```php
 <?php
-// Pet.php
-require_once 'Animal.php';
+// src/Pet.php
+require __DIR__ . '/Animal.php';
 
 abstract class Pet extends Animal {
     protected string $nickname;
@@ -1239,8 +1160,8 @@ classe abstraite `Pet` :
 
 ```php
 <?php
-// Dog.php
-require_once 'Pet.php';
+// src/Dog.php
+require __DIR__ . '/Pet.php';
 
 class Dog extends Pet {
     public function __construct(string $name, float $size, string $nickname) {
@@ -1258,8 +1179,8 @@ classe abstraite `Pet` :
 
 ```php
 <?php
-// Cat.php
-require_once 'Pet.php';
+// src/Cat.php
+require __DIR__ . '/Pet.php';
 
 class Cat extends Pet {
     public function __construct(string $name, float $size, string $nickname) {
@@ -1277,9 +1198,9 @@ application, où nous incluons les fichiers nécessaires et créons des objets :
 
 ```php
 <?php
-// index.php
-require_once 'Dog.php';
-require_once 'Cat.php';
+// public/index.php
+require __DIR__ . '/../src/Dog.php';
+require __DIR__ . '/../src/Cat.php';
 
 $dog = new Dog("Nalia", 30.5, "Naliouille");
 $cat = new Cat("Tofu", 10.0, "Sushi");
@@ -1291,19 +1212,21 @@ echo $cat->getName() . " says: " . $cat->makeSound() . "<br>";
 Avec le code actuel, nous sommes confronté à un problème d'import.
 
 En effet, PHP va exécuter le fichier `index.php` et va rencontrer la ligne
-`require_once 'Dog.php';`. PHP va alors inclure le fichier `Dog.php`.
+`require __DIR__ . '/../src/Dog.php';`. PHP va alors inclure le fichier
+`src/Dog.php`.
 
 Le fichier `Dog.php` importe lui-même le fichier `Pet.php` avec la ligne
-`require_once 'Pet.php';`.
+`require __DIR__ . '/Pet.php';`.
 
 Le fichier `Pet.php` importe lui-même le fichier `Animal.php` avec la ligne
-`require_once 'Animal.php';`.
+`require __DIR__ . '/Animal.php';`.
 
 Jusqu'ici, tout va bien.
 
-Le même processus se produit pour la ligne `require_once 'Cat.php';` dans le
-fichier `index.php`, qui inclut `Cat.php`, mais ce fichier contient lui-même une
-ligne `require_once 'Pet.php';`.
+Le même processus se produit pour la ligne
+`require __DIR__ . '/../src/Cat.php';` dans le fichier `index.php`, qui inclut
+`Cat.php`, mais ce fichier contient lui-même une ligne
+`require __DIR__ . '/Pet.php';`.
 
 Hors, le fichier `Pet.php` a déjà été inclus une première fois, donc PHP va
 générer une erreur fatale :
@@ -1321,219 +1244,36 @@ Ainsi, tous les fichiers `Dog.php`, `Cat.php` et `Pet.php` doivent utiliser
 
 ```php
 <?php
-// Dog.php
-require_once 'Pet.php';
+// src/Dog.php
+require_once __DIR__ . '/Pet.php';
 ...
 ```
 
 ```php
 <?php
-// Cat.php
-require_once 'Pet.php';
+// src/Cat.php
+require_once __DIR__ . '/Pet.php';
 ...
 ```
 
 ```php
 <?php
-// Pet.php
-require_once 'Animal.php';
+// src/Pet.php
+require_once __DIR__ . '/Animal.php';
+...
+```
+
+```php
+<?php
+// public/index.php
+require_once __DIR__ . '/../src/Dog.php';
+require_once __DIR__ . '/../src/Cat.php';
 ...
 ```
 
 De cette manière, lorsque PHP inclut `Dog.php`, il inclut `Pet.php` une seule
 fois (qui lui-même inclut `Animal.php` une seule fois) et lorsque `Cat.php` est
 inclus, `Pet.php` n'est pas inclus à nouveau. Le problème d'import est résolu !
-
-### Espaces de noms (namespaces)
-
-Les namespaces permettent d'organiser le code en regroupant les classes,
-fonctions et constantes sous un même espace de noms. Cela peut permettre
-d'éviter les conflits de noms et d'améliorer la lisibilité du code.
-
-En reprenant l'exemple précédent, nous pourrions définir un namespace pour
-chaque groupe de classes.
-
-```php
-<?php
-// src/Animals/Animal.php
-namespace Animals;
-
-abstract class Animal {
-    protected string $name;
-    protected float $size;
-
-    public function __construct(string $name, float $size) {
-        $this->name = $name;
-        $this->size = $size;
-    }
-
-    abstract public function makeSound(): string;
-
-    public function getName(): string {
-        return $this->name;
-    }
-
-    public function getSize(): float {
-        return $this->size;
-    }
-}
-```
-
-```php
-<?php
-// src/Animals/Pets/Pet.php
-namespace Animals\Pets;
-
-require_once 'Animal.php';
-
-use Animals\Animal;
-
-abstract class Pet extends Animal {
-    protected string $nickname;
-
-    public function __construct(string $name, float $size, string $nickname) {
-        parent::__construct($name, $size);
-        $this->nickname = $nickname;
-    }
-
-    public function getNickname(): string {
-        return $this->nickname;
-    }
-
-    public function setNickname(string $nickname): void {
-        $this->nickname = $nickname;
-    }
-}
-```
-
-```php
-<?php
-// src/Animals/Pets/Dog.php
-namespace Animals\Pets;
-
-require_once 'Pet.php';
-
-use Animals\Pets\Pet;
-
-class Dog extends Pet {
-    public function __construct(string $name, float $size, string $nickname) {
-        parent::__construct($name, $size, $nickname);
-    }
-
-    public function makeSound(): string {
-        return "Woof!";
-    }
-}
-```
-
-```php
-<?php
-// src/Animals/Pets/Cat.php
-namespace Animals\Pets;
-
-require_once 'Pet.php';
-
-use Animals\Pets\Pet;
-
-class Cat extends Pet {
-    public function __construct(string $name, float $size, string $nickname) {
-        parent::__construct($name, $size, $nickname);
-    }
-
-    public function makeSound(): string {
-        return "Meow!";
-    }
-}
-```
-
-Pour utiliser cette classe dans un autre fichier, nous devons importer le
-namespace ou utiliser son nom complet.
-
-```php
-<?php
-require_once 'src/Animals/Pets/Dog.php';
-require_once 'src/Animals/Pets/Cat.php';
-
-use Animals\Pets\Dog;
-use Animals\Pets\Cat;
-
-$dog = new Dog("Nalia", 30.5, "Naliouille");
-$cat = new Cat("Tofu", 10.0, "Sushi");
-
-echo $dog->getName() . " says: " . $dog->makeSound() . "<br>";
-echo $cat->getName() . " says: " . $cat->makeSound() . "<br>";
-```
-
-```php
-<?php
-require_once 'Dog.php';
-require_once 'Cat.php';
-
-$dog = new \MyApp\Animals\Pets\Dog("Nalia", 30.5, "Naliouille");
-$cat = new \MyApp\Animals\Pets\Cat("Tofu", 10.0, "Sushi");
-
-echo $dog->getName() . " says: " . $dog->makeSound() . "<br>";
-echo $cat->getName() . " says: " . $cat->makeSound() . "<br>";
-```
-
-Les namespaces ne sont pas obligatoires, mais ils peuvent aider à organiser le
-code pour les projets plus complexes et éviter les conflits de noms (plusieurs
-classes avec le même nom dans des contextes différents).
-
-### Inclusion automatique (autoloader)
-
-Gérer les imports manuellement peut devenir fastidieux dans les projets plus
-complexes avec de nombreuses classes et dépendances. Pour simplifier ce
-processus, PHP offre une fonctionnalité d'inclusion automatique (autoloader).
-
-L'autoloader permet de charger automatiquement les classes lorsqu'elles sont
-utilisées, sans avoir à inclure manuellement chaque fichier.
-
-L'autoloader sera importé une seule fois par fichier, puis il s'occupera de
-charger toutes les autres classes utilisées dans ce fichier de manière
-automatique :
-
-```php
-<?php
-// autoloader.php
-// Charge les classes automatiquement
-spl_autoload_register(function ($class) {
-    // Convertit les séparateurs de namespace en séparateurs de répertoires
-    $relativePath = str_replace('\\', '/', $class);
-
-    // Construit le chemin complet du fichier
-    $file = __DIR__ . '/../classes/' . $relativePath . '.php';
-
-    // Vérifie si le fichier existe avant de l'inclure
-    if (file_exists($file)) {
-        // Inclut le fichier de classe
-        require_once $file;
-    }
-});
-```
-
-Ensuite, dans le fichier `index.php`, nous incluons simplement l'autoloader au
-lieu d'inclure chaque fichier de classe individuellement :
-
-```php
-<?php
-// index.php
-require_once 'autoloader.php'; // Plus besoin d'inclure chaque fichier de classe manuellement
-
-use Animals\Pets\Dog;
-use Animals\Pets\Cat;
-
-$dog = new Dog("Nalia", 30.5, "Naliouille");
-$cat = new Cat("Tofu", 10.0, "Sushi");
-
-echo $dog->getName() . " says: " . $dog->makeSound() . "<br>";
-echo $cat->getName() . " says: " . $cat->makeSound() . "<br>";
-```
-
-L'autoloader va automatiquement chercher et inclure les fichiers nécessaires
-lorsque les classes `Dog` et `Cat` sont instanciées. L'autoloader se chargera
-d'importer qu'un seul fichier par classe, même si plusieurs classes sont
-utilisées dans le même fichier.
 
 ## Limites de l'héritage et de l'abstraction
 
@@ -1549,30 +1289,26 @@ maintenir.
 L'exemple suivant illustre une hiérarchie de classes qui peut déjà être
 considérée comme trop complexe :
 
-![Exemple de diagramme de classes inutilement compliqué](./images/animal-hierarchy-example-over-engineered.png)
+![Exemple de diagramme de classes inutilement compliqué](./images/animal-hierarchy-example-over-engineered.svg)
 
 Restez simple et adaptez la structure de votre code aux besoins réels de votre
 application si les besoins évoluent.
 
 ## Conclusion
 
-Dans ce cours, nous avons exploré les concepts fondamentaux de la programmation
-en PHP ainsi que les principes de la programmation orientée objet (POO).
+La programmation orientée objet (POO) est un paradigme de programmation qui
+permet de structurer le code en regroupant les données et les comportements dans
+des entités appelées classes.
 
-Nous avons couvert les bases du langage PHP, y compris les variables, les types
-de données, les structures de contrôle, les fonctions, et l'importation de
-fichiers.
+Elle offre de nombreux avantages, tels que la lisibilité, la réutilisabilité et
+la maintenabilité du code. PHP prend en charge la POO depuis la version 5,
+permettant de créer des classes et des objets, d'utiliser l'encapsulation, et de
+définir des attributs et des méthodes.
 
-Ensuite, nous avons approfondi la POO en examinant les classes, les objets,
-l'héritage, les interfaces, l'abstraction, et la gestion des espaces de noms.
-
-Nous avons également abordé des pratiques avancées telles que l'inclusion
-automatique des classes (autoloader) pour simplifier la gestion des dépendances
-dans les projets plus complexes.
-
-La POO est un paradigme puissant qui permet de structurer le code de manière
-modulaire et réutilisable, mais il est essentiel de l'utiliser judicieusement
-pour éviter une complexité excessive.
+La POO est un outil puissant pour structurer le code et faciliter le
+développement d'applications complexes. Cependant, elle peut introduire une
+certaine complexité. Il faut savoir l'utiliser judicieusement en fonction des
+besoins de l'application.
 
 ## Exemples de code
 

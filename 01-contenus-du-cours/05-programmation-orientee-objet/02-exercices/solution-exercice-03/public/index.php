@@ -1,22 +1,14 @@
 <?php
-require_once __DIR__ . '/../src/utils/autoloader.php';
+require_once __DIR__ . '/../src/Library.php';
+require_once __DIR__ . '/../src/Book.php';
 
-use Characters\Assassins\Ninja;
-use Characters\Assassins\Spy;
-use Characters\Mages\Wizard;
-use Characters\Mages\Witch;
-use Characters\Warriors\Soldier;
-use Characters\Warriors\Pyrotechnician;
+$library = new Library("Bibliothèque Municipale");
 
-$ninja = new Ninja("Ibuki", 19, "Street Fighter");
-$spy = new Spy("Agent 47", 40, "Hitman");
-$wizard = new Wizard("Gandalf", 100, "Lord of the Rings");
-$witch = new Witch("Hermione Granger", 30, "Harry Potter");
-$soldier = new Soldier("Master Chief", 45, "Halo");
-$pyrotechnician = new Pyrotechnician("Jinx", 28, "Arcane");
+$book1 = new Book("1984", "George Orwell", "978-0451524935");
+$book2 = new Book("Le Petit Prince", "Antoine de Saint-Exupéry", "978-2070408504");
 
-$characters = [$ninja, $spy, $wizard, $witch, $soldier, $pyrotechnician];
+$library->addBook($book1);
+$library->addBook($book2);
 
-foreach ($characters as $character) {
-    echo $character->attack() . "<br>";
-}
+$library->borrowBook("1984");
+echo $library->getLibraryStats();

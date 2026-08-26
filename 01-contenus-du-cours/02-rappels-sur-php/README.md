@@ -76,6 +76,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Formulaires HTML, validation et sécurité](#formulaires-html-validation-et-sécurité)
 - [Conclusion](#conclusion)
 - [Exemples de code](#exemples-de-code)
+- [Exercices](#exercices)
 - [À faire pour la semaine suivante](#à-faire-pour-la-semaine-suivante)
 
 ## Objectifs
@@ -629,6 +630,14 @@ de mieux comprendre les concepts abordés.
 
 Vous trouverez les exemples de code ici :
 [Exemples de code](./01-exemples-de-code/README.md).
+
+## Exercices
+
+Nous vous invitons maintenant à réaliser les exercices de la séance afin de
+mettre en pratique les concepts abordés.
+
+Vous trouverez les exercices et leur corrigé ici :
+[Exercices](./02-exercices/README.md).
 
 ## À faire pour la semaine suivante
 
