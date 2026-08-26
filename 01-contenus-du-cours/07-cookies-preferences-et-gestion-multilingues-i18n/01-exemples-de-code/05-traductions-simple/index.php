@@ -1,6 +1,6 @@
 
 <?php
-require_once '05.01-translations.php';
+require_once 'translations.php';
 
 // Langue par défaut
 const DEFAULT_LANGUAGE = 'en';
