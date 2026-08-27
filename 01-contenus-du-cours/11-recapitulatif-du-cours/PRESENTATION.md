@@ -32,7 +32,7 @@ _paginate: false
 
 <small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg opacity:0.1][illustration-principale]
 
 ## Récapitulatif du cours
 
@@ -64,7 +64,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01.03-programmation-orientee-objet-avance).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg opacity:0.1][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -83,7 +83,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg opacity:0.1][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -102,7 +102,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/03.01-deploiement).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg opacity:0.1][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -122,7 +122,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/04.01-cookies-preferences-et-gestion-multilingues-i18n).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg opacity:0.1][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -142,7 +142,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/07.01-recapitulatif-de-lunite-denseignement).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg opacity:0.1][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -161,7 +161,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/06.01-gestion-et-envoi-des-e-mails).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg opacity:0.1][illustration-principale]
 
 #### Éléments clés à retenir
 
@@ -180,7 +180,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 [Retrouvez ce cours sur le dépôt Git du cours](<https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01.03-projet-libre-(1-sur-8)>).
 
-![bg brightness:2 opacity:0.2][illustration-principale]
+![bg opacity:0.1][illustration-principale]
 
 #### Éléments clés à retenir
 

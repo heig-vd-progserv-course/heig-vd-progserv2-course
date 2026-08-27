@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../src/utils/autoloader.php';
+require_once __DIR__ . '/../utils/autoloader.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-const MAIL_CONFIGURATION_FILE = __DIR__ . '/../src/config/mail.ini';
+const MAIL_CONFIGURATION_FILE = __DIR__ . '/../config/mail.ini';
 
 $config = parse_ini_file(MAIL_CONFIGURATION_FILE, true);
 
@@ -38,7 +38,7 @@ try {
 
     // Expéditeur et destinataire
     $mail->setFrom($from_email, $from_name);
-    $mail->addAddress('CHANGE_ME', 'CHANGE WITH YOUR NAME');
+    $mail->addAddress('example@example.com', 'Merci de changer ces informations par les vôtres');
 
     // Contenu du mail
     $mail->isHTML(true);

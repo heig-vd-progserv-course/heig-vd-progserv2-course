@@ -57,7 +57,7 @@ cliquant sur l'en-tête de ce document._
 
 - Utiliser la bibliothèque PHPMailer pour envoyer des e-mails en PHP.
 
-**Il s'agit du dernier cours théorique du cours _"Programmation serveur 2
+**Il s'agit du dernier contenu théorique du cours _"Programmation serveur 2
 (ProgServ2)"_.**
 
 ![bg right:40%][illustration-objectifs]
@@ -150,19 +150,11 @@ mail($to, $subject, $body, $headers);
 
 - Avant d'envoyer des e-mails, il est nécessaire de configurer son environnement
   :
-  1. Production (avec Infomaniak)
-  2. Développement (avec Mailpit).
+  1. Développement (avec Mailpit).
+  2. Production (avec Infomaniak)
 
 ![bg right:40% contain](./images/infomaniak-configuration-adresse-email-4.png)
 ![bg right:40% contain vertical](./images/mailpit-interface-web.png)
-
-### Configurer son environnement de production
-
-- Nous utilisons déjà Infomaniak pour l'hébergement web et le nom de domaine.
-- Nécessaire de commander un service de messagerie.
-- Le [support de cours][contenu-complet] explique comment faire cela.
-
-![bg right:40% h:75%](./images/infomaniak-configuration-adresse-email-4.png)
 
 ### Configuration son environnement de développement
 
@@ -172,6 +164,14 @@ mail($to, $subject, $body, $headers);
 - Le [support de cours][contenu-complet] explique comment faire cela.
 
 ![bg right:40% h:75%](./images/mailpit-interface-web.png)
+
+### Configurer son environnement de production
+
+- Nous utilisons déjà Infomaniak pour l'hébergement web et le nom de domaine.
+- Nécessaire de commander un service de messagerie.
+- Le [support de cours][contenu-complet] explique comment faire cela.
+
+![bg right:40% h:75%](./images/infomaniak-configuration-adresse-email-4.png)
 
 ## Envoyer des mails en PHP à l'aide de PHPMailer
 
@@ -227,6 +227,20 @@ mail($to, $subject, $body, $headers);
   1. Développement local (Mailpit)
   2. Production (Infomaniak).
 
+#### Mailpit (développement)
+
+```ini
+host = "mailpit"
+port = 1025
+authentication = false
+username = ""
+password = ""
+from_email = "no-reply@mailpit.localhost"
+from_name = "Mailpit Local SMTP"
+```
+
+![bg right:40%][illustration-derriere-les-mails-smtp-pop3-imap]
+
 #### Infomaniak (production)
 
 ```ini
@@ -241,30 +255,16 @@ from_name = "HEIG-VD ProgServ Course"
 
 ![bg right:40%][illustration-derriere-les-mails-smtp-pop3-imap]
 
-#### Mailpit (développement)
-
-```ini
-host = "localhost"
-port = 1025
-authentication = false
-username = ""
-password = ""
-from_email = "no-reply@mailpit.localhost"
-from_name = "Mailpit Local SMTP"
-```
-
-![bg right:40%][illustration-derriere-les-mails-smtp-pop3-imap]
-
 ### Utilisation de PHPMailer pour envoyer des e-mails
 
 ```php
 <?php
-require_once __DIR__ . '/../src/utils/autoloader.php';
+require_once __DIR__ . '/../utils/autoloader.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-const MAIL_CONFIGURATION_FILE = __DIR__ . '/../src/config/mail.ini';
+const MAIL_CONFIGURATION_FILE = __DIR__ . '/../config/mail.ini';
 
 $config = parse_ini_file(MAIL_CONFIGURATION_FILE, true);
 
@@ -306,7 +306,7 @@ try {
 ```php
     // Expéditeur et destinataire
     $mail->setFrom($from_email, $from_name);
-    $mail->addAddress('CHANGE_ME', 'CHANGE WITH YOUR NAME');
+    $mail->addAddress('example@example.com', 'Merci de changer ces informations par les vôtres');
 
     // Contenu du mail
     $mail->isHTML(true);
@@ -326,8 +326,7 @@ try {
 
 - Pour tester l'envoi d'e-mails en développement, assurez-vous que Mailpit est
   en cours d'exécution.
-- Accédez à la page web qui envoie l'e-mail (par exemple,
-  <http://localhost/index.php>).
+- Accédez à la page web qui envoie l'e-mail.
 - Vérifiez que le mail a bien été reçu (interface web de Mailpit en
   développement ou dans votre client mail en production).
 
