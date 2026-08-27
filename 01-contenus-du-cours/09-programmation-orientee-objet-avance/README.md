@@ -88,7 +88,7 @@ Chaque hashtag représente un namespace, et les images (classes, fonctions,
 constantes) qui partagent le même hashtag sont regroupées ensemble.
 
 En reprenant l'exemple présenté dans le contenu
-[Programmation orientée objet](../09-programmation-orientee-objet-avance/README.md),
+[Programmation orientée objet](../03-programmation-orientee-objet/README.md),
 nous pourrions définir un namespace pour chaque groupe de classes que nous
 organisons de la manière suivante :
 
