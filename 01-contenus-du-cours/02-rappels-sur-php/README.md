@@ -54,6 +54,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [Architecture client-serveur](#architecture-client-serveur)
+  - [Navigateur web](#navigateur-web)
   - [Serveur web](#serveur-web)
   - [Interpréteur PHP](#interpréteur-php)
   - [Base de données](#base-de-données)
@@ -105,6 +106,18 @@ Cette architecture permet de séparer la logique de présentation (côté client
 la logique de traitement (côté serveur).
 
 ![Architecture client-serveur](./images/architecture-typique-dune-application-web-php.svg)
+
+### Navigateur web (client)
+
+Le navigateur web est l'application client qui permet aux utilisateurs de
+consulter les pages web. Il envoie des requêtes HTTP au serveur et affiche les
+réponses reçues.
+
+C'est grâce au navigateur web que nous pouvons interagir avec les applications
+web PHP. Il est important de noter que le navigateur web ne comprend pas le code
+PHP, il ne peut donc pas l'exécuter. Le code PHP est exécuté sur le serveur, et
+le navigateur reçoit uniquement le résultat de cette exécution (généralement du
+HTML, du CSS et du JavaScript).
 
 ### Serveur web
 

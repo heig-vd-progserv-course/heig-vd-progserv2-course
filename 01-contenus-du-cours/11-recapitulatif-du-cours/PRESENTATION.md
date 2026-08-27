@@ -138,7 +138,14 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 #### Éléments clés à retenir
 
-TODO
+- La réutilisation de parties d'interface permet de créer des composants
+  modulaires et maintenables.
+- Il n'est donc pas nécessaire de modifier chaque page individuellement pour
+  apporter des changements à l'interface.
+- Les parties communes de l'interface ou les composants peuvent être inclus dans
+  les pages web à l'aide de fonctions PHP comme `require()`.
+- Une modification dans un fichier inclus se répercute automatiquement sur
+  toutes les pages qui l'utilisent.
 
 ### Séance 5 - Sécurité et nettoyage des saisies
 
@@ -150,7 +157,14 @@ TODO
 
 #### Éléments clés à retenir
 
-TODO
+- La sécurité est cruciale dans le développement web pour protéger les données
+  et les utilisateurs.
+- Les attaques courantes incluent l'injection SQL et les attaques XSS
+  (Cross-Site Scripting).
+- Les requêtes préparées avec PDO permettent de prévenir les attaques par
+  injection SQL en séparant le code SQL des données.
+- Les fonctions de nettoyage comme `htmlspecialchars()` aident à sécuriser les
+  données affichées dans le navigateur en échappant les caractères spéciaux.
 
 ### Séance 6 - Cookies, préférences, et gestion multilingue (i18n)
 
