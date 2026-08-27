@@ -46,23 +46,58 @@ Vous l'avez fait, bravo ! 🎉
 
 Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
-### Objectifs du cours
+### Objectifs du cours (1/2)
 
-> En résumé, vous devriez être capable de :
->
-> - Appliquer tous les concepts vu en
->   [Programmation serveur 1 (ProgServ1)](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
->   dans le contexte d'un projet libre.
-> - Utiliser des concepts avancés de la programmation orientée objet.
-> - Déployer et accéder à votre propre application en ligne et persister les
->   données dans une base de données dédiée.
-> - Gérer les préférences et l'authentification des utilisateur.trices.
+À la fin de ce cours, vous devriez être capable de :
 
-### Cours 01 - Programmation orientée objet
+> - Structurer un code serveur avec les concepts de la programmation orientée
+>   objet.
+> - Mettre en place les principes de session/cookie pour gérer une
+>   authentification simple.
+> - Mettre en place les principes de sécurité pour protéger une application web
+>   contre les attaques les plus courantes.
+> - Réutiliser des parties d'interface pour simplifier le développement d'une
+>   application web.
+
+### Objectifs du cours (2/2)
+
+> - Implémenter une application web multilingue.
+> - Déployer une application web avec une base de données dédiée.
+> - Envoyer des e-mails depuis une application web.
+
+---
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01.03-programmation-orientee-objet-avance).
+> Grâce à ces compétences, la personne qui étudie sera en mesure de développer
+> des applications web combinant plusieurs aspects avec une gestion des accès
+> aux pages publiques et privées (par exemple, un gestionnaire de tâches
+> multi-utilisateurs, une plateforme de réservations de concerts, etc.).
+
+### Séance 1 - Rappels sur PHP
+
+<!-- _class: lead -->
+
+[Retrouvez ce contenu sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/02-rappels-sur-php/README.md).
+
+![bg opacity:0.1][illustration-principale]
+
+#### Éléments clés à retenir
+
+- PHP est un langage de programmation côté serveur utilisé pour créer des
+  applications web dynamiques.
+- PHP est interprété par un serveur web, qui génère du HTML à envoyer au
+  navigateur, basé sur une architecture client-serveur.
+- L'hébergement web ou l'environnement de développement permet de mettre tout le
+  nécessaire pour exécuter une application web PHP sur Internet : serveur web,
+  base de données, gestion des e-mails, espace de stockage, etc.
+- Le début de votre projet libre !
+
+### Séance 2 - Programmation orientée objet
+
+<!-- _class: lead -->
+
+[Retrouvez ce contenu sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/03-programmation-orientee-objet/README.md).
 
 ![bg opacity:0.1][illustration-principale]
 
@@ -74,14 +109,12 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 - La POO facilite la réutilisabilité et la maintenabilité du code.
 - Les concepts avancés de la POO incluent l'héritage, les interfaces, et les
   classes abstraites.
-- Grâce à l'autoloader, les classes peuvent être chargées automatiquement en
-  fonction de leur namespace.
 
-### Cours 02 - Bases de données MySQL/MariaDB et déploiement
+### Séance 3 - Bases de données MySQL/MariaDB et déploiement
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02.01-bases-de-donnees-et-pdo-avance).
+[Retrouvez ce contenu sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/04-bases-de-donnees-avec-mysql-mariadb-et-deploiement/README.md).
 
 ![bg opacity:0.1][illustration-principale]
 
@@ -91,36 +124,39 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
   données de manière structurée.
 - PDO (PHP Data Objects) est une extension de PHP qui permet d'interagir avec
   différentes bases de données de manière sécurisée et efficace.
-- PDO peut interagir avec plusieurs types de bases de données.
-- SQLite en _"Programmation serveur 1 (ProgServ1)"_, MySQL en _Programmation
-  serveur 2 (ProgServ2)_.
-- Attention aux attaques par injection SQL et attaques XSS !
+- PDO peut interagir avec plusieurs types de bases de données : SQLite en
+  ProgServ1, MySQL en ProgServ2.
+- Déployer une application web PHP demande de bien connaître son architecture.
 
-### Cours 03 - Déploiement
+### Séance 4 - Réutiliser des parties d'interface
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/03.01-deploiement).
+[Retrouvez ce contenu sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/05-reutiliser-des-parties-dinterface/README.md).
 
 ![bg opacity:0.1][illustration-principale]
 
 #### Éléments clés à retenir
 
-- Déployer une application web PHP demande de bien connaître son architecture
-  (un serveur web (Apache) pour gérer les requêtes HTTP, un interpréteur PHP
-  pour exécuter le code PHP, une base de données pour stocker les données, et un
-  espace de stockage pour les fichiers de l'application).
-- Configurer un environnement de production sécurisé est crucial pour protéger
-  les données et les utilisateurs.
-- Infomaniak est un fournisseur suisse de confiance pour héberger des
-  applications web PHP.
-- Vos applications sont accessibles depuis n'importe où (!).
+TODO
 
-### Cours 04 - Cookies, préférences, et gestion multilingues (i18n)
+### Séance 5 - Sécurité et nettoyage des saisies
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/04.01-cookies-preferences-et-gestion-multilingues-i18n).
+[Retrouvez ce contenu sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/06-securite-et-nettoyage-des-saisies/README.md).
+
+![bg opacity:0.1][illustration-principale]
+
+#### Éléments clés à retenir
+
+TODO
+
+### Séance 6 - Cookies, préférences, et gestion multilingue (i18n)
+
+<!-- _class: lead -->
+
+[Retrouvez ce contenu sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/07-cookies-preferences-et-gestion-multilingues-i18n/README.md).
 
 ![bg opacity:0.1][illustration-principale]
 
@@ -136,11 +172,11 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 - Utiliser des fichiers de traduction pour stocker les chaînes de texte dans
   différentes langues.
 
-### Cours 05 - Sessions, authentification, et autorisation
+### Séance 7 - Sessions, authentification, et autorisation
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/07.01-recapitulatif-de-lunite-denseignement).
+[Retrouvez ce contenu sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/08-sessions-authentification-et-autorisation/README.md).
 
 ![bg opacity:0.1][illustration-principale]
 
@@ -155,11 +191,30 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 - Ces deux concepts sont essentiels pour sécuriser les applications web et
   isoler/protéger les données des utilisateurs.
 
-### Cours 06 - Gestion et envoi des e-mails
+### Séance 8 - Programmation orientée objet (avancé)
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/06.01-gestion-et-envoi-des-e-mails).
+[Retrouvez ce contenu sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/09-programmation-orientee-objet-avance/README.md).
+
+![bg opacity:0.1][illustration-principale]
+
+#### Éléments clés à retenir
+
+- Les espaces de noms (namespaces) permettent d'organiser le code et d'éviter
+  les conflits de noms entre différentes parties d'une application.
+- L'autoloader permet de charger automatiquement les classes et les fichiers
+  nécessaires à l'exécution d'une application, simplifiant ainsi la gestion des
+  dépendances.
+- Les traits sont des mécanismes de réutilisation de code qui permettent de
+  partager des méthodes et des propriétés entre plusieurs classes, sans avoir à
+  recourir à l'héritage.
+
+### Séance 9 - Gestion et envoi des e-mails
+
+<!-- _class: lead -->
+
+[Retrouvez ce contenu sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/10-gestion-et-envoi-des-e-mails/README.md).
 
 ![bg opacity:0.1][illustration-principale]
 
@@ -174,24 +229,62 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
   manière plus fiable et sécurisée.
 - Utiliser des dépendances externes simplifie le développement.
 
-### Projet libre
+### Évaluation intermédiaire
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git du cours](<https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01.03-projet-libre-(1-sur-8)>).
+[Retrouvez ce contenu sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02-evaluations/01-evaluation-intermediaire/README.md).
 
 ![bg opacity:0.1][illustration-principale]
 
 #### Éléments clés à retenir
 
-- Vous avez réalisé un projet libre de A à Z.
-- Vous avez déployé l'application chez un hébergeur tel qu'Infomaniak.
+- Vous avez réalisé un projet libre **conséquent** de A à Z.
+- Vous avez déployé l'application chez un hébergeur tel qu'Infomaniak avec une
+  base de données dédiée et e-mails.
 - L'application est disponible sur Internet, la rendant accessible à tout le
-  monde.
-- Vous pouvez être fier.es de ce que vous avez fait ! Bravo !
+  monde. Plus avancé que tout ce que vous avez réalisé jusqu'ici (ProgServ1 et
+  DévAppliS).
+- **Vous pouvez être fier.es de ce que vous avez fait ! Bravo !**
 
-**Attention à la date et la forme du rendu** (voir support de cours). Je ferai
+**Attention à la date et la forme du rendu** (voir [support de cours]). Je ferai
 mon possible pour vous rendre les notes au plus vite.
+
+### Projet libre
+
+<!-- _class: lead -->
+
+[Retrouvez ce contenu sur le dépôt Git du cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02-evaluations/02-projet-libre/README.md).
+
+![bg opacity:0.1][illustration-principale]
+
+#### Éléments clés à retenir
+
+- Vous avez réalisé un projet libre **conséquent** de A à Z.
+- Vous avez déployé l'application chez un hébergeur tel qu'Infomaniak avec une
+  base de données dédiée et e-mails.
+- L'application est disponible sur Internet, la rendant accessible à tout le
+  monde. Plus avancé que tout ce que vous avez réalisé jusqu'ici (ProgServ1 et
+  DévAppliS).
+
+<center>
+
+**Vous pouvez être fier.es de ce que vous avez fait ! Bravo !**
+
+</center>
+
+#### Rendu du projet libre
+
+- Attention à la date et la forme du rendu.
+- Votre travail sera évalué selon les différentes grilles d'évaluation.
+- Je ferai mon possible pour vous rendre les notes au plus vite.
+
+<center>
+
+**Toutes les informations sont disponibles dans le
+[support de cours](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/02-evaluations/02-projet-libre/README.md).**
+
+</center>
 
 ## Résultats des formulaires de feedback et évaluations GAPS
 

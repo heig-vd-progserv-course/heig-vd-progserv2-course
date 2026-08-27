@@ -7,16 +7,16 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
-title: HEIG-VD ProgServ2 Course - Cookies, préférences, et gestion multilingues (i18n)
-description: Cookies, préférences, et gestion multilingues (i18n) pour le cours ProgServ2 enseigné à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/07-cookies-preferences-et-gestion-multilingues-i18n/presentation.html
-header: "[**Cookies, préférences, et gestion multilingues (i18n)**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/07-cookies-preferences-et-gestion-multilingues-i18n/README.md)"
+title: HEIG-VD ProgServ2 Course - Cookies, préférences, et gestion multilingue (i18n)
+description: Cookies, préférences, et gestion multilingue (i18n) pour le cours ProgServ2 enseigné à la HEIG-VD, Suisse
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/07-cookies-preferences-et-gestion-multilingue-i18n/presentation.html
+header: "[**Cookies, préférences, et gestion multilingue (i18n)**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/07-cookies-preferences-et-gestion-multilingue-i18n/README.md)"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
 headingDivider: 6
 math: mathjax
 -->
 
-# Cookies, préférences, et gestion multilingues (i18n)
+# Cookies, préférences, et gestion multilingue (i18n)
 
 <!--
 _class: lead
@@ -277,7 +277,7 @@ Est-ce que vous avez des questions ?
 <!-- URLs -->
 
 [contenu-complet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/07-cookies-preferences-et-gestion-multilingues-i18n/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/07-cookies-preferences-et-gestion-multilingue-i18n/README.md
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
 

@@ -1,4 +1,4 @@
-# Cookies, préférences, et gestion multilingues (i18n)
+# Cookies, préférences, et gestion multilingue (i18n)
 
 L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).
@@ -12,9 +12,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > **Ressources annexes**
 >
 > - Autres formats :
->   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/07-cookies-preferences-et-gestion-multilingues-i18n/presentation.html)
+>   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/06-cookies-preferences-et-gestion-multilingue-i18n/presentation.html)
 >   ·
->   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/07-cookies-preferences-et-gestion-multilingues-i18n/07-cookies-preferences-et-gestion-multilingues-i18n-presentation.pdf).
+>   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/06-cookies-preferences-et-gestion-multilingue-i18n/06-cookies-preferences-et-gestion-multilingue-i18n-presentation.pdf).
 > - Exemples de code : [Code source](./01-exemples-de-code/README.md).
 > - Exercices : [Énoncés et solutions](./02-exercices/README.md).
 >

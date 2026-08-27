@@ -11,11 +11,11 @@ Suisse !
 
 À l'issue de ce cours, la personne qui étudie sera capable de :
 
-- Réutiliser des parties d'interface pour simplifier le développement d'une
-  application web.
-- Déployer une application web avec une base de données dédiée.
 - Structurer un code serveur avec les concepts de la programmation orientée
   objet.
+- Déployer une application web avec une base de données dédiée.
+- Réutiliser des parties d'interface pour simplifier le développement d'une
+  application web.
 - Mettre en place les principes de sécurité pour protéger une application web
   contre les attaques les plus courantes.
 - Mettre en place les principes de session/cookie pour gérer une
@@ -52,16 +52,16 @@ Les dates sont tirées du
 |       4 | 12.10. - 18.10.26 | [Réutiliser des parties d'interface](./01-contenus-du-cours/05-reutiliser-des-parties-dinterface/README.md)                                                                                 | [Réalisation du projet libre (3/10)](./02-evaluations/02-projet-libre/README.md)  | 🟢 Prêt     |
 |       - | 19.10. - 25.10.26 | _Pas de cours_                                                                                                                                                                              | _Pas de cours_                                                                    | -           |
 |       5 | 26.10. - 01.11.26 | [Sécurité et nettoyage des saisies](./01-contenus-du-cours/06-securite-et-nettoyage-des-saisies)                                                                                            | [Réalisation du projet libre (4/10)](./02-evaluations/02-projet-libre/README.md)  | 🟢 Prêt     |
-|       6 | 02.11. - 08.11.26 | [Cookies, préférences, et gestion multilingues (i18n)](./01-contenus-du-cours/07-cookies-preferences-et-gestion-multilingues-i18n/README.md)                                                | [Réalisation du projet libre (5/10)](./02-evaluations/02-projet-libre/README.md)  | 🟢 Prêt     |
+|       6 | 02.11. - 08.11.26 | [Cookies, préférences, et gestion multilingue (i18n)](./01-contenus-du-cours/07-cookies-preferences-et-gestion-multilingue-i18n/README.md)                                                  | [Réalisation du projet libre (5/10)](./02-evaluations/02-projet-libre/README.md)  | 🟢 Prêt     |
 |       - | 09.11. - 15.11.26 | _Pas de cours_                                                                                                                                                                              | _Pas de cours_                                                                    | -           |
 |       7 | 16.11. - 22.11.26 | [Sessions, authentification et autorisation](./01-contenus-du-cours/08-sessions-authentification-et-autorisation/README.md)                                                                 | [Réalisation du projet libre (6/10)](./02-evaluations/02-projet-libre/README.md)  | 🟢 Prêt     |
 |    🚨 8 | 23.11. - 29.11.26 | [Évaluation intermédiaire](./02-evaluations/01-evaluation-intermediaire/README.md)                                                                                                          | [Réalisation du projet libre (7/10)](./02-evaluations/02-projet-libre/README.md)  | 🟢 Prêt     |
 |       9 | 30.11. - 06.12.26 | [Programmation orientée objet (avancé)](./01-contenus-du-cours/09-programmation-orientee-objet-avance/README.md)                                                                            | [Réalisation du projet libre (8/10)](./02-evaluations/02-projet-libre/README.md)  | 🟢 Prêt     |
 |      10 | 07.12. - 13.12.26 | [Gestion et envoi des e-mails](./01-contenus-du-cours/10-gestion-et-envoi-des-e-mails/README.md)                                                                                            | [Réalisation du projet libre (9/10)](./02-evaluations/02-projet-libre/README.md)  | 🟢 Prêt     |
-|      11 | 14.12. - 20.12.26 | [Récapitulatif du cours](./01-contenus-du-cours/11-recapitulatif-du-cours/README.md)                                                                                                        | [Réalisation du projet libre (10/10)](./02-evaluations/02-projet-libre/README.md) | 🟡 En cours |
+|      11 | 14.12. - 20.12.26 | [Récapitulatif du cours](./01-contenus-du-cours/11-recapitulatif-du-cours/README.md)                                                                                                        | [Réalisation du projet libre (10/10)](./02-evaluations/02-projet-libre/README.md) | 🟢 Prêt     |
 |       - | 21.12. - 27.12.26 | _Pas de cours : vacances_                                                                                                                                                                   | _Pas de cours : vacances_                                                         | -           |
 |       - | 28.12. - 03.01.27 | _Pas de cours : vacances_                                                                                                                                                                   | _Pas de cours : vacances_                                                         | -           |
-|   🚨 12 | 04.01. - 10.01.27 | [Présentations des projets libres](./02-evaluations/02-projet-libre/README.md)                                                                                                              | [Présentations des projets libres](./02-evaluations/02-projet-libre/README.md)    | 🔴 À faire  |
+|   🚨 12 | 04.01. - 10.01.27 | [Présentations des projets libres](./02-evaluations/02-projet-libre/README.md)                                                                                                              | [Présentations des projets libres](./02-evaluations/02-projet-libre/README.md)    | 🟢 Prêt     |
 |       - | 11.01. - 17.01.27 | _Pas de cours_                                                                                                                                                                              | _Pas de cours_                                                                    | -           |
 |       - | 18.01. - 24.01.26 | _Pas de cours_                                                                                                                                                                              | _Pas de cours_                                                                    | -           |
 |       - | 25.01. - 31.01.26 | _Pas de cours_                                                                                                                                                                              | _Pas de cours_                                                                    | -           |

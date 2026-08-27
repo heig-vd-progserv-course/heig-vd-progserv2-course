@@ -401,9 +401,9 @@ Les résultats seront discutés au prochain cours. **Merci beaucoup !**
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/10-gestion-et-envoi-des-e-mails/README.md
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
-[feedback]: https://framaforms.org/progserv2-2025-2026-feedback-1762260178
+[feedback]: https://framaforms.org/progserv2-2026-2027-feedback-1787835671
 [feedback-qr-code]:
-	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/progserv2-2025-2026-feedback-1762260178
+	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/progserv2-2026-2027-feedback-1787835671
 
 <!-- Illustrations -->
 
