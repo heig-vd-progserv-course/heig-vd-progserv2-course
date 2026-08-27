@@ -92,8 +92,6 @@ MySQL/MariaDB sur un hébergeur web.
 La liste complète des objectifs est disponible dans la section _"Objectifs"_ du
 bloc d'information en haut de ce contenu.
 
-## Formulaires HTML et PDO, un rappel
-
 > [!TIP]
 >
 > Des difficultés à comprendre certains concepts de PHP présentés dans ce
@@ -102,6 +100,8 @@ bloc d'information en haut de ce contenu.
 > <https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>.
 >
 > N'hésitez pas à poser des questions si besoin !
+
+## Formulaires HTML et PDO, un rappel
 
 Les formulaires HTML sont un élément clé pour interagir avec les utilisateurs
 sur le web. Ils permettent de collecter des données que les utilisateurs peuvent
@@ -494,7 +494,7 @@ sur l'un ou l'autre dans le monde professionnel.
 Voici comment se connecter à une base de données MySQL/MariaDB avec PDO :
 
 ```php
-const DB_HOST = '127.0.0.1';
+const DB_HOST = 'mariadb';
 const DB_PORT = 3306;
 const DB_NAME = 'my_database';
 const DB_USER = 'username';
@@ -809,7 +809,7 @@ les informations sensibles (comme les mots de passe) hors du code.
 Voici un exemple simple de fichier de configuration `config/database.ini` :
 
 ```php
-host = "127.0.0.1"
+host = "mariadb"
 port = 3306
 database = "my_database"
 username = "username"

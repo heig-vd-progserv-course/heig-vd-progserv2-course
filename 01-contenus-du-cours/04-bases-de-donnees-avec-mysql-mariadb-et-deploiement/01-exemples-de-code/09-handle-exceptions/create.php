@@ -1,6 +1,6 @@
 <?php
 // Connexion à la base de données MySQL
-const DB_HOST = '127.0.0.1';
+const DB_HOST = 'mariadb';
 const DB_PORT = 3306;
 const DB_NAME = 'my_database';
 const DB_USER = 'username';

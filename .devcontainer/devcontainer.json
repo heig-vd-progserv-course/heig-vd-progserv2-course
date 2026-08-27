@@ -18,6 +18,7 @@
 				"GitHub.copilot",
 				"jebbs.plantuml",
 				"marp-team.marp-vscode",
+				"qwtel.sqlite-viewer",
 				"redhat.vscode-yaml",
 				"streetsidesoftware.code-spell-checker",
 				"streetsidesoftware.code-spell-checker-french",
@@ -46,7 +47,5 @@
 		}
 	},
 	// Execute the post-create.sh script once the container is created
-	"postCreateCommand": ".devcontainer/post-create.sh",
-	// Execute the post-start.sh script once the container is started
-	"postStartCommand": ".devcontainer/post-start.sh"
+	"postCreateCommand": ".devcontainer/post-create.sh"
 }

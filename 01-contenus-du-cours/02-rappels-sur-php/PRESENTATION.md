@@ -81,6 +81,8 @@ PHP fonctionne grâce aux outils suivants :
 - Gère les requêtes HTTP.
 - Distribue les ressources (fichiers HTML, CSS, JavaScript, images, etc.).
 - Exemples : Apache, Nginx.
+- Jusqu'à présent localement : `php -S 0.0.0.0:8080`.
+- Dans un contexte professionnel : Apache ou Nginx (ex. Infomaniak).
 
 ![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/commons/1/10/Apache_HTTP_server_logo_%282019-present%29.svg)
 ![bg right:40% w:80% vertical](https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg)
@@ -561,6 +563,17 @@ echo greet("Alice"); // "Hello, Alice!"
   vulnérabilités.
 
 ![bg right:40%][illustration-formulaires-html-validation-et-securite]
+
+## Template mis à disposition
+
+Afin de vous aider à démarrer vos projets PHP, un template de projet est mis à
+votre disposition :
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course-php-template>.
+
+Le `README.md` du template contient des instructions pour l'utiliser et ce qui
+est inclus dans le template.
+
+**Prenez le temps de lire le `README.md` du template avant de l'utiliser !**
 
 ## Conclusion
 

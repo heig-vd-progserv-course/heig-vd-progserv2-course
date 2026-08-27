@@ -89,6 +89,15 @@ les attaques XSS (Cross-Site Scripting), ainsi que les bonnes pratiques pour
 La liste complète des objectifs est disponible dans la section _"Objectifs"_ du
 bloc d'information en haut de ce contenu.
 
+> [!TIP]
+>
+> Des difficultés à comprendre certains concepts de PHP présentés dans ce
+> support de cours ? Consultez les supports de cours pour le cours Programmation
+> serveur 1 (ProgServ1) pour vous aider :
+> <https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course>.
+>
+> N'hésitez pas à poser des questions si besoin !
+
 ## Validation et nettoyage des saisies utilisateurs
 
 La validation et le nettoyage des saisies utilisateurs sont des étapes
