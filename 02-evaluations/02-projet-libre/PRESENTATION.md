@@ -43,12 +43,23 @@ _Cette présentation est un résumé du contenu complet disponible sur GitHub._
 _Pour plus de détails, retrouvez le contenu complet [ici][contenu-complet] ou en
 cliquant sur l'en-tête de ce document._
 
-## Objectifs
+## Objectifs (1/2)
 
 - Réaliser une application web complète, incluant une interface utilisateur, une
   logique métier et une persistance des données.
 - Gérer correctement l'authentification et les accès aux différentes pages.
 - Déployer et accéder à l'application web depuis Internet.
+
+![bg right:40%][illustration-objectifs]
+
+## Objectifs (2/2)
+
+- Vous pouvez être créatif.ve !
+- Vous pouvez proposer une application web originale.
+- Ou vous inspirer d'applications web existantes et les améliorer ou les adapter
+  à vos besoins.
+
+**Laissez libre cours à votre imagination !**
 
 ![bg right:40%][illustration-objectifs]
 

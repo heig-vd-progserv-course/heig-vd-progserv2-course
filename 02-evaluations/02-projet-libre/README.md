@@ -58,7 +58,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Échelle d'évaluation](#échelle-dévaluation)
 - [Grilles d'évaluation](#grilles-dévaluation)
   - [Processus de travail](#processus-de-travail)
-  - [Présentation finale du projet](#présentation-finale-du-projet)
+  - [Présentation finale](#présentation-finale)
   - [Produit final](#produit-final)
 - [Contraintes](#contraintes)
 - [Soumission](#soumission)
@@ -83,6 +83,10 @@ Le projet est libre : c'est à vous de définir les fonctionnalités et les
 services que vous souhaitez proposer. Il peut s'agir d'une application web que
 vous aimeriez utiliser dans votre vie quotidienne ou d'une application web que
 vous aimeriez utiliser pour vos études.
+
+Vous pouvez être créatif.ve et proposer une application web originale, mais vous
+pouvez aussi vous inspirer d'applications web existantes et les améliorer ou les
+adapter à vos besoins !
 
 Par exemple, vous pourriez créer un site de gestion de tâches, une plateforme de
 réservation d'événements, un blog personnel ou encore un site pour gérer vos
@@ -202,8 +206,9 @@ Le projet libre sera noté sur trois aspects :
 - [Processus de travail](#processus-de-travail) (la manière dont vous avez
   travaillé tout au long du semestre pour réaliser le projet avec votre équipe)
   : 40 %.
-- [Présentation finale du projet](#présentation-finale-du-projet) : 30 %.
-- [Produit final](#produit-final) : 30 %.
+- [Présentation finale](#présentation-finale) (la présentation de votre projet
+  devant le corps enseignant) : 30 %.
+- [Produit final](#produit-final) (l'application web réalisée) : 30 %.
 
 Le projet libre compte pour 50 % de la note finale du cours.
 
@@ -246,7 +251,7 @@ se déroulera de la manière suivante :
 |   8 | La gestion des sessions, de l'authentification et de l'autorisation est implémentée et fonctionne correctement sur toutes les pages. | La ou les PRs qui implémentent la gestion des sessions, de l'authentification et de l'autorisation et le code source de l'application.                                      | Séance 9  |
 |   9 | Les e-mails sont correctement envoyés depuis l'application.                                                                          | La ou les PRs qui implémentent l'envoi d'e-mails et le code source de l'application.                                                                                        | Séance 10 |
 
-### Présentation finale du projet
+### Présentation finale
 
 |   # | Critère                                                                                                |
 | --: | :----------------------------------------------------------------------------------------------------- |
@@ -269,7 +274,7 @@ se déroulera de la manière suivante :
 |   6 | La page d'accueil permet de comprendre rapidement l'objectif de la plateforme et propose un accès aux principales fonctionnalités.                                               | -                                                                                                  |
 |   7 | La plateforme propose un moyen de se créer un nouveau compte sur la plateforme et de se connecter. Les informations sont stockées de manière sécurisée dans la base de données.  | -                                                                                                  |
 |   8 | La plateforme propose un moyen de mettre à jour son profil et de se déconnecter.                                                                                                 | -                                                                                                  |
-|   9 | Une fois la personne connectée, la plateforme maintient la session de la personne sur toutes les pages.                                                                          | -                                                                                                  |
+|   9 | Une fois la personne connectée, la plateforme maintient la session de la personne sur toutes les pages. Il est également possible de se déconnecter.                             | -                                                                                                  |
 |  10 | La plateforme supporte au moins deux rôles distincts (par exemple : _utilisateur_ et _administrateur_).                                                                          | -                                                                                                  |
 |  11 | La plateforme permet de gérer au moins deux domaines/types de ressources avec des relations/liens entre elles (par exemple : _articles_ et _utilisateurs_)[^multiples-domaines]. | -                                                                                                  |
 |  12 | La plateforme stocke les mots de passe de façon sécurisée dans la base de données.                                                                                               | -                                                                                                  |
@@ -423,4 +428,7 @@ a accès aux ressources nécessaires et comprenne bien son rôle dans le projet.
     tâches, où chaque utilisateur.trice peut avoir plusieurs tâches associées.
     Cela implique la création de relations entre les différentes entités dans la
     base de données et la mise en place de fonctionnalités permettant de gérer
-    ces relations dans l'application.
+    ces relations dans l'application. Cela implique qu'il faudra au moins trois
+    tables dans la base de données pour gérer le cas présenté ci-dessus (une
+    pour les utilisateurs, une pour les tâches et une pour gérer la relation
+    entre les deux).
