@@ -56,7 +56,7 @@ _paginate: false
 ## Espaces de noms (namespaces) (2/5)
 
 Reprenons l'exemple des animaux de compagnie étudié dans le contenu
-[Programmation orientée objet](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/03-programmation-orientee-objet/README.md)
+[Programmation orientée objet](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/09-programmation-orientee-objet-avance/README.md)
 structuré comme suit :
 
 ```text
@@ -81,7 +81,7 @@ structuré comme suit :
 
 Analysons le code de chaque classe pour voir comment les namespaces sont
 utilisés dans l'exemple
-[`01-namespaces-sans-autoloader`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/84-relecture-de-la-s%C3%A9ance-9/01-contenus-du-cours/09-programmation-orientee-objet-avance/01-exemples-de-code/01-namespaces-sans-autoloader/README.md).
+[`01-namespaces-sans-autoloader`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/09-programmation-orientee-objet-avance/01-exemples-de-code/01-namespaces-sans-autoloader/README.md).
 
 ## Inclusion automatique (autoloader)
 
@@ -91,7 +91,7 @@ utilisés dans l'exemple
 - Le code se simplifie et les dépendances sont mieux gérées.
 
 Analysons le code de l'exemple
-[`02-namespaces-avec-autoloader-simple`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/84-relecture-de-la-s%C3%A9ance-9/01-contenus-du-cours/09-programmation-orientee-objet-avance/01-exemples-de-code/02-namespaces-avec-autoloader-simple/README.md).
+[`02-namespaces-avec-autoloader-simple`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/09-programmation-orientee-objet-avance/01-exemples-de-code/02-namespaces-avec-autoloader-simple/README.md).
 
 ## Interfaces, classes abstraites et traits
 
@@ -104,7 +104,7 @@ Analysons le code de l'exemple
   héritage.
 
 Analysons le code de l'exemple
-[`04-traits`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/84-relecture-de-la-s%C3%A9ance-9/01-contenus-du-cours/09-programmation-orientee-objet-avance/01-exemples-de-code/04-traits/README.md).
+[`04-traits`](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/09-programmation-orientee-objet-avance/01-exemples-de-code/04-traits/README.md).
 
 ## Conclusion
 
