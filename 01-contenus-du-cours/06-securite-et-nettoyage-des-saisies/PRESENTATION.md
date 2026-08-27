@@ -9,8 +9,8 @@ paginate: true
 author: L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgServ2 Course - Sécurité et nettoyage des saisies
 description: Sécurité et nettoyage des saisies pour le cours ProgServ2 enseigné à la HEIG-VD, Suisse
-url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/05-reutiliser-des-parties-dinterface/presentation.html
-header: "[**Sécurité et nettoyage des saisies**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/05-reutiliser-des-parties-dinterface/README.md)"
+url: https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/06-securite-et-nettoyage-des-saisies/presentation.html
+header: "[**Sécurité et nettoyage des saisies**](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/06-securite-et-nettoyage-des-saisies/README.md)"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgServ2 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)'
 headingDivider: 6
 math: mathjax
@@ -474,7 +474,7 @@ Est-ce que vous avez des questions ?
 <!-- URLs -->
 
 [contenu-complet]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/05-reutiliser-des-parties-dinterface/README.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/01-contenus-du-cours/06-securite-et-nettoyage-des-saisies/README.md
 [license]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
 

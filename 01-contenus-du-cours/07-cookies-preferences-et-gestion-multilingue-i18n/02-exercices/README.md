@@ -1,4 +1,4 @@
-# Cookies, préférences, et gestion multilingues (i18n) - Exercices
+# Cookies, préférences, et gestion multilingue (i18n) - Exercices
 
 L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).

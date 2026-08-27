@@ -1,4 +1,4 @@
-# Cookies, préférences, et gestion multilingues (i18n) - Exemples de code
+# Cookies, préférences, et gestion multilingue (i18n) - Exemples de code
 
 L. Delafontaine, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).
