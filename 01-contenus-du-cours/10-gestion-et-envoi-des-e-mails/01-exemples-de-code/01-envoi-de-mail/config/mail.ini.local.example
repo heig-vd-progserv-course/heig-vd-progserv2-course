@@ -1,4 +1,4 @@
-host = "localhost"
+host = "mailpit"
 port = 1025
 authentication = false
 username = ""

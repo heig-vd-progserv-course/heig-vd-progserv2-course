@@ -5,7 +5,7 @@ spl_autoload_register(function ($class) {
     $relativePath = str_replace('\\', '/', $class);
 
     // Construit le chemin complet du fichier
-    $file = __DIR__ . '/../classes/' . $relativePath . '.php';
+    $file = __DIR__ . '/../src/' . $relativePath . '.php';
 
     // Vérifie si le fichier existe avant de l'inclure
     if (file_exists($file)) {
