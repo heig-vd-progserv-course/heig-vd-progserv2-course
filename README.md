@@ -11,11 +11,11 @@ Suisse !
 
 À l'issue de ce cours, la personne qui étudie sera capable de :
 
-- Réutiliser des parties d'interface pour simplifier le développement d'une
-  application web.
-- Déployer une application web avec une base de données dédiée.
 - Structurer un code serveur avec les concepts de la programmation orientée
   objet.
+- Déployer une application web avec une base de données dédiée.
+- Réutiliser des parties d'interface pour simplifier le développement d'une
+  application web.
 - Mettre en place les principes de sécurité pour protéger une application web
   contre les attaques les plus courantes.
 - Mettre en place les principes de session/cookie pour gérer une
