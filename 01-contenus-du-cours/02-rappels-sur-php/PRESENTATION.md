@@ -76,6 +76,16 @@ PHP fonctionne grâce aux outils suivants :
 
 ![bg h:85%](./images/architecture-typique-dune-application-web-php.svg)
 
+### Navigateur web (client)
+
+- Permet à l'utilisateur d'interagir avec l'application web.
+- Envoie des requêtes HTTP au serveur web.
+- Affiche les réponses du serveur web (HTML, CSS, JavaScript, images, etc.).
+- **Ne comprend pas le code PHP, juste le résultat de la requête !**
+
+![bg right:40% w:40%](https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original)
+![bg right:40% w:40% vertical](https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original)
+
 ### Serveur web
 
 - Gère les requêtes HTTP.
