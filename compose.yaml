@@ -2,9 +2,39 @@ volumes:
   mariadb_data:
 
 services:
+  apache:
+    container_name: apache
+    build:
+      context: .
+      dockerfile_inline: |
+        FROM php:8.5-apache
+        RUN docker-php-ext-install -j$(nproc) pdo_mysql
+    restart: unless-stopped
+    ports:
+      - 8080:80
+    volumes:
+      - .:/var/www/html
+    command:
+      - /bin/sh
+      - -lc
+      - |
+        cat > /etc/apache2/sites-available/000-default.conf <<"EOF"
+        <VirtualHost *:80>
+            DocumentRoot /var/www/html
+            ErrorLog $${APACHE_LOG_DIR}/error.log
+            CustomLog $${APACHE_LOG_DIR}/access.log combined
+
+            <Directory /var/www/html>
+                Options +Indexes
+            </Directory>
+        </VirtualHost>
+        EOF
+        exec apache2-foreground
+
   mailpit:
     container_name: mailpit
     image: axllent/mailpit:v1.30
+    restart: unless-stopped
     ports:
       - 1025:1025
       - 8025:8025

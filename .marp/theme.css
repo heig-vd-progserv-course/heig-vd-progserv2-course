@@ -219,6 +219,10 @@ section:has(h1) {
 	padding: 50px;
 }
 
+section:has(h1) a:link {
+	text-decoration: none;
+}
+
 section a,
 section mark {
 	color: var(--color-primary);
@@ -335,7 +339,6 @@ blockquote > *:first-child {
 }
 
 .two-thirds-one-third-columns {
-	gap: 2rem;
 	grid-template-columns: 2fr 1fr;
 }
 

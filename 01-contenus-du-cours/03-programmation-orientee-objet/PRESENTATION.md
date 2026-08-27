@@ -415,7 +415,7 @@ Est-ce que vous avez des questions ?
 [contenu-complet]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/tree/main/01-contenus-du-cours/03-programmation-orientee-objet/README.md
 [license]:
-	https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
 
 <!-- Illustrations -->
 

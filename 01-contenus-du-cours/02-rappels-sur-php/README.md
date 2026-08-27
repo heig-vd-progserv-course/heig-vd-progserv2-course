@@ -74,6 +74,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Tableaux](#tableaux)
   - [Boucles](#boucles)
 - [Formulaires HTML, validation et sécurité](#formulaires-html-validation-et-sécurité)
+- [Template mis à disposition](#template-mis-à-disposition)
 - [Conclusion](#conclusion)
 - [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
@@ -116,6 +117,15 @@ dynamiques.
 Il existe plusieurs serveurs web populaires, notamment Apache et Nginx. Ces
 serveurs web peuvent être configurés pour fonctionner avec PHP via différents
 modules.
+
+Jusqu'à présent, vous avez utilisé le serveur web intégré de PHP pour exécuter
+vos applications PHP en local à l'aide de la commande `php -S 0.0.0.0:8080`.
+
+Cependant, dans un contexte professionnel, il est courant d'utiliser un serveur
+web dédié comme Apache ou Nginx pour héberger des applications PHP, ce que vous
+avez notamment utilisé dans le cours
+[Développer une application web simple (DévAppliS)](https://github.com/heig-vd-devapplis-course/heig-vd-devapplis-course)
+avec Infomaniak.
 
 ### Interpréteur PHP
 
@@ -613,6 +623,17 @@ formulaires pour éviter des vulnérabilités telles que les injections SQL ou l
 attaques XSS (Cross-Site Scripting).
 
 Nous y reviendrons plus en détail dans une future séance.
+
+## Template mis à disposition
+
+Afin de vous aider à démarrer vos projets PHP, un template de projet est mis à
+votre disposition :
+<https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course-php-template>.
+
+Le `README.md` du template contient des instructions pour l'utiliser et ce qui
+est inclus dans le template.
+
+**Prenez le temps de lire le `README.md` du template avant de l'utiliser !**
 
 ## Conclusion
 

@@ -162,7 +162,7 @@ cliquant sur l'en-tête de ce document._
   - Espace de discussion pour poser des questions et obtenir de l'aide (**il n'y
     a pas de questions bêtes !**, je suis payé pour ça).
 
-### Exemples de code
+### Exemples de code (1/2)
 
 - Exemples de code pour illustrer les concepts.
 - Exemples à étudier et à prendre en main.
@@ -171,9 +171,23 @@ cliquant sur l'en-tête de ce document._
 
 ![bg right:40%][illustration-exemples-de-code]
 
+### Exemples de code (2/2)
+
+- Les exemples essayent d'être simples et compréhensibles.
+- De ce fait, **ils ne respectent pas forcément les bonnes pratiques de
+  développement.**
+- **C'est à vous de les améliorer et de les adapter** pour que votre code soit
+  propre et maintenable.
+- Cela fait partie de l'exercice.
+
+![bg right:40%][illustration-exemples-de-code]
+
 ### Exercices
 
 - Permet d'exercer les concepts vus en cours, autant théoriques que pratiques.
+- N'oubliez pas que la pratique est la meilleure façon d'apprendre.
+- C'est à vous de prendre les exemples de code et de les adapter pour répondre
+  aux besoins des exercices.
 
 ![bg right:40%][illustration-exercices]
 
@@ -181,9 +195,20 @@ cliquant sur l'en-tête de ce document._
 
 Le cours sera évaluée à l'aide des éléments suivants :
 
+- Une évaluation intermédiaire écrite.
 - Un projet libre par groupe de deux (2) à trois (3) étudiant.es à réaliser tout
   au long du cours.
-- Une évaluation intermédiaire écrite.
+
+![bg right:40%][illustration-modalites-devaluation]
+
+### Évaluation intermédiaire
+
+- Évaluation sur toutes les connaissances et compétences acquises tout au long
+  du cours.
+- Durée d'environ 90 minutes.
+- Papier et crayon.
+- **Aucune aide autorisée.**
+- 50% de la note finale du cours.
 
 ![bg right:40%][illustration-modalites-devaluation]
 
@@ -196,17 +221,6 @@ Le cours sera évaluée à l'aide des éléments suivants :
 - 50% de la note finale du cours.
 
 ![bg right:40%][illustration-projet]
-
-### Évaluation intermédiaire
-
-- Évaluation sur toutes les connaissances et compétences acquises tout au long
-  du cours.
-- Durée d'environ 90 minutes.
-- Papier et crayon.
-- **Aucune aide autorisée.**
-- 50% de la note finale du cours.
-
-![bg right:40%][illustration-modalites-devaluation]
 
 ## Besoin de rafraîchissement ?
 
