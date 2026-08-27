@@ -109,7 +109,7 @@ Voir le [support de cours][contenu-complet] pour plus de détails.
 Ne soyez pas Numérobis du film _Astérix et Obélix : Mission Cléopâtre_ !
 
 <small>Voir la scène du film ici :
-[YouTube](https://www.youtube.com/watch?v=dEP7aEyTOf0)</small>
+[YouTube](https://www.youtube.com/watch?v=dEP7aEyTOf0).</small>
 
 ![bg right:39%](./images/asterix-et-obelix-mission-cleopatre-porte-au-plafond.png)
 

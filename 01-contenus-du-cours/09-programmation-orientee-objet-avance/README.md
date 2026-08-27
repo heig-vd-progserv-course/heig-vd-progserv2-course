@@ -12,9 +12,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 > **Ressources annexes**
 >
 > - Autres formats :
->   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/03-programmation-orientee-objet/presentation.html)
+>   [Presentation (web)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/09-programmation-orientee-objet-avance/presentation.html)
 >   ·
->   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/03-programmation-orientee-objet/03-programmation-orientee-objet-presentation.pdf)
+>   [Presentation (PDF)](https://heig-vd-progserv-course.github.io/heig-vd-progserv2-course/01-contenus-du-cours/09-programmation-orientee-objet-avance/09-programmation-orientee-objet-avance-presentation.pdf)
 > - Exemples de code : [Code source](./01-exemples-de-code/README.md).
 > - Exercices : [Énoncés et solutions](./02-exercices/README.md).
 >
@@ -88,7 +88,7 @@ Chaque hashtag représente un namespace, et les images (classes, fonctions,
 constantes) qui partagent le même hashtag sont regroupées ensemble.
 
 En reprenant l'exemple présenté dans le contenu
-[Programmation orientée objet](../03-programmation-orientee-objet/README.md),
+[Programmation orientée objet](../09-programmation-orientee-objet-avance/README.md),
 nous pourrions définir un namespace pour chaque groupe de classes que nous
 organisons de la manière suivante :
 
