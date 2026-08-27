@@ -20,8 +20,10 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 >
 > **Objectifs**
 >
-> - Inclure des fichiers à l'aide d'un autoloader et d'espaces de noms
->   (namespaces).
+> - Décrire l'utilisation des espaces de noms (namespaces) pour organiser le
+>   code.
+> - Inclure des fichiers de façon automatique à l'aide d'un autoloader et
+>   d'espaces de noms (namespaces).
 > - Décrire la différence entre une interface, une classe abstraite et un trait.
 >
 > **Méthodes d'enseignement et d'apprentissage**
@@ -56,7 +58,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [Espaces de noms (namespaces)](#espaces-de-noms-namespaces)
-  - [Inclusion automatique (autoloader)](#inclusion-automatique-autoloader)
+- [Inclusion automatique (autoloader)](#inclusion-automatique-autoloader)
 - [Interfaces, classes abstraites et traits](#interfaces-classes-abstraites-et-traits)
 - [Conclusion](#conclusion)
 - [Exemples de code](#exemples-de-code)
@@ -265,7 +267,7 @@ Les namespaces ne sont pas obligatoires, mais ils peuvent aider à organiser le
 code pour les projets plus complexes et éviter les conflits de noms (plusieurs
 classes avec le même nom dans des contextes différents).
 
-### Inclusion automatique (autoloader)
+## Inclusion automatique (autoloader)
 
 Vous avez peut-être remarqué dans les exemples précédents que nous avons utilisé
 l'instruction `require_once` pour inclure les fichiers de classes. Cela peut
@@ -606,12 +608,21 @@ classes qui ne sont pas liées par une relation d'héritage, ce qui permet de
 créer des classes plus modulaires et réutilisables sans devoir utiliser
 d'interfaces ou de classes abstraites.
 
+En effet, une classe peut implémenter plusieurs interfaces ou traits, mais
+qu'une seule classe abstraite. Grâce aux traits, cette limitation est levée, et
+il est possible de partager du code entre plusieurs classes sans avoir à créer
+une hiérarchie de classes complexe.
+
 Il est important de noter que les traits ne sont pas des classes et ne peuvent
 pas être instanciés directement. Ils sont utilisés uniquement pour partager du
 code entre des classes. De plus, les traits ne peuvent pas contenir de
 constructeurs, mais ils peuvent contenir des méthodes et des propriétés. Les
 classes qui utilisent un trait peuvent également définir leurs propres méthodes
 et propriétés, en plus de celles définies dans le trait.
+
+Les traits sont des mécanismes puissants pour partager du code relativement
+propres à PHP, qui peuvent être utilisés dans des situations où l'héritage n'est
+pas approprié.
 
 ## Conclusion
 
