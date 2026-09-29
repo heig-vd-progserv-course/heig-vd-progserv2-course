@@ -1236,11 +1236,11 @@ Fatal error: Cannot declare class Pet, because the name is already in use in /pa
 ```
 
 Pour éviter ce problème, nous pouvons utiliser `require_once` au lieu de
-`require_once`. Cela garantit que chaque fichier n'est inclus qu'une seule fois,
-même s'il est référencé plusieurs fois.
+`require`. Cela garantit que chaque fichier n'est inclus qu'une seule fois, même
+s'il est référencé plusieurs fois.
 
 Ainsi, tous les fichiers `Dog.php`, `Cat.php` et `Pet.php` doivent utiliser
-`require_once` au lieu de `require_once` :
+`require_once` au lieu de `require` :
 
 ```php
 <?php
