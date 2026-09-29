@@ -1219,7 +1219,9 @@ Le fichier `Dog.php` importe lui-même le fichier `Pet.php` avec la ligne
 `require __DIR__ . '/Pet.php';`.
 
 Le fichier `Pet.php` importe lui-même le fichier `Animal.php` avec la ligne
-`require __DIR__ . '/Animal.php';`. Jusqu'ici, tout va bien.
+`require __DIR__ . '/Animal.php';`.
+
+Jusqu'ici, tout va bien.
 
 Le même processus se produit pour la ligne
 `require __DIR__ . '/../src/Cat.php';` dans le fichier `index.php`, qui inclut
