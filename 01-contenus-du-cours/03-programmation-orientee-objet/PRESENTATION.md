@@ -121,16 +121,16 @@ réutilisables et faciles à maintenir.
 
 - **Complexité** : la POO peut être plus complexe que la programmation
   procédurale, ce qui peut rendre le code plus difficile à comprendre pour les
-  débutants.
+  débutant.es.
 - **Performance** : la POO peut être moins performante que la programmation
   procédurale, car elle nécessite plus de ressources pour créer et gérer des
   objets.
 
-![bg right:35% ][illustration-desavantages-de-la-poo]
+![bg right:35%][illustration-desavantages-de-la-poo]
 
 ## La POO en PHP
 
-- La POO est prise en charge par PHP depuis la version 5.
+- La POO est prise en charge par PHP depuis la version 5 (8.5 actuelle).
 - PHP propose toutes les fonctionnalités de la POO (classes, objets, attributs,
   méthodes, encapsulation, constructeurs et les destructeurs, etc.).
 - Explorons certains de ces concepts en PHP.
