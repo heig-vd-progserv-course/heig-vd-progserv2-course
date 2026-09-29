@@ -1,4 +1,4 @@
-@startuml animal-hierarchy-example-overengineered
+@startuml animal-hierarchy-example-over-engineered
 skinparam noteTextAlignment center
 skinparam groupInheritance 2
 

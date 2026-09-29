@@ -333,7 +333,11 @@ et
 
 ---
 
-![bg h:85%](./images/animal-hierarchy-example-overengineered.svg)
+![bg h:85%](./images/animal-hierarchy-example-over-engineered.svg)
+
+---
+
+![bg h:85%](./images/animal-hierarchy-example.svg)
 
 ## Conclusion
 
