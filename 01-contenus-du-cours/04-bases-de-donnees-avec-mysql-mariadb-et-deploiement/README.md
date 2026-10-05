@@ -846,7 +846,7 @@ $pdo = new PDO("mysql:host=$host;port=$port;charset=utf8mb4", $username, $passwo
 >
 > Pour voir l'exemple complet, se référer aux fichiers
 > [`10-database-configuration-file`](./01-exemples-de-code/10-mysql-with-configuration-file/create.php)
-> ,
+> , 
 > [`index-mysql`](./01-exemples-de-code/10-mysql-with-configuration-file/index.php)
 > et
 > [`database.ini`](./01-exemples-de-code/10-mysql-with-configuration-file/database.ini)
