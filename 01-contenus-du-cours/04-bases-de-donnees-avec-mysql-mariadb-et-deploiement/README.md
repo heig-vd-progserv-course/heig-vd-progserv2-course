@@ -370,8 +370,8 @@ exit();
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer au fichiers
-> [`05-pdo-and-sqlite`](./01-exemples-de-code/05-pdo-and-sqlite.php) et
-> [`index-sqlite`](./01-exemples-de-code/index-sqlite/create.php).
+> [`05-pdo-and-sqlite`](./01-exemples-de-code/05-pdo-and-sqlite/create.php) et
+> [`index-sqlite`](./01-exemples-de-code/05-pdo-and-sqlite/index.php).
 
 Grâce aux requêtes préparées, les valeurs des variables sont liées aux
 paramètres de la requête SQL. Les valeurs sont automatiquement échappées par
@@ -406,8 +406,9 @@ Voici comment afficher les données de manière sécurisée :
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer aux fichiers
-> [`06-escape-special-characters`](./01-exemples-de-code/06-escape-special-characters.php)
-> et [`index-sqlite`](./01-exemples-de-code/index-sqlite/create.php).
+> [`06-escape-special-characters`](./01-exemples-de-code/06-escape-special-characters/create.php)
+> et
+> [`index-sqlite`](./01-exemples-de-code/06-escape-special-characters/index.php).
 
 Ici, `htmlspecialchars()` convertit les caractères spéciaux en entités HTML,
 empêchant ainsi l'exécution de code malveillant si l'utilisateur a saisi du HTML
@@ -465,8 +466,9 @@ de validation côté client :
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer aux fichiers
-> [`07-validate-data-client-side`](./01-exemples-de-code/07-validate-data-client-side.php)
-> et [`index-sqlite`](./01-exemples-de-code/index-sqlite/create.php).
+> [`07-validate-data-client-side`](./01-exemples-de-code/07-validate-data-client-side/create.php)
+> et
+> [`index-sqlite`](./01-exemples-de-code/07-validate-data-client-side/index.php).
 
 Grâce aux attributs `required`, `minlength`, `type="email"`, et `min`, le
 navigateur effectue une validation de base avant de permettre la soumission du
@@ -508,8 +510,8 @@ $pdo = new PDO($dsn, DB_USER, DB_PASSWORD);
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer aux fichiers
-> [`08-mysql-with-constants`](./01-exemples-de-code/08-mysql-with-constants.php)
-> et [`index-mysql`](./01-exemples-de-code/index-mysql/create.php).
+> [`08-mysql-with-constants`](./01-exemples-de-code/08-mysql-with-constants/create.php)
+> et [`index-mysql`](./01-exemples-de-code/08-mysql-with-constants/index.php).
 
 Dans cet exemple, nous définissons les paramètres de connexion à la base de
 données, y compris l'hôte, le port, le nom de la base de données, l'utilisateur
@@ -554,8 +556,8 @@ $stmt->execute();
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer aux fichiers
-> [`08-mysql-with-constants`](./01-exemples-de-code/08-mysql-with-constants.php)
-> et [`index-mysql`](./01-exemples-de-code/index-mysql/create.php).
+> [`08-mysql-with-constants`](./01-exemples-de-code/08-mysql-with-constants/create.php)
+> et [`index-mysql`](./01-exemples-de-code/08-mysql-with-constants/index.php).
 
 En dehors de la syntaxe SQL, l'utilisation de PDO avec MySQL/MariaDB reste
 similaire à celle avec SQLite, notamment en ce qui concerne les requêtes
@@ -789,8 +791,8 @@ if (empty($errors)) {
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer aux fichiers
-> [`09-handle-exceptions`](./01-exemples-de-code/09-handle-exceptions.php) et
-> [`index-mysql`](./01-exemples-de-code/index-mysql/create.php).
+> [`09-handle-exceptions`](./01-exemples-de-code/09-handle-exceptions/create.php)
+> et [`index-mysql`](./01-exemples-de-code/09-handle-exceptions/index.php).
 
 Notez l'utilisation de plusieurs blocs `catch` pour gérer différents types
 d'exceptions. Le premier bloc capture les exceptions spécifiques à PDO, tandis
@@ -843,8 +845,11 @@ $pdo = new PDO("mysql:host=$host;port=$port;charset=utf8mb4", $username, $passwo
 > [!TIP]
 >
 > Pour voir l'exemple complet, se référer aux fichiers
-> [`10-database-configuration-file`](./01-exemples-de-code/10-database-configuration-file.php)
-> et [`index-mysql`](./01-exemples-de-code/index-mysql/create.php).
+> [`10-database-configuration-file`](./01-exemples-de-code/10-mysql-with-configuration-file/create.php)
+> , 
+> [`index-mysql`](./01-exemples-de-code/10-mysql-with-configuration-file/index.php)
+> et
+> [`database.ini`](./01-exemples-de-code/10-mysql-with-configuration-file/database.ini)
 
 En utilisant un fichier de configuration, il est important de s'assurer que ce
 fichier n'est pas accessible publiquement via le serveur web pour des raisons de
