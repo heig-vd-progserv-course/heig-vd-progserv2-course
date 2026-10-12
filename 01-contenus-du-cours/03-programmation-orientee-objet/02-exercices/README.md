@@ -256,7 +256,7 @@ Implémentez les méthodes suivantes :
 #### Solution
 
 Une solution possible est disponible dans le dossier
-[`solution-exercice-03`](./solution-exercice-01/)
+[`solution-exercice-03`](./solution-exercice-03/)
 
 ### Exercice 4
 
@@ -320,7 +320,7 @@ $calculator->clear();
 #### Solution
 
 Une solution possible est disponible dans le dossier
-[`solution-exercice-04`](./solution-exercice-02/).
+[`solution-exercice-04`](./solution-exercice-04/).
 
 [licence]:
 	https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md
