@@ -1,6 +1,6 @@
 # Évaluation intermédiaire
 
-- Date : 25.11.2026, de 16h30 à 18h00.
+- Date : 24.11.2026, de 13h00 à 14h30.
 
 ## Table des matières
 
